@@ -2,46 +2,64 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome to AWATERRA Documentation
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the AWATERRA platform documentation! This is your comprehensive guide to understanding and building the AWATERRA ecosystem.
+
+## What is AWATERRA?
+
+AWATERRA is a meditation and mindfulness platform designed to help users connect with the world around them through mindful practices and community engagement. The platform features a global visualization system where users can see collective energy and participate in both individual and master-led practices.
+
+## Platform Overview
+
+AWATERRA combines several key elements:
+
+- 🌍 **Global Community**: Connect with users worldwide through shared practices
+- 🧘 **Mindful Practices**: Access guided meditation and mindfulness content
+- 📱 **Cross-Platform**: Available on web and mobile
+- 🌐 **Multi-Language**: Support for multiple languages
+- ✨ **Visual Storytelling**: Immersive 3D globe showing collective energy
+- 🎯 **Gamification**: Progress through sacred geometry and achievements
+
+## Documentation Structure
+
+### [Capabilities](/docs/capabilities/intro)
+High-level system capabilities and infrastructure components that power the platform.
+
+### [Features](/docs/features/intro)
+Detailed feature specifications for UI designers and developers.
+
+### [Version Roadmap](/docs/roadmap/intro)
+Development phases from MVP (Photon) to full release (Ignition).
 
 ## Getting Started
 
-Get started by **creating a new site**.
+- [Installation Guide](/docs/tutorial-basics/create-a-document)
+- [Development Setup](/docs/tutorial-basics/create-a-page)
+- [Architecture Overview](/docs/tutorial-basics/markdown-features)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Key Concepts
 
-### What you'll need
+### AWA Units (Au)
+The platform's virtual currency system used for rewards, missions, and premium features.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### AWA Pulse
+A visualization system showing collective energy and user activity on the global map.
 
-## Generate a new site
+### AWAWAY (Streaks)
+A gamification system where users progress through sacred geometry by maintaining practice streaks.
 
-Generate a new Docusaurus site using the **classic template**.
+### Master Practices
+Special guided sessions led by experienced practitioners, available to premium users.
 
-The classic template will automatically be added to your project after you run the command:
+## Community
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+Join our community to get help, share experiences, and contribute to the project.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- [GitHub Repository](https://github.com/lyfar/awa-docs)
+- [Discord Community](#)
+- [Support Forum](#)
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+---
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+*Last updated: December 2024*
