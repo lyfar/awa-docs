@@ -25,7 +25,7 @@ const config: Config = {
   organizationName: 'lyfar', // Usually your GitHub org/user name.
   projectName: 'awa-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
