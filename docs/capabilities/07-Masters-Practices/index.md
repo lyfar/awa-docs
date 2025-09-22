@@ -2,7 +2,7 @@
 sidebar_position: 07
 ---
 
-# 07-Masters-Practices
+# 07. Masters Practices
 
 *Capability description will be added here.*
 

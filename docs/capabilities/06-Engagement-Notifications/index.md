@@ -2,7 +2,7 @@
 sidebar_position: 06
 ---
 
-# 06-Engagement-Notifications
+# 06. Engagement & Notifications
 
 *Capability description will be added here.*
 

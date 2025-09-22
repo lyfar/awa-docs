@@ -2,7 +2,7 @@
 sidebar_position: 08
 ---
 
-# 08-AWAY-Streaks
+# 08. AWAWAY (Streaks)
 
 *Capability description will be added here.*
 

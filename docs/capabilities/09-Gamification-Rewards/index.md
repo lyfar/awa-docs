@@ -2,7 +2,7 @@
 sidebar_position: 09
 ---
 
-# 09-Gamification-Rewards
+# 09. Gamification & Rewards
 
 *Capability description will be added here.*
 

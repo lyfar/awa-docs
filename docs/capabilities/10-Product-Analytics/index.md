@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# 10-Product-Analytics
+# 10. Product Analytics
 
 *Capability description will be added here.*
 

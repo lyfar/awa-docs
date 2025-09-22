@@ -2,7 +2,7 @@
 sidebar_position: 11
 ---
 
-# 11-Customer-Support
+# 11. Customer Support
 
 *Capability description will be added here.*
 

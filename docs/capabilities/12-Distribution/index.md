@@ -2,7 +2,7 @@
 sidebar_position: 12
 ---
 
-# 12-Distribution
+# 12. Distribution
 
 *Capability description will be added here.*
 
