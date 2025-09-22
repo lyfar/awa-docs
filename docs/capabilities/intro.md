@@ -56,20 +56,20 @@ Each capability section includes:
 - **Dependencies**: What other capabilities it relies on
 - **Implementation Notes**: Technical considerations for developers
 
-## Getting Started
+## Capability Pages
 
-- [App Infrastructure](/docs/capabilities/app-infrastructure)
-- [Visualization & Map Layer](/docs/capabilities/visualization-map-layer)
-- [Access](/docs/capabilities/access)
-- [Identity](/docs/capabilities/identity)
-- [Practice](/docs/capabilities/practice)
-- [Engagement & Notifications](/docs/capabilities/engagement-notifications)
-- [Masters Practices](/docs/capabilities/masters-practices)
-- [AWAWAY (Streaks)](/docs/capabilities/away-streaks)
-- [Gamification & Rewards](/docs/capabilities/gamification-rewards)
-- [Product Analytics](/docs/capabilities/product-analytics)
-- [Customer Support](/docs/capabilities/customer-support)
-- [Distribution](/docs/capabilities/distribution)
+- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure)
+- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer)
+- [03. Access](/docs/capabilities/03-Access)
+- [04. Identity](/docs/capabilities/04-Identity)
+- [05. Practice](/docs/capabilities/05-Practice)
+- [06. Engagement & Notifications](/docs/capabilities/06-Engagement-Notifications)
+- [07. Masters Practices](/docs/capabilities/07-Masters-Practices)
+- [08. AWAWAY (Streaks)](/docs/capabilities/08-AWAY-Streaks)
+- [09. Gamification & Rewards](/docs/capabilities/09-Gamification-Rewards)
+- [10. Product Analytics](/docs/capabilities/10-Product-Analytics)
+- [11. Customer Support](/docs/capabilities/11-Customer-Support)
+- [12. Distribution](/docs/capabilities/12-Distribution)
 
 ---
 

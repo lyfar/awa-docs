@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# App Infrastructure
+# 01. App Infrastructure
 
 Core application setup, backend systems, and foundational services that power the AWATERRA platform.
 

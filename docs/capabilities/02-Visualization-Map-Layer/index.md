@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Visualization & Map Layer
+# 02. Visualization & Map Layer
 
 Responsible for the immersive, visual storytelling elements of the platform. It makes practices visible on a global scale and communicates collective energy.
 

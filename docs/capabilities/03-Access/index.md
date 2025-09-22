@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Access
+# 03. Access
 
 Handles user authentication, onboarding, and access control systems for the AWATERRA platform.
 

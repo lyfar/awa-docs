@@ -21,7 +21,7 @@ AWATERRA combines several key elements:
 - ✨ **Visual Storytelling**: Immersive 3D globe showing collective energy
 - 🎯 **Gamification**: Progress through sacred geometry and achievements
 
-## Documentation Structure
+## Documentation Sections
 
 ### [Capabilities](/docs/capabilities/intro)
 High-level system capabilities and infrastructure components that power the platform.
@@ -29,14 +29,8 @@ High-level system capabilities and infrastructure components that power the plat
 ### [Features](/docs/features/intro)
 Detailed feature specifications for UI designers and developers.
 
-### [Version Roadmap](/docs/roadmap/intro)
+### [Roadmap](/docs/roadmap/intro)
 Development phases from MVP (Photon) to full release (Ignition).
-
-## Getting Started
-
-- [Capabilities Overview](/docs/capabilities/intro)
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
 
 ## Key Concepts
 

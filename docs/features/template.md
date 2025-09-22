@@ -99,9 +99,9 @@ Use this template when documenting new features for the AWATERRA platform.
 
 ## Related Documentation
 
-- [Related Capability](/docs/capabilities/related-capability)
-- [Related Feature](/docs/features/related-feature)
-- [Technical Specification](/docs/technical/specification)
+- [Capabilities Overview](/docs/capabilities/intro)
+- [Features Overview](/docs/features/intro)
+- [Development Roadmap](/docs/roadmap/intro)
 
 ---
 

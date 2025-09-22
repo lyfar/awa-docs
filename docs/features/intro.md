@@ -50,11 +50,9 @@ Features are organized by release version:
 - **0.7-0.9** - Advanced features
 - **1.0 Ignition** 🚀 - Full paid platform
 
-## Getting Started
+## Feature Documentation
 
 - [Feature Template](/docs/features/template)
-- [Core Features](/docs/features/core)
-- [Premium Features](/docs/features/premium)
 
 ---
 
