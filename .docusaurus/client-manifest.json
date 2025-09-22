@@ -1,0 +1,737 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "2237": [
+      2237
+    ],
+    "6870": [
+      867,
+      1869,
+      3249,
+      4813,
+      6061,
+      7518,
+      7643,
+      8401,
+      6870
+    ],
+    "7518": [
+      867,
+      1869,
+      3249,
+      4212,
+      4813,
+      6870,
+      7643,
+      7518
+    ],
+    "17896441": [
+      1869,
+      6870,
+      8401
+    ],
+    "20154178": [
+      7915
+    ],
+    "59362658": [
+      9325
+    ],
+    "main": [
+      1869,
+      5354,
+      8792
+    ],
+    "runtime~main": [
+      1869,
+      8792,
+      5354
+    ],
+    "01a85c17": [
+      1869,
+      8209
+    ],
+    "0e384e19": [
+      3976
+    ],
+    "14eb3368": [
+      1869,
+      6969
+    ],
+    "18c41134": [
+      9262
+    ],
+    "1df93b7f": [
+      1869,
+      4583
+    ],
+    "1e4232ab": [
+      1953
+    ],
+    "1f391b9e": [
+      1869,
+      6870,
+      6061
+    ],
+    "33fc5bb8": [
+      1869,
+      6870,
+      7518,
+      867
+    ],
+    "36994c47": [
+      9858
+    ],
+    "393be207": [
+      4134
+    ],
+    "533a09ca": [
+      3098
+    ],
+    "5492f474": [
+      5330
+    ],
+    "5ae91a0d": [
+      8549
+    ],
+    "5c868d36": [
+      1974
+    ],
+    "5e95c892": [
+      9647
+    ],
+    "621db11d": [
+      1869,
+      7518,
+      4212
+    ],
+    "6875c492": [
+      1869,
+      6870,
+      7518,
+      4813
+    ],
+    "73664a40": [
+      1972
+    ],
+    "7661071f": [
+      8737
+    ],
+    "7f0bbc43": [
+      2120
+    ],
+    "814f3328": [
+      7472
+    ],
+    "822bd8ab": [
+      2748
+    ],
+    "83ee1924": [
+      7754
+    ],
+    "8717b14a": [
+      3694
+    ],
+    "925b3f96": [
+      8609
+    ],
+    "9e4087bc": [
+      2711
+    ],
+    "a6aa9e1f": [
+      1869,
+      6870,
+      7518,
+      7643
+    ],
+    "a7456010": [
+      1235
+    ],
+    "a7bd4aaa": [
+      7098
+    ],
+    "a94703ab": [
+      1869,
+      9048
+    ],
+    "a94f0c7a": [
+      6920
+    ],
+    "aa2f9bac": [
+      6132
+    ],
+    "aba21aa0": [
+      5742
+    ],
+    "acecf23e": [
+      1903
+    ],
+    "c942a3b8": [
+      6483
+    ],
+    "ccc49370": [
+      1869,
+      6870,
+      7518,
+      3249
+    ],
+    "cfaaa8ba": [
+      3474
+    ],
+    "d4f17198": [
+      2567
+    ],
+    "d9f32620": [
+      5557
+    ],
+    "dedbcbf8": [
+      4629
+    ],
+    "dff1c289": [
+      1724
+    ],
+    "e273c56f": [
+      9328
+    ],
+    "e44a2883": [
+      4736
+    ],
+    "f1c0d8a1": [
+      7947
+    ],
+    "f4f34a3a": [
+      3637
+    ],
+    "f55d3e7a": [
+      8863
+    ],
+    "f70b333a": [
+      8690
+    ],
+    "styles": [
+      867,
+      3249,
+      4212,
+      4583,
+      4813,
+      5354,
+      6061,
+      6870,
+      6969,
+      7518,
+      7643,
+      8209,
+      8401,
+      8792,
+      9048,
+      1869
+    ]
+  },
+  "assets": {
+    "867": {
+      "js": [
+        {
+          "file": "assets/js/33fc5bb8.fb1eed05.js",
+          "hash": "4c77b2cef885820c",
+          "publicPath": "/awa-docs/assets/js/33fc5bb8.fb1eed05.js"
+        }
+      ]
+    },
+    "1235": {
+      "js": [
+        {
+          "file": "assets/js/a7456010.54abed90.js",
+          "hash": "63c444b6d0b8adbf",
+          "publicPath": "/awa-docs/assets/js/a7456010.54abed90.js"
+        }
+      ]
+    },
+    "1724": {
+      "js": [
+        {
+          "file": "assets/js/dff1c289.171c1b9f.js",
+          "hash": "e9bf325d3ea5e95b",
+          "publicPath": "/awa-docs/assets/js/dff1c289.171c1b9f.js"
+        }
+      ]
+    },
+    "1869": {
+      "css": [
+        {
+          "file": "assets/css/styles.da0391ba.css",
+          "hash": "f8da8bbb0a35ae27",
+          "publicPath": "/awa-docs/assets/css/styles.da0391ba.css"
+        }
+      ]
+    },
+    "1903": {
+      "js": [
+        {
+          "file": "assets/js/acecf23e.5bf771dc.js",
+          "hash": "ea4e879e30025313",
+          "publicPath": "/awa-docs/assets/js/acecf23e.5bf771dc.js"
+        }
+      ]
+    },
+    "1953": {
+      "js": [
+        {
+          "file": "assets/js/1e4232ab.8b64070e.js",
+          "hash": "209202c6e39eab47",
+          "publicPath": "/awa-docs/assets/js/1e4232ab.8b64070e.js"
+        }
+      ]
+    },
+    "1972": {
+      "js": [
+        {
+          "file": "assets/js/73664a40.91c8a38a.js",
+          "hash": "081c52d06e2e0e1e",
+          "publicPath": "/awa-docs/assets/js/73664a40.91c8a38a.js"
+        }
+      ]
+    },
+    "1974": {
+      "js": [
+        {
+          "file": "assets/js/5c868d36.009fcd0c.js",
+          "hash": "c0b00907eed80528",
+          "publicPath": "/awa-docs/assets/js/5c868d36.009fcd0c.js"
+        }
+      ]
+    },
+    "2120": {
+      "js": [
+        {
+          "file": "assets/js/7f0bbc43.c61c194c.js",
+          "hash": "31b10c5d97852063",
+          "publicPath": "/awa-docs/assets/js/7f0bbc43.c61c194c.js"
+        }
+      ]
+    },
+    "2237": {
+      "js": [
+        {
+          "file": "assets/js/2237.15704a95.js",
+          "hash": "da34430bf29d612f",
+          "publicPath": "/awa-docs/assets/js/2237.15704a95.js"
+        }
+      ]
+    },
+    "2567": {
+      "js": [
+        {
+          "file": "assets/js/d4f17198.76717a24.js",
+          "hash": "f1c5b9a0239cf72f",
+          "publicPath": "/awa-docs/assets/js/d4f17198.76717a24.js"
+        }
+      ]
+    },
+    "2711": {
+      "js": [
+        {
+          "file": "assets/js/9e4087bc.2892e3e0.js",
+          "hash": "69960b881898fad2",
+          "publicPath": "/awa-docs/assets/js/9e4087bc.2892e3e0.js"
+        }
+      ]
+    },
+    "2748": {
+      "js": [
+        {
+          "file": "assets/js/822bd8ab.9754a787.js",
+          "hash": "bcaf715be65b9d47",
+          "publicPath": "/awa-docs/assets/js/822bd8ab.9754a787.js"
+        }
+      ]
+    },
+    "3098": {
+      "js": [
+        {
+          "file": "assets/js/533a09ca.a9903ec0.js",
+          "hash": "e297d47389e68799",
+          "publicPath": "/awa-docs/assets/js/533a09ca.a9903ec0.js"
+        }
+      ]
+    },
+    "3249": {
+      "js": [
+        {
+          "file": "assets/js/ccc49370.717aaf9a.js",
+          "hash": "60679019fc5fb611",
+          "publicPath": "/awa-docs/assets/js/ccc49370.717aaf9a.js"
+        }
+      ]
+    },
+    "3474": {
+      "js": [
+        {
+          "file": "assets/js/cfaaa8ba.d3bb3e06.js",
+          "hash": "1e9659676ecba81c",
+          "publicPath": "/awa-docs/assets/js/cfaaa8ba.d3bb3e06.js"
+        }
+      ]
+    },
+    "3637": {
+      "js": [
+        {
+          "file": "assets/js/f4f34a3a.a081929f.js",
+          "hash": "e92fd5b96a7b7f1c",
+          "publicPath": "/awa-docs/assets/js/f4f34a3a.a081929f.js"
+        }
+      ]
+    },
+    "3694": {
+      "js": [
+        {
+          "file": "assets/js/8717b14a.eeb529c1.js",
+          "hash": "0fbe1cec0d148f20",
+          "publicPath": "/awa-docs/assets/js/8717b14a.eeb529c1.js"
+        }
+      ]
+    },
+    "3976": {
+      "js": [
+        {
+          "file": "assets/js/0e384e19.9acf7547.js",
+          "hash": "fabe04ece0bf71ca",
+          "publicPath": "/awa-docs/assets/js/0e384e19.9acf7547.js"
+        }
+      ]
+    },
+    "4134": {
+      "js": [
+        {
+          "file": "assets/js/393be207.a45b203b.js",
+          "hash": "651bcafcd9201938",
+          "publicPath": "/awa-docs/assets/js/393be207.a45b203b.js"
+        }
+      ]
+    },
+    "4212": {
+      "js": [
+        {
+          "file": "assets/js/621db11d.daf541b0.js",
+          "hash": "172768fb00286a3e",
+          "publicPath": "/awa-docs/assets/js/621db11d.daf541b0.js"
+        }
+      ]
+    },
+    "4583": {
+      "js": [
+        {
+          "file": "assets/js/1df93b7f.981f0570.js",
+          "hash": "1abd361f8ec25c22",
+          "publicPath": "/awa-docs/assets/js/1df93b7f.981f0570.js"
+        }
+      ]
+    },
+    "4629": {
+      "js": [
+        {
+          "file": "assets/js/dedbcbf8.61eab126.js",
+          "hash": "ba98f087bcfefdfb",
+          "publicPath": "/awa-docs/assets/js/dedbcbf8.61eab126.js"
+        }
+      ]
+    },
+    "4736": {
+      "js": [
+        {
+          "file": "assets/js/e44a2883.f1337cc7.js",
+          "hash": "23c832ec51e7cf95",
+          "publicPath": "/awa-docs/assets/js/e44a2883.f1337cc7.js"
+        }
+      ]
+    },
+    "4813": {
+      "js": [
+        {
+          "file": "assets/js/6875c492.635ed0f9.js",
+          "hash": "98ada5f1ee3bca40",
+          "publicPath": "/awa-docs/assets/js/6875c492.635ed0f9.js"
+        }
+      ]
+    },
+    "5330": {
+      "js": [
+        {
+          "file": "assets/js/5492f474.9fe36df8.js",
+          "hash": "00ff1ab7a57b9257",
+          "publicPath": "/awa-docs/assets/js/5492f474.9fe36df8.js"
+        }
+      ]
+    },
+    "5354": {
+      "js": [
+        {
+          "file": "assets/js/runtime~main.e68fe92d.js",
+          "hash": "d52fd7d2bdb29440",
+          "publicPath": "/awa-docs/assets/js/runtime~main.e68fe92d.js"
+        }
+      ]
+    },
+    "5557": {
+      "js": [
+        {
+          "file": "assets/js/d9f32620.7395717b.js",
+          "hash": "ee84548a8c084eea",
+          "publicPath": "/awa-docs/assets/js/d9f32620.7395717b.js"
+        }
+      ]
+    },
+    "5742": {
+      "js": [
+        {
+          "file": "assets/js/aba21aa0.b40eb204.js",
+          "hash": "e76277eb37f48ddd",
+          "publicPath": "/awa-docs/assets/js/aba21aa0.b40eb204.js"
+        }
+      ]
+    },
+    "6061": {
+      "js": [
+        {
+          "file": "assets/js/1f391b9e.33e2a5f5.js",
+          "hash": "5c85d13e3a66e398",
+          "publicPath": "/awa-docs/assets/js/1f391b9e.33e2a5f5.js"
+        }
+      ]
+    },
+    "6132": {
+      "js": [
+        {
+          "file": "assets/js/aa2f9bac.e306e384.js",
+          "hash": "648659df2d3ffcb7",
+          "publicPath": "/awa-docs/assets/js/aa2f9bac.e306e384.js"
+        }
+      ]
+    },
+    "6483": {
+      "js": [
+        {
+          "file": "assets/js/c942a3b8.5495ad8e.js",
+          "hash": "304eaaa102ba9c67",
+          "publicPath": "/awa-docs/assets/js/c942a3b8.5495ad8e.js"
+        }
+      ]
+    },
+    "6870": {
+      "js": [
+        {
+          "file": "assets/js/6870.2f9b6cfe.js",
+          "hash": "699a0efdfe33ef19",
+          "publicPath": "/awa-docs/assets/js/6870.2f9b6cfe.js"
+        }
+      ]
+    },
+    "6920": {
+      "js": [
+        {
+          "file": "assets/js/a94f0c7a.24654a4c.js",
+          "hash": "6a5478578e9f6a44",
+          "publicPath": "/awa-docs/assets/js/a94f0c7a.24654a4c.js"
+        }
+      ]
+    },
+    "6969": {
+      "js": [
+        {
+          "file": "assets/js/14eb3368.797cd897.js",
+          "hash": "0fd1f4d908a3a5ac",
+          "publicPath": "/awa-docs/assets/js/14eb3368.797cd897.js"
+        }
+      ]
+    },
+    "7098": {
+      "js": [
+        {
+          "file": "assets/js/a7bd4aaa.0dfcad8b.js",
+          "hash": "6e6f5497b0a14a0c",
+          "publicPath": "/awa-docs/assets/js/a7bd4aaa.0dfcad8b.js"
+        }
+      ]
+    },
+    "7472": {
+      "js": [
+        {
+          "file": "assets/js/814f3328.9d1c7b89.js",
+          "hash": "9da2a1de58a6bc43",
+          "publicPath": "/awa-docs/assets/js/814f3328.9d1c7b89.js"
+        }
+      ]
+    },
+    "7518": {
+      "js": [
+        {
+          "file": "assets/js/7518.3d6107ed.js",
+          "hash": "c9a58b7041487b07",
+          "publicPath": "/awa-docs/assets/js/7518.3d6107ed.js"
+        }
+      ]
+    },
+    "7643": {
+      "js": [
+        {
+          "file": "assets/js/a6aa9e1f.49c2bccb.js",
+          "hash": "c22dbadc14aec0a4",
+          "publicPath": "/awa-docs/assets/js/a6aa9e1f.49c2bccb.js"
+        }
+      ]
+    },
+    "7754": {
+      "js": [
+        {
+          "file": "assets/js/83ee1924.9de29000.js",
+          "hash": "9afaf9873f570aa6",
+          "publicPath": "/awa-docs/assets/js/83ee1924.9de29000.js"
+        }
+      ]
+    },
+    "7915": {
+      "js": [
+        {
+          "file": "assets/js/20154178.b8c5b24e.js",
+          "hash": "cc977146d2bde2a8",
+          "publicPath": "/awa-docs/assets/js/20154178.b8c5b24e.js"
+        }
+      ]
+    },
+    "7947": {
+      "js": [
+        {
+          "file": "assets/js/f1c0d8a1.f24b8d0c.js",
+          "hash": "67d38ecd19825cd6",
+          "publicPath": "/awa-docs/assets/js/f1c0d8a1.f24b8d0c.js"
+        }
+      ]
+    },
+    "8209": {
+      "js": [
+        {
+          "file": "assets/js/01a85c17.490f77b0.js",
+          "hash": "8fdcd3b91bf97ec9",
+          "publicPath": "/awa-docs/assets/js/01a85c17.490f77b0.js"
+        }
+      ]
+    },
+    "8401": {
+      "js": [
+        {
+          "file": "assets/js/17896441.370fd667.js",
+          "hash": "a4368177a70eb81d",
+          "publicPath": "/awa-docs/assets/js/17896441.370fd667.js"
+        }
+      ]
+    },
+    "8549": {
+      "js": [
+        {
+          "file": "assets/js/5ae91a0d.6259d2ef.js",
+          "hash": "2e806d769b73782e",
+          "publicPath": "/awa-docs/assets/js/5ae91a0d.6259d2ef.js"
+        }
+      ]
+    },
+    "8609": {
+      "js": [
+        {
+          "file": "assets/js/925b3f96.9391cd00.js",
+          "hash": "4228e813217c046e",
+          "publicPath": "/awa-docs/assets/js/925b3f96.9391cd00.js"
+        }
+      ]
+    },
+    "8690": {
+      "js": [
+        {
+          "file": "assets/js/f70b333a.b7c260c6.js",
+          "hash": "8e5ad35135e566d5",
+          "publicPath": "/awa-docs/assets/js/f70b333a.b7c260c6.js"
+        }
+      ]
+    },
+    "8737": {
+      "js": [
+        {
+          "file": "assets/js/7661071f.c83c6098.js",
+          "hash": "8e1a34965a085605",
+          "publicPath": "/awa-docs/assets/js/7661071f.c83c6098.js"
+        }
+      ]
+    },
+    "8792": {
+      "js": [
+        {
+          "file": "assets/js/main.11cd5339.js",
+          "hash": "25638d8abb7f14bb",
+          "publicPath": "/awa-docs/assets/js/main.11cd5339.js"
+        }
+      ]
+    },
+    "8863": {
+      "js": [
+        {
+          "file": "assets/js/f55d3e7a.e1ba0b0a.js",
+          "hash": "bbf881b8a905b28b",
+          "publicPath": "/awa-docs/assets/js/f55d3e7a.e1ba0b0a.js"
+        }
+      ]
+    },
+    "9048": {
+      "js": [
+        {
+          "file": "assets/js/a94703ab.55eff576.js",
+          "hash": "f8c91ff2cac43562",
+          "publicPath": "/awa-docs/assets/js/a94703ab.55eff576.js"
+        }
+      ]
+    },
+    "9262": {
+      "js": [
+        {
+          "file": "assets/js/18c41134.3d982078.js",
+          "hash": "031cc345b206c3b1",
+          "publicPath": "/awa-docs/assets/js/18c41134.3d982078.js"
+        }
+      ]
+    },
+    "9325": {
+      "js": [
+        {
+          "file": "assets/js/59362658.2e947427.js",
+          "hash": "8ab160a7e61dc269",
+          "publicPath": "/awa-docs/assets/js/59362658.2e947427.js"
+        }
+      ]
+    },
+    "9328": {
+      "js": [
+        {
+          "file": "assets/js/e273c56f.f4ecf3de.js",
+          "hash": "27c439e168450950",
+          "publicPath": "/awa-docs/assets/js/e273c56f.f4ecf3de.js"
+        }
+      ]
+    },
+    "9647": {
+      "js": [
+        {
+          "file": "assets/js/5e95c892.f65b4005.js",
+          "hash": "b3831b09d28aeb51",
+          "publicPath": "/awa-docs/assets/js/5e95c892.f65b4005.js"
+        }
+      ]
+    },
+    "9858": {
+      "js": [
+        {
+          "file": "assets/js/36994c47.4b46bae4.js",
+          "hash": "915f69f567246631",
+          "publicPath": "/awa-docs/assets/js/36994c47.4b46bae4.js"
+        }
+      ]
+    }
+  }
+}

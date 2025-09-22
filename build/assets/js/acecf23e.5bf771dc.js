@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkawa_docs=self.webpackChunkawa_docs||[]).push([[1903],{1912:a=>{a.exports=JSON.parse('{"blogBasePath":"/awa-docs/blog","blogTitle":"Blog","authorsListPath":"/awa-docs/blog/authors"}')}}]);
