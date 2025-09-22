@@ -61,6 +61,15 @@ Features are organized by release version:
 - [Paid / Subscription Profile](/docs/features/paid-subscription-profile)
 - [Layout/Menu](/docs/features/layout-menu)
 
+### Visualization & Map Layer Features
+- [Light Ignition](/docs/features/light-ignition)
+- [Globe](/docs/features/globe)
+- [AWA Soul](/docs/features/awa-soul)
+- [AWA Pulse (Basic)](/docs/features/awa-pulse-basic)
+- [Total User Counter](/docs/features/total-user-counter)
+- [Prototype 3D Map with FPS Stats](/docs/features/prototype-3d-map-fps)
+- [Master's Globe / Planet / Soul](/docs/features/masters-globe-planet-soul)
+
 ### Templates
 - [Feature Template](/docs/features/template)
 
