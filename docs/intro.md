@@ -34,9 +34,9 @@ Development phases from MVP (Photon) to full release (Ignition).
 
 ## Getting Started
 
-- [Installation Guide](/docs/tutorial-basics/create-a-document)
-- [Development Setup](/docs/tutorial-basics/create-a-page)
-- [Architecture Overview](/docs/tutorial-basics/markdown-features)
+- [Capabilities Overview](/docs/capabilities/intro)
+- [Features Overview](/docs/features/intro)
+- [Development Roadmap](/docs/roadmap/intro)
 
 ## Key Concepts
 
@@ -52,13 +52,9 @@ A gamification system where users progress through sacred geometry by maintainin
 ### Master Practices
 Special guided sessions led by experienced practitioners, available to premium users.
 
-## Community
+## Support
 
-Join our community to get help, share experiences, and contribute to the project.
-
-- [GitHub Repository](https://github.com/lyfar/awa-docs)
-- [Discord Community](#)
-- [Support Forum](#)
+For questions about the platform or documentation, please refer to the relevant sections in this documentation.
 
 ---
 

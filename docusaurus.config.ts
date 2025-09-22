@@ -42,25 +42,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/lyfar/awa-docs/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/lyfar/awa-docs/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -91,12 +72,6 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/lyfar/awa-docs',
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
     },
     footer: {
@@ -113,36 +88,14 @@ const config: Config = {
               label: 'Features',
               to: '/docs/features/intro',
             },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/lyfar/awa-docs',
-            },
-            {
-              label: 'Discord',
-              href: '#',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/lyfar/awa-docs',
+              label: 'Roadmap',
+              to: '/docs/roadmap/intro',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} AWATERRA Documentation. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AWATERRA Documentation.`,
     },
     prism: {
       theme: prismThemes.github,

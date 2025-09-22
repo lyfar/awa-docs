@@ -59,8 +59,17 @@ Each capability section includes:
 ## Getting Started
 
 - [App Infrastructure](/docs/capabilities/app-infrastructure)
-- [Visualization & Map Layer](/docs/capabilities/visualization)
-- [Access Management](/docs/capabilities/access)
+- [Visualization & Map Layer](/docs/capabilities/visualization-map-layer)
+- [Access](/docs/capabilities/access)
+- [Identity](/docs/capabilities/identity)
+- [Practice](/docs/capabilities/practice)
+- [Engagement & Notifications](/docs/capabilities/engagement-notifications)
+- [Masters Practices](/docs/capabilities/masters-practices)
+- [AWAWAY (Streaks)](/docs/capabilities/away-streaks)
+- [Gamification & Rewards](/docs/capabilities/gamification-rewards)
+- [Product Analytics](/docs/capabilities/product-analytics)
+- [Customer Support](/docs/capabilities/customer-support)
+- [Distribution](/docs/capabilities/distribution)
 
 ---
 
