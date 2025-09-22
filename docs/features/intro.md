@@ -52,6 +52,16 @@ Features are organized by release version:
 
 ## Feature Documentation
 
+### App Infrastructure Features
+- [Push Notifications](/docs/features/push-notifications)
+- [Setup Backend Infrastructure](/docs/features/setup-backend-infrastructure)
+- [App Architecture and Base](/docs/features/app-architecture-base)
+- [Localization Management](/docs/features/localization-management)
+- [Admin Area v0.1 (CRM/CMS)](/docs/features/admin-area-cms)
+- [Paid / Subscription Profile](/docs/features/paid-subscription-profile)
+- [Layout/Menu](/docs/features/layout-menu)
+
+### Templates
 - [Feature Template](/docs/features/template)
 
 ---
