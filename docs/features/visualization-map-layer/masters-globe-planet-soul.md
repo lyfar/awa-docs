@@ -1,6 +1,7 @@
 ---
 version: "0.1"
-sidebar_position: 14
+sidebar_position: 7
+version: "0.3"
 ---
 version: "0.1"
 

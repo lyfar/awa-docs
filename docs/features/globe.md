@@ -1,6 +1,9 @@
 ---
+version: "0.1"
+version: "0.1"
 sidebar_position: 9
 ---
+version: "0.1"
 
 # Globe
 
@@ -228,5 +231,6 @@ class GlobeService {
 - [Development Roadmap](/docs/roadmap/intro)
 
 ---
+version: "0.1"
 
 *Feature last updated: December 2024*

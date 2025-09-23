@@ -52,19 +52,25 @@ Features are organized by release version:
 
 ## Feature Documentation
 
-Features are now organized by version for better development planning. Each version contains the features planned for that release.
+Features are organized by capability for easy navigation and understanding. Use the version selector in the top navigation to filter features by release version.
 
-### Version-Based Feature Organization
-- [Version 0.1 Photon Features](/docs/versions/0.1-photon/intro) - MVP features
-- [Version 0.2 Spark Features](/docs/versions/0.2-spark/intro) - Advanced practices
-- [Version 0.3 Ember Features](/docs/versions/0.3-ember/intro) - Basic masters
-- [Version 0.4 Flicker Features](/docs/versions/0.4-flicker/intro) - AWA Units
-- [Version 0.5 Glow Features](/docs/versions/0.5-glow/intro) - AWAWAY streaks
-- [Version 0.6 Ray Features](/docs/versions/0.6-ray/intro) - Basic missions
-- [Version 0.7 INT Beam Features](/docs/versions/0.7-int-beam/intro) - Advanced features
-- [Version 0.8 INT Flame Features](/docs/versions/0.8-int-flame/intro) - Enhanced features
-- [Version 0.9 INT Blaze Features](/docs/versions/0.9-int-blaze/intro) - Platform optimization
-- [Version 1.0 Ignition Features](/docs/versions/1.0-ignition/intro) - Full platform
+import VersionFilter from '@site/src/components/VersionFilter';
+
+<VersionFilter />
+
+### Capability-Based Feature Organization
+- [App Infrastructure](/docs/features/app-infrastructure/intro) - Backend systems and core platform services
+- [Visualization & Map Layer](/docs/features/visualization-map-layer/intro) - 3D visualizations and interactive maps
+- [Access](/docs/features/access/intro) - User authentication and onboarding
+- [Identity](/docs/features/identity/intro) - Profile management and user settings
+- [Practice](/docs/features/practice/intro) - Core meditation and mindfulness experiences
+- [Engagement & Notifications](/docs/features/engagement-notifications/intro) - User engagement and communication
+- [Masters Practices](/docs/features/masters-practices/intro) - Master-led sessions and guidance
+- [AWAWAY (Streaks)](/docs/features/away-streaks/intro) - Gamification and achievement tracking
+- [Gamification & Rewards](/docs/features/gamification-rewards/intro) - Rewards system and missions
+- [Product Analytics](/docs/features/product-analytics/intro) - Data insights and user behavior
+- [Customer Support](/docs/features/customer-support/intro) - Help and feedback systems
+- [Distribution](/docs/features/distribution/intro) - App deployment and distribution
 
 ### Templates
 - [Feature Template](/docs/features/template)

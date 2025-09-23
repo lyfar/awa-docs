@@ -1,6 +1,9 @@
 ---
+version: "0.1"
+version: "0.1"
 sidebar_position: 8
 ---
+version: "0.1"
 
 # Light Ignition
 
@@ -219,5 +222,6 @@ class LightIgnitionService {
 - [Development Roadmap](/docs/roadmap/intro)
 
 ---
+version: "0.1"
 
 *Feature last updated: December 2024*

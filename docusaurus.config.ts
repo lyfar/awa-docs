@@ -72,6 +72,53 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
+        {
+          type: 'dropdown',
+          label: 'Version',
+          position: 'right',
+          items: [
+            {
+              label: '0.1 Photon (MVP)',
+              href: '/docs/versions/0.1-photon/intro',
+            },
+            {
+              label: '0.2 Spark (Advanced Practices)',
+              href: '/docs/versions/0.2-spark/intro',
+            },
+            {
+              label: '0.3 Ember (Basic Masters)',
+              href: '/docs/versions/0.3-ember/intro',
+            },
+            {
+              label: '0.4 Flicker (AWA Units)',
+              href: '/docs/versions/0.4-flicker/intro',
+            },
+            {
+              label: '0.5 Glow (AWAWAY Streaks)',
+              href: '/docs/versions/0.5-glow/intro',
+            },
+            {
+              label: '0.6 Ray (Basic Missions)',
+              href: '/docs/versions/0.6-ray/intro',
+            },
+            {
+              label: '0.7 INT Beam (Advanced Features)',
+              href: '/docs/versions/0.7-int-beam/intro',
+            },
+            {
+              label: '0.8 INT Flame (Advanced Features)',
+              href: '/docs/versions/0.8-int-flame/intro',
+            },
+            {
+              label: '0.9 INT Blaze (Advanced Features)',
+              href: '/docs/versions/0.9-int-blaze/intro',
+            },
+            {
+              label: '1.0 Ignition (Full Platform)',
+              href: '/docs/versions/1.0-ignition/intro',
+            },
+          ],
+        },
       ],
     },
     footer: {
