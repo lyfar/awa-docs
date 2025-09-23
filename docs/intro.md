@@ -23,14 +23,14 @@ AWATERRA combines several key elements:
 
 ## Documentation Sections
 
+### [Version Roadmap](/docs/versions/intro)
+Development phases from MVP (Photon) to full release (Ignition), organized by version.
+
 ### [Capabilities](/docs/capabilities/intro)
 High-level system capabilities and infrastructure components that power the platform.
 
 ### [Features](/docs/features/intro)
 Detailed feature specifications for UI designers and developers.
-
-### [Roadmap](/docs/roadmap/intro)
-Development phases from MVP (Photon) to full release (Ignition).
 
 ## Key Concepts
 
