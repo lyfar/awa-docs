@@ -1,18 +1,7 @@
 ---
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 sidebar_position: 3
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 # App Architecture and Base
 
@@ -187,8 +176,5 @@ class AppInitializer {
 
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 *Feature last updated: December 2024*

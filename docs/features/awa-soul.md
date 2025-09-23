@@ -1,18 +1,7 @@
 ---
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 sidebar_position: 10
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 # AWA Soul
 
@@ -262,8 +251,5 @@ class AWASoul {
 
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 *Feature last updated: December 2024*

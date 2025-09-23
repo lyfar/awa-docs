@@ -1,18 +1,7 @@
 ---
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 sidebar_position: 13
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 # Prototype 3D Map with FPS Stats
 
@@ -319,8 +308,5 @@ class MapPrototypeService {
 
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 *Feature last updated: December 2024*

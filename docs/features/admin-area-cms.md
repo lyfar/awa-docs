@@ -1,18 +1,8 @@
 ---
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 sidebar_position: 5
----
 version: "0.1"
 capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
+---
 
 # Admin Area v0.1 (CRM/CMS)
 
@@ -202,8 +192,5 @@ class PracticeController {
 
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 *Feature last updated: December 2024*

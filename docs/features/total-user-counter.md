@@ -1,18 +1,7 @@
 ---
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
-version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 sidebar_position: 12
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 # Total User Counter
 
@@ -293,8 +282,5 @@ class TotalUserCounterService {
 
 ---
 version: "0.1"
-capability: "app-infrastructure"
-capability: "app-infrastructure"
-rank: 1
 
 *Feature last updated: December 2024*
