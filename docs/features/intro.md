@@ -52,23 +52,19 @@ Features are organized by release version:
 
 ## Feature Documentation
 
-### App Infrastructure Features
-- [Push Notifications](/docs/features/push-notifications)
-- [Setup Backend Infrastructure](/docs/features/setup-backend-infrastructure)
-- [App Architecture and Base](/docs/features/app-architecture-base)
-- [Localization Management](/docs/features/localization-management)
-- [Admin Area v0.1 (CRM/CMS)](/docs/features/admin-area-cms)
-- [Paid / Subscription Profile](/docs/features/paid-subscription-profile)
-- [Layout/Menu](/docs/features/layout-menu)
+Features are now organized by version for better development planning. Each version contains the features planned for that release.
 
-### Visualization & Map Layer Features
-- [Light Ignition](/docs/features/light-ignition)
-- [Globe](/docs/features/globe)
-- [AWA Soul](/docs/features/awa-soul)
-- [AWA Pulse (Basic)](/docs/features/awa-pulse-basic)
-- [Total User Counter](/docs/features/total-user-counter)
-- [Prototype 3D Map with FPS Stats](/docs/features/prototype-3d-map-fps)
-- [Master's Globe / Planet / Soul](/docs/features/masters-globe-planet-soul)
+### Version-Based Feature Organization
+- [Version 0.1 Photon Features](/docs/versions/0.1-photon/intro) - MVP features
+- [Version 0.2 Spark Features](/docs/versions/0.2-spark/intro) - Advanced practices
+- [Version 0.3 Ember Features](/docs/versions/0.3-ember/intro) - Basic masters
+- [Version 0.4 Flicker Features](/docs/versions/0.4-flicker/intro) - AWA Units
+- [Version 0.5 Glow Features](/docs/versions/0.5-glow/intro) - AWAWAY streaks
+- [Version 0.6 Ray Features](/docs/versions/0.6-ray/intro) - Basic missions
+- [Version 0.7 INT Beam Features](/docs/versions/0.7-int-beam/intro) - Advanced features
+- [Version 0.8 INT Flame Features](/docs/versions/0.8-int-flame/intro) - Enhanced features
+- [Version 0.9 INT Blaze Features](/docs/versions/0.9-int-blaze/intro) - Platform optimization
+- [Version 1.0 Ignition Features](/docs/versions/1.0-ignition/intro) - Full platform
 
 ### Templates
 - [Feature Template](/docs/features/template)
