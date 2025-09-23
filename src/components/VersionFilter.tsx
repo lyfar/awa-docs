@@ -9,12 +9,32 @@ const VersionFilter: React.FC = () => {
     // Extract version from URL or localStorage
     const savedVersion = localStorage.getItem('awa-docs-version') || '0.1';
     setCurrentVersion(savedVersion);
+    
+    // Apply version filtering to sidebar
+    applyVersionFilter(savedVersion);
   }, []);
+
+  const applyVersionFilter = (version: string) => {
+    // Hide/show features based on version
+    const featureItems = document.querySelectorAll('[data-version]');
+    featureItems.forEach((item) => {
+      const itemVersion = item.getAttribute('data-version');
+      const parent = item.closest('.menu__list-item');
+      
+      if (parent) {
+        if (itemVersion === version) {
+          parent.style.display = 'block';
+        } else {
+          parent.style.display = 'none';
+        }
+      }
+    });
+  };
 
   const handleVersionChange = (version: string) => {
     setCurrentVersion(version);
     localStorage.setItem('awa-docs-version', version);
-    // You could add logic here to filter the sidebar or redirect
+    applyVersionFilter(version);
   };
 
   const versions = [

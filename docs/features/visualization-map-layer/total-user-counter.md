@@ -1,9 +1,18 @@
 ---
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 sidebar_position: 12
 ---
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 
 # Total User Counter
 
@@ -284,5 +293,8 @@ class TotalUserCounterService {
 
 ---
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 
 *Feature last updated: December 2024*

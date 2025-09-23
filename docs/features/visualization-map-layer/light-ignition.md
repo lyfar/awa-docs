@@ -1,10 +1,9 @@
 ---
-version: "0.1"
-version: "0.1"
 sidebar_position: 1
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
 ---
-version: "0.1"
 
 # Light Ignition
 
@@ -81,5 +80,8 @@ flowchart TD
 
 ---
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 
 *Feature last updated: December 2024*

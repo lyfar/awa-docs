@@ -1,9 +1,18 @@
 ---
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 sidebar_position: 3
 ---
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 
 # Globe
 
@@ -80,5 +89,8 @@ flowchart TD
 
 ---
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 
 *Feature last updated: December 2024*

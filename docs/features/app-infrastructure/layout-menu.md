@@ -1,9 +1,18 @@
 ---
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 sidebar_position: 7
 ---
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 
 # Layout/Menu
 
@@ -197,5 +206,8 @@ const NavigationMenu = () => {
 
 ---
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 
 *Feature last updated: December 2024*

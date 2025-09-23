@@ -13,7 +13,7 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
  Create as many sidebars as you want.
  */
 const sidebars: SidebarsConfig = {
-  // Main documentation sidebar with version filtering
+  // Main documentation sidebar with dynamic filtering
   tutorialSidebar: [
     'intro',
     {

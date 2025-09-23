@@ -1,9 +1,8 @@
 ---
-version: "0.1"
 sidebar_position: 6
 version: "0.7"
+capability: "app-infrastructure"
 ---
-version: "0.1"
 
 # Paid / Subscription Profile
 
@@ -198,5 +197,8 @@ class SubscriptionService {
 
 ---
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 
 *Feature last updated: December 2024*

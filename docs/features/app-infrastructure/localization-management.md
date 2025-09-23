@@ -1,9 +1,18 @@
 ---
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 sidebar_position: 4
 ---
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 
 # Localization Management (Keys & Translations)
 
@@ -177,5 +186,8 @@ const switchLanguage = (languageCode) => {
 
 ---
 version: "0.1"
+capability: "app-infrastructure"
+capability: "app-infrastructure"
+rank: 1
 
 *Feature last updated: December 2024*

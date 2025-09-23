@@ -1,9 +1,8 @@
 ---
-version: "0.1"
 sidebar_position: 7
 version: "0.3"
+capability: "visualization-map-layer"
 ---
-version: "0.1"
 
 # Master's Globe / Planet / Soul
 
@@ -299,5 +298,8 @@ class MastersGlobeService {
 
 ---
 version: "0.1"
+capability: "visualization-map-layer"
+capability: "visualization-map-layer"
+rank: 1
 
 *Feature last updated: December 2024*
