@@ -1,4 +1,11 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import {readFeatureMetadata, type FeatureMetadata} from './utils/featureMetadata';
+
+const fallbackMetadata: FeatureMetadata = {
+  featureMapping: {},
+  capabilityMapping: {},
+  versionDocMapping: {},
+};
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -12,69 +19,80 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
  Create as many sidebars as you want.
  */
+
+// Read feature metadata to dynamically generate sidebar
+const {featureMapping, capabilityMapping, versionDocMapping} = (() => {
+  try {
+    return readFeatureMetadata();
+  } catch (error) {
+    console.error('Failed to read feature metadata for sidebar generation:', error);
+    return fallbackMetadata;
+  }
+})();
+
+// Group features by capability
+const featuresByCapability: Record<string, string[]> = {};
+Object.entries(featureMapping).forEach(([featurePath, metadata]) => {
+  const capability = metadata.capability;
+  if (!featuresByCapability[capability]) {
+    featuresByCapability[capability] = [];
+  }
+  featuresByCapability[capability].push(featurePath);
+});
+
+// Sort features within each capability by position
+Object.keys(featuresByCapability).forEach(capability => {
+  featuresByCapability[capability].sort((a, b) => {
+    const posA = featureMapping[a]?.position || 999;
+    const posB = featureMapping[b]?.position || 999;
+    return posA - posB;
+  });
+});
+
+const versionDocs = Object.entries(versionDocMapping)
+  .map(([docPath, info]) => ({
+    docPath,
+    position: info.position ?? 999,
+  }))
+  .sort((a, b) => {
+    if (a.position !== b.position) {
+      return a.position - b.position;
+    }
+    return a.docPath.localeCompare(b.docPath);
+  });
+
+const templateDocs = [
+  'product-templates/capability-template',
+  'product-templates/feature-template',
+  'product-templates/version-template',
+];
+
 const sidebars: SidebarsConfig = {
   // Main documentation sidebar with dynamic filtering
   tutorialSidebar: [
-    'intro',
-    {
-      type: 'category',
-      label: 'Version Roadmap',
-      items: [
-        'versions/intro',
-        'versions/0.1-photon/intro',
-        'versions/0.2-spark/intro',
-        'versions/0.3-ember/intro',
-        'versions/0.4-flicker/intro',
-        'versions/0.5-glow/intro',
-        'versions/0.6-ray/intro',
-        'versions/0.7-int-beam/intro',
-        'versions/0.8-int-flame/intro',
-        'versions/0.9-int-blaze/intro',
-        'versions/1.0-ignition/intro',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Capabilities',
-      items: [
-        'capabilities/intro',
-        'capabilities/App-Infrastructure/index',
-        'capabilities/Visualization-Map-Layer/index',
-        'capabilities/Access/index',
-        'capabilities/Identity/index',
-        'capabilities/Practice/index',
-        'capabilities/Engagement-Notifications/index',
-        'capabilities/Masters-Practices/index',
-        'capabilities/AWAY-Streaks/index',
-        'capabilities/Gamification-Rewards/index',
-        'capabilities/Product-Analytics/index',
-        'capabilities/Customer-Support/index',
-        'capabilities/Distribution/index',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Features',
-      items: [
-        'features/intro',
-        'features/push-notifications',
-        'features/setup-backend-infrastructure',
-        'features/app-architecture-base',
-        'features/localization-management',
-        'features/admin-area-cms',
-        'features/layout-menu',
-        'features/paid-subscription-profile',
-        'features/light-ignition',
-        'features/globe',
-        'features/awa-soul',
-        'features/awa-pulse-basic',
-        'features/total-user-counter',
-        'features/prototype-3d-map-fps',
-        'features/masters-globe-planet-soul',
-        'features/template',
-      ],
-    },
+    ...(versionDocs.length > 0
+      ? [{
+          type: 'category' as const,
+          label: 'Product Versions',
+          items: versionDocs.map(version => version.docPath),
+          collapsed: false,
+        }]
+      : []),
+    // Features grouped by capabilities - dynamically generated from frontmatter metadata
+    ...Object.entries(capabilityMapping)
+      .filter(([capabilityKey]) => featuresByCapability[capabilityKey] && featuresByCapability[capabilityKey].length > 0)
+      .map(([capabilityKey, capabilityInfo]) => ({
+        type: 'category' as const,
+        label: capabilityInfo.label,
+        items: featuresByCapability[capabilityKey],
+      })),
   ],
+  templatesSidebar: [{
+    type: 'category',
+    label: 'Product Templates',
+    collapsed: false,
+    items: templateDocs,
+  }],
 };
 
 export default sidebars;
