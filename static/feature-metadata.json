@@ -1,0 +1,195 @@
+{
+  "featureMapping": {
+    "features/admin-area-cms": {
+      "version": "0.1",
+      "capability": "app-infrastructure",
+      "position": 5,
+      "title": "Admin Area v0.1 (CRM/CMS)"
+    },
+    "features/awa-pulse-basic": {
+      "version": "0.1",
+      "capability": "visualization-map-layer",
+      "position": 4,
+      "title": "AWA Pulse (Basic)"
+    },
+    "features/awa-soul": {
+      "version": "0.1",
+      "capability": "visualization-map-layer",
+      "position": 3,
+      "title": "AWA Soul"
+    },
+    "features/globe": {
+      "version": "0.1",
+      "capability": "visualization-map-layer",
+      "position": 2,
+      "title": "Globe"
+    },
+    "features/layout-menu": {
+      "version": "0.1",
+      "capability": "app-infrastructure",
+      "position": 6,
+      "title": "Layout/Menu"
+    },
+    "features/light-ignition": {
+      "version": "0.1",
+      "capability": "visualization-map-layer",
+      "position": 1,
+      "title": "Light Ignition"
+    },
+    "features/localization-management": {
+      "version": "0.1",
+      "capability": "app-infrastructure",
+      "position": 4,
+      "title": "Localization Management"
+    },
+    "features/masters-globe-planet-soul": {
+      "version": "0.3",
+      "capability": "masters-practices",
+      "position": 1,
+      "title": "Master's Globe / Planet / Soul"
+    },
+    "features/paid-subscription-profile": {
+      "version": "0.2",
+      "capability": "identity",
+      "position": 1,
+      "title": "Paid / Subscription Profile"
+    },
+    "features/prototype-3d-map-fps": {
+      "version": "0.1",
+      "capability": "visualization-map-layer",
+      "position": 6,
+      "title": "Prototype 3D Map with FPS Stats"
+    },
+    "features/push-notifications": {
+      "version": "0.1",
+      "capability": "app-infrastructure",
+      "position": 1,
+      "title": "Push Notifications"
+    },
+    "features/setup-backend-infrastructure": {
+      "version": "0.1",
+      "capability": "app-infrastructure",
+      "position": 2,
+      "title": "Setup Backend Infrastructure"
+    },
+    "features/total-user-counter": {
+      "version": "0.1",
+      "capability": "visualization-map-layer",
+      "position": 5,
+      "title": "Total User Counter"
+    }
+  },
+  "capabilityMapping": {
+    "app-infrastructure": {
+      "label": "01. App Infrastructure",
+      "path": "capabilities/01-App-Infrastructure/index"
+    },
+    "visualization-map-layer": {
+      "label": "02. Visualization & Map Layer",
+      "path": "capabilities/02-Visualization-Map-Layer/index"
+    },
+    "access": {
+      "label": "03. Access",
+      "path": "capabilities/03-Access/index"
+    },
+    "identity": {
+      "label": "04. Identity",
+      "path": "capabilities/04-Identity/index"
+    },
+    "practice": {
+      "label": "05. Practice",
+      "path": "capabilities/05-Practice/index"
+    },
+    "engagement-notifications": {
+      "label": "06. Engagement & Notifications",
+      "path": "capabilities/06-Engagement-Notifications/index"
+    },
+    "masters-practices": {
+      "label": "07. Masters Practices",
+      "path": "capabilities/07-Masters-Practices/index"
+    },
+    "away-streaks": {
+      "label": "08. AWAY Streaks",
+      "path": "capabilities/08-AWAY-Streaks/index"
+    },
+    "gamification-rewards": {
+      "label": "09. Gamification & Rewards",
+      "path": "capabilities/09-Gamification-Rewards/index"
+    },
+    "product-analytics": {
+      "label": "10. Product Analytics",
+      "path": "capabilities/10-Product-Analytics/index"
+    },
+    "customer-support": {
+      "label": "11. Customer Support",
+      "path": "capabilities/11-Customer-Support/index"
+    },
+    "distribution": {
+      "label": "12. Distribution",
+      "path": "capabilities/12-Distribution/index"
+    }
+  },
+  "versionDocMapping": {
+    "versions/0.1-photon/intro": {
+      "version": "0.1",
+      "position": 1,
+      "label": "0.1 Photon (MVP)",
+      "slug": "0.1-photon"
+    },
+    "versions/0.2-spark/intro": {
+      "version": "0.2",
+      "position": 2,
+      "label": "0.2 Spark (Advanced Practices)",
+      "slug": "0.2-spark"
+    },
+    "versions/0.3-ember/intro": {
+      "version": "0.3",
+      "position": 3,
+      "label": "0.3 Ember (Basic Masters and Collective Practices)",
+      "slug": "0.3-ember"
+    },
+    "versions/0.4-flicker/intro": {
+      "version": "0.4",
+      "position": 4,
+      "label": "0.4 Flicker (Basic AWA Units + Registration and Login)",
+      "slug": "0.4-flicker"
+    },
+    "versions/0.5-glow/intro": {
+      "version": "0.5",
+      "position": 5,
+      "label": "0.5 Glow (Basic Streaks - AWAWAY)",
+      "slug": "0.5-glow"
+    },
+    "versions/0.6-ray/intro": {
+      "version": "0.6",
+      "position": 6,
+      "label": "0.6 Ray (Basic Missions)",
+      "slug": "0.6-ray"
+    },
+    "versions/0.7-int-beam/intro": {
+      "version": "0.7",
+      "position": 7,
+      "label": "0.7 INT Beam (Advanced Features)",
+      "slug": "0.7-int-beam"
+    },
+    "versions/0.8-int-flame/intro": {
+      "version": "0.8",
+      "position": 8,
+      "label": "0.8 INT Flame (Advanced Features)",
+      "slug": "0.8-int-flame"
+    },
+    "versions/0.9-int-blaze/intro": {
+      "version": "0.9",
+      "position": 9,
+      "label": "0.9 INT Blaze (Advanced Features)",
+      "slug": "0.9-int-blaze"
+    },
+    "versions/1.0-ignition/intro": {
+      "version": "1.0",
+      "position": 10,
+      "label": "1.0 Ignition (Full Paid Platform)",
+      "slug": "1.0-ignition"
+    }
+  },
+  "lastUpdated": "2025-09-24T11:00:10.565Z"
+}

@@ -1,7 +1,8 @@
 ---
-sidebar_position: 8
----
+sidebar_position: 1
 version: "0.1"
+capability: "visualization-map-layer"
+---
 
 # Light Ignition
 

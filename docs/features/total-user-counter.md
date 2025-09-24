@@ -1,5 +1,7 @@
 ---
-sidebar_position: 12
+sidebar_position: 5
+version: "0.1"
+capability: "visualization-map-layer"
 ---
 version: "0.1"
 

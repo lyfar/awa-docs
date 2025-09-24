@@ -1,6 +1,7 @@
 ---
-version: "0.1"
-sidebar_position: 14
+sidebar_position: 1
+version: "0.3"
+capability: "masters-practices"
 ---
 version: "0.1"
 

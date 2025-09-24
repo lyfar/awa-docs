@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.filterBlock {
+  padding: 1rem 1rem 0.25rem;
+  border-bottom: 1px solid rgba(154, 152, 177, 0.18);
+}
+
+:global([data-theme='dark']) .filterBlock {
+  border-bottom-color: rgba(209, 206, 255, 0.16);
+}
+
+.sidebarContent {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 0.5rem;
+}
+
+.sidebarContent :global(.menu__list) {
+  padding-bottom: 1.5rem;
+}
+
+.orbBlock {
+  padding: 1.5rem 1rem 2rem;
+  border-top: 1px solid rgba(154, 152, 177, 0.18);
+  display: flex;
+  justify-content: center;
+}
+
+:global([data-theme='dark']) .orbBlock {
+  border-top-color: rgba(209, 206, 255, 0.16);
+}

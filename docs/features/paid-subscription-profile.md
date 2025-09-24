@@ -1,8 +1,8 @@
 ---
-version: "0.1"
-sidebar_position: 6
+sidebar_position: 1
+version: "0.2"
+capability: "identity"
 ---
-version: "0.1"
 
 # Paid / Subscription Profile
 

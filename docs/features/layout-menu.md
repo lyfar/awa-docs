@@ -1,7 +1,8 @@
 ---
-sidebar_position: 7
----
+sidebar_position: 6
 version: "0.1"
+capability: "app-infrastructure"
+---
 
 # Layout/Menu
 

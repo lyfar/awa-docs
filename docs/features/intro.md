@@ -9,14 +9,10 @@ This section contains detailed documentation for all AWATERRA platform features,
 
 ## Feature Documentation
 
-Features are organized by capability and can be filtered by version using the version selector above.
-
-import VersionFilter from '@site/src/components/VersionFilter';
-
-<VersionFilter />
+Features are organized by capability and can be filtered by version using the selector in the sidebar.
 
 ### Feature Organization
-Features are organized by capability and can be filtered by version using the version selector above.
+Features are organized by capability and can be filtered by version using the selector in the sidebar.
 
 #### App Infrastructure Features
 - [Push Notifications](/docs/features/push-notifications) - User engagement and retention
@@ -37,7 +33,7 @@ Features are organized by capability and can be filtered by version using the ve
 - [Master's Globe / Planet / Soul](/docs/features/masters-globe-planet-soul) - Master visualizations
 
 ### Templates
-- [Feature Template](/docs/features/template)
+- [Feature Template](/docs/product-templates/feature-template)
 
 ---
 

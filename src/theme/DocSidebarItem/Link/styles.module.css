@@ -1,0 +1,89 @@
+.menuExternalLink {
+  align-items: center;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  width: 100%;
+  position: relative;
+  padding-left: 0.75rem;
+  padding-right: 3.6rem;
+  min-height: 2.5rem;
+}
+
+.menuLabel {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.versionBadge {
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(154, 152, 177, 0.35);
+  background: rgba(154, 152, 177, 0.16);
+  color: rgba(33, 28, 50, 0.6);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+[data-theme='dark'] .versionBadge {
+  background: rgba(208, 205, 255, 0.12);
+  border-color: rgba(208, 205, 255, 0.2);
+  color: rgba(208, 205, 255, 0.75);
+}
+
+.rightSlot {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-width: 1.8rem;
+}
+
+.currentIndicator {
+  position: relative;
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+.currentIndicatorDot,
+.currentIndicatorPing {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+}
+
+.currentIndicatorDot {
+  box-shadow: 0 0 10px rgba(122, 108, 198, 0.6);
+}
+
+.currentIndicatorPing {
+  opacity: 0.6;
+  animation: awaCurrentPulse 1.8s ease-out infinite;
+}
+
+@keyframes awaCurrentPulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.75;
+  }
+  70% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}

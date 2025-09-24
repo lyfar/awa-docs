@@ -1,30 +1,366 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --awa-gradient-0: #fdced3;
+  --awa-gradient-1: #fdd4d7;
+  --awa-gradient-2: #fadedd;
+  --awa-gradient-3: #e9dfe9;
+  --awa-gradient-4: #c8c8d3;
+  --awa-gradient-5: #a7a5ba;
+  --awa-gradient-6: #9a98b1;
+
+  --awa-font-base: 'Urbanist', 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --awa-font-secondary: 'Satoshi', 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --awa-text-hero: #201a2e;
+  --awa-surface-muted: #fffbf4;
+  --awa-footer-background: #0b0a10;
+  --awa-footer-text: #231d34;
+  --awa-footer-link: #5b4ea7;
+
+  --ifm-font-family-base: var(--awa-font-base);
+  --ifm-font-family-headings: var(--awa-font-base);
+  --ifm-heading-font-weight: 600;
+  --ifm-background-color: #fffffa;
+  --ifm-background-surface-color: var(--awa-surface-muted);
+  --ifm-footer-background-color: #ffffff;
+  --ifm-footer-title-color: var(--awa-footer-text);
+  --ifm-footer-link-color: var(--awa-footer-link);
+  --ifm-footer-link-hover-color: #3d3187;
+  --ifm-code-font-size: 95%;
+  --ifm-button-border-radius: 20px;
+  --docusaurus-highlighted-code-line-bg: rgba(154, 152, 177, 0.15);
+  --awa-hero-gradient: linear-gradient(
+      135deg,
+      var(--awa-gradient-0) 0%,
+      var(--awa-gradient-1) 18%,
+      var(--awa-gradient-2) 32%,
+      var(--awa-gradient-3) 46%,
+      var(--awa-gradient-4) 69%,
+      var(--awa-gradient-5) 85%,
+      var(--awa-gradient-6) 100%
+    );
+}
+
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #0b0a10;
+  --ifm-background-surface-color: #14111f;
+  --ifm-color-primary: var(--awa-gradient-6);
+  --ifm-color-primary-dark: #807ea0;
+  --ifm-color-primary-darker: #6b6988;
+  --ifm-color-primary-darkest: #53526d;
+  --ifm-color-primary-light: #aaa7c3;
+  --ifm-color-primary-lighter: #c0bed1;
+  --ifm-color-primary-lightest: #d9d6e3;
+  --ifm-footer-background-color: #000000;
+  --ifm-footer-title-color: #f0effa;
+  --ifm-footer-link-color: #d9d6ff;
+  --ifm-footer-link-hover-color: #ffffff;
+  --docusaurus-highlighted-code-line-bg: rgba(154, 152, 177, 0.25);
+  --awa-text-hero: #201a2e;
+  --awa-surface-muted: #14111f;
+  --awa-footer-text: #f0effa;
+  --awa-footer-link: #d9d6ff;
+}
+
+:root {
+  --doc-sidebar-width: 320px;
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --doc-sidebar-width: 340px;
+  }
+}
+
+.menu__list-item.version-filter__item--previous > .menu__link {
+  color: var(--ifm-color-emphasis-500);
+  opacity: 0.7;
+}
+
+.menu__list-item.version-filter__item--previous > .menu__link:hover,
+.menu__list-item.version-filter__item--previous > .menu__link.menu__link--active {
+  opacity: 1;
+}
+
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--awa-footer-text);
+}
+
+.footer a {
+  color: var(--ifm-footer-link-color);
+}
+
+.footer a:hover {
+  color: var(--ifm-footer-link-hover-color);
+}
+
+.awa-hero {
+  isolation: isolate;
+  position: relative;
+}
+
+.awa-hero::before,
+.awa-hero::after {
+  content: '';
+  position: absolute;
+  inset: -6% -4%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.awa-hero::before {
+  background: linear-gradient(
+    135deg,
+    var(--awa-gradient-0) 0%,
+    var(--awa-gradient-1) 18%,
+    var(--awa-gradient-2) 32%,
+    var(--awa-gradient-3) 46%,
+    var(--awa-gradient-4) 69%,
+    var(--awa-gradient-5) 85%,
+    var(--awa-gradient-6) 100%
+  );
+  opacity: 0.8;
+  filter: blur(22px) saturate(108%);
+}
+
+.awa-hero::after {
+  background:
+    radial-gradient(65% 65% at 18% 22%, rgba(255, 255, 255, 0.45), transparent 70%),
+    radial-gradient(55% 55% at 74% 18%, rgba(205, 200, 245, 0.35), transparent 72%),
+    repeating-linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 12px,
+      rgba(255, 255, 255, 0) 12px,
+      rgba(255, 255, 255, 0) 24px
+    );
+  mix-blend-mode: screen;
+  opacity: 0.5;
+}
+
+.awa-hero-prism {
+  filter: saturate(1.15) brightness(1.08);
+  mix-blend-mode: screen;
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.awa-footer-shader {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: screen;
+  filter: blur(28px) saturate(110%);
+}
+
+.awa-hero-title {
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--awa-text-hero);
+  text-shadow: 0 10px 28px rgba(54, 32, 74, 0.22);
+}
+
+.awa-hero-lede {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: rgba(32, 26, 46, 0.82);
+}
+
+.awa-star-border {
+  position: relative;
+  display: inline-block;
+  padding: 1px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.awa-hero-badge {
+  display: inline-block;
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.65);
+  color: #2a2336;
+  box-shadow: 0 18px 34px rgba(60, 40, 90, 0.18);
+}
+
+[data-theme='dark'] .awa-hero-badge {
+  background: rgba(14, 12, 20, 0.62);
+  color: #f4f2ff;
+}
+
+.awa-star-border__halo {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.2;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.awa-star-border__halo--bottom {
+  bottom: -14px;
+  right: -240%;
+  animation: awa-star-move-bottom linear infinite;
+}
+
+.awa-star-border__halo--top {
+  top: -12px;
+  left: -240%;
+  animation: awa-star-move-top linear infinite;
+}
+
+.awa-star-border__content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 1.1rem 1.6rem;
+  border-radius: 20px;
+  border: 1px solid rgba(154, 152, 177, 0.35);
+  background: linear-gradient(180deg, rgba(255, 255, 250, 0.92), rgba(248, 245, 253, 0.92));
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.awa-star-border__content:hover,
+.awa-star-border__content:focus-visible {
+  border-color: rgba(154, 152, 177, 0.7);
+  box-shadow: 0 12px 28px rgba(154, 152, 177, 0.25);
+  transform: translateY(-1px);
+}
+
+[data-theme='dark'] .awa-star-border__content {
+  background: linear-gradient(180deg, rgba(20, 17, 31, 0.92), rgba(26, 23, 38, 0.94));
+  border-color: rgba(209, 206, 255, 0.25);
+}
+
+[data-theme='dark'] .awa-star-border__content:hover,
+[data-theme='dark'] .awa-star-border__content:focus-visible {
+  border-color: rgba(209, 206, 255, 0.6);
+  box-shadow: 0 16px 32px rgba(75, 71, 121, 0.4);
+}
+
+.awa-hero-ctaGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.awa-cta {
+  display: inline-block;
+}
+
+.awa-cta .awa-star-border__content {
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.awa-cta .awa-star-border__content:hover,
+.awa-cta .awa-star-border__content:focus-visible {
+  transform: translateY(-2px);
+}
+
+.navbar {
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 250, 0.55);
+  border-bottom: 1px solid rgba(154, 152, 177, 0.18);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: rgba(11, 10, 16, 0.65);
+  border-color: rgba(208, 205, 255, 0.16);
+}
+
+.navbar__title {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar__link {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+@keyframes awa-star-move-bottom {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(120%, 0, 0); }
+}
+
+@keyframes awa-star-move-top {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-120%, 0, 0); }
+}
+
+body {
+  font-family: var(--awa-font-base);
+  color: var(--ifm-font-color-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--awa-font-base);
+  font-weight: 600;
+}
+
+strong {
+  font-family: var(--awa-font-base);
+}
+.theme-doc-sidebar-item-category .menu__link {
+  position: relative;
+  padding-right: 4rem;
+}
+
+.theme-doc-sidebar-item-category .menu__link .menu__link--sublist-caret {
+  right: 1.2rem;
+  left: auto;
 }
