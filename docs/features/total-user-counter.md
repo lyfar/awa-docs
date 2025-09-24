@@ -1,288 +1,74 @@
 ---
-sidebar_position: 5
+title: Total User Counter
+sidebar_label: Total User Counter
+sidebar_position: 6
 version: "0.1"
 capability: "visualization-map-layer"
+status: "to-do"
+lark_id: "recuXvi4F0VoKa"
+figma: ""
+owner: ""
+user_value: "Show community scale and reinforce belonging"
+trigger: "When a user opens the home scene or Pulse widget"
+done_when: "Counter displays total connected users with smooth animation and accurate data"
+capability_label: "02. Visualization & Map Layer"
 ---
-version: "0.1"
+
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Total User Counter
 
-## Feature Name
-Total User Counter
+## One-Glance Summary
 
-## Overview
-The Total User Counter is a visualization feature that displays the total number of active users connected to the AWATERRA system. It shows community scale and reinforces belonging by aggregating user metrics and displaying a single counter with smooth animations.
+<FeatureSummary />
 
-## Purpose
-The business need this feature addresses is creating a sense of community scale and belonging, allowing users to see how many people are part of the AWATERRA community and feel connected to a larger movement.
+## Narrative
+Total User Counter is the simplest expression of our living community. By aggregating live participation and presenting it in an elegant animation, the feature helps users feel part of something larger. The counter appears on the home Light Map and Pulse surfaces, synchronizing with underlying metrics.
 
-## User Stories
+The experience needs to balance accuracy, motion, and calmness. Updates should feel alive without distracting from the broader interface, and messaging must clarify what the number represents so trust grows with every glance.
 
-### Primary User Story
-As a user, I want to see how many people are currently active in the AWATERRA community so that I can feel part of something larger and meaningful.
+## Interaction Blueprint
+1. Aggregate total connected and active user counts across relevant services.
+2. Stream the value to clients with sensible caching to prevent flicker.
+3. Animate the counter for increases and decreases with mindful easing.
+4. Surface contextual copy that describes the moment (e.g., "Practicing now").
+5. Provide hover or tap affordances for deeper stats when available.
+6. Log synchronization and delta timing to monitor accuracy.
 
-### Secondary User Stories
-- As a user, I want to see the counter update in real-time
-- As a user, I want to feel proud of being part of a growing community
-- As a user, I want to see the counter in different contexts (home screen, pulse screen)
-- As a user, I want to understand what the counter represents
+- Edge case: Sudden drops due to data lag; hold the previous value and show a syncing state rather than oscillating wildly.
 
-## UI/UX Requirements
+- Signals of success:
+  - Counter updates within expected latency and mirrors backend telemetry.
+  - Users reference the number in qualitative feedback as a reason to stay engaged.
+  - Animations remain smooth across devices and respect reduced-motion preferences.
 
-### Visual Design
-- Large, prominent counter display
-- Smooth counting animations
-- Real-time updates with smooth transitions
-- Clear typography and readability
-- Responsive design for different screen sizes
-- Visual indicators for growth trends
+### Mermaid Journey IN MERMAID FORMAT
 
-### User Flow
-1. User opens home or Pulse screen/widget
-2. System fetches total active users
-3. Counter aggregates across metrics
-4. Single counter displays with smooth animation
-5. Counter updates in real-time
-6. User sees current community size
-
-### Accessibility
-- Clear, readable counter display
-- Alternative text for counter value
-- Haptic feedback for significant changes
-- Screen reader support for counter updates
-
-## Technical Requirements
-
-### Frontend
-- Counter display component
-- Smooth animation system
-- Real-time update handling
-- Responsive design implementation
-- Accessibility features
-- Visual trend indicators
-
-### Backend
-- Active user counting system
-- Real-time data aggregation
-- User activity tracking
-- Counter update APIs
-- Analytics for community growth
-- Performance optimization
-
-### Data Models
-- Active user metrics
-- Counter update history
-- Community growth data
-- User activity timestamps
-- Counter display settings
-- Analytics data
-
-### Integrations
-- Real-time data streaming
-- User activity tracking
-- Analytics platform
-- Performance monitoring
-- Community engagement metrics
-
-## Dependencies
-
-### Required Capabilities
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer) - Core visualization system
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure) - Backend services and user tracking
-
-### Required Features
-- User activity tracking
-- Real-time data processing
-- Counter visualization system
-- Analytics platform
-
-### External Dependencies
-- Real-time data services
-- User tracking systems
-- Analytics platform
-- Performance monitoring tools
-
-## Version Information
-
-- **Target Version**: 0.1 Photon
-- **Priority**: Medium
-- **Status**: Done (To Do)
-- **Estimated Effort**: 2-3 weeks
-- **Start Date**: TBD
-- **End Date**: TBD
-
-## Acceptance Criteria
-
-### Functional Requirements
-- Counter is visible and matches total users connected to system
-- Real-time updates work correctly
-- Smooth animations for counter changes
-- Accurate user counting
-- Responsive design for all devices
-- Performance optimized for large numbers
-
-### Non-Functional Requirements
-- Counter updates within 10 seconds
-- Smooth animations (60fps)
-- Accurate user counting
-- Responsive design for all screen sizes
-- Battery efficient data processing
-
-### Testing Requirements
-- Unit tests for user counting logic
-- Integration tests for real-time updates
-- Performance tests for large user counts
-- User experience tests for counter display
-- End-to-end tests for complete counter flow
-
-## Implementation Notes
-
-### Technical Considerations
-- Implement efficient user counting algorithms
-- Use proper data aggregation for performance
-- Consider performance impact of large user counts
-- Implement proper caching for counter updates
-- Design for scalability with growing user base
-
-### Design Considerations
-- Design counter to feel impressive and motivating
-- Ensure counter is readable at all sizes
-- Consider different number formats for different regions
-- Design for emotional impact and community pride
-- Consider accessibility for users with visual impairments
-
-### Risk Factors
-- Performance issues with large user counts
-- Data synchronization failures
-- Counter accuracy problems
-- Battery drain from continuous updates
-- User experience issues with complex animations
-
-## Examples
-
-### Counter Display
-- **Format**: "23,456 participants"
-- **Real-time Updates**: Smooth counting animations
-- **Context**: Home screen, Pulse screen, widgets
-- **Growth Indicators**: Visual trends and growth patterns
-
-### Implementation Tasks
-- Implement user counting system
-- Create counter display component
-- Build smooth animation system
-- Develop real-time update mechanism
-- Add responsive design
-- Implement accessibility features
-
-### Code Examples
-```javascript
-// Example Total User Counter implementation
-class TotalUserCounterService {
-  constructor() {
-    this.currentCount = 0;
-    this.updateInterval = 10000; // 10 seconds
-    this.isUpdating = false;
-  }
-  
-  async fetchTotalActiveUsers() {
-    try {
-      // Aggregate across multiple metrics
-      const metrics = await Promise.all([
-        this.getActiveUsers(),
-        this.getOnlineUsers(),
-        this.getRecentActivityUsers(),
-        this.getEngagedUsers()
-      ]);
-      
-      // Calculate total unique users
-      const totalUsers = this.calculateUniqueUsers(metrics);
-      
-      return totalUsers;
-    } catch (error) {
-      throw new Error(`Failed to fetch total users: ${error.message}`);
-    }
-  }
-  
-  calculateUniqueUsers(metrics) {
-    const [activeUsers, onlineUsers, recentUsers, engagedUsers] = metrics;
-    
-    // Combine and deduplicate user IDs
-    const allUserIds = new Set([
-      ...activeUsers.map(u => u.id),
-      ...onlineUsers.map(u => u.id),
-      ...recentUsers.map(u => u.id),
-      ...engagedUsers.map(u => u.id)
-    ]);
-    
-    return allUserIds.size;
-  }
-  
-  async updateCounter() {
-    if (this.isUpdating) return;
-    
-    this.isUpdating = true;
-    
-    try {
-      const newCount = await this.fetchTotalActiveUsers();
-      
-      if (newCount !== this.currentCount) {
-        await this.animateCounterChange(this.currentCount, newCount);
-        this.currentCount = newCount;
-      }
-    } catch (error) {
-      console.error('Counter update failed:', error);
-    } finally {
-      this.isUpdating = false;
-    }
-  }
-  
-  async animateCounterChange(fromCount, toCount) {
-    const duration = 1000; // 1 second
-    const steps = 60; // 60fps
-    const stepDuration = duration / steps;
-    const countDifference = toCount - fromCount;
-    
-    for (let i = 0; i <= steps; i++) {
-      const progress = i / steps;
-      const currentCount = Math.round(fromCount + (countDifference * progress));
-      
-      await this.updateCounterDisplay(currentCount);
-      await this.sleep(stepDuration);
-    }
-  }
-  
-  async updateCounterDisplay(count) {
-    // Update UI with formatted count
-    const formattedCount = this.formatCount(count);
-    await this.uiService.updateCounterDisplay(formattedCount);
-  }
-  
-  formatCount(count) {
-    if (count >= 1000000) {
-      return `${(count / 1000000).toFixed(1)}M participants`;
-    } else if (count >= 1000) {
-      return `${(count / 1000).toFixed(1)}K participants`;
-    } else {
-      return `${count.toLocaleString()} participants`;
-    }
-  }
-  
-  startRealTimeUpdates() {
-    setInterval(() => {
-      this.updateCounter();
-    }, this.updateInterval);
-  }
-}
+```mermaid
+flowchart TD
+    START([Fetch user totals])
+    VERIFY[Validate data freshness]
+    UPDATE[Animate counter change]
+    CONTEXT[Show supporting copy]
+    MONITOR[Log sync and deltas]
+    START --> VERIFY --> UPDATE --> CONTEXT --> MONITOR --> END((Community scale reinforced))
 ```
 
-## Related Documentation
+## Requirements & Guardrails
+- **Acceptance criteria**
+  - GIVEN new telemetry WHEN the counter updates THEN the value animates within 1 second without jitter.
+  - GIVEN data delays WHEN freshness drops below SLA THEN display a syncing state instead of misleading numbers.
+  - GIVEN accessibility preferences WHEN reduced motion is enabled THEN transitions swap to crossfades or step changes.
+- **No-gos & risks**
+  - Misreporting totals undermines confidence in the broader analytics story.
+  - Overly flashy animations conflict with the calm tone of the experience.
+  - Pulling raw identifiable data rather than aggregated counts could violate privacy commitments.
 
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer)
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure) - User tracking
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data & Measurement
+- Primary metric: Accuracy rate comparing displayed totals vs. backend truth at sample intervals.
+- Secondary checks: Update latency, user interactions with the counter, and qualitative sentiment.
+- Telemetry requirements: Log timestamp of each update, delta magnitude, and fallback states triggered.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Should we segment the counter (global vs. local) for v0.1 or keep to a single global number?
+- How often should we poll or stream to balance freshness with network efficiency?

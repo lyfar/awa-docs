@@ -1,236 +1,79 @@
 ---
-sidebar_position: 2
+title: Globe
+sidebar_label: Globe
+sidebar_position: 3
 version: "0.1"
 capability: "visualization-map-layer"
+status: "in-progress"
+lark_id: "recuVfLSgiTO4y"
+figma: "https://www.figma.com/design/CBoSOj4JkiZkWdINOzzFE7/Awaterra-App-UIUX?node-id=48-5"
+owner: ""
+user_value: "Help users locate their light, see nearby activity, and feel part of the global practice"
+trigger: "During onboarding handoff and whenever the home Light Map loads"
+done_when: "User’s location, recent practice, and surrounding activity display accurately and update in real time"
+capability_label: "02. Visualization & Map Layer"
 ---
-version: "0.1"
+
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Globe
 
-## Feature Name
-Globe
+## One-Glance Summary
 
-## Overview
-The Globe feature provides users with an interactive 3D visualization of the AWATERRA community, allowing them to locate and track their activity and see others in their vicinity. It displays real-time user activity through particles and visual effects, creating a sense of global connection and community.
+<FeatureSummary />
 
-## Purpose
-The business need this feature addresses is creating a sense of global community and belonging, allowing users to see their place in the larger AWATERRA ecosystem and feel connected to other practitioners worldwide.
+## Narrative
+The Globe is the living map of AWATERRA. It centers on the practitioner’s location, pulses with their latest contribution, and illuminates nearby lights to reinforce the collective journey. Designed for awe and clarity, it blends real-time data with mindful pacing so each spin feels grounded.
 
-## User Stories
+The surface serves multiple roles: onboarding wow moment, daily home base, and contextual prompt for inviting friends. Every visual treatment—from golden pulses to expanding ripples—communicates that practice has tangible impact.
 
-### Primary User Story
-As a user, I want to see my location and activity on a global map so that I can feel connected to the worldwide AWATERRA community.
+## Interaction Blueprint
+1. Acquire permissioned location data or fall back to a global overview if unavailable.
+2. Render the user’s position and animate a golden pulse with expanding rings after each practice.
+3. Overlay surrounding participants and data layers (Pulse rate, last practice timestamps) with graceful transitions.
+4. Provide controls for rotate, zoom, and pan, tuned for touch gestures and accessibility.
+5. Surface a call-to-action such as “Invite a friend” tied to the current practice moment.
+6. Continuously sync telemetry so the globe remains fresh without draining device resources.
 
-### Secondary User Stories
-- As a user, I want to see other users' activity in my area
-- As a user, I want to invite friends to join the community
-- As a user, I want to see real-time updates of global activity
-- As a user, I want to interact with the globe through gestures
+- Edge case: Location permissions denied; present a global view with gentle prompts to enable sharing while preserving agency.
 
-## UI/UX Requirements
+- Signals of success:
+  - Globe loads within performance budgets and maintains smooth frame rates.
+  - User location accuracy remains within acceptable thresholds or provides clear fallback states.
+  - Invite actions and repeat visits increase after users see the globe visualization.
 
-### Visual Design
-- Interactive 3D globe centered on user's location
-- Bright golden pulsing point at user's location
-- Spreading circle animations from user's point
-- Other surrounding points illuminated
-- AWA Pulse counter acceleration effect
-- Invite friend functionality with shareable links
+### Mermaid Journey IN MERMAID FORMAT
 
-### User Flow
-1. User opens app during onboarding or main page
-2. Globe centers on user's geolocation
-3. Bright golden point pulses at center
-4. Animation of spreading circles from point
-5. Other points around user illuminate
-6. AWA Pulse counter accelerates for several seconds
-7. User can invite friends via shareable link
-
-### Accessibility
-- Alternative text for visual elements
-- Haptic feedback for interactions
-- Audio cues for important events
-- Clear visual indicators for user location
-
-## Technical Requirements
-
-### Frontend
-- 3D globe rendering engine
-- Interactive gesture controls (rotate, zoom)
-- Real-time particle system for user activity
-- Geolocation integration
-- Animation and visual effects system
-- Share functionality for invitations
-
-### Backend
-- User location tracking and storage
-- Real-time activity data aggregation
-- Invitation link generation and tracking
-- AWA Pulse calculation and updates
-- User proximity detection
-- Analytics for community engagement
-
-### Data Models
-- User location coordinates
-- Activity timestamps and data
-- Invitation links and tracking
-- AWA Pulse metrics
-- Community engagement data
-- User proximity relationships
-
-### Integrations
-- Geolocation services
-- Real-time data streaming
-- Social sharing APIs
-- Analytics platform
-- Push notification system
-
-## Dependencies
-
-### Required Capabilities
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer) - Core visualization system
-- [03. Access](/docs/capabilities/03-Access) - Location permissions
-- [06. Engagement & Notifications](/docs/capabilities/06-Engagement-Notifications) - Invitation system
-
-### Required Features
-- User location services
-- 3D rendering engine
-- Real-time data updates
-- Social sharing functionality
-
-### External Dependencies
-- 3D rendering libraries
-- Geolocation APIs
-- Real-time data services
-- Social sharing platforms
-
-## Version Information
-
-- **Target Version**: 0.1 Photon
-- **Priority**: High
-- **Status**: Done (In Progress)
-- **Estimated Effort**: 4-5 weeks
-- **Start Date**: 2025/09/20
-- **End Date**: 2025/10/03
-
-## Acceptance Criteria
-
-### Functional Requirements
-- User's location is visible and accurate
-- User's activity is displayed in real-time
-- Last practice time is updated correctly
-- Other users' activity is visible in vicinity
-- Invitation links work correctly
-- AWA Pulse counter accelerates appropriately
-
-### Non-Functional Requirements
-- Globe renders smoothly (60fps)
-- Real-time updates within 5 seconds
-- Location accuracy within 100 meters
-- Responsive design for different screen sizes
-- Battery efficient rendering
-
-### Testing Requirements
-- Unit tests for location tracking
-- Integration tests for real-time updates
-- Performance tests for 3D rendering
-- User experience tests for interactions
-- End-to-end tests for invitation flow
-
-## Implementation Notes
-
-### Technical Considerations
-- Implement efficient 3D rendering for smooth performance
-- Use proper geolocation handling with privacy considerations
-- Implement real-time data synchronization
-- Consider performance impact of multiple users
-- Design for offline functionality
-
-### Design Considerations
-- Design for intuitive gesture controls
-- Ensure visual effects don't overwhelm users
-- Consider different lighting conditions
-- Design for various screen sizes and orientations
-- Consider cultural differences in map representations
-
-### Risk Factors
-- Performance issues with complex 3D rendering
-- Privacy concerns with location tracking
-- Battery drain from continuous location updates
-- Real-time data synchronization failures
-- User experience issues with complex interactions
-
-## Examples
-
-### Visual Effects
-- **Globe Centering**: Automatically centers on user's location
-- **Golden Point**: Bright pulsing point at user's location
-- **Spreading Circles**: Animation of circles expanding from user's point
-- **Surrounding Points**: Other users' activity illuminated
-- **Pulse Acceleration**: AWA Pulse counter speeds up temporarily
-- **Invite Friend**: Copy link to invite others to join AWATERRA
-
-### Implementation Tasks
-- [Map] Usecase - Map Integration with Real Data
-- [Map] Net data - Map Integration with Real Data
-- [Map] UI - final implementation of globe
-- [Map] Vibration helper
-- [Map] Sound helper
-- [API][Map] POST /map
-- [Users count] UI
-- [Users count] Usecase
-- [Users count] Net data
-
-### Code Examples
-```javascript
-// Example Globe interaction
-class GlobeService {
-  async initializeGlobe(userLocation) {
-    try {
-      // Center globe on user location
-      await this.centerGlobeOnLocation(userLocation);
-      
-      // Start pulsing animation at user's point
-      await this.startPulsingAnimation(userLocation);
-      
-      // Load nearby user activity
-      const nearbyActivity = await this.getNearbyActivity(userLocation);
-      
-      // Illuminate surrounding points
-      await this.illuminateNearbyPoints(nearbyActivity);
-      
-      // Accelerate AWA Pulse counter
-      await this.accelerateAWAPulse();
-      
-      return {
-        userLocation,
-        nearbyActivity,
-        pulseAcceleration: true
-      };
-    } catch (error) {
-      throw new Error(`Globe initialization failed: ${error.message}`);
-    }
-  }
-  
-  async inviteFriend(userId) {
-    const inviteLink = await this.generateInviteLink(userId);
-    return {
-      link: inviteLink,
-      message: "Join me in the AWATERRA community!"
-    };
-  }
-}
+```mermaid
+flowchart TD
+    START([Load Light Map])
+    LOCATE{Location available?}
+    SETVIEW[Center on user]
+    GLOBAL[Show global overview]
+    ANIMATE[Play pulse & nearby lights]
+    INTERACT[Enable rotation and zoom]
+    CTA[Offer invite/share prompt]
+    START --> LOCATE
+    LOCATE -->|Yes| SETVIEW --> ANIMATE
+    LOCATE -->|No| GLOBAL --> ANIMATE
+    ANIMATE --> INTERACT --> CTA --> END((Globe session complete))
 ```
 
-## Related Documentation
+## Requirements & Guardrails
+- **Acceptance criteria**
+  - GIVEN a granted location WHEN the globe loads THEN it centers on the user with pulse animation and updated metadata.
+  - GIVEN denied permissions WHEN the globe loads THEN it presents a respectful global overview with optional enablement guidance.
+  - GIVEN rapid user interactions WHEN the globe responds THEN framerate and touch responsiveness stay within experience targets.
+- **No-gos & risks**
+  - Revealing precise coordinates that compromise privacy—always obfuscate to community-safe granularity.
+  - Overly heavy shaders or particle counts that drop performance below acceptable FPS.
+  - Visual clutter that obscures context or overwhelms users unfamiliar with 3D navigation.
 
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer)
-- [03. Access](/docs/capabilities/03-Access) - Location permissions
-- [06. Engagement & Notifications](/docs/capabilities/06-Engagement-Notifications)
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data & Measurement
+- Primary metric: Successful globe render rate with location contextualization (or safe fallback) per session.
+- Secondary checks: Average FPS, invite CTA interactions, time spent exploring the map.
+- Telemetry requirements: Log load outcomes, permission states, camera interactions, and performance diagnostics.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Should we personalize globe overlays (e.g., practice streaks) for returning users in v0.1?
+- How often should the home scene poll for updates to balance freshness with battery use?

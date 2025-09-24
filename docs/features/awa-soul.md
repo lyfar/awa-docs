@@ -1,257 +1,78 @@
 ---
-sidebar_position: 3
+title: AWA Soul
+sidebar_label: AWA Soul
+sidebar_position: 2
 version: "0.1"
 capability: "visualization-map-layer"
+status: "in-progress"
+lark_id: "recuVfKxHQ1Vl1"
+figma: "https://www.figma.com/design/CBoSOj4JkiZkWdINOzzFE7/Awaterra-App-UIUX?node-id=48-4"
+owner: ""
+user_value: "Inspiring onboarding guide that introduces users to the global light community"
+trigger: "When a user opens the app for the first time and during early guided practices"
+done_when: "Users experience AWA Soul’s greeting, guidance, and wrap into the globe, establishing the community connection"
+capability_label: "02. Visualization & Map Layer"
 ---
-version: "0.1"
+
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # AWA Soul
 
-## Feature Name
-AWA Soul
+## One-Glance Summary
 
-## Overview
-AWA Soul is a unique character-space that serves as the symbol of the AWATERRA community. It appears as a sphere of approximately 50,000 pulsing light points that guides users through onboarding and practice sessions, creating an instant sense of global community and spiritual connection.
+<FeatureSummary />
 
-## Purpose
-The business need this feature addresses is creating an emotional connection and sense of belonging for users, providing a spiritual guide that represents the collective energy of the AWATERRA community and helps users feel part of something larger than themselves.
+## Narrative
+AWA Soul is the luminous ambassador that welcomes every newcomer. Rendered as a living sphere of 50,000 shimmering points, it breathes, responds, and narrates the journey from onboarding into first practice. The character personifies AWATERRA’s promise: you’re joining a global constellation of mindful practitioners.
 
-## User Stories
+Beyond visual poetry, AWA Soul provides clear guidance, sets expectations, and gently encourages commitment. As onboarding concludes, the entity expands to wrap the 3D globe, reminding users that their light contributes to a shared field of energy.
 
-### Primary User Story
-As a new user, I want to be greeted by AWA Soul during onboarding so that I feel welcomed into the AWATERRA community and understand the spiritual nature of the platform.
+## Interaction Blueprint
+1. Detect first-launch or guided practice scenarios that require the AWA Soul introduction.
+2. Render the pulsing light sphere with breathing motion and adaptive brightness.
+3. Deliver scripted narration—voice or text—coordinated with particle emphasis and formations.
+4. Transition from onboarding steps into the Light Map, animating AWA Soul as it envelops the globe.
+5. Respond to user interactions (tap, swipe, dwell) with subtle animation changes that reinforce presence.
+6. Persist the user’s onboarding completion so subsequent sessions start in the standard home experience.
 
-### Secondary User Stories
-- As a user, I want AWA Soul to guide me through my first practice
-- As a user, I want to see AWA Soul respond to my interactions
-- As a user, I want to feel the collective energy of the community through AWA Soul
-- As a user, I want AWA Soul to be present during my practice sessions
+- Edge case: Device performance limits particle effects; degrade gracefully to fewer points while preserving breathing and narration.
 
-## UI/UX Requirements
+- Signals of success:
+  - New users complete onboarding with comprehension of AWATERRA’s mission.
+  - Interaction logs show engagement with AWA Soul’s prompts vs. skips.
+  - Visual transitions run smoothly on target hardware ranges.
 
-### Visual Design
-- Sphere of ~50,000 light points using Fibonacci Sphere algorithm
-- Points of different sizes and brightness creating "breathing" effect
-- Pulsation and breathing animations
-- Points can intensify and form shapes during dialogue
-- Smooth transitions between states
-- Ambient cosmic sound design
+### Mermaid Journey IN MERMAID FORMAT
 
-### User Flow
-1. User opens app for first time
-2. AWA Soul appears as pulsing sphere of light points
-3. AWA Soul "speaks" to user (voice/text + animation)
-4. AWA Soul guides user through onboarding steps
-5. After onboarding, AWA Soul expands and envelops the globe
-6. AWA Soul remains as second layer around Earth globe
-7. AWA Soul guides user during practice sessions
-
-### Accessibility
-- Audio descriptions for visual elements
-- Text alternatives for voice content
-- Haptic feedback for interactions
-- Clear visual indicators for AWA Soul's responses
-
-## Technical Requirements
-
-### Frontend
-- 3D sphere rendering with 50,000 points
-- Fibonacci Sphere algorithm implementation
-- Particle system for breathing effects
-- Animation system for point intensification
-- Voice synthesis and text-to-speech
-- Smooth transition animations
-
-### Backend
-- AWA Soul dialogue and response system
-- User interaction tracking
-- Onboarding flow management
-- Practice guidance system
-- Community energy calculation
-- Analytics for user engagement
-
-### Data Models
-- AWA Soul dialogue scripts
-- User interaction history
-- Community energy metrics
-- Onboarding progress data
-- Practice guidance rules
-- User emotional state tracking
-
-### Integrations
-- Voice synthesis services
-- Text-to-speech systems
-- 3D rendering engine
-- Analytics platform
-- User preference system
-
-## Dependencies
-
-### Required Capabilities
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer) - Core visualization system
-- [03. Access](/docs/capabilities/03-Access) - Onboarding flow
-- [05. Practice](/docs/capabilities/05-Practice) - Practice guidance
-
-### Required Features
-- 3D rendering engine
-- Voice synthesis system
-- Onboarding flow management
-- Practice session system
-
-### External Dependencies
-- 3D rendering libraries
-- Voice synthesis APIs
-- Audio processing systems
-- Animation libraries
-
-## Version Information
-
-- **Target Version**: 0.1 Photon
-- **Priority**: High
-- **Status**: Done (In Progress)
-- **Estimated Effort**: 5-6 weeks
-- **Start Date**: 2025/09/18
-- **End Date**: 2025/10/26
-
-## Acceptance Criteria
-
-### Functional Requirements
-- AWA Soul is visible and "talking" during onboarding
-- Practice is guided by AWA Soul visually
-- AWA Soul responds to user interactions
-- Smooth transitions between AWA Soul states
-- Voice synthesis works correctly
-- AWA Soul envelops globe after onboarding
-
-### Non-Functional Requirements
-- 50,000 points render smoothly (60fps)
-- Voice synthesis latency under 1 second
-- Smooth animations and transitions
-- Responsive design for different devices
-- Battery efficient rendering
-
-### Testing Requirements
-- Unit tests for Fibonacci Sphere algorithm
-- Integration tests for voice synthesis
-- Performance tests for particle rendering
-- User experience tests for onboarding flow
-- End-to-end tests for complete AWA Soul interaction
-
-## Implementation Notes
-
-### Technical Considerations
-- Implement efficient particle rendering for 50,000 points
-- Use proper memory management for large particle systems
-- Implement smooth voice synthesis with low latency
-- Consider performance impact on different devices
-- Design for scalability with multiple users
-
-### Design Considerations
-- Design AWA Soul to feel alive and responsive
-- Ensure voice content is culturally appropriate
-- Consider different user preferences for voice
-- Design for emotional impact and connection
-- Consider accessibility for users with hearing impairments
-
-### Risk Factors
-- Performance issues with large particle systems
-- Voice synthesis quality and latency
-- Cultural sensitivity in spiritual content
-- Battery drain from intensive rendering
-- User experience issues with complex interactions
-
-## Examples
-
-### AWA Soul Characteristics
-- **Visual**: Sphere of 50,000 pulsing light points
-- **Algorithm**: Fibonacci Sphere distribution
-- **Breathing Effect**: Points of different sizes and brightness
-- **Dialogue Response**: Points intensify and form shapes
-- **Metaphor**: Each light = AWATERRA community member
-- **Role**: Spiritual guide and community symbol
-
-### Light Map WOW Moment
-- **Trigger**: Automatic transition to Home/Light Map after onboarding
-- **Visual Effects**: 3D globe with thousands of pulsing light points
-- **Real-time**: Light bursts appear in real-time
-- **AWA Pulse**: Heartbeat graph (e.g., "72 bpm")
-- **Sound**: Planetary heartbeat and ambient cosmic tones
-- **User Counter**: "With us now 23,456 participants"
-- **Interactive**: Geolocation request, globe rotation/zoom, "Ignite Your Light" CTA
-
-### Implementation Tasks
-- Implement Fibonacci Sphere algorithm
-- Create particle system for 50,000 points
-- Develop breathing and pulsing animations
-- Build voice synthesis system
-- Create dialogue and response system
-- Implement smooth state transitions
-
-### Code Examples
-```javascript
-// Example AWA Soul implementation
-class AWASoul {
-  constructor() {
-    this.points = this.generateFibonacciSphere(50000);
-    this.breathingPhase = 0;
-    this.isSpeaking = false;
-  }
-  
-  generateFibonacciSphere(numPoints) {
-    const points = [];
-    const goldenRatio = (1 + Math.sqrt(5)) / 2;
-    
-    for (let i = 0; i < numPoints; i++) {
-      const theta = 2 * Math.PI * i / goldenRatio;
-      const phi = Math.acos(1 - 2 * (i + 0.5) / numPoints);
-      
-      points.push({
-        x: Math.cos(theta) * Math.sin(phi),
-        y: Math.sin(theta) * Math.sin(phi),
-        z: Math.cos(phi),
-        size: Math.random() * 0.5 + 0.5,
-        brightness: Math.random() * 0.5 + 0.5
-      });
-    }
-    
-    return points;
-  }
-  
-  async speakToUser(message) {
-    this.isSpeaking = true;
-    
-    // Intensify points during speech
-    await this.intensifyPoints();
-    
-    // Synthesize voice
-    await this.synthesizeVoice(message);
-    
-    // Return to normal state
-    this.isSpeaking = false;
-    await this.normalizePoints();
-  }
-  
-  async guideOnboarding(steps) {
-    for (const step of steps) {
-      await this.speakToUser(step.message);
-      await this.waitForUserInteraction(step.interaction);
-    }
-    
-    // Expand and envelop globe
-    await this.expandAndEnvelopGlobe();
-  }
-}
+```mermaid
+flowchart TD
+    START([First app launch])
+    INTRO[Render AWA Soul sphere]
+    GUIDE[Deliver guided narration]
+    TRANSITION[Animate wrap into globe]
+    CHECK{Onboarding complete?}
+    HOME[Land on Light Map]
+    START --> INTRO --> GUIDE --> TRANSITION --> CHECK
+    CHECK -->|Yes| HOME --> END((User feels welcomed))
+    CHECK -->|No| LOOP[Offer gentle reminders]
+    LOOP --> GUIDE
 ```
 
-## Related Documentation
+## Requirements & Guardrails
+- **Acceptance criteria**
+  - GIVEN a new user WHEN the app opens THEN AWA Soul greets them with narration and responsive animation.
+  - GIVEN animation playback WHEN the user interacts THEN feedback (point clustering, brightness shifts) reflects that attention.
+  - GIVEN onboarding completion WHEN the user returns THEN AWA Soul resumes in-context guidance rather than repeating the full sequence.
+- **No-gos & risks**
+  - Overly intense visuals or audio that overwhelm sensitive users.
+  - Long load times that break immersion before the greeting begins.
+  - Localization gaps that make guidance inaccessible in the user’s language.
 
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer)
-- [03. Access](/docs/capabilities/03-Access) - Onboarding flow
-- [05. Practice](/docs/capabilities/05-Practice) - Practice guidance
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data & Measurement
+- Primary metric: Onboarding completion rate driven by AWA Soul’s guided flow.
+- Secondary checks: Average dwell time with the character, skip rates, and drop-off points per narration step.
+- Telemetry requirements: Log scene transitions, interaction events with the sphere, and animation performance metrics.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Should AWA Soul’s script adapt based on user-selected intent or language preferences in v0.1?
+- How do we maintain narrative freshness for returning users who revisit the guidance flow?

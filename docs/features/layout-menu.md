@@ -1,200 +1,78 @@
 ---
+title: Layout & Menu
+sidebar_label: Layout & Menu
 sidebar_position: 6
 version: "0.1"
 capability: "app-infrastructure"
+status: "to-do"
+lark_id: "recuXeu55tzWaV"
+figma: ""
+owner: ""
+user_value: "Give users a clear, consistent navigation system across the app"
+trigger: "Whenever a user needs to move between primary areas of the product"
+done_when: "Navigation surfaces all launch features, adapts to screen sizes, and orients the user at every step"
+capability_label: "01. App Infrastructure"
 ---
 
-# Layout/Menu
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
-## Feature Name
-Layout/Menu
+# Layout & Menu
 
-## Overview
-This feature defines the overall layout and menu structure of the AWATERRA application. It provides the foundational UI/UX design framework that determines how users navigate through the app and access different features and sections.
+## One-Glance Summary
 
-## Purpose
-The business need this feature addresses is providing a consistent, intuitive navigation experience that allows users to easily access all features and content within the AWATERRA platform.
+<FeatureSummary />
 
-## User Stories
+## Narrative
+Layout & Menu defines the foundation of AWATERRA’s navigation experience. The structure must balance clarity and calmness so practitioners can find what they need without cognitive overload. This first release anchors the global navigation, surfaces the most important destinations, and establishes responsive patterns for future modules.
 
-### Primary User Story
-As a user, I want to easily navigate through the app using a clear menu structure so that I can find and access all features quickly.
+Beyond basic wayfinding, the menu educates users on the breadth of the product—practices, pulse, profile, and admin surfaces—while keeping the spiritual tone intact. Consistent placement, motion, and iconography set expectations that future features can inherit without rework.
 
-### Secondary User Stories
-- As a user, I want consistent navigation across all screens
-- As a user, I want to understand where I am in the app at all times
-- As a user, I want quick access to my most-used features
-- As a user, I want the navigation to work on different screen sizes
+## Interaction Blueprint
+1. Align stakeholders on the launch IA and map it to user journeys and permissions.
+2. Design responsive layout shells for mobile-first usage with scalable breakpoints.
+3. Implement navigation components, including icons, labels, and active-state cues.
+4. Wire navigation routes, deeplinks, and analytics tracking for each destination.
+5. Exercise typical and edge navigation paths with usability tests and accessibility audits.
+6. Load the layout in production-like environments to confirm performance and localization resilience.
 
-## UI/UX Requirements
+- Edge case: A locale introduces long labels that break layout; responsive truncation and tooltips preserve clarity without clipping.
 
-### Visual Design
-- Consistent navigation bar and menu design
-- Clear visual hierarchy and information architecture
-- Responsive design for different screen sizes
-- Accessible navigation elements
-- Brand-consistent styling and theming
+- Signals of success:
+  - Users identify their current location and upcoming steps without assistance.
+  - Navigation adjusts gracefully across device sizes and orientations.
+  - Analytics show balanced engagement across primary destinations.
 
-### User Flow
-1. User opens the app
-2. User sees main navigation structure
-3. User can access different sections via menu
-4. User can navigate between features seamlessly
-5. User always knows their current location
+### Mermaid Journey IN MERMAID FORMAT
 
-### Accessibility
-- Keyboard navigation support
-- Screen reader compatibility
-- Clear focus indicators
-- Proper heading structure
-- Accessible menu labels
-
-## Technical Requirements
-
-### Frontend
-- Navigation component architecture
-- Menu state management
-- Responsive layout system
-- Theme and styling system
-- Accessibility features
-
-### Backend
-- Menu configuration management
-- User preference storage for navigation
-- Analytics for navigation usage
-- Content management for menu items
-
-### Data Models
-- Menu structure and hierarchy
-- User navigation preferences
-- Feature access permissions
-- Navigation analytics data
-
-### Integrations
-- User authentication for personalized menus
-- Analytics for navigation tracking
-- Content management for menu updates
-
-## Dependencies
-
-### Required Capabilities
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure) - Backend services and user management
-
-### Required Features
-- User authentication and profiles
-- Feature access control
-- Content management system
-
-### External Dependencies
-- UI framework and component library
-- Analytics and tracking tools
-
-## Version Information
-
-- **Target Version**: 0.1 Photon
-- **Priority**: High
-- **Status**: To Do
-- **Estimated Effort**: 2-3 weeks
-- **Start Date**: TBD
-- **End Date**: TBD
-
-## Acceptance Criteria
-
-### Functional Requirements
-- Clear and intuitive navigation structure
-- Consistent layout across all screens
-- Responsive design for different devices
-- Proper menu state management
-- Accessible navigation elements
-
-### Non-Functional Requirements
-- Fast navigation transitions (under 200ms)
-- Consistent performance across devices
-- Proper accessibility compliance
-- Scalable design system
-- Maintainable code structure
-
-### Testing Requirements
-- Unit tests for navigation components
-- Integration tests for menu functionality
-- Accessibility tests for navigation
-- Cross-device testing for responsive design
-- User experience testing for navigation flow
-
-## Implementation Notes
-
-### Technical Considerations
-- Use component-based architecture for reusability
-- Implement proper state management for navigation
-- Design for scalability and maintainability
-- Use proper accessibility patterns
-- Implement responsive design principles
-
-### Design Considerations
-- Design for consistency across all screens
-- Consider user mental models for navigation
-- Ensure clear visual hierarchy
-- Design for different user types and permissions
-- Consider future feature additions
-
-### Risk Factors
-- Navigation complexity confusing users
-- Performance issues with complex layouts
-- Accessibility compliance challenges
-- Maintenance overhead with complex navigation
-- User experience inconsistencies
-
-## Examples
-
-### Implementation Tasks
-- Design main navigation structure
-- Create responsive layout system
-- Implement menu state management
-- Add accessibility features
-- Create theme and styling system
-
-### Code Examples
-```javascript
-// Example navigation component
-const NavigationMenu = () => {
-  const [activeSection, setActiveSection] = useState('home');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  const menuItems = [
-    { id: 'home', label: 'Home', icon: 'home', path: '/' },
-    { id: 'practices', label: 'Practices', icon: 'play', path: '/practices' },
-    { id: 'profile', label: 'Profile', icon: 'user', path: '/profile' },
-    { id: 'settings', label: 'Settings', icon: 'settings', path: '/settings' }
-  ];
-  
-  return (
-    <nav className="navigation-menu">
-      <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <MenuIcon />
-      </div>
-      <div className={`menu-items ${isMenuOpen ? 'open' : ''}`}>
-        {menuItems.map(item => (
-          <MenuItem
-            key={item.id}
-            item={item}
-            isActive={activeSection === item.id}
-            onClick={() => setActiveSection(item.id)}
-          />
-        ))}
-      </div>
-    </nav>
-  );
-};
+```mermaid
+flowchart TD
+    START([Define navigation goals])
+    IA[Map information architecture]
+    DESIGN[Design responsive layouts]
+    BUILD[Implement navigation components]
+    TEST{Wayfinding validated?}
+    LAUNCH[Publish layout & menu]
+    START --> IA --> DESIGN --> BUILD --> TEST
+    TEST -->|Yes| LAUNCH --> END((Users navigate confidently))
+    TEST -->|No| ITERATE[Refine IA or patterns]
+    ITERATE --> DESIGN
 ```
 
-## Related Documentation
+## Requirements & Guardrails
+- **Acceptance criteria**
+  - GIVEN a first-time user WHEN the app opens THEN the layout indicates the available sections and active view.
+  - GIVEN a screen rotation or form-factor change WHEN the menu reflows THEN controls remain usable and accessible.
+  - GIVEN analytics dashboards WHEN navigation events stream THEN destinations and deeplinks are captured accurately.
+- **No-gos & risks**
+  - Overloading the top-level menu confuses early adopters and dilutes focus.
+  - Inconsistent iconography or labels erodes the mindful tone we aim to uphold.
+  - Ignoring accessibility standards (contrast, hit areas, focus order) limits who can benefit.
 
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure)
-- [04. Identity](/docs/capabilities/04-Identity) - User preferences and settings
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data & Measurement
+- Primary metric: Successful navigation rate to key destinations (Practices, Pulse, Profile) per session.
+- Secondary checks: Time-to-first-action after launch, menu interaction drop-off, and accessibility audit scores.
+- Telemetry requirements: Instrument navigation taps, deeplink entries, and screen transitions.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Do we introduce quick shortcuts for returning practitioners in v0.1 or defer to a later release?
+- Which sections, if any, should remain hidden for guests versus registered members at launch?

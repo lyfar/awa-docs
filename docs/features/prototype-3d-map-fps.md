@@ -1,314 +1,75 @@
 ---
-sidebar_position: 6
+title: Prototype 3D Map with FPS Stats
+sidebar_label: Prototype 3D Map (FPS)
+sidebar_position: 5
 version: "0.1"
 capability: "visualization-map-layer"
+status: "done"
+lark_id: "recuVvR66MnYyR"
+figma: ""
+owner: ""
+user_value: "Visualize the practice journey while monitoring real-time performance"
+trigger: "When a user opens the prototype 3D map feature"
+done_when: "Map renders with interactive controls and FPS counter updates continuously"
+capability_label: "02. Visualization & Map Layer"
 ---
-version: "0.1"
+
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Prototype 3D Map with FPS Stats
 
-## Feature Name
-Prototype 3D Map with FPS Stats
+## One-Glance Summary
 
-## Overview
-The Prototype 3D Map with FPS Stats is a development and testing feature that visualizes the practice journey with an interactive 3D map and provides real-time performance feedback. It loads a 3D map, renders a plane with controls, overlays FPS statistics, and updates in real-time for performance monitoring.
+<FeatureSummary />
 
-## Purpose
-The business need this feature addresses is providing developers and testers with a tool to visualize practice journeys while monitoring performance metrics, ensuring the 3D map system can handle the required load and provide smooth user experiences.
+## Narrative
+The Prototype 3D Map with FPS Stats is our sandbox for validating rendering, controls, and telemetry before the full Light Map launch. It exposes core interactions—navigation, zoom, and overlays—while surfacing performance metrics so engineering can tune shaders and pipelines.
 
-## User Stories
+Although positioned for internal use, the experience still mirrors the final vision: an interactive map that responds smoothly, communicates orientation, and helps stakeholders feel the spatial storytelling we plan to ship.
 
-### Primary User Story
-As a developer, I want to test the 3D map performance with FPS statistics so that I can ensure smooth rendering and optimal user experience.
+## Interaction Blueprint
+1. Load prototype assets and initialize the 3D scene with target shaders and lighting.
+2. Render the practice plane and attach navigation controls (pan, zoom, rotate) tuned for device input.
+3. Instrument frame timing and overlay FPS along with key resource stats.
+4. Stream user inputs and environment data to validate crash-free stability over extended sessions.
+5. Capture recordings or screenshots for stakeholder review and documentation.
+6. Export performance logs and summarize findings to inform optimization backlog.
 
-### Secondary User Stories
-- As a tester, I want to see real-time FPS data during map interactions
-- As a developer, I want to monitor performance during different map states
-- As a user, I want to experience smooth 3D map interactions
-- As a developer, I want to identify performance bottlenecks
+- Edge case: Low-end devices might dip below target FPS; provide quality toggles or simplified rendering paths to continue the evaluation.
 
-## UI/UX Requirements
+- Signals of success:
+  - Consistent frame rate within target thresholds during interaction loops.
+  - No crashes or graphical glitches during extended test sessions.
+  - Actionable performance insights captured for the production roadmap.
 
-### Visual Design
-- 3D map rendering with interactive controls
-- FPS counter overlay in corner of screen
-- Performance metrics display
-- Interactive map controls (rotate, zoom, pan)
-- Real-time performance feedback
-- Clean, developer-focused interface
+### Mermaid Journey IN MERMAID FORMAT
 
-### User Flow
-1. User opens prototype map feature
-2. 3D map loads with interactive plane
-3. FPS counter appears and starts updating
-4. User can interact with map controls
-5. FPS statistics update in real-time
-6. Performance metrics are displayed
-7. User can test different map states
-
-### Accessibility
-- Clear FPS counter display
-- Alternative text for performance metrics
-- Keyboard controls for map interaction
-- Screen reader support for statistics
-
-## Technical Requirements
-
-### Frontend
-- 3D map rendering engine
-- FPS statistics capture and display
-- Interactive map controls
-- Real-time performance monitoring
-- Overlay system for statistics
-- Performance optimization tools
-
-### Backend
-- Map data processing
-- Performance metrics collection
-- Real-time data streaming
-- Analytics for performance data
-- Crash reporting and monitoring
-- Performance optimization APIs
-
-### Data Models
-- FPS performance data
-- Map interaction metrics
-- Performance benchmarks
-- Crash and error data
-- User interaction patterns
-- System performance metrics
-
-### Integrations
-- 3D rendering engine
-- Performance monitoring tools
-- Analytics platform
-- Crash reporting system
-- Real-time data services
-
-## Dependencies
-
-### Required Capabilities
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer) - Core visualization system
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure) - Backend services and monitoring
-
-### Required Features
-- 3D rendering engine
-- Performance monitoring system
-- Interactive map controls
-- Real-time data processing
-
-### External Dependencies
-- 3D rendering libraries
-- Performance monitoring tools
-- Analytics platform
-- Crash reporting services
-
-## Version Information
-
-- **Target Version**: 0.1 Photon
-- **Priority**: Medium
-- **Status**: Done (N/A)
-- **Estimated Effort**: 2-3 weeks
-- **Start Date**: 2025/08/16
-- **End Date**: 2025/08/27
-
-## Acceptance Criteria
-
-### Functional Requirements
-- Map is displayed with interactive controls
-- Navigation works smoothly
-- FPS counter is visible and updating
-- Performance metrics are accurate
-- Real-time updates work correctly
-- Crash-free operation for 24 hours
-
-### Non-Functional Requirements
-- FPS counter updates in real-time
-- Map renders smoothly (target 60fps)
-- Performance metrics are accurate
-- Responsive design for different devices
-- Battery efficient rendering
-
-### Testing Requirements
-- Unit tests for FPS calculation
-- Integration tests for map rendering
-- Performance tests for different map states
-- Stress tests for high load scenarios
-- End-to-end tests for complete prototype flow
-
-## Implementation Notes
-
-### Technical Considerations
-- Implement efficient FPS calculation and display
-- Use proper performance monitoring techniques
-- Consider performance impact of monitoring overhead
-- Implement proper error handling for crashes
-- Design for scalability and optimization
-
-### Design Considerations
-- Design interface for developer and tester use
-- Ensure FPS counter doesn't interfere with map interaction
-- Consider different performance scenarios
-- Design for easy performance analysis
-- Consider accessibility for testing tools
-
-### Risk Factors
-- Performance overhead from monitoring
-- FPS calculation accuracy
-- Map rendering performance issues
-- Battery drain from continuous monitoring
-- User experience issues with prototype interface
-
-## Examples
-
-### Implementation Tasks
-- Implement FPS statistics (capture & display)
-- Verify crash-free rate on staging (24h)
-- Prepare 30–60s screencast of prototype
-
-### Performance Metrics
-- **FPS Counter**: Real-time frames per second display
-- **Performance Overlay**: Additional performance metrics
-- **Crash Monitoring**: 24-hour crash-free verification
-- **Screencast**: Demonstration of prototype functionality
-
-### Code Examples
-```javascript
-// Example 3D Map Prototype with FPS Stats
-class MapPrototypeService {
-  constructor() {
-    this.fpsCounter = new FPSCounter();
-    this.performanceMonitor = new PerformanceMonitor();
-    this.mapRenderer = new MapRenderer();
-    this.isMonitoring = false;
-  }
-  
-  async initializePrototype() {
-    try {
-      // Load 3D map
-      await this.mapRenderer.loadMap();
-      
-      // Start FPS monitoring
-      this.startFPSMonitoring();
-      
-      // Initialize performance metrics
-      await this.performanceMonitor.initialize();
-      
-      // Start crash monitoring
-      this.startCrashMonitoring();
-      
-      return {
-        mapLoaded: true,
-        fpsMonitoring: true,
-        performanceMonitoring: true
-      };
-    } catch (error) {
-      throw new Error(`Prototype initialization failed: ${error.message}`);
-    }
-  }
-  
-  startFPSMonitoring() {
-    this.isMonitoring = true;
-    
-    const updateFPS = () => {
-      if (!this.isMonitoring) return;
-      
-      const fps = this.fpsCounter.getCurrentFPS();
-      const avgFPS = this.fpsCounter.getAverageFPS();
-      const minFPS = this.fpsCounter.getMinFPS();
-      const maxFPS = this.fpsCounter.getMaxFPS();
-      
-      // Update FPS display
-      this.updateFPSDisplay({
-        current: fps,
-        average: avgFPS,
-        min: minFPS,
-        max: maxFPS
-      });
-      
-      // Check for performance issues
-      if (fps < 30) {
-        this.handleLowFPS(fps);
-      }
-      
-      requestAnimationFrame(updateFPS);
-    };
-    
-    updateFPS();
-  }
-  
-  updateFPSDisplay(fpsData) {
-    // Update UI with FPS statistics
-    this.uiService.updateFPSOverlay(fpsData);
-  }
-  
-  handleLowFPS(fps) {
-    console.warn(`Low FPS detected: ${fps}`);
-    
-    // Record performance issue
-    this.performanceMonitor.recordPerformanceIssue({
-      type: 'low_fps',
-      fps: fps,
-      timestamp: Date.now()
-    });
-    
-    // Trigger performance optimization
-    this.optimizePerformance();
-  }
-  
-  async optimizePerformance() {
-    // Reduce map complexity
-    await this.mapRenderer.reduceComplexity();
-    
-    // Optimize rendering settings
-    await this.mapRenderer.optimizeSettings();
-    
-    // Clear performance caches
-    await this.performanceMonitor.clearCaches();
-  }
-  
-  startCrashMonitoring() {
-    // Monitor for crashes and errors
-    window.addEventListener('error', (event) => {
-      this.performanceMonitor.recordCrash({
-        type: 'javascript_error',
-        message: event.message,
-        filename: event.filename,
-        lineno: event.lineno,
-        timestamp: Date.now()
-      });
-    });
-    
-    window.addEventListener('unhandledrejection', (event) => {
-      this.performanceMonitor.recordCrash({
-        type: 'unhandled_promise_rejection',
-        reason: event.reason,
-        timestamp: Date.now()
-      });
-    });
-  }
-  
-  async generateScreencast() {
-    // Generate 30-60 second screencast of prototype
-    const screencast = await this.screencastService.record({
-      duration: 60,
-      includeFPS: true,
-      includePerformanceMetrics: true
-    });
-    
-    return screencast;
-  }
-}
+```mermaid
+flowchart TD
+    START([Launch prototype scene])
+    INIT[Initialize 3D environment]
+    CONTROLS[Attach user controls]
+    OVERLAY[Display FPS & stats]
+    TEST[Run interaction scenarios]
+    REVIEW[Log metrics & findings]
+    START --> INIT --> CONTROLS --> OVERLAY --> TEST --> REVIEW --> END((Insights captured))
 ```
 
-## Related Documentation
+## Requirements & Guardrails
+- **Acceptance criteria**
+  - GIVEN the prototype loads WHEN a tester interacts THEN FPS counter and controls respond without stutter.
+  - GIVEN extended usage WHEN logs are captured THEN memory usage stays within safe thresholds and no crashes occur.
+  - GIVEN stakeholders request evidence WHEN playback assets are generated THEN recordings illustrate both visuals and performance.
+- **No-gos & risks**
+  - Ignoring thermal or battery impact could mislead production expectations.
+  - Using placeholder assets that differ greatly from planned fidelity undermines the exercise.
+  - Failing to document findings slows optimization cycles.
 
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer)
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure) - Performance monitoring
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data & Measurement
+- Primary metric: Median FPS during scripted interaction scenarios (rotate, zoom, data overlay).
+- Secondary checks: Crash-free rate over 24h burn-in, GPU/CPU utilization, and memory headroom.
+- Telemetry requirements: Log per-frame timing, resource usage, camera path events, and any runtime warnings.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Do we keep the FPS overlay in production for debugging or remove before public release?
+- Which rendering optimizations deliver the greatest benefit without compromising visual storytelling?
