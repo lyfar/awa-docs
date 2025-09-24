@@ -2,6 +2,11 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const isVercelDeployment = Boolean(process.env.VERCEL);
+const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined;
+const siteUrl = process.env.SITE_URL ?? vercelUrl ?? 'https://lyfar.github.io';
+const baseUrl = process.env.BASE_URL ?? (isVercelDeployment ? '/' : '/awa-docs/');
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -15,10 +20,10 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://lyfar.github.io',
+  url: siteUrl,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? '/awa-docs/',
+  baseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
