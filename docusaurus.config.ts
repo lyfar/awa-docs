@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://lyfar.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/awa-docs/',
+  baseUrl: process.env.BASE_URL ?? '/awa-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -63,7 +63,8 @@ const config: Config = {
       title: 'AWATERRA Docs',
       logo: {
         alt: 'AWATERRA Logo',
-        src: 'img/logo.svg',
+        src: 'img/awa-logo.svg',
+        srcDark: 'img/awa-logo-dark.svg',
       },
       items: [
         {
@@ -73,51 +74,10 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          type: 'dropdown',
-          label: 'Version',
-          position: 'right',
-          items: [
-            {
-              label: '0.1 Photon (MVP)',
-              href: '/docs/versions/0.1-photon/intro',
-            },
-            {
-              label: '0.2 Spark (Advanced Practices)',
-              href: '/docs/versions/0.2-spark/intro',
-            },
-            {
-              label: '0.3 Ember (Basic Masters)',
-              href: '/docs/versions/0.3-ember/intro',
-            },
-            {
-              label: '0.4 Flicker (AWA Units)',
-              href: '/docs/versions/0.4-flicker/intro',
-            },
-            {
-              label: '0.5 Glow (AWAWAY Streaks)',
-              href: '/docs/versions/0.5-glow/intro',
-            },
-            {
-              label: '0.6 Ray (Basic Missions)',
-              href: '/docs/versions/0.6-ray/intro',
-            },
-            {
-              label: '0.7 INT Beam (Advanced Features)',
-              href: '/docs/versions/0.7-int-beam/intro',
-            },
-            {
-              label: '0.8 INT Flame (Advanced Features)',
-              href: '/docs/versions/0.8-int-flame/intro',
-            },
-            {
-              label: '0.9 INT Blaze (Advanced Features)',
-              href: '/docs/versions/0.9-int-blaze/intro',
-            },
-            {
-              label: '1.0 Ignition (Full Platform)',
-              href: '/docs/versions/1.0-ignition/intro',
-            },
-          ],
+          type: 'docSidebar',
+          sidebarId: 'templatesSidebar',
+          position: 'left',
+          label: 'Templates',
         },
       ],
     },
@@ -125,20 +85,19 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentation',
+          title: 'Product',
           items: [
-            {
-              label: 'Capabilities',
-              to: '/docs/capabilities/intro',
-            },
-            {
-              label: 'Features',
-              to: '/docs/features/intro',
-            },
-            {
-              label: 'Roadmap',
-              to: '/docs/roadmap/intro',
-            },
+            {label: 'Versions', to: '/docs/versions/1.0-ignition/intro'},
+            {label: 'Features', to: '/docs/features/intro'},
+            {label: 'Capabilities', to: '/docs/capabilities/01-App-Infrastructure/index'},
+          ],
+        },
+        {
+          title: 'Templates',
+          items: [
+            {label: 'Capability Template', to: '/docs/product-templates/capability-template'},
+            {label: 'Feature Template', to: '/docs/product-templates/feature-template'},
+            {label: 'Version Template', to: '/docs/product-templates/version-template'},
           ],
         },
       ],

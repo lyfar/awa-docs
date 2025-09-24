@@ -1,182 +1,81 @@
 ---
+title: Setup Backend Infrastructure
+sidebar_label: Setup Backend Infrastructure
 sidebar_position: 2
----
 version: "0.1"
+capability: "app-infrastructure"
+status: ""
+lark_id: "recuVvSPYH1qEL"
+figma: ""
+owner: ""
+user_value: "Enable app to run reliably with scalable backend"
+trigger: "When engineering team sets up core infrastructure for launch"
+done_when: "Backend is live, stable, connected to app, and all core services respond correctly"
+capability_label: "01. App Infrastructure"
+---
+
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Setup Backend Infrastructure
 
-## Feature Name
-Setup Backend Infrastructure
+## One-Glance Summary
 
-## Overview
-This feature establishes the foundational backend infrastructure that enables the AWATERRA app to run reliably with scalable backend services. It includes server provisioning, database configuration, API setup, authentication integration, storage systems, and monitoring infrastructure.
+<FeatureSummary />
 
-## Purpose
-The business need this feature addresses is providing a reliable, scalable foundation for the AWATERRA platform. Without proper backend infrastructure, the app cannot function, making this a critical foundation for all other features.
+## Narrative
+Setup Backend Infrastructure establishes the technical spine that keeps AWATERRA available, secure, and performant. The work bundles provisioning managed services, wiring authentication, and building the foundational APIs that power the first release.
 
-## User Stories
+The team brings every core system online in a controlled sequence so mobile clients can reach critical data paths with confidence. Monitoring, logging, and automated backups round out the effort so operations have immediate visibility once the product goes live.
 
-### Primary User Story
-As an engineering team, I need to set up core infrastructure for launch so that the app can run reliably and scale with user growth.
+## Interaction Blueprint
+1. Configure cloud service accounts and baseline access policies for the environment.
+2. Provision compute, database, and storage resources, then prepare the baseline data structures for launch.
+3. Deploy the core service layer and expose the essential launch endpoints.
+4. Integrate authentication, media storage, and secure domain settings so clients can connect confidently.
+5. Enable observability with performance, reliability, and incident dashboards.
+6. Run connectivity and load smoke tests across Wi-Fi and cellular profiles, then share monitoring access with operators.
 
-### Secondary User Stories
-- As a developer, I need access to monitoring dashboards to track system health
-- As an admin, I need reliable database access for content management
-- As a user, I need fast, responsive API calls for smooth app experience
+- Edge case: A service comes up without the expected network rules, preventing mobile traffic; revert to the safe policy baseline and retest connectivity before going live.
 
-## UI/UX Requirements
+- Signals of success:
+  - Core APIs respond within target thresholds across staged network profiles.
+  - Heartbeat monitors stay green with no unauthorised errors during soak tests.
+  - Observability dashboards show live traffic and alerting without manual intervention.
 
-### Visual Design
-- Monitoring dashboard interfaces
-- Admin panel for infrastructure management
-- API documentation interfaces
+### Mermaid Journey IN MERMAID FORMAT
 
-### User Flow
-1. Provision servers and cloud resources
-2. Configure database and storage systems
-3. Set up APIs and authentication
-4. Deploy monitoring and backup systems
-5. Test all core services
-6. Provide access to monitoring dashboards
-
-### Accessibility
-- Accessible monitoring dashboards
-- Clear error messages and status indicators
-- Proper contrast for admin interfaces
-
-## Technical Requirements
-
-### Frontend
-- Monitoring dashboard UI
-- Admin panel interfaces
-- API documentation site
-
-### Backend
-- Server provisioning and configuration
-- Database setup and optimization
-- API development and deployment
-- Authentication and authorization systems
-- Cloud storage integration
-- Monitoring and logging systems
-
-### Data Models
-- User data schemas
-- Practice content models
-- Analytics data structures
-- System configuration models
-
-### Integrations
-- Cloud service providers (AWS, Google Cloud, Azure)
-- Database systems (PostgreSQL, MongoDB)
-- Authentication providers
-- Monitoring tools (Datadog, Grafana)
-- Firebase Performance & Crashlytics
-
-## Dependencies
-
-### Required Capabilities
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure) - Core infrastructure foundation
-
-### Required Features
-- None (this is a foundational feature)
-
-### External Dependencies
-- Cloud service providers
-- Database systems
-- Monitoring and analytics tools
-- SSL certificate providers
-
-## Version Information
-
-- **Target Version**: 0.1 Photon
-- **Priority**: Critical
-- **Status**: In Progress
-- **Estimated Effort**: 3-4 weeks
-- **Start Date**: 2025/09/02
-- **End Date**: 2025/09/15
-
-## Acceptance Criteria
-
-### Functional Requirements
-- Backend is live and stable
-- All core services respond correctly
-- Database is accessible and optimized
-- APIs are functional and documented
-- Monitoring dashboards are accessible
-- SSL certificates are configured
-
-### Non-Functional Requirements
-- 99.9% uptime target
-- API response times under 200ms
-- Database queries optimized for performance
-- Secure authentication and data encryption
-- Automated backup systems
-
-### Testing Requirements
-- API connectivity tests (200 requests)
-- Load testing for scalability
-- Security penetration testing
-- Database performance testing
-- Monitoring system validation
-
-## Implementation Notes
-
-### Technical Considerations
-- Use infrastructure as code (IaC) for reproducible deployments
-- Implement proper logging and monitoring from day one
-- Set up automated backups and disaster recovery
-- Use containerization for consistent deployments
-- Implement proper security measures and access controls
-
-### Design Considerations
-- Design monitoring dashboards for easy troubleshooting
-- Create clear API documentation for developers
-- Ensure admin interfaces are intuitive and efficient
-
-### Risk Factors
-- Cloud service outages
-- Database performance issues
-- Security vulnerabilities
-- Scaling challenges with user growth
-- Cost management for cloud resources
-
-## Examples
-
-### Implementation Tasks
-- Configure service accounts
-- Setup database
-- Setup cloud storage
-- Create basic NestJS application
-- Implement POST /map
-- Implement GET /heartbeat
-- Configure domain and SSL certificates
-- Setup Firebase Performance & Crashlytics
-- Setup Datadog/Grafana dashboards
-- Configure network test profiles (Wi-Fi/4G, Network Link Conditioner)
-- API connectivity test (200 requests)
-- Provide monitoring dashboard links
-
-### Code Examples
-```javascript
-// Example API endpoint implementation
-app.post('/map', async (req, res) => {
-  try {
-    const { userId, practiceData } = req.body;
-    const result = await mapService.updateUserPractice(userId, practiceData);
-    res.json({ success: true, data: result });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+```mermaid
+flowchart TD
+    START([Kickoff infrastructure build])
+    ACCOUNTS[Configure cloud accounts and IAM]
+    RESOURCES[Provision compute, database, storage]
+    SERVICES[Deploy core service layer]
+    SECURITY[Wire auth, storage, SSL domain]
+    OBSERVE[Enable monitoring and logging]
+    TEST{Do validation tests pass?}
+    START --> ACCOUNTS --> RESOURCES --> SERVICES --> SECURITY --> OBSERVE --> TEST
+    TEST -->|Yes| READY[Platform ready for app integration]
+    TEST -->|No| REMEDIATE[Fix configuration and rerun]
+    REMEDIATE --> TEST
+    READY --> END((Backend stable and live))
 ```
 
-## Related Documentation
+## Requirements & Guardrails
+- **Acceptance criteria**
+  - GIVEN the production infrastructure WHEN the service layer is live THEN the core user journeys respond successfully and report healthy status signals.
+  - GIVEN the launch domain and certificates WHEN users access secure areas of the product THEN the experience remains trusted with no security warnings or broken sessions.
+  - GIVEN the observability tooling WHEN platform health slips outside agreed thresholds THEN alerts notify the on-call owner with actionable context.
+- **No-gos & risks**
+  - Do not expose databases or storage buckets without restricted access policies.
+  - Avoid skipping backup configuration or runbook documentation for critical services.
+  - Prevent cost spikes by right sizing resources and tagging spend owners from day one.
 
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure)
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data & Measurement
+- Primary metric: API success rate for core endpoints during smoke and load tests (target 99.5 percent or higher).
+- Secondary checks: Median response time under 200 ms, error budget burn rate during soak, backup job completion status.
+- Telemetry requirements: Track heartbeat uptime, latency percentiles, deployment events, and alert firing in analytics pipelines.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Which regions and redundancy tiers do we need at launch to balance latency and cost?
+- How will we automate environment parity between staging and production?
+- What thresholds should trigger paging for infrastructure incidents?

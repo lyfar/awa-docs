@@ -1,179 +1,80 @@
 ---
+title: Localization Management (Keys & Translations)
+sidebar_label: Localization Management
 sidebar_position: 4
----
 version: "0.1"
+capability: "app-infrastructure"
+status: ""
+lark_id: "recuWcdkuTRS6D"
+figma: ""
+owner: ""
+user_value: "Seamless multi-language support for diverse users"
+trigger: "When setting up or updating app language options"
+done_when: "Users can switch languages smoothly and see translated content without errors"
+capability_label: "01. App Infrastructure"
+---
+
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Localization Management (Keys & Translations)
 
-## Feature Name
-Localization Management (Keys & Translations)
+## One-Glance Summary
 
-## Overview
-This feature provides seamless multi-language support for diverse users by managing translation keys and translations centrally. It enables developers to add translation keys, input translations, store keys centrally, and allows users to select their language preference.
+<FeatureSummary />
 
-## Purpose
-The business need this feature addresses is supporting a global user base with diverse language requirements. By providing multi-language support, AWATERRA can reach users worldwide and provide a localized experience.
+## Narrative
+Localization Management ensures AWATERRA feels native regardless of language. Engineers and content partners collaborate on a central registry of translation keys, then populate locale files so every string in the experience stays in sync.
 
-## User Stories
+By coupling runtime language selection with rigorous validation, the app updates text, layouts, and assets instantly when a user switches preferences. Transparent fallbacks and monitoring help flag missing keys before they affect live audiences.
 
-### Primary User Story
-As a user, I want to use the app in my preferred language so that I can understand and engage with the content effectively.
+## Interaction Blueprint
+1. Define canonical translation keys for product surfaces inside the central repository.
+2. Populate locale files with approved translations and store them in version controlled storage.
+3. Integrate the i18n service with the app shell so it loads language packs on boot.
+4. Expose settings controls for language selection and persist the choice to user preferences.
+5. Render screens in the selected language and validate dynamic content for text expansion.
+6. Run automated audits that detect missing keys, RTL regressions, or stale translations before release.
 
-### Secondary User Stories
-- As a developer, I want to easily add new translation keys and translations
-- As a content manager, I want to update translations without code changes
-- As a user, I want to switch languages smoothly without losing my progress
+- Edge case: A new build ships without translated copy for a key; the fallback mechanism should surface the default language and log the gap for fast remediation.
 
-## UI/UX Requirements
+- Signals of success:
+  - Users can change language without relaunching and keep their active session.
+  - Translation completeness stays at or above 98 percent across supported locales.
+  - Automated audits report zero critical missing key or RTL issues for launch builds.
 
-### Visual Design
-- Language selection interface
-- Consistent typography across languages
-- Proper text expansion handling for different languages
-- RTL (Right-to-Left) language support
+### Mermaid Journey IN MERMAID FORMAT
 
-### User Flow
-1. User accesses language settings
-2. User selects preferred language
-3. App updates interface with new language
-4. Content displays in selected language
-5. User can switch languages at any time
-
-### Accessibility
-- Screen reader support for different languages
-- Proper language attributes for assistive technologies
-- Clear language selection interface
-
-## Technical Requirements
-
-### Frontend
-- Language switching interface
-- Dynamic text rendering
-- RTL language support
-- Font and typography handling for different languages
-
-### Backend
-- Translation key management system
-- Translation storage and retrieval
-- Language preference storage
-- Translation update APIs
-
-### Data Models
-- Translation keys and values
-- Language preferences
-- Translation metadata (last updated, version)
-- Content localization rules
-
-### Integrations
-- Translation management systems
-- Content delivery networks
-- Analytics for language usage
-
-## Dependencies
-
-### Required Capabilities
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure) - Backend services and data storage
-
-### Required Features
-- User settings and preferences
-- Content management system
-
-### External Dependencies
-- Translation services (optional)
-- Font libraries for different languages
-
-## Version Information
-
-- **Target Version**: 0.1 Photon
-- **Priority**: Medium
-- **Status**: Planned
-- **Estimated Effort**: 2-3 weeks
-- **Start Date**: 2025/09/20
-- **End Date**: 2025/10/11
-
-## Acceptance Criteria
-
-### Functional Requirements
-- Users can switch languages smoothly
-- Translated content displays without errors
-- Translation keys are centrally managed
-- Developers can easily add new translations
-- Language preferences are persisted
-
-### Non-Functional Requirements
-- Language switching completes within 1 second
-- All text content is properly translated
-- No missing translation keys
-- Proper handling of text expansion
-- Support for RTL languages
-
-### Testing Requirements
-- Unit tests for translation key management
-- Integration tests for language switching
-- UI tests for different language layouts
-- Content validation for all supported languages
-
-## Implementation Notes
-
-### Technical Considerations
-- Use proper internationalization (i18n) libraries
-- Implement fallback mechanisms for missing translations
-- Consider text expansion for different languages
-- Use proper encoding for special characters
-- Implement lazy loading for translation data
-
-### Design Considerations
-- Design interfaces that work with different text lengths
-- Consider cultural differences in UI design
-- Ensure proper spacing for different languages
-- Test with actual translated content, not placeholder text
-
-### Risk Factors
-- Missing translations causing UI breaks
-- Text expansion breaking layouts
-- Cultural sensitivity in translations
-- Performance impact of loading multiple languages
-- Maintenance overhead of keeping translations updated
-
-## Examples
-
-### Implementation Tasks
-- Set up translation key management system
-- Create language selection interface
-- Implement dynamic text rendering
-- Add RTL language support
-- Create translation update workflow
-
-### Code Examples
-```javascript
-// Example translation key management
-const translations = {
-  en: {
-    'welcome.title': 'Welcome to AWATERRA',
-    'practice.start': 'Start Practice'
-  },
-  es: {
-    'welcome.title': 'Bienvenido a AWATERRA',
-    'practice.start': 'Iniciar Práctica'
-  }
-};
-
-// Language switching
-const switchLanguage = (languageCode) => {
-  const currentTranslations = translations[languageCode];
-  updateUIWithTranslations(currentTranslations);
-  saveLanguagePreference(languageCode);
-};
+```mermaid
+flowchart TD
+    START([Add new feature copy])
+    DEFINE[Create translation keys]
+    TRANSLATE[Populate locale files]
+    SYNC[Sync translations to app build]
+    SELECT[User selects preferred language]
+    RENDER{All strings resolved?}
+    START --> DEFINE --> TRANSLATE --> SYNC --> SELECT --> RENDER
+    RENDER -->|Yes| EXPERIENCE[Experience displays in chosen language]
+    RENDER -->|No| FALLBACK[Fallback default language and log issue]
+    FALLBACK --> DEFINE
+    EXPERIENCE --> END((Localized experience stable))
 ```
 
-## Related Documentation
+## Requirements & Guardrails
+- **Acceptance criteria**
+  - GIVEN a supported language WHEN the user switches preferences THEN all navigation, system copy, and dynamic strings update instantly without reload.
+  - GIVEN new translation keys WHEN build validation runs THEN missing or outdated translations are flagged and cannot pass without review.
+  - GIVEN an RTL locale WHEN the app renders THEN layouts, typography, and input affordances mirror correctly.
+- **No-gos & risks**
+  - Do not allow hard coded strings in the product surfaces.
+  - Avoid releasing locales without proofread translations and QA sign off.
+  - Prevent silent fallback failures that hide missing translations from analytics.
 
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure)
-- [04. Identity](/docs/capabilities/04-Identity) - User preferences
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data & Measurement
+- Primary metric: Translation coverage per locale (target 98 percent or higher each sprint).
+- Secondary checks: Average language switch latency under 800 milliseconds, count of missing key alerts per release train.
+- Telemetry requirements: Log language change events, missing key incidents, and locale specific errors for analytics review.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Which locales are in scope for the 0.1 launch versus fast followers?
+- How will we handle dynamic content translations from community or partner feeds?
+- Do we need in-product copy review workflows for regulated regions?

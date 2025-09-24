@@ -1,196 +1,83 @@
 ---
+title: Admin Area v0.1 (CRM/CMS)
+sidebar_label: Admin Area v0.1 (CRM/CMS)
 sidebar_position: 5
 version: "0.1"
 capability: "app-infrastructure"
+status: "to-do"
+lark_id: "recuWRmlxI3SIx"
+figma: ""
+owner: ""
+user_value: "Simplifies content management for the first wave of practices."
+trigger: "When an admin logs into the dashboard."
+done_when: "Admins can access and modify practices with full CRUD."
+capability_label: "01. App Infrastructure"
 ---
+
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Admin Area v0.1 (CRM/CMS)
 
-## Feature Name
-Admin Area v0.1 (CRM/CMS)
+## One-Glance Summary
 
-## Overview
-This feature provides a basic admin area that simplifies content management for the AWATERRA platform. It enables administrators to control and manage practices through a web-based interface with CRUD (Create, Read, Update, Delete) operations.
+<FeatureSummary />
 
-## Purpose
-The business need this feature addresses is providing administrators with the ability to manage content and practices without requiring technical knowledge or direct database access.
+## Narrative
+The Admin Area v0.1 gives stewards of AWATERRA a trusted workspace to curate practices without touching production databases. With secure sign-in, clear views of the catalog, and simple form-driven editing, the team can keep guidance fresh as the offering evolves.
 
-## User Stories
+This first release focuses on the essentials: manage practice metadata, publish or retire entries, and confirm that every change synchronizes with the public experience. Guardrails like role checks and audit logging keep the environment safe even while we move quickly.
 
-### Primary User Story
-As an admin, I want to access and modify practices through a web interface so that I can manage content efficiently.
+## Interaction Blueprint
+1. Admin authenticates with elevated credentials and reaches the dashboard home.
+2. Dashboard lists existing practices with status badges, search, and quick filters.
+3. Admin chooses an item to edit or selects "Create practice" to open the guided form.
+4. Changes are saved via secure APIs, validated, and reflected in preview state.
+5. Admin confirms updates, publishes, or reverts as needed; audit trail stores the action.
+6. System syncs updates to the live catalog and notifies relevant stakeholders.
 
-### Secondary User Stories
-- As an admin, I want to create new practices and content
-- As an admin, I want to update existing practices
-- As an admin, I want to delete outdated practices
-- As an admin, I want to view analytics about practice usage
+- Edge case: Form validation fails because required fields are missing; the dashboard blocks submission, highlights the fields, and prevents publishing until resolved.
 
-## UI/UX Requirements
+- Signals of success:
+  - Practice CRUD operations complete without manual database access.
+  - Admin workflows average under five minutes from edit to publish.
+  - Audit logs capture 100 percent of create, update, and delete events.
 
-### Visual Design
-- Clean, intuitive admin interface
-- Clear navigation and menu structure
-- Form layouts for practice management
-- Data tables for practice listings
-- Confirmation dialogs for destructive actions
+### Mermaid Journey IN MERMAID FORMAT
 
-### User Flow
-1. Admin logs into the dashboard
-2. Admin navigates to practice management section
-3. Admin can view, create, edit, or delete practices
-4. Changes are saved and reflected in the app
-5. Admin can view confirmation of actions
-
-### Accessibility
-- Keyboard navigation support
-- Screen reader compatibility
-- Clear form labels and error messages
-- Proper focus management
-
-## Technical Requirements
-
-### Frontend
-- Admin dashboard interface
-- Practice management forms
-- Data tables and listings
-- Authentication and authorization
-- Responsive design for different screen sizes
-
-### Backend
-- Admin authentication system
-- Practice CRUD APIs
-- Role-based access control
-- Data validation and sanitization
-- Audit logging for admin actions
-
-### Data Models
-- Practice content models
-- Admin user models
-- Audit log models
-- Permission and role models
-
-### Integrations
-- Authentication system
-- Content delivery system
-- Analytics and reporting
-- Email notifications for admin actions
-
-## Dependencies
-
-### Required Capabilities
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure) - Backend services and authentication
-
-### Required Features
-- User authentication system
-- Practice content management
-- Database access and APIs
-
-### External Dependencies
-- Web framework for admin interface
-- Authentication and authorization libraries
-- Database management tools
-
-## Version Information
-
-- **Target Version**: 0.1 Photon
-- **Priority**: Medium
-- **Status**: To Do
-- **Estimated Effort**: 3-4 weeks
-- **Start Date**: TBD
-- **End Date**: TBD
-
-## Acceptance Criteria
-
-### Functional Requirements
-- Admin can access and modify practices (CRUD)
-- Admin authentication and authorization works
-- Practice changes are reflected in the app
-- Admin can view practice listings and details
-- Confirmation dialogs prevent accidental deletions
-
-### Non-Functional Requirements
-- Admin interface loads within 2 seconds
-- Secure authentication and session management
-- Proper data validation and error handling
-- Responsive design for different devices
-- Audit trail for all admin actions
-
-### Testing Requirements
-- Unit tests for CRUD operations
-- Integration tests for admin workflows
-- Security tests for authentication and authorization
-- UI tests for admin interface
-- End-to-end tests for practice management
-
-## Implementation Notes
-
-### Technical Considerations
-- Implement proper role-based access control
-- Use secure authentication mechanisms
-- Implement proper data validation and sanitization
-- Create audit logging for compliance
-- Design for scalability and performance
-
-### Design Considerations
-- Design intuitive interfaces for non-technical users
-- Provide clear feedback for all actions
-- Implement proper error handling and recovery
-- Consider mobile access for admin tasks
-
-### Risk Factors
-- Security vulnerabilities in admin access
-- Data corruption from improper CRUD operations
-- Performance issues with large datasets
-- User experience issues for non-technical admins
-- Compliance and audit requirements
-
-## Examples
-
-### Implementation Tasks
-- Set up admin authentication system
-- Create practice management interface
-- Implement CRUD operations for practices
-- Add role-based access control
-- Create audit logging system
-
-### Code Examples
-```javascript
-// Example practice management API
-class PracticeController {
-  async createPractice(req, res) {
-    try {
-      const practiceData = req.body;
-      const practice = await practiceService.create(practiceData);
-      await auditService.log('practice_created', req.user.id, practice.id);
-      res.json({ success: true, data: practice });
-    } catch (error) {
-      res.status(400).json({ error: error.message });
-    }
-  }
-  
-  async updatePractice(req, res) {
-    try {
-      const { id } = req.params;
-      const updates = req.body;
-      const practice = await practiceService.update(id, updates);
-      await auditService.log('practice_updated', req.user.id, id);
-      res.json({ success: true, data: practice });
-    } catch (error) {
-      res.status(400).json({ error: error.message });
-    }
-  }
-}
+```mermaid
+flowchart TD
+    START([Admin logs into dashboard])
+    LIST[View practice catalog]
+    ACTION{Create or edit?}
+    START --> LIST --> ACTION
+    ACTION -->|Create| CREATE[Complete new practice form]
+    ACTION -->|Edit| EDIT[Update existing practice fields]
+    CREATE --> VALIDATE{Pass validation?}
+    EDIT --> VALIDATE
+    VALIDATE -->|Yes| REVIEW[Review changes & confirm]
+    VALIDATE -->|No| FIX[Highlight issues & request fixes]
+    FIX --> ACTION
+    REVIEW --> SAVE[Persist changes via APIs]
+    SAVE --> SYNC[Sync to live catalog & log action]
+    SYNC --> END((Practices updated successfully))
 ```
 
-## Related Documentation
+## Requirements & Guardrails
+- **Acceptance criteria**
+  - GIVEN an authenticated admin WHEN they open the practice catalog THEN they see a searchable list with status, owner, and last-updated metadata.
+  - GIVEN the admin submits a fully populated practice form WHEN the change is confirmed THEN the record is created or updated and visible in both dashboard and client app within a refresh cycle.
+  - GIVEN the admin deletes a practice WHEN the action is confirmed THEN the item is marked inactive, logged, and removed from user-facing entry points.
+- **No-gos & risks**
+  - Never expose admin tools without MFA and role-based access control.
+  - Avoid silent failures that overwrite content without alerting the editor.
+  - Prevent destructive actions from bypassing audit logging or version history.
 
-- [01. App Infrastructure](/docs/capabilities/01-App-Infrastructure)
-- [05. Practice](/docs/capabilities/05-Practice) - Practice content management
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data & Measurement
+- Primary metric: Admin task completion rate (create/update/delete) without engineering intervention (target ≥ 95 percent).
+- Secondary checks: Median dashboard load under 2 seconds, number of validation errors per session, count of audit gaps.
+- Telemetry requirements: Log every CRUD action with actor, timestamp, diff snapshot, and outcome; instrument dashboard performance and error events.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Do we need draft states and preview links before publishing in v0.1?
+- How will we handle bulk updates or imports if the catalog scales beyond a few dozen practices?
+- Which admins require approval workflows before destructive actions?
