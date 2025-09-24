@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Geo Allow Follow-up reintroduces location sharing to users who previously said no. Instead of repeated system prompts, we present contextual education—showing how the globe personalizes when location is enabled—and offer one-click access to OS settings. The tone is invitational, never coercive.
+Geo Allow Follow-up offers a respectful path to enable location after a user said no. Instead of repeating the system prompt, we explain how the globe personalizes with location and provide a direct link to settings.
+
+The tone stays invitational so users feel in control. They can enable permission with one tap or dismiss without friction.
 
 ## Interaction Blueprint
 1. Detect experiences (Light Map, localized missions) where location adds value for users who have declined permissions.
@@ -33,14 +35,17 @@ Geo Allow Follow-up reintroduces location sharing to users who previously said n
 5. Respect cooldown periods to avoid nagging users repeatedly.
 6. Provide alternate experiences (e.g., global view) when location remains disabled.
 
-- Edge case: Device restrictions prevent direct navigation to settings; provide manual instructions and support link.
+:::caution Edge Case
+Device restrictions prevent direct navigation to settings. Provide manual instructions and a support link.
+:::
 
-- Signals of success:
-  - Conversion rate from follow-up prompt to enabled permission without driving opt-outs.
-  - Decrease in confusion about why the globe appears generic with location off.
-  - Minimal reports of users feeling pressured or annoyed.
+:::tip Signals of Success
+- Permission enablement rises after the follow-up prompt without increasing opt-outs.
+- Confusion about a generic globe view drops.
+- Users report feeling respected instead of pressured.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

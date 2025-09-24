@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The FAQ is the self-serve knowledge base living within AWATERRA’s profile context. It answers common questions about practices, rewards, privacy, and troubleshooting, reducing reliance on support while reinforcing brand voice. Content should be concise, compassionate, and easily updatable by non-engineers.
+The FAQ is a self-serve knowledge base inside AWATERRA. It answers common questions about practices, rewards, privacy, and troubleshooting so users can help themselves before contacting support.
+
+Content stays concise, compassionate, and easy for non-engineers to update, which keeps the brand voice consistent.
 
 ## Interaction Blueprint
 1. Provide a discoverable FAQ entry point from Profile and key empty states.
@@ -33,14 +35,17 @@ The FAQ is the self-serve knowledge base living within AWATERRA’s profile cont
 5. Track deflection metrics by capturing whether the answer resolved the question.
 6. Establish a content governance process for adding, editing, and retiring articles.
 
-- Edge case: A question lacks an article; present contact support options with prefilled context.
+:::caution Edge Case
+A question lacks an article. Present contact support options with prefilled context.
+:::
 
-- Signals of success:
-  - High resolution rate without escalating to human support.
-  - FAQ articles reflect up-to-date product capabilities and policies.
-  - Content creation workflow empowers product/support to update quickly.
+:::tip Signals of Success
+- Most questions resolve without escalation to human support.
+- FAQ articles stay aligned with current product capabilities and policies.
+- Content creators outside engineering can update entries quickly.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

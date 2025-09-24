@@ -9,7 +9,7 @@ description: How we turn a single Lark export row into an AWATERRA feature docum
 
 1. Capture the feature row in Lark first. Lark remains the source of truth for versioning, capability assignment, status, and scheduling.
 2. Copy one row from the Lark table (the export is tab-separated). Do not edit the order of columns.
-3. Paste the row and the prompt below into the AI agent. The agent must output a complete markdown file that respects our existing metadata conventions—*never delete or rename existing fields, only enrich them where missing*.
+3. Paste the row and the prompt below into the AI agent. The agent must output a complete markdown file that respects our existing metadata conventions. *Never delete or rename existing fields; only enrich them when something is missing.*
 4. Review the generated file, adjust wording if needed, then add it to the docs repository under `docs/features/`.
 
 Once the file is in this knowledge base, the feature becomes the narrative companion to the Lark entry.
@@ -23,7 +23,7 @@ You are AWATERRA’s feature-doc agent. From a single Lark export row, create or
 REQUIRED OUTPUT: complete markdown file (frontmatter + body) with Unix newlines and a trailing newline. Do not add commentary.
 
 ---
-FRONTMATTER TEMPLATE (must retain existing keys — only add if missing)
+FRONTMATTER TEMPLATE (must retain existing keys - only add if missing)
 ---
 # Preserve existing if the file already exists; otherwise initialise as:
 title: {Title}
@@ -55,14 +55,14 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Write 2–3 paragraphs explaining the experience (calm, aligned product voice). Expand on the Flow text and weave in dependencies if provided. Mention how the feature reinforces AWATERRA’s mindful journey.
+Write 2 to 3 short paragraphs that explain the experience in clear, simple language while keeping the calm, aligned product voice. Expand on the Flow text, weave in dependencies if provided, and note how the feature reinforces AWATERRA’s mindful journey.
 
 ## Interaction Blueprint
 1. Expand the Flow into numbered steps (max 7).
 2. Add at least one edge or failure case.
 3. Finish with a bullet list “Signals of success” derived from *User value* and *Done when*.
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 flowchart TD
     START([User enters trigger])
@@ -75,7 +75,7 @@ flowchart TD
     RECOVERY --> ALT[Fallback / message]
     ALT --> END
 
-Replace each node with the actual steps, including at least one negative branch.
+Replace each node with the actual steps, including at least one negative branch. Keep the journey inside a ```mermaid``` fence so Docusaurus renders it.
 
 ## Requirements & Guardrails
 - Acceptance criteria using GIVEN / WHEN / THEN phrasing that describe observable user or business outcomes (avoid prescribing technical implementation).
@@ -84,7 +84,7 @@ Replace each node with the actual steps, including at least one negative branch.
 ## Data & Measurement
 - Primary metric(s) to watch.
 - Secondary / qualitative checks.
-- Telemetry requirements (use “TBD – align with analytics” if unknown).
+- Telemetry requirements (use “TBD - align with analytics” if unknown).
 
 ## Open Questions
 - List outstanding unknowns or assumptions. If none, write “None right now.”
@@ -92,9 +92,13 @@ Replace each node with the actual steps, including at least one negative branch.
 ---
 WRITING GUIDELINES
 ---
+:::tip Markdown Features
+Use Docusaurus defaults where they improve clarity: headings and automatic table of contents, admonitions, tabs, fenced code blocks, Mermaid diagrams, Markdown links, assets, MDX and React components, plugins, math equations, diagrams, and head metadata. Prefer these built-in patterns over custom styling.
+:::
+
 - Stay concise, sober, AWATERRA tone.
 - Present tense for behaviour, future tense for the plan.
-- Never invent facts—use “TBD” when information is missing.
+- Never invent facts - use “TBD” when information is missing.
 - Keep markdown clean; headings above are mandatory.
 - Output must be valid markdown with one newline at end of file.
 - NEVER use the em-dash. Only "-".

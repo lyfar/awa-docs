@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The Globe is the living map of AWATERRA. It centers on the practitioner’s location, pulses with their latest contribution, and illuminates nearby lights to reinforce the collective journey. Designed for awe and clarity, it blends real-time data with mindful pacing so each spin feels grounded.
+The Globe is the living map of AWATERRA. It centers on the practitioner, pulses with their latest contribution, and shows nearby lights so the community feels close.
 
-The surface serves multiple roles: onboarding wow moment, daily home base, and contextual prompt for inviting friends. Every visual treatment—from golden pulses to expanding ripples—communicates that practice has tangible impact.
+It serves as the onboarding wow moment, daily home base, and gentle prompt to invite friends. Every visual treatment, from golden pulses to expanding ripples, signals that practice has real impact.
 
 ## Interaction Blueprint
 1. Acquire permissioned location data or fall back to a global overview if unavailable.
@@ -35,14 +35,17 @@ The surface serves multiple roles: onboarding wow moment, daily home base, and c
 5. Surface a call-to-action such as “Invite a friend” tied to the current practice moment.
 6. Continuously sync telemetry so the globe remains fresh without draining device resources.
 
-- Edge case: Location permissions denied; present a global view with gentle prompts to enable sharing while preserving agency.
+:::caution Edge Case
+Location permissions are denied. Present a global view with gentle prompts to enable sharing while preserving agency.
+:::
 
-- Signals of success:
-  - Globe loads within performance budgets and maintains smooth frame rates.
-  - User location accuracy remains within acceptable thresholds or provides clear fallback states.
-  - Invite actions and repeat visits increase after users see the globe visualization.
+:::tip Signals of Success
+- Globe loads within performance budgets and maintains smooth frame rates.
+- User location accuracy stays within acceptable thresholds or provides a clear fallback.
+- Invite actions and repeat visits increase after users see the visualization.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD
@@ -65,7 +68,7 @@ flowchart TD
   - GIVEN denied permissions WHEN the globe loads THEN it presents a respectful global overview with optional enablement guidance.
   - GIVEN rapid user interactions WHEN the globe responds THEN framerate and touch responsiveness stay within experience targets.
 - **No-gos & risks**
-  - Revealing precise coordinates that compromise privacy—always obfuscate to community-safe granularity.
+- Revealing precise coordinates that compromise privacy. Always obfuscate to community-safe granularity.
   - Overly heavy shaders or particle counts that drop performance below acceptable FPS.
   - Visual clutter that obscures context or overwhelms users unfamiliar with 3D navigation.
 

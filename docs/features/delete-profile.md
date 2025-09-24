@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Delete Profile honors user agency. The flow provides clear warnings about data loss, requests deliberate confirmation, and orchestrates secure erasure across primary and backup systems. Tone stays compassionate—thanking the user for their time while ensuring compliance with privacy standards.
+Delete Profile honors user agency. The flow shares clear warnings about data loss, requests deliberate confirmation, and then erases data across primary and backup systems.
+
+Tone stays compassionate, thanking the user for their time while staying aligned with privacy standards.
 
 ## Interaction Blueprint
 1. Expose Delete Profile within Application Settings with brief explanation and link to data policy.
@@ -33,14 +35,17 @@ Delete Profile honors user agency. The flow provides clear warnings about data l
 5. Notify the user via in-app message and email once deletion is complete.
 6. Log the action for compliance audits without retaining personal data.
 
-- Edge case: User requests deletion but reconsiders within a short grace period; offer a brief cancellation window before hard delete completes.
+:::caution Edge Case
+User requests deletion but reconsiders within a short grace period. Offer a brief cancellation window before the hard delete completes.
+:::
 
-- Signals of success:
-  - Deletion requests complete within promised timeframes across all systems.
-  - Users receive confirmation and do not find residual data upon re-entry.
-  - Support sees minimal follow-up about partial deletions or lingering notifications.
+:::tip Signals of Success
+- Deletion requests finish within the promised timeframe across all systems.
+- Users receive confirmation and do not find leftover data after return.
+- Support sees minimal follow-up about partial deletions or lingering notifications.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

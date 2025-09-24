@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Localization Management ensures AWATERRA feels native regardless of language. Engineers and content partners collaborate on a central registry of translation keys, then populate locale files so every string in the experience stays in sync.
+Localization Management makes AWATERRA feel native in every supported language. Teams maintain a shared registry of translation keys and keep locale files in sync.
 
-By coupling runtime language selection with rigorous validation, the app updates text, layouts, and assets instantly when a user switches preferences. Transparent fallbacks and monitoring help flag missing keys before they affect live audiences.
+Runtime language switching and validation update text, layouts, and assets instantly when a user changes preferences. Clear fallbacks and monitoring catch missing keys before anyone notices in production.
 
 ## Interaction Blueprint
 1. Define canonical translation keys for product surfaces inside the central repository.
@@ -35,14 +35,17 @@ By coupling runtime language selection with rigorous validation, the app updates
 5. Render screens in the selected language and validate dynamic content for text expansion.
 6. Run automated audits that detect missing keys, RTL regressions, or stale translations before release.
 
-- Edge case: A new build ships without translated copy for a key; the fallback mechanism should surface the default language and log the gap for fast remediation.
+:::caution Edge Case
+A new build ships without translated copy for a key. The fallback should show the default language and log the gap for fast remediation.
+:::
 
-- Signals of success:
-  - Users can change language without relaunching and keep their active session.
-  - Translation completeness stays at or above 98 percent across supported locales.
-  - Automated audits report zero critical missing key or RTL issues for launch builds.
+:::tip Signals of Success
+- Users change language without relaunching and keep their active session.
+- Translation completeness stays at or above 98 percent across supported locales.
+- Automated audits report zero critical missing key or RTL issues for launch builds.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

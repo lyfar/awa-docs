@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-App Architecture and Base lays down the structural framework that every other AWATERRA feature relies upon. The team hardens the core application shell, wires in platform services, and verifies data flows so cold starts and background resumes feel stable from the very first release.
+App Architecture and Base supplies the structure every AWATERRA feature depends on. We harden the shell, connect platform services, and verify data flows so launches stay steady from the first release.
 
-By coupling defensive coding patterns with rigorous environment configuration, the base layer keeps user data safe while still allowing rapid iteration. Guardrails around caching, synchronization, and secrets management ensure that downstream features can plug in without reinventing foundational plumbing.
+Defensive code and careful configuration protect user data while letting us move fast. Guardrails around caching, sync, and secrets mean new features can plug in without rebuilding the foundation.
 
 ## Interaction Blueprint
 1. Scaffold the project foundation, establish shared libraries, and document the conventions for new modules.
@@ -35,14 +35,17 @@ By coupling defensive coding patterns with rigorous environment configuration, t
 5. Exercise happy-path and failure-path launch scenarios to confirm graceful recovery and logging.
 6. Publish architecture documentation and walkthroughs so engineering, QA, and ops share the same mental model.
 
-- Edge case: A dependency initializes slower than expected, delaying app launch; introduce asynchronous loading with user-facing skeleton states while keeping integrity checks in place.
+:::caution Edge Case
+A dependency initializes slowly and delays app launch. Introduce asynchronous loading with user-facing skeleton states while keeping integrity checks in place.
+:::
 
-- Signals of success:
-  - Cold and warm launches complete within acceptable thresholds across target devices.
-  - Core services respond with healthy status codes immediately after deployment.
-  - Architecture docs stay current and unblock new contributors.
+:::tip Signals of Success
+- Cold and warm launches complete within target thresholds across devices.
+- Core services return healthy status codes right after deployment.
+- Architecture docs stay current and unblock new contributors.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Profile View is the pivotal moment where guests feel the impact of their first practice and are invited to join the community fully. The screen radiates with light, recaps contributions, and presents the option to create a profile to secure AWAunits, streaks, and deeper features.
+Profile View is the moment guests feel the impact of their first practice and can join the community fully. The screen glows with gratitude, recaps contributions, and invites profile creation to save AWAunits, streaks, and deeper features.
 
-The flow must respect choice. Users can celebrate and continue as guests, yet copy makes transparent what they miss by not saving progress. Subtle animation and storytelling reinforce that their light matters and belongs on the map long-term.
+The flow respects choice. Users can celebrate and continue as guests while seeing a clear summary of what they miss by not saving progress, reinforced with gentle animation.
 
 ## Interaction Blueprint
 1. Trigger the completion animation and summary after a guest practice ends.
@@ -35,14 +35,17 @@ The flow must respect choice. Users can celebrate and continue as guests, yet co
 5. If they defer, clarify that earned AWAunits will expire and provide gentle reminders.
 6. Update access permissions: unlock missions, masters, and progress tracking for registered members; gate for guests.
 
-- Edge case: User dismisses the modal accidentally; re-surface the invitation in the profile tab without blocking core usage.
+:::caution Edge Case
+User dismisses the modal accidentally. Resurface the invitation in the profile tab without blocking core usage.
+:::
 
-- Signals of success:
-  - High conversion rate from guest to registered after first practice.
-  - Clear understanding (via feedback) of benefits tied to creating a profile.
-  - No duplicate account creation when users retry the flow.
+:::tip Signals of Success
+- Conversion rate from guest to registered climbs after the first practice.
+- Feedback shows users understand the benefits of creating a profile.
+- No duplicate accounts appear when users retry the flow.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

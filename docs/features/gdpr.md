@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-GDPR Compliance operationalizes AWATERRA’s promise of mindful data stewardship. Users must understand what data we collect, why, and how to control it. The experience spans consent flows, profile settings, and backend tooling to honor access, portability, and deletion requests within mandated timelines.
+GDPR Compliance turns AWATERRA’s mindful data promise into daily practice. Users need clear explanations of what we collect, why, and how to control it across consent flows, settings, and backend tools.
 
-By designing transparent copy and resilient storage practices, we reduce legal risk while strengthening user trust. The system should feel empowering—not bureaucratic.
+Transparent copy and resilient storage reduce legal risk while strengthening trust. The system should feel empowering, not bureaucratic.
 
 ## Interaction Blueprint
 1. Present clear consent choices during signup with granular toggles for communications and data processing.
@@ -35,14 +35,17 @@ By designing transparent copy and resilient storage practices, we reduce legal r
 5. Confirm actions via email or in-app receipts so users know their request is acknowledged.
 6. Coordinate backend jobs to fulfill access/deletion within regulatory timelines and log completion.
 
-- Edge case: A user withdraws consent while active sessions exist; ensure services revoke tokens and mask data gracefully.
+:::caution Edge Case
+A user withdraws consent while active sessions exist. Revoke tokens and mask data gracefully.
+:::
 
-- Signals of success:
-  - 100% of signups capture explicit consent and store immutable records.
-  - Requests for access or deletion complete within SLA with transparent communication.
-  - Audits demonstrate data minimization and least-privilege access.
+:::tip Signals of Success
+- Every signup captures explicit consent and stores immutable records.
+- Access and deletion requests finish within SLA with clear communication.
+- Audits confirm data minimization and least-privilege access.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

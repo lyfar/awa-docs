@@ -61,7 +61,7 @@ export default function Home(): ReactNode {
           <div className="awa-hero-badge">Product Strategy · Live Source</div>
           <h1 className="awa-hero-title">Shape every AWATERRA release with intent</h1>
           <p className="awa-hero-lede">
-            One master reference for the platform—versions, capabilities, and feature specs captured in a voice that
+            One master reference for the platform: versions, capabilities, and feature specs captured in a voice that
             keeps product, design, and engineering breathing together.
           </p>
           <div className="awa-hero-ctaGroup">

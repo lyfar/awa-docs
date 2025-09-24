@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Setup Backend Infrastructure establishes the technical spine that keeps AWATERRA available, secure, and performant. The work bundles provisioning managed services, wiring authentication, and building the foundational APIs that power the first release.
+Setup Backend Infrastructure builds the technical spine that keeps AWATERRA available, secure, and fast. The work covers provisioning services, wiring authentication, and building core APIs for the first release.
 
-The team brings every core system online in a controlled sequence so mobile clients can reach critical data paths with confidence. Monitoring, logging, and automated backups round out the effort so operations have immediate visibility once the product goes live.
+We bring systems online in a controlled sequence so mobile clients reach critical data paths with confidence. Monitoring, logging, and automated backups give operations visibility from day one.
 
 ## Interaction Blueprint
 1. Configure cloud service accounts and baseline access policies for the environment.
@@ -35,14 +35,17 @@ The team brings every core system online in a controlled sequence so mobile clie
 5. Enable observability with performance, reliability, and incident dashboards.
 6. Run connectivity and load smoke tests across Wi-Fi and cellular profiles, then share monitoring access with operators.
 
-- Edge case: A service comes up without the expected network rules, preventing mobile traffic; revert to the safe policy baseline and retest connectivity before going live.
+:::caution Edge Case
+A service comes up without the expected network rules and blocks mobile traffic. Revert to the safe policy baseline and retest before going live.
+:::
 
-- Signals of success:
-  - Core APIs respond within target thresholds across staged network profiles.
-  - Heartbeat monitors stay green with no unauthorised errors during soak tests.
-  - Observability dashboards show live traffic and alerting without manual intervention.
+:::tip Signals of Success
+- Core APIs respond within target thresholds across staged network profiles.
+- Heartbeat monitors stay green with no unauthorized errors during soak tests.
+- Observability dashboards show live traffic and alerting without manual intervention.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

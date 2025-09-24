@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Light Ignition turns each completed practice into a celebratory spectacle. The globe flashes, the Pulse climbs, and AWAunits cascade into the user’s wallet to make progress tangible. For registered members the moment also unlocks deeper rewards, while guests still feel the resonance of contributing to a living community.
+Light Ignition turns each completed practice into a calm celebration. The globe flashes, the Pulse lifts, and AWAunits reach the wallet so progress feels tangible. Registered members unlock deeper rewards while guests still feel their contribution.
 
-The experience balances awe with clarity: the animation communicates impact, while UI elements recap streaks, wallet additions, and favorites. Guardrails ensure we never overwhelm the user—effects are soothing, timing is deliberate, and accessibility cues keep the flow inclusive.
+We keep the moment clear by recapping streaks, rewards, and favorites without overwhelming the user. Effects stay soothing, timing is deliberate, and accessibility cues keep everyone included.
 
 ## Interaction Blueprint
 1. Detect completion of the guided 10-minute morning practice.
@@ -35,14 +35,17 @@ The experience balances awe with clarity: the animation communicates impact, whi
 5. Offer options to favorite the session and respect tier limits (3 for Free, unlimited for Journey).
 6. Persist the session summary, update streak counters, and reset the interface for the next action.
 
-- Edge case: Simultaneous completions could overwhelm the pulse animation; throttle visual intensity while still logging each contribution.
+:::caution Edge Case
+Simultaneous completions overwhelm the pulse animation. Throttle visual intensity while still logging each contribution.
+:::
 
-- Signals of success:
-  - Every session produces a reliable visual flash and Pulse update.
-  - Wallet balances reflect credited AWAunits within seconds for registered members.
-  - Favorites honor tier limits without blocking joyful completion.
+:::tip Signals of Success
+- Every session produces a reliable visual flash and Pulse update.
+- Wallet balances reflect credited AWAunits within seconds for registered members.
+- Favorites honor tier limits without blocking joyful completion.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

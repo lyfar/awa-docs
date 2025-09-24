@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-AWA Pulse translates community activity into a living heartbeat. By sampling engagement metrics and projecting them into a mindful visual, users can sense when the collective energy soars or needs attention. When levels dip, gentle prompts encourage supportive practice rather than triggering alarm.
+AWA Pulse translates community activity into a gentle heartbeat. We sample engagement metrics and present them in a clear visual so everyone can sense when energy is high or needs care.
 
-The basic version focuses on clarity: a prominent BPM-style indicator, supporting trends, and contextual copy that explains what action helps. The visualization bridges analytics and emotion—grounding the product’s promise that every practice matters.
+The basic release keeps the display simple with a main pulse value, short trend notes, and plain copy about helpful actions. The visualization links data to feeling and reminds users that every practice counts.
 
 ## Interaction Blueprint
 1. Stream defined engagement metrics (finishes, streaks, active sessions) into the Pulse service.
@@ -35,14 +35,17 @@ The basic version focuses on clarity: a prominent BPM-style indicator, supportin
 5. Log user interactions (expanding details, tapping CTA) for insight into engagement.
 6. Trigger low-pulse alerts to other channels (push, in-app) when thresholds are crossed.
 
-- Edge case: Data spikes or outages could produce unrealistic pulse swings; clamp ranges and fail gracefully with calming copy when feeds degrade.
+:::caution Edge Case
+Data spikes or outages produce unrealistic pulse swings. Clamp ranges and fail gracefully with calming copy when feeds degrade.
+:::
 
-- Signals of success:
-  - Pulse values refresh within SLA after new practice events.
-  - Users understand the meaning of the metric and respond to low-pulse nudges.
-  - Visualizations maintain smooth animation without motion sickness.
+:::tip Signals of Success
+- Pulse values refresh within the latency target after new practice events.
+- Users understand the metric and respond to low-pulse nudges.
+- Animations stay smooth and avoid motion sickness.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

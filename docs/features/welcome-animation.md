@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The Welcome Animation bridges Loading Screen and onboarding. It invites users to share their name, watch the globe awaken, and feel the presence of AWA Soul guiding the experience. Motion is purposeful: light flows outward, hinting at the global network they are about to join.
+The Welcome Animation bridges the Loading Screen and onboarding. It invites users to share their name, watch the globe awaken, and feel AWA Soul guiding the experience. Motion stays purposeful so light flows outward and hints at the global network ahead.
 
-This sequence is also functional. It sets context for location access, primes the user for community participation, and transitions gracefully into the guided setup without breaking immersion.
+The sequence also sets context for location access, primes community participation, and transitions into guided setup without breaking immersion.
 
 ## Interaction Blueprint
 1. Launch the welcome scene after the loading sequence on first run or post-update resets.
@@ -35,14 +35,17 @@ This sequence is also functional. It sets context for location access, primes th
 5. Offer controls to continue, skip, or learn more, maintaining a gentle pace.
 6. Persist onboarding progress so returning users skip or resume appropriately.
 
-- Edge case: Users may skip quickly; ensure essential context (name capture, location rationale) surfaces later if bypassed.
+:::caution Edge Case
+Users skip quickly. Surface essential context such as name capture and location rationale later if they bypass the scene.
+:::
 
-- Signals of success:
-  - High completion rate of the welcome flow with minimal friction.
-  - Users provide their name and consent signals without confusion.
-  - Transitions to subsequent onboarding steps remain smooth and thematically aligned.
+:::tip Signals of Success
+- Completion rate of the welcome flow stays high with minimal friction.
+- Users provide their name and consent signals without confusion.
+- Transitions to subsequent onboarding steps stay smooth and thematically aligned.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

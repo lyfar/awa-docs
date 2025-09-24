@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-App Store Presence ensures AWATERRA’s first impression in marketplaces reflects the product’s essence. The work covers visuals, copy, compliance checklists, and release workflows. A polished listing improves conversion, communicates value, and avoids costly approval delays.
+App Store Presence makes sure AWATERRA's listing matches the product. We prepare visuals, copy, and compliance checklists so the store page feels calm and clear.
+
+Smooth release workflows and timely reviews prevent approval delays. A polished listing helps users grasp the value and supports conversion.
 
 ## Interaction Blueprint
 1. Draft positioning statements, screenshots, and preview videos that align with brand tone.
@@ -33,14 +35,17 @@ App Store Presence ensures AWATERRA’s first impression in marketplaces reflect
 5. Run internal reviews and legal/brand approvals before submission.
 6. Schedule releases, monitor review status, and respond to feedback post-launch.
 
-- Edge case: Store rejection citing policy issues; maintain a rapid escalation path with corrected assets or clarifications.
+:::caution Edge Case
+Store rejection cites a policy issue. Maintain a rapid escalation path with corrected assets or clarifications.
+:::
 
-- Signals of success:
-  - Listing approval on first submission with minimal revisions.
-  - Healthy view-to-install conversion driven by resonant messaging and visuals.
-  - Timely updates synced with product releases and campaign timelines.
+:::tip Signals of Success
+- Listing wins approval on the first submission with minimal revisions.
+- View-to-install conversion stays healthy because messaging and visuals resonate.
+- Updates land on time with product releases and campaigns.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

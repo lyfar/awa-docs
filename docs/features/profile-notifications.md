@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Profile Notifications close the loop on personal milestones. Whether someone reacts to your practice, a mission unlocks, or AWAunits arrive, timely updates sustain motivation. Messaging must remain gentle and context-rich, matching user preferences configured in Push Notification Settings.
+Profile Notifications close the loop on personal milestones. Reactions, mission unlocks, and AWAunit drops arrive in a gentle tone that follows the user’s preferences.
+
+Each message includes helpful context and respects quiet hours so motivation stays steady without pressure.
 
 ## Interaction Blueprint
 1. Listen for profile events from engagement services (mentions, achievements, invitations).
@@ -33,14 +35,17 @@ Profile Notifications close the loop on personal milestones. Whether someone rea
 5. Deeplink to the appropriate section (profile summary, notifications hub) when tapped.
 6. Track dismissals and follow-up actions to refine relevance.
 
-- Edge case: High event volume could overwhelm; batch similar notifications or summarize to prevent fatigue.
+:::caution Edge Case
+High event volume overwhelms the user. Batch similar notifications or summarize to prevent fatigue.
+:::
 
-- Signals of success:
-  - High open rates with corresponding in-app action (e.g., checking profile updates).
-  - Minimal opt-outs attributed to profile notifications.
-  - Accurate deeplinks that land users on the expected screen.
+:::tip Signals of Success
+- Open rates stay high with matching in-app actions such as checking profile updates.
+- Opt-outs attributed to profile notifications remain low.
+- Deeplinks land users on the expected screen.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

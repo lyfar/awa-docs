@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Accept Notifications Screens introduce push messaging with intention. Instead of dropping the system modal abruptly, we present a bespoke view explaining how reminders support practice cadence and pulse stewardship. Only after the user taps “Accept” do we trigger the native permission dialog.
+The Accept Notifications screens explain why reminders matter before the system dialog appears. We show how prompts support steady practice and share the privacy basics in clear language.
+
+After the user taps Accept we launch the OS dialog and store the result. If they decline we respect the choice, record it, and point to settings for a future change.
 
 ## Interaction Blueprint
 1. Detect engagement moment (post-practice) when a user expresses interest in reminders.
@@ -33,14 +35,17 @@ Accept Notifications Screens introduce push messaging with intention. Instead of
 5. Persist the result; if granted, send a confirmation and quick primer on managing preferences.
 6. If declined, respect the choice and guide users to settings for future changes.
 
-- Edge case: iOS allows only one request; ensure we only present the system prompt after explicit user intent.
+:::caution Edge Case
+iOS allows only one request. We present the system prompt only after explicit user intent.
+:::
 
-- Signals of success:
-  - Higher allow rate vs. baseline OS prompts.
-  - Users understand exactly what types of notifications we send.
-  - Minimal bounce from repeated prompts thanks to respectful handling of declines.
+:::tip Signals of Success
+- Allow rate rises compared with baseline OS prompts.
+- Users can restate the types of notifications we send.
+- Declines stay low because we respect the answer and avoid nagging.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

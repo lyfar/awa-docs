@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Basic Analytics provides the initial visibility into AWATERRA’s health. Dashboards surface end-to-end funnels: installs, onboarding completions, practice starts, and repeat engagement. Accurate instrumentation informs roadmap decisions, marketing, and operations without waiting on manual exports.
+Basic Analytics gives the team an early view of AWATERRA’s health. Dashboards show the funnel from installs to practice engagement so decisions lean on real data.
+
+Accurate instrumentation keeps marketing, product, and operations aligned without waiting for manual exports.
 
 ## Interaction Blueprint
 1. Instrument key events across app (install, onboarding step, practice start/finish, notification opens).
@@ -33,14 +35,17 @@ Basic Analytics provides the initial visibility into AWATERRA’s health. Dashbo
 5. Share access with stakeholders and document metric definitions to avoid misinterpretation.
 6. Iterate on instrumentation based on gaps identified in reviews.
 
-- Edge case: Event schema changes break dashboards; use versioning and backward-compatible updates.
+:::caution Edge Case
+Event schema changes break dashboards. Use versioning and backward-compatible updates.
+:::
 
-- Signals of success:
-  - Stakeholders rely on dashboards for weekly reviews without questioning accuracy.
-  - Instrumentation covers all critical journeys with minimal sampling gaps.
-  - Data anomalies are detected quickly thanks to automated QA.
+:::tip Signals of Success
+- Stakeholders rely on dashboards for weekly reviews without questioning accuracy.
+- Instrumentation covers all critical journeys with minimal sampling gaps.
+- Automated QA surfaces anomalies quickly.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Language Settings ensures AWATERRA feels native regardless of tongue. Users can switch between supported locales (initially English and Russian) during onboarding or anytime from settings. Updates apply instantly, demonstrating the strength of the localization system introduced in App Infrastructure.
+Language Settings helps AWATERRA feel native in every supported language. Users can switch between locales during onboarding or from settings, and the interface updates right away.
 
-The control also educates users on how to expand language options in the future and invites feedback from communities needing broader support.
+The control also explains how to request more languages and invites feedback from communities that need broader support.
 
 ## Interaction Blueprint
 1. Surface the language selector during onboarding with default based on device locale.
@@ -35,14 +35,17 @@ The control also educates users on how to expand language options in the future 
 5. Provide a fallback mechanism if translations are missing, coupled with graceful messaging.
 6. Log changes for analytics to prioritize future localization investments.
 
-- Edge case: A translation key is missing; fall back to default language while flagging the gap for content teams.
+:::caution Edge Case
+A translation key is missing. Fall back to the default language while flagging the gap for content teams.
+:::
 
-- Signals of success:
-  - Language changes happen without app restarts or broken layouts.
-  - Localization QA reports minimal truncation or clipping issues.
-  - Feedback loops capture demand for additional languages.
+:::tip Signals of Success
+- Language changes occur without restarts or broken layouts.
+- Localization QA finds minimal truncation or clipping issues.
+- Feedback loops capture demand for additional languages.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

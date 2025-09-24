@@ -23,26 +23,29 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-AWA Soul is the luminous ambassador that welcomes every newcomer. Rendered as a living sphere of 50,000 shimmering points, it breathes, responds, and narrates the journey from onboarding into first practice. The character personifies AWATERRA’s promise: you’re joining a global constellation of mindful practitioners.
+AWA Soul is the ambassador that welcomes every newcomer. A living sphere of light breathes, guides the user through onboarding, and reminds them they join a global community.
 
-Beyond visual poetry, AWA Soul provides clear guidance, sets expectations, and gently encourages commitment. As onboarding concludes, the entity expands to wrap the 3D globe, reminding users that their light contributes to a shared field of energy.
+The character gives clear directions, sets expectations, and encourages commitment in plain words. When onboarding ends, the sphere wraps into the globe so users see how their light joins the whole.
 
 ## Interaction Blueprint
 1. Detect first-launch or guided practice scenarios that require the AWA Soul introduction.
 2. Render the pulsing light sphere with breathing motion and adaptive brightness.
-3. Deliver scripted narration—voice or text—coordinated with particle emphasis and formations.
+3. Deliver scripted narration (voice or text) coordinated with particle emphasis and formations.
 4. Transition from onboarding steps into the Light Map, animating AWA Soul as it envelops the globe.
 5. Respond to user interactions (tap, swipe, dwell) with subtle animation changes that reinforce presence.
 6. Persist the user’s onboarding completion so subsequent sessions start in the standard home experience.
 
-- Edge case: Device performance limits particle effects; degrade gracefully to fewer points while preserving breathing and narration.
+:::caution Edge Case
+Device performance limits particle effects. Degrade gracefully to fewer points while keeping breathing and narration.
+:::
 
-- Signals of success:
-  - New users complete onboarding with comprehension of AWATERRA’s mission.
-  - Interaction logs show engagement with AWA Soul’s prompts vs. skips.
-  - Visual transitions run smoothly on target hardware ranges.
+:::tip Signals of Success
+- New users finish onboarding and understand AWATERRA’s mission.
+- Interaction logs show engagement with AWA Soul’s prompts instead of skips.
+- Visual transitions run smoothly on target hardware.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

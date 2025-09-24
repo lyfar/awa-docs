@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Push Notifications keep AWATERRA practitioners gently tethered to their intentions. Whenever the platform detects a scheduled reminder or a meaningful event in the user's journey, it delivers a mindful prompt that reinforces consistent practice without feeling intrusive.
+Push Notifications help practitioners stay aware of their next step. When a schedule or event fires, the system sends a calm prompt that encourages practice without pressure.
 
-The experience guides the user from lock screen to the exact moment of relevance inside the app. Each touchpoint is tracked so we can understand how reminders resonate, close the feedback loop, and keep the cadence tuned to each person's rhythm.
+The flow guides the user from the lock screen into the right screen inside the app. We track each delivery and response so timing and content stay useful.
 
 ## Interaction Blueprint
 1. System evaluates schedule and user events to queue a notification.
@@ -35,14 +35,17 @@ The experience guides the user from lock screen to the exact moment of relevance
 5. App deep-links to the intended destination and records the interaction.
 6. Analytics pipeline logs delivery and engagement for reporting.
 
-- Edge case: Delivery fails because the device is offline; the system retries automatically and flags the notification for follow-up once the device reconnects.
+:::caution Edge Case
+Delivery fails because the device is offline. The system retries automatically and flags the notification for follow-up once the device reconnects.
+:::
 
-- Signals of success:
-  - Users interact with timely prompts instead of ignoring them.
-  - Delivery and interaction logs confirm healthy reliability.
-  - Practice streaks and session completions lift for notified cohorts.
+:::tip Signals of Success
+- Users interact with timely prompts instead of ignoring them.
+- Delivery and interaction logs confirm healthy reliability.
+- Practice streaks and session completions rise for cohorts that receive messages.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

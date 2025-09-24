@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Practice Screen delivers the core AWATERRA experience. It ushers users into a focused state with gradient visuals, AWA Soul breathing animations, and ambient audio. Controls remain minimal—start, pause, mute, finish—keeping attention on inner work. For guests, the flow still records a session while previewing the benefits of creating an account.
+The Practice Screen delivers the core AWATERRA experience. Soft gradients, AWA Soul breathing animations, and ambient audio help users settle into focus.
+
+Controls stay simple with clear start, pause, mute, and finish actions so attention remains on inner work. Guests still record a session and see the benefit of creating an account.
 
 ## Interaction Blueprint
 1. Load practice assets (audio, visuals, guidance text) and prepare do-not-disturb prompt.
@@ -33,14 +35,17 @@ Practice Screen delivers the core AWATERRA experience. It ushers users into a fo
 5. On completion, surface finish CTA, gratitude prompt, and optional reaction/feedback.
 6. Persist session data, then route to Profile View or Light Ignition celebration.
 
-- Edge case: User receives interruption (call, notification); ensure resume state is saved and easy to re-enter.
+:::caution Edge Case
+User receives an interruption such as a call or notification. Save the session state and make it easy to resume.
+:::
 
-- Signals of success:
-  - High completion rate without technical glitches or audio dropouts.
-  - Users understand controls instantly and report calm, focused experience.
-  - Session telemetry records time-on-task and outcomes reliably.
+:::tip Signals of Success
+- Completion rate stays high without technical glitches or audio dropouts.
+- Users understand controls instantly and report a calm, focused experience.
+- Session telemetry records time-on-task and outcomes reliably.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

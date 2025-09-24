@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Layout & Menu defines the foundation of AWATERRA’s navigation experience. The structure must balance clarity and calmness so practitioners can find what they need without cognitive overload. This first release anchors the global navigation, surfaces the most important destinations, and establishes responsive patterns for future modules.
+Layout & Menu sets the navigation foundation for AWATERRA. The structure balances clarity and calm so practitioners find what they need without overload. This release anchors the global navigation, surfaces key destinations, and defines responsive patterns for later modules.
 
-Beyond basic wayfinding, the menu educates users on the breadth of the product—practices, pulse, profile, and admin surfaces—while keeping the spiritual tone intact. Consistent placement, motion, and iconography set expectations that future features can inherit without rework.
+Beyond wayfinding, the menu shows the breadth of the product, from practices to profile, while keeping the mindful tone. Consistent placement, motion, and iconography give future features a pattern to follow without rework.
 
 ## Interaction Blueprint
 1. Align stakeholders on the launch IA and map it to user journeys and permissions.
@@ -35,14 +35,17 @@ Beyond basic wayfinding, the menu educates users on the breadth of the product�
 5. Exercise typical and edge navigation paths with usability tests and accessibility audits.
 6. Load the layout in production-like environments to confirm performance and localization resilience.
 
-- Edge case: A locale introduces long labels that break layout; responsive truncation and tooltips preserve clarity without clipping.
+:::caution Edge Case
+A locale introduces long labels that break the layout. Use responsive truncation and tooltips to preserve clarity without clipping.
+:::
 
-- Signals of success:
-  - Users identify their current location and upcoming steps without assistance.
-  - Navigation adjusts gracefully across device sizes and orientations.
-  - Analytics show balanced engagement across primary destinations.
+:::tip Signals of Success
+- Users identify their current location and next steps without assistance.
+- Navigation adjusts gracefully across device sizes and orientations.
+- Analytics show balanced engagement across primary destinations.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The Loading Screen offers a grounded welcome before AWATERRA comes to life. Rather than a passive spinner, the sequence introduces the brand voice—“We felt you’d come. Welcome home.”—and sets expectations about the light-filled community the user is joining. Calm animations keep energy steady while background tasks prepare content.
+The Loading Screen welcomes the user while the app prepares content. Calm animations, warm copy, and soft audio make the wait feel intentional instead of idle.
 
-Because first impressions matter, the experience must be performant and intentional: uplifting copy, gentle sound, and subtle progress cues reassure users that the platform is readying their next moment of practice.
+We keep progress cues honest and responsive. As soon as tasks finish, the sequence fades away so the user arrives at the right spot without extra delay.
 
 ## Interaction Blueprint
 1. Detect launch or feature transitions that require prefetching and initialize the loading state.
@@ -35,14 +35,17 @@ Because first impressions matter, the experience must be performant and intentio
 5. Fade out the loading sequence once prerequisites complete and transition into the destination experience.
 6. Record whether the sequence has been shown before to avoid repetition when unnecessary.
 
-- Edge case: Slow network extends load time; surface calming loops with honest messaging instead of freezing the visual.
+:::caution Edge Case
+Slow network extends load time. Show a calming loop with honest messaging instead of freezing the visual.
+:::
 
-- Signals of success:
-  - New users experience a welcoming sequence without perceivable stutter.
-  - Repeat users see the screen only when necessary; otherwise navigation remains snappy.
-  - Support tickets referencing “blank screen on launch” trend downward.
+:::tip Signals of Success
+- New users experience a welcoming sequence without visible stutter.
+- Repeat users see the screen only when needed; navigation stays fast otherwise.
+- Support tickets about blank launch screens trend downward.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

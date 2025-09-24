@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Practices List curates the launch set of seven guided sessions plus “My Practice.” Cards highlight duration, modality, and community reactions, inviting exploration without overwhelming. The list honors the mindful tone—calm visuals, gentle microinteractions, and explicit benefits.
+Practices List presents the launch set of guided sessions plus “My Practice.” Each card shows duration, modality, and community reactions so exploration feels inviting without overload. Calm visuals, gentle microinteractions, and clear benefits keep the tone mindful.
 
-Selecting a practice reveals detailed previews or launches the experience directly depending on user familiarity. “My Practice” provides a customizable entry point with icons for meditation, breathing, mantras, sound healing, movement, and more.
+Selecting a practice shows a quick preview or launches the session based on familiarity. “My Practice” stays customizable with icons across meditation, breathing, mantras, sound healing, movement, and more.
 
 ## Interaction Blueprint
 1. Fetch practice catalog and user-specific metadata (likes, availability) on load.
@@ -35,14 +35,17 @@ Selecting a practice reveals detailed previews or launches the experience direct
 5. Selecting a practice transitions to the Practice Screen with saved preferences applied.
 6. Log selection and engagement metrics to inform future curation.
 
-- Edge case: Network latency delays content; show placeholders and allow offline cached practices where possible.
+:::caution Edge Case
+Network latency delays content. Show placeholders and allow offline cached practices where possible.
+:::
 
-- Signals of success:
-  - Catalog loads within target time and drives practice starts.
-  - Users engage with “My Practice” customization without confusion.
-  - Reaction counts and favorites encourage social proof without pressuring.
+:::tip Signals of Success
+- Catalog loads within target time and drives practice starts.
+- Users engage with “My Practice” customization without confusion.
+- Reaction counts and favorites encourage social proof without pressure.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

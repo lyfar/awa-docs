@@ -23,7 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-This engagement play keeps the community responsive. When AWA Pulse dips, a mindful notification invites practitioners to contribute a practice, share energy, or send encouragement. Copy balances urgency with compassion—“The pulse is gentle right now, can you help?”—reinforcing shared responsibility without guilt.
+This engagement play keeps the community responsive. When AWA Pulse dips, a mindful notification invites practitioners to contribute a practice, share energy, or send encouragement.
+
+Copy balances urgency with compassion using lines like “The pulse is gentle right now, can you help?” so shared responsibility stays warm, not guilty.
 
 ## Interaction Blueprint
 1. Monitor pulse analytics service for threshold breaches sustained over the configured window.
@@ -33,14 +35,17 @@ This engagement play keeps the community responsive. When AWA Pulse dips, a mind
 5. Track opens, conversions, and resulting pulse recovery.
 6. Suppress duplicate sends until the pulse stabilizes or a cooldown expires.
 
-- Edge case: Pulse fluctuates rapidly around the threshold; introduce hysteresis to avoid spam.
+:::caution Edge Case
+Pulse fluctuates rapidly around the threshold. Introduce hysteresis to avoid spam.
+:::
 
-- Signals of success:
-  - Noticeable uptick in practice starts after alerts.
-  - Low opt-out rates due to balanced tone.
-  - Pulse recovers within target timeframe thanks to community action.
+:::tip Signals of Success
+- Practice starts increase after alerts.
+- Opt-out rates stay low because tone remains balanced.
+- Pulse recovers within the target timeframe thanks to community action.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

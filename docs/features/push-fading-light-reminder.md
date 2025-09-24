@@ -23,24 +23,29 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The Fading Light Reminder is a gentle whisper: “Your light is dimming—ready to shine again?” It respects cadence, avoids pressure, and opens straight into Practice so users can reignite their presence. Tone is reflective, focusing on personal rhythm instead of streak anxiety.
+The Fading Light Reminder is a gentle note: “Your light is dimming, ready to shine again?” It respects cadence, avoids pressure, and opens straight into Practice so users can reignite their presence.
+
+Tone stays reflective, focusing on personal rhythm instead of streak anxiety.
 
 ## Interaction Blueprint
 1. Schedule a reminder 24 hours after the last completed practice, respecting quiet hours and notification preferences.
-2. Compose copy referencing the user’s contribution (“Your light still glows—keep it bright”).
+2. Compose copy referencing the user’s contribution (“Your light still glows, keep it bright”).
 3. Deliver via push and optionally in-app inbox for users who prefer ambient prompts.
 4. Deep link to the Practices List or a personalized recommendation when opened.
 5. Track completion or snooze actions to refine future timing.
 6. Cancel reminders if the user practices again before the 24-hour mark.
 
-- Edge case: User already has multiple reminders queued; deduplicate to avoid stacking.
+:::caution Edge Case
+User already has multiple reminders queued. Deduplicate to avoid stacking.
+:::
 
-- Signals of success:
-  - Re-engagement rate within 12 hours of receiving the reminder.
-  - Low opt-out rates due to considerate tone and cadence.
-  - Minimal support complaints about over-notification.
+:::tip Signals of Success
+- Re-engagement lifts within 12 hours of receiving the reminder.
+- Opt-out rates stay low thanks to considerate tone and cadence.
+- Support hears minimal complaints about over-notification.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

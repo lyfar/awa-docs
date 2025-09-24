@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Application Settings centralizes the levers practitioners need to personalize AWATERRA. From biometric login to language, notifications, and profile data, the screen balances power with simplicity. Clear sections, inline guidance, and confirmation states keep the experience calm even while editing sensitive options.
+Application Settings gathers the controls practitioners use to personalize AWATERRA. Clear sections cover biometric login, language, notifications, and profile data so updates stay calm and easy.
 
-The module also houses critical compliance actions such as profile deletion and data controls, linking to GDPR flows without forcing users into separate surfaces.
+The module also holds compliance actions such as profile deletion and data requests. We link to GDPR flows directly so users can manage responsibilities without leaving the screen.
 
 ## Interaction Blueprint
 1. Present categorized settings (Account, Security, Notifications, Language, Location) with intuitive icons.
@@ -35,14 +35,17 @@ The module also houses critical compliance actions such as profile deletion and 
 5. Offer destructive actions (Delete profile) with confirmation dialogs and supporting explanations.
 6. Persist changes to backend and local storage, then notify dependent services to honor the new configuration.
 
-- Edge case: Network loss mid-update; queue changes locally and prompt the user when sync completes or fails.
+:::caution Edge Case
+Network loss happens mid-update. Queue changes locally and prompt the user when sync completes or fails.
+:::
 
-- Signals of success:
-  - Settings adjustments reflect instantly without requiring app restarts.
-  - Users understand how to undo or revisit any change they make.
-  - Sensitive actions include safeguards that prevent accidental data loss.
+:::tip Signals of Success
+- Settings adjust instantly without needing an app restart.
+- Users know how to undo or revisit every change they make.
+- Sensitive actions include safeguards that prevent accidental data loss.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

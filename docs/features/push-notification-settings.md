@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Push Notification Settings empower practitioners to choose the rhythms that serve them. Users can enable categories—practice reminders, pulse alerts, profile updates—and silence those that do not resonate. Transparent descriptions keep the experience mindful, not noisy.
+Push Notification Settings let practitioners choose the rhythms that serve them. Users can enable categories such as practice reminders, pulse alerts, and profile updates while silencing ones that do not fit.
 
-The configuration syncs across devices and honors GDPR consent, ensuring users remain in control of how AWATERRA reaches out.
+Transparent descriptions and synced preferences across devices keep communication mindful and aligned with consent.
 
 ## Interaction Blueprint
 1. Surface settings entry points from Profile and contextual nudges.
@@ -35,14 +35,17 @@ The configuration syncs across devices and honors GDPR consent, ensuring users r
 5. Provide quick controls for muting all notifications temporarily.
 6. Log changes and respect them immediately across push, in-app, and email systems.
 
-- Edge case: OS-level permission revoked; show inline warning and link to system settings without breaking the flow.
+:::caution Edge Case
+OS-level permission is revoked. Show an inline warning and link to system settings without breaking the flow.
+:::
 
-- Signals of success:
-  - High alignment between configured categories and delivered messages.
-  - Reduced opt-out or uninstall rates linked to notification fatigue.
-  - Support requests about unwanted notifications trend downward.
+:::tip Signals of Success
+- Delivered messages match the categories users configure.
+- Opt-out or uninstall rates tied to notification fatigue go down.
+- Support requests about unwanted notifications trend downward.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

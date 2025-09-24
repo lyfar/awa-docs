@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The Admin Area v0.1 gives stewards of AWATERRA a trusted workspace to curate practices without touching production databases. With secure sign-in, clear views of the catalog, and simple form-driven editing, the team can keep guidance fresh as the offering evolves.
+Admin Area v0.1 gives AWATERRA staff a safe place to manage practices without touching production systems. Secure sign-in, clear catalog views, and simple forms let the team refresh guidance quickly.
 
-This first release focuses on the essentials: manage practice metadata, publish or retire entries, and confirm that every change synchronizes with the public experience. Guardrails like role checks and audit logging keep the environment safe even while we move quickly.
+This release covers the basics: edit metadata, publish or retire entries, and confirm that updates reach the app. Role checks and audit logs keep the workspace protected even as we move fast.
 
 ## Interaction Blueprint
 1. Admin authenticates with elevated credentials and reaches the dashboard home.
@@ -35,14 +35,17 @@ This first release focuses on the essentials: manage practice metadata, publish 
 5. Admin confirms updates, publishes, or reverts as needed; audit trail stores the action.
 6. System syncs updates to the live catalog and notifies relevant stakeholders.
 
-- Edge case: Form validation fails because required fields are missing; the dashboard blocks submission, highlights the fields, and prevents publishing until resolved.
+:::caution Edge Case
+Form validation fails because required fields are missing. The dashboard blocks submission, highlights the fields, and prevents publishing until everything is filled in.
+:::
 
-- Signals of success:
-  - Practice CRUD operations complete without manual database access.
-  - Admin workflows average under five minutes from edit to publish.
-  - Audit logs capture 100 percent of create, update, and delete events.
+:::tip Signals of Success
+- Admins complete practice CRUD without manual database access.
+- Most edits finish in under five minutes from change to publish.
+- Audit logs capture every create, update, and delete event.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

@@ -39,17 +39,17 @@ Surface the capability-led story right after the overview so teams immediately s
 If manual, keep the hierarchy tight:
 
 ```md
-- **05. Practice** — Guided Journeys v2 (In Delivery)
-- **08. AWAY Streaks** — Cosmic Calendar Gamification (Discovery)
+- **05. Practice** - Guided Journeys v2 (In Delivery)
+- **08. AWAY Streaks** - Cosmic Calendar Gamification (Discovery)
 ```
 
 ## Strategic Pillars
 
-Describe 2–4 pillars that organise the work. Each pillar should map to capabilities and features.
+Describe 2-4 pillars that organise the work. Each pillar should map to capabilities and features.
 
 ```md
-1. Guided Onboarding — Make first 7 days feel magical.
-2. Social Resonance — Encourage community formations.
+1. Guided Onboarding - Make first 7 days feel magical.
+2. Social Resonance - Encourage community formations.
 ```
 
 ## Release Scope
@@ -63,9 +63,9 @@ Call out explicit descopes so expectations remain tight.
 
 ## Dependencies & Risks
 
-- **Cross-team dependencies** — Marketing launch, data pipelines, content production.
-- **Technical risks** — Migrations, performance, security, scalability.
-- **Decision checkpoints** — Gate reviews, leadership approvals.
+- **Cross-team dependencies** - Marketing launch, data pipelines, content production.
+- **Technical risks** - Migrations, performance, security, scalability.
+- **Decision checkpoints** - Gate reviews, leadership approvals.
 ## Go-To-Market Alignment
 
 - Launch narrative and messaging pillars.

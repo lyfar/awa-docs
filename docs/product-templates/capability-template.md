@@ -11,10 +11,10 @@ Use this template when you introduce or refine a capability area within the AWAT
 
 ## Capability Identity
 
-- **Capability Name** — Distinct, action-oriented label that the team can rally around.
-- **Primary Owner** — Product, design, or engineering lead accountable for outcomes.
-- **Supporting Teams** — Cross-functional partners and dependencies.
-- **Lifecycle Stage** — Idea · Discovery · Definition · Delivery · Live · Iterate.
+- **Capability Name** - Distinct, action-oriented label that the team can rally around.
+- **Primary Owner** - Product, design, or engineering lead accountable for outcomes.
+- **Supporting Teams** - Cross-functional partners and dependencies.
+- **Lifecycle Stage** - Idea · Discovery · Definition · Delivery · Live · Iterate.
 
 ## Purpose & Strategic Fit
 
@@ -39,24 +39,24 @@ Capture the experience principles that must remain true across every feature in 
 
 ## Scope & Boundaries
 
-- **In Scope** — Core flows, user segments, platforms, geography.
-- **Out of Scope** — Deferred ideas or experiments that are explicitly excluded for this release.
-- **Dependencies** — APIs, data sets, or other capabilities this work depends on.
+- **In Scope** - Core flows, user segments, platforms, geography.
+- **Out of Scope** - Deferred ideas or experiments that are explicitly excluded for this release.
+- **Dependencies** - APIs, data sets, or other capabilities this work depends on.
 
 ## Feature Inventory
 
 List every feature that currently lives in this capability, including roadmap stage.
 
 ```md
-- [Feature Name](/docs/features/feature-slug) — Live · Version 1.0 Ignition
-- [Future Feature](/docs/features/future-feature-slug) — Discovery · Version 1.1 Aurora
+- [Feature Name](/docs/features/feature-slug) - Live · Version 1.0 Ignition
+- [Future Feature](/docs/features/future-feature-slug) - Discovery · Version 1.1 Aurora
 ```
 
 ## Operational Guidelines
 
-- **Runbooks** — Links to incident response, content governance, or moderation playbooks.
-- **Content Sources** — Who supplies the data, meditations, or visuals that make this capability useful?
-- **Tooling** — CMS dashboards, analytics boards, and automation surfaces.
+- **Runbooks** - Links to incident response, content governance, or moderation playbooks.
+- **Content Sources** - Who supplies the data, meditations, or visuals that make this capability useful?
+- **Tooling** - CMS dashboards, analytics boards, and automation surfaces.
 
 ## Implementation Notes
 

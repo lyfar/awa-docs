@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The Prototype 3D Map with FPS Stats is our sandbox for validating rendering, controls, and telemetry before the full Light Map launch. It exposes core interactions—navigation, zoom, and overlays—while surfacing performance metrics so engineering can tune shaders and pipelines.
+The Prototype 3D Map with FPS Stats is our sandbox for testing rendering, controls, and telemetry before the full Light Map launch. It exposes navigation, zoom, and overlays while surfacing performance metrics so engineering can tune shaders and pipelines.
 
-Although positioned for internal use, the experience still mirrors the final vision: an interactive map that responds smoothly, communicates orientation, and helps stakeholders feel the spatial storytelling we plan to ship.
+Even as an internal tool it mirrors the future experience with smooth interaction and clear orientation, helping stakeholders feel the spatial story we plan to ship.
 
 ## Interaction Blueprint
 1. Load prototype assets and initialize the 3D scene with target shaders and lighting.
@@ -35,14 +35,17 @@ Although positioned for internal use, the experience still mirrors the final vis
 5. Capture recordings or screenshots for stakeholder review and documentation.
 6. Export performance logs and summarize findings to inform optimization backlog.
 
-- Edge case: Low-end devices might dip below target FPS; provide quality toggles or simplified rendering paths to continue the evaluation.
+:::caution Edge Case
+Low-end devices dip below target FPS. Provide quality toggles or simplified rendering paths so evaluation can continue.
+:::
 
-- Signals of success:
-  - Consistent frame rate within target thresholds during interaction loops.
-  - No crashes or graphical glitches during extended test sessions.
-  - Actionable performance insights captured for the production roadmap.
+:::tip Signals of Success
+- Frame rate stays within target thresholds during interaction loops.
+- Extended test sessions complete without crashes or visual glitches.
+- Performance insights flow into the production roadmap.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

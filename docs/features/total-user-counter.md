@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Total User Counter is the simplest expression of our living community. By aggregating live participation and presenting it in an elegant animation, the feature helps users feel part of something larger. The counter appears on the home Light Map and Pulse surfaces, synchronizing with underlying metrics.
+Total User Counter is a simple way to show the living community. It aggregates live participation and animates gently on the home Light Map and Pulse surfaces.
 
-The experience needs to balance accuracy, motion, and calmness. Updates should feel alive without distracting from the broader interface, and messaging must clarify what the number represents so trust grows with every glance.
+Updates stay accurate, calm, and clear so users trust what the number represents every time they glance at it.
 
 ## Interaction Blueprint
 1. Aggregate total connected and active user counts across relevant services.
@@ -35,14 +35,17 @@ The experience needs to balance accuracy, motion, and calmness. Updates should f
 5. Provide hover or tap affordances for deeper stats when available.
 6. Log synchronization and delta timing to monitor accuracy.
 
-- Edge case: Sudden drops due to data lag; hold the previous value and show a syncing state rather than oscillating wildly.
+:::caution Edge Case
+Sudden drops appear because of data lag. Hold the previous value and show a syncing state rather than oscillating wildly.
+:::
 
-- Signals of success:
-  - Counter updates within expected latency and mirrors backend telemetry.
-  - Users reference the number in qualitative feedback as a reason to stay engaged.
-  - Animations remain smooth across devices and respect reduced-motion preferences.
+:::tip Signals of Success
+- Counter updates within expected latency and mirrors backend telemetry.
+- Users reference the number in feedback as a reason to stay engaged.
+- Animations remain smooth across devices and respect reduced-motion preferences.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD

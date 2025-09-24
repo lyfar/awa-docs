@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Location permission unlocks the personal resonance of the Light Map. During onboarding we explain why sharing a general location matters—seeing your light among others—while acknowledging privacy choices. The flow must be transparent, reversible, and fully compliant with prior consent for data processing.
+Location permission unlocks the personal resonance of the Light Map. During onboarding we explain why sharing a general location matters and acknowledge privacy choices in plain language.
 
-The screen pairs narrative copy with a preview of the globe, helping users visualize the benefit before a system modal appears. Should they decline, we honor the choice and provide ways to enable later without friction.
+The screen pairs clear copy with a globe preview so users see the benefit before the system modal appears. If they decline we honor the decision and show how to enable it later without friction.
 
 ## Interaction Blueprint
 1. Confirm user acceptance of the data policy before requesting location.
@@ -35,14 +35,17 @@ The screen pairs narrative copy with a preview of the globe, helping users visua
 5. Handle responses: success leads to globe personalization; denial stores preference and offers gentle re-entry points.
 6. Log consent state and provide in-app settings to revisit the decision.
 
-- Edge case: Device-level restrictions prevent location even after consent; show a clear message and link to OS instructions.
+:::caution Edge Case
+Device-level restrictions prevent location even after consent. Show a clear message and link to OS instructions.
+:::
 
-- Signals of success:
-  - High acceptance rate accompanied by positive qualitative feedback about clarity.
-  - Users who defer can later enable without dead ends.
-  - No crashes or blocked transitions when permissions are denied.
+:::tip Signals of Success
+- Acceptance rate stays high with positive feedback about clarity.
+- Users who defer can enable later without dead ends.
+- No crashes or blocked transitions occur when permissions are denied.
+:::
 
-### Mermaid Journey IN MERMAID FORMAT
+### Journey
 
 ```mermaid
 flowchart TD
