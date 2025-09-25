@@ -55,6 +55,8 @@ const config: Config = {
     ],
   ],
 
+  plugins: [require.resolve('./plugins/gitLastUpdated.js')],
+
   themes: ['@docusaurus/theme-mermaid'],
 
   markdown: {
