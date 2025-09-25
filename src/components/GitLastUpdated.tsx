@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import React, {useMemo} from 'react';
+import usePluginData from '@docusaurus/useGlobalData';
 
 interface GitLastUpdatedProps {
   docPath?: string;
@@ -11,30 +11,14 @@ interface GitMetadata {
 }
 
 const GitLastUpdated: React.FC<GitLastUpdatedProps> = ({docPath}) => {
-  const [metadata, setMetadata] = useState<GitMetadata | null>(null);
-  const metadataUrl = useBaseUrl('git-last-updated.json');
+  const pluginData = usePluginData('git-last-updated-plugin') as GitMetadata | undefined;
 
-  useEffect(() => {
-    let cancelled = false;
-    const fetchData = async () => {
-      try {
-        const response = await fetch(metadataUrl);
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-        const data: GitMetadata = await response.json();
-        if (!cancelled) {
-          setMetadata(data);
-        }
-      } catch (error) {
-        console.error('Failed to load git last updated info', error);
-      }
-    };
-    fetchData();
-    return () => {
-      cancelled = true;
-    };
-  }, [metadataUrl]);
+  const metadata = useMemo<GitMetadata | null>(() => {
+    if (!pluginData) {
+      return null;
+    }
+    return pluginData;
+  }, [pluginData]);
 
   if (!metadata) {
     return null;
