@@ -1,0 +1,120 @@
+.gateWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(109, 90, 230, 0.12), transparent 55%),
+    radial-gradient(circle at bottom, rgba(92, 67, 197, 0.18), transparent 60%),
+    var(--ifm-background-color);
+  padding: 2rem;
+}
+
+.gateCard {
+  width: 100%;
+  max-width: 420px;
+  background: var(--ifm-card-background-color, rgba(255, 255, 255, 0.92));
+  border-radius: 20px;
+  padding: 2.8rem 2.4rem;
+  box-shadow: 0 45px 85px rgba(43, 31, 89, 0.18);
+  text-align: center;
+  border: 1px solid rgba(109, 90, 230, 0.18);
+}
+
+.gateTitle {
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
+  color: var(--ifm-font-color-base);
+}
+
+.gateSubtitle {
+  margin: 0 auto 1.8rem;
+  max-width: 22rem;
+  color: rgba(46, 37, 70, 0.72);
+  font-size: 0.98rem;
+}
+
+.gateForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.codeFrame {
+  position: relative;
+}
+
+.codeDisplay {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+  gap: 0.55rem;
+}
+
+.codeDigit {
+  width: 3rem;
+  height: 3.2rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(93, 73, 187, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.codeDigitActive {
+  border-color: rgba(109, 90, 230, 0.74);
+  box-shadow: 0 0 0 3px rgba(109, 90, 230, 0.2);
+}
+
+.hiddenInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border: none;
+  padding: 0;
+}
+
+.gateError {
+  margin: 0.4rem 0 0.8rem;
+  color: rgb(227, 76, 89);
+  font-weight: 600;
+}
+
+.resetButton {
+  background: transparent;
+  border: none;
+  color: rgba(109, 90, 230, 0.9);
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.resetButton:hover {
+  color: rgba(92, 67, 197, 0.9);
+}
+
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .gateCard {
+    padding: 2rem 1.7rem;
+  }
+
+  .otpSlot {
+    width: 2.6rem;
+    height: 3rem;
+  }
+}
