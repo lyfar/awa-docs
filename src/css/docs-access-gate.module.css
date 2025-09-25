@@ -12,7 +12,7 @@
 .gateCard {
   width: 100%;
   max-width: 420px;
-  background: var(--ifm-card-background-color, rgba(255, 255, 255, 0.92));
+  background: var(--ifm-card-background-color, rgba(255, 255, 255, 0.94));
   border-radius: 24px;
   padding: 3rem 2.6rem 2.4rem;
   box-shadow: 0 45px 85px rgba(43, 31, 89, 0.18);
@@ -47,7 +47,7 @@
 .gateSubtitle {
   margin: 0 auto 2.1rem;
   max-width: 23rem;
-  color: rgba(46, 37, 70, 0.72);
+  color: var(--ifm-color-gray-700);
   font-size: 1rem;
 }
 
@@ -195,4 +195,57 @@
   .logoWrap {
     height: 48px;
   }
+}
+
+:global([data-theme='dark']) .gateWrapper {
+  background: radial-gradient(circle at top, rgba(109, 90, 230, 0.12), transparent 55%),
+    radial-gradient(circle at bottom, rgba(40, 36, 110, 0.28), transparent 60%),
+    var(--ifm-background-color);
+}
+
+:global([data-theme='dark']) .gateCard {
+  background: rgba(25, 21, 43, 0.92);
+  border-color: rgba(132, 120, 238, 0.28);
+  box-shadow: 0 40px 80px rgba(12, 10, 28, 0.55);
+}
+
+:global([data-theme='dark']) .gateSubtitle {
+  color: rgba(206, 204, 230, 0.76);
+}
+
+:global([data-theme='dark']) .codeDigit {
+  background: rgba(35, 31, 61, 0.88);
+  border-color: rgba(132, 120, 238, 0.24);
+  color: rgba(240, 238, 255, 0.95);
+}
+
+:global([data-theme='dark']) .codeDigitActive {
+  border-color: rgba(146, 135, 250, 0.8);
+  box-shadow: 0 0 0 3px rgba(146, 135, 250, 0.24);
+}
+
+:global([data-theme='dark']) .hiddenInput {
+  background: transparent;
+  color: rgba(240, 238, 255, 0.95);
+}
+
+:global([data-theme='dark']) .gateError {
+  color: rgb(245, 110, 124);
+}
+
+:global([data-theme='dark']) .resetButton {
+  color: rgba(178, 169, 255, 0.9);
+}
+
+:global([data-theme='dark']) .resetButton:hover {
+  color: rgba(208, 201, 255, 0.95);
+}
+
+:global([data-theme='dark']) .successBadge {
+  background: rgba(67, 196, 120, 0.92);
+  box-shadow: 0 0 0 8px rgba(67, 196, 120, 0.22);
+}
+
+:global([data-theme='dark']) .successMessage {
+  color: rgba(178, 239, 204, 0.92);
 }
