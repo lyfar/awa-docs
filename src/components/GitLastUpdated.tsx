@@ -11,21 +11,37 @@ interface GitMetadata {
 }
 
 const GitLastUpdated: React.FC<GitLastUpdatedProps> = ({docPath}) => {
-  const pluginData = usePluginData('git-last-updated-plugin') as GitMetadata | undefined;
+  const pluginData = usePluginData('git-last-updated-plugin') as unknown;
 
   const metadata = useMemo<GitMetadata | null>(() => {
     if (!pluginData) {
       return null;
     }
-    return pluginData;
+
+    if (typeof pluginData === 'object' && pluginData !== null) {
+      const direct = pluginData as Record<string, unknown>;
+      if ('repoLastUpdated' in direct && 'docs' in direct) {
+        return direct as GitMetadata;
+      }
+
+      const defaultEntry = (direct as {default?: GitMetadata}).default;
+      if (defaultEntry && typeof defaultEntry === 'object') {
+        return defaultEntry;
+      }
+    }
+
+    return null;
   }, [pluginData]);
 
   if (!metadata) {
     return null;
   }
 
-  const lookupKey = docPath?.replace(/^@site\//, '') ?? '';
-  const docDate = lookupKey ? metadata.docs[lookupKey] : null;
+  const lookupKeyRaw = docPath?.replace(/^@site\//, '') ?? '';
+  const lookupKey = lookupKeyRaw.endsWith('.md') || lookupKeyRaw.endsWith('.mdx')
+    ? lookupKeyRaw
+    : `${lookupKeyRaw}.mdx`;
+  const docDate = lookupKey ? metadata.docs[lookupKey] ?? metadata.docs[lookupKeyRaw] : null;
   const dateToUse = docDate || metadata.repoLastUpdated;
 
   if (!dateToUse) {

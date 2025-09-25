@@ -69,8 +69,9 @@ function createPlugin() {
       return {repoLastUpdated, docs};
     },
     async contentLoaded({content, actions}) {
-      const {createData} = actions;
+      const {createData, setGlobalData} = actions;
       await createData('git-last-updated.json', JSON.stringify(content));
+      setGlobalData(content);
     },
   };
 }
