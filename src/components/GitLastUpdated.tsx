@@ -1,5 +1,7 @@
 import React, {useMemo} from 'react';
-import usePluginData from '@docusaurus/useGlobalData';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const pluginData = require('@generated/git-last-updated-plugin/default/git-last-updated.json') as GitMetadata;
 
 interface GitLastUpdatedProps {
   docPath?: string;
@@ -11,37 +13,25 @@ interface GitMetadata {
 }
 
 const GitLastUpdated: React.FC<GitLastUpdatedProps> = ({docPath}) => {
-  const pluginData = usePluginData('git-last-updated-plugin') as unknown;
-
-  const metadata = useMemo<GitMetadata | null>(() => {
-    if (!pluginData) {
-      return null;
-    }
-
-    if (typeof pluginData === 'object' && pluginData !== null) {
-      const direct = pluginData as Record<string, unknown>;
-      if ('repoLastUpdated' in direct && 'docs' in direct) {
-        return direct as GitMetadata;
-      }
-
-      const defaultEntry = (direct as {default?: GitMetadata}).default;
-      if (defaultEntry && typeof defaultEntry === 'object') {
-        return defaultEntry;
-      }
-    }
-
-    return null;
-  }, [pluginData]);
-
-  if (!metadata) {
-    return null;
-  }
+  const metadata = pluginData;
 
   const lookupKeyRaw = docPath?.replace(/^@site\//, '') ?? '';
-  const lookupKey = lookupKeyRaw.endsWith('.md') || lookupKeyRaw.endsWith('.mdx')
-    ? lookupKeyRaw
-    : `${lookupKeyRaw}.mdx`;
-  const docDate = lookupKey ? metadata.docs[lookupKey] ?? metadata.docs[lookupKeyRaw] : null;
+  const lookupCandidates = useMemo(() => {
+    if (!lookupKeyRaw) {
+      return [] as string[];
+    }
+    const base = lookupKeyRaw.replace(/\.(mdx?)$/i, '');
+    return [
+      lookupKeyRaw,
+      `${base}.mdx`,
+      `${base}.md`,
+      base,
+    ].filter((key, index, array) => key && array.indexOf(key) === index);
+  }, [lookupKeyRaw]);
+
+  const docDate = lookupCandidates
+    .map((key) => metadata.docs[key])
+    .find((value) => Boolean(value)) ?? null;
   const dateToUse = docDate || metadata.repoLastUpdated;
 
   if (!dateToUse) {

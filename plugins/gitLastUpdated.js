@@ -50,7 +50,18 @@ function getDocLastUpdatedDates() {
     try {
       const output = execSync(`git log -1 --format=%cd -- "${absPath}"`).toString().trim();
       const date = output ? new Date(output) : null;
-      results[relPath] = date && !Number.isNaN(date.getTime()) ? date.toISOString() : null;
+      const isoString = date && !Number.isNaN(date.getTime()) ? date.toISOString() : null;
+      const baseKey = relPath.replace(/\.(mdx?)$/i, '');
+      const variations = new Set([
+        relPath,
+        `${baseKey}.md`,
+        `${baseKey}.mdx`,
+        baseKey,
+      ]);
+
+      variations.forEach((key) => {
+        results[key] = isoString;
+      });
     } catch (error) {
       console.warn(`Unable to read git update for ${relPath}:`, error.message);
       results[relPath] = null;

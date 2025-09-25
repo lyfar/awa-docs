@@ -10,7 +10,8 @@ import GitLastUpdated from '@site/src/components/GitLastUpdated';
 const DocItemFooter = (): JSX.Element | null => {
   const {metadata} = useDoc();
   const {editUrl, lastUpdatedAt, lastUpdatedBy, tags} = metadata;
-  const docPath = metadata.source?.replace(/^@site\//, '') ?? undefined;
+  const docPath = metadata.source?.replace(/^@site\//, '')
+    ?? (metadata.id ? `docs/${metadata.id}` : undefined);
 
   const canDisplayTagsRow = tags.length > 0;
   const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
