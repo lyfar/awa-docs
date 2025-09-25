@@ -22,8 +22,8 @@
   gap: 0.65rem;
   width: 100%;
   position: relative;
-  padding-left: 0.75rem;
-  padding-right: 3.6rem;
+  padding-left: 0.85rem;
+  padding-right: 3.4rem;
   min-height: 2.5rem;
 }
 
@@ -58,15 +58,18 @@
   transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  min-width: 1.8rem;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  min-width: 2.1rem;
 }
 
 .currentIndicator {
   position: relative;
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .currentIndicatorDot,

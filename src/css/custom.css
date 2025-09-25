@@ -55,6 +55,13 @@
   --ifm-heading-font-weight: 600;
   --ifm-background-color: #fffffa;
   --ifm-background-surface-color: var(--awa-surface-muted);
+  --ifm-color-primary: #6d5ae6;
+  --ifm-color-primary-dark: #594ad0;
+  --ifm-color-primary-darker: #4c42b4;
+  --ifm-color-primary-darkest: #3a318c;
+  --ifm-color-primary-light: #8375ee;
+  --ifm-color-primary-lighter: #9b90f3;
+  --ifm-color-primary-lightest: #b6aef8;
   --ifm-footer-background-color: #ffffff;
   --ifm-footer-title-color: var(--awa-footer-text);
   --ifm-footer-link-color: var(--awa-footer-link);
@@ -391,10 +398,13 @@ strong {
 }
 .theme-doc-sidebar-item-category .menu__link {
   position: relative;
-  padding-right: 4rem;
+  padding-right: 3.4rem;
 }
 
 .theme-doc-sidebar-item-category .menu__link .menu__link--sublist-caret {
-  right: 1.2rem;
+  position: absolute;
+  right: 0.95rem;
   left: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
