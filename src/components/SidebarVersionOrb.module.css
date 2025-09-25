@@ -1,18 +1,47 @@
 .wrapper {
   position: relative;
-  padding: 1.2rem 0 1.4rem;
+  padding: 1.4rem 1.1rem 1.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.1rem;
   width: 100%;
   margin-top: 1.5rem;
+  background: var(--ifm-card-background-color, var(--ifm-background-color));
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(84, 64, 120, 0.14);
+  overflow: visible;
+}
+
+.selectorOnly {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  margin-top: 0;
+  align-items: stretch;
+}
+
+.breadcrumbs {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0;
+}
+
+.breadcrumbs .selector {
+  max-width: 260px;
 }
 
 .shaderShell {
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   overflow: hidden;
   filter: drop-shadow(0 18px 38px rgba(84, 64, 120, 0.35));
@@ -24,7 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
   color: rgba(33, 28, 50, 0.88);
   text-transform: uppercase;
@@ -35,35 +64,324 @@
   color: rgba(240, 238, 255, 0.9);
 }
 
-.label {
-  text-align: center;
-  font-size: 0.78rem;
+.selector {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: stretch;
+}
+
+.selectorEyebrow {
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(35, 29, 52, 0.65);
+  color: rgba(35, 29, 52, 0.62);
 }
 
-:global([data-theme='dark']) .label {
-  color: rgba(240, 238, 255, 0.62);
+:global([data-theme='dark']) .selectorEyebrow {
+  color: rgba(240, 238, 255, 0.6);
 }
 
-.caption {
-  font-size: 0.9rem;
+.selectorButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  box-shadow: inset 0 0 0 0 rgba(84, 64, 120, 0.08);
+}
+
+.selectorButton:hover:not(:disabled) {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 8px 18px rgba(84, 64, 120, 0.16);
+  transform: translateY(-1px);
+}
+
+.selectorButton:focus-visible {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(109, 90, 230, 0.24);
+}
+
+.selectorButtonActive {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 12px 26px rgba(84, 64, 120, 0.2);
+  transform: translateY(-1px);
+}
+
+.selectorButtonDisabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.selectorLabel {
+  flex: 1;
+  text-align: left;
+}
+
+.selectorIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.18s ease;
+}
+
+.selectorButtonActive .selectorIcon {
+  transform: rotate(180deg);
+}
+
+.selectorMenu {
+  position: absolute;
+  bottom: calc(100% + 0.45rem);
+  left: 0;
+  right: 0;
+  background: var(--ifm-card-background-color, var(--ifm-background-color));
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  box-shadow: 0 22px 46px rgba(39, 26, 74, 0.22);
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-height: 260px;
+  overflow-y: auto;
+  z-index: 40;
+  opacity: 0;
+  transform: translateY(14px) scale(0.96);
+  transform-origin: bottom center;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  animation: selector-pop-in 0.22s ease forwards;
+}
+
+.selectorMenu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selectorMenu::-webkit-scrollbar-thumb {
+  background: rgba(109, 90, 230, 0.3);
+  border-radius: 999px;
+}
+
+.selectorOption {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  border-radius: 10px;
+  padding: 0.55rem 0.6rem;
+  background: transparent;
+  border: none;
+  font-size: 0.88rem;
   font-weight: 500;
-  text-align: center;
-  color: rgba(35, 29, 52, 0.68);
-  line-height: 1.4;
+  color: var(--ifm-font-color-base);
+  text-align: left;
+  transition: background-color 0.16s ease, transform 0.16s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(6px);
 }
 
-:global([data-theme='dark']) .caption {
-  color: rgba(240, 238, 255, 0.68);
+.selectorOption:hover {
+  background: rgba(109, 90, 230, 0.1);
+  transform: translateX(2px);
+}
+
+.selectorOptionActive {
+  background: rgba(109, 90, 230, 0.16);
+  color: var(--ifm-color-primary);
+}
+
+.selectorOptionActive .selectorOptionValue {
+  color: inherit;
+}
+
+.selectorOptionLabel {
+  flex: 1;
+  line-height: 1.3;
+}
+
+.selectorOptionValue {
+  font-size: 0.78rem;
+  color: rgba(35, 29, 52, 0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+:global([data-theme='dark']) .selectorOptionValue {
+  color: rgba(240, 238, 255, 0.58);
+}
+
+.selectorOptionAnimated {
+  animation: selector-option-fade 0.24s ease forwards;
+}
+
+.selectorOptionSummary {
+  margin: 0.25rem 0.6rem 0.35rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: rgba(35, 29, 52, 0.68);
+}
+
+:global([data-theme='dark']) .selectorOptionSummary {
+  color: rgba(240, 238, 255, 0.7);
 }
 
 .compact .shaderShell {
-  width: 120px;
-  height: 120px;
+  width: 104px;
+  height: 104px;
 }
 
 .compact .value {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0.4rem 0 0;
+  padding-top: 0.75rem;
+  font-size: 0.84rem;
+  color: rgba(35, 29, 52, 0.75);
+  width: 100%;
+  text-align: left;
+  line-height: 1.4;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  transition: color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+:global([data-theme='dark']) .toggle {
+  color: rgba(240, 238, 255, 0.78);
+  border-top: 1px solid rgba(240, 238, 255, 0.16);
+}
+
+.toggle:not(.toggleDisabled):hover {
+  transform: translateY(-1px);
+}
+
+.toggleText {
+  flex: 1;
+  letter-spacing: 0.02em;
+}
+
+.toggleDisabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.toggleCompact {
+  font-size: 0.78rem;
+  gap: 0.65rem;
+}
+
+.checkboxInput {
+  position: absolute;
+  top: 0.75rem;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  opacity: 0;
+}
+
+.checkboxVisual {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(35, 29, 52, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-primary);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 0 0 rgba(84, 64, 120, 0);
+}
+
+:global([data-theme='dark']) .checkboxVisual {
+  border-color: rgba(240, 238, 255, 0.28);
+  background: rgba(24, 22, 35, 0.88);
+}
+
+.toggle:not(.toggleDisabled):hover .checkboxVisual {
+  transform: scale(1.05);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 6px 14px rgba(84, 64, 120, 0.24);
+}
+
+.toggle:not(.toggleDisabled):active .checkboxVisual {
+  transform: scale(0.95);
+}
+
+.checkboxSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.checkboxPath {
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  opacity: 0;
+  transition: stroke-dashoffset 0.25s ease, opacity 0.2s ease;
+}
+
+.checkboxInput:focus-visible + .checkboxVisual {
+  box-shadow: 0 0 0 3px rgba(109, 90, 230, 0.3);
+  border-color: var(--ifm-color-primary);
+}
+
+.checkboxInput:checked + .checkboxVisual {
+  border-color: var(--ifm-color-primary);
+  background: rgba(109, 90, 230, 0.12);
+}
+
+@keyframes selector-pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.94);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes selector-option-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:global([data-theme='dark']) .checkboxInput:checked + .checkboxVisual {
+  background: rgba(109, 90, 230, 0.2);
+}
+
+.checkboxInput:checked + .checkboxVisual .checkboxPath {
+  stroke-dashoffset: 0;
+  opacity: 1;
 }

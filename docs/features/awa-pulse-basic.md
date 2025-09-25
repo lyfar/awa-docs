@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # AWA Pulse (Basic)
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ AWA Pulse translates community activity into a gentle heartbeat. We sample engag
 
 The basic release keeps the display simple with a main pulse value, short trend notes, and plain copy about helpful actions. The visualization links data to feeling and reminds users that every practice counts.
 
-## Interaction Blueprint
+## Interaction
 1. Stream defined engagement metrics (finishes, streaks, active sessions) into the Pulse service.
 2. Apply the agreed formula to convert metrics into a normalized heartbeat value.
 3. Render the pulse visualization with smooth transitions and subtle haptics.
@@ -61,7 +61,7 @@ flowchart TD
     CHECK -->|No| END((Community feels connected))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN fresh engagement data WHEN the pulse service updates THEN UI reflects the new value within the defined latency budget.
   - GIVEN pulse dips below threshold WHEN alerts trigger THEN copy stays supportive and links to meaningful actions.
@@ -71,7 +71,7 @@ flowchart TD
   - Latency or stale data undermines trust in the heartbeat metaphor.
   - Overly aggressive alerts feel spammy and may push users away.
 
-## Data & Measurement
+## Data
 - Primary metric: Percentage of sessions where pulse data is up-to-date (within X minutes of real time).
 - Secondary checks: Low-pulse recovery rate after notifications, detail expansion engagement, and qualitative feedback on clarity.
 - Telemetry requirements: Log calculation timestamp, render duration, threshold crossings, and CTA interactions.

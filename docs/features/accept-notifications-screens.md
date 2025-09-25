@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Accept Notifications Screens
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ The Accept Notifications screens explain why reminders matter before the system 
 
 After the user taps Accept we launch the OS dialog and store the result. If they decline we respect the choice, record it, and point to settings for a future change.
 
-## Interaction Blueprint
+## Interaction
 1. Detect engagement moment (post-practice) when a user expresses interest in reminders.
 2. Show AWATERRA-designed screen summarizing benefits, examples, and privacy assurances.
 3. Provide primary Accept CTA and secondary “Maybe later” option.
@@ -63,7 +63,7 @@ flowchart TD
     RESULT -->|No| RESPECT --> END
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a user taps Accept WHEN we invoke OS permission THEN analytics capture outcome and prevent duplicate prompts.
   - GIVEN a decline WHEN recorded THEN subsequent flows reference that state and avoid nagging.
@@ -73,7 +73,7 @@ flowchart TD
   - Promising notifications we cannot deliver (e.g., immediate results beyond cadence).
   - Failing to route users to preference controls post-acceptance.
 
-## Data & Measurement
+## Data
 - Primary metric: Permission allow rate from this flow.
 - Secondary checks: Time between permission grant and first delivered notification, decline follow-up conversions, and feedback sentiment.
 - Telemetry requirements: Log screen views, CTA selections, OS outcomes, and subsequent preference edits.

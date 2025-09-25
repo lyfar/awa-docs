@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # GDPR Compliance
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ GDPR Compliance turns AWATERRA’s mindful data promise into daily practice. Use
 
 Transparent copy and resilient storage reduce legal risk while strengthening trust. The system should feel empowering, not bureaucratic.
 
-## Interaction Blueprint
+## Interaction
 1. Present clear consent choices during signup with granular toggles for communications and data processing.
 2. Store consent artifacts with timestamps, policy versions, and geo metadata for audit trails.
 3. Expose settings to review and modify preferences later, including notification categories and language.
@@ -63,7 +63,7 @@ flowchart TD
     REQUEST -->|No| END
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a new user WHEN they sign up THEN consent messaging is explicit, unbundled, and recorded with traceable metadata.
   - GIVEN a user updates preferences WHEN the change is saved THEN all dependent services honor the new setting immediately.
@@ -73,7 +73,7 @@ flowchart TD
   - Retaining data longer than legally justified or failing to respond within statutory windows.
   - Exposing internal admin tools without strict access control.
 
-## Data & Measurement
+## Data
 - Primary metric: Compliance SLA adherence for consent capture and rights requests.
 - Secondary checks: Volume of support escalations, audit findings, and frequency of consent changes.
 - Telemetry requirements: Log consent events, preference updates, request lifecycle stages, and admin actions.

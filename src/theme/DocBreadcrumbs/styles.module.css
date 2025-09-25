@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.controlsSingle {
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    gap: 0.65rem;
+  }
+}

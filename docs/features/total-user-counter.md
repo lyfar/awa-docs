@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Total User Counter
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Total User Counter is a simple way to show the living community. It aggregates l
 
 Updates stay accurate, calm, and clear so users trust what the number represents every time they glance at it.
 
-## Interaction Blueprint
+## Interaction
 1. Aggregate total connected and active user counts across relevant services.
 2. Stream the value to clients with sensible caching to prevent flicker.
 3. Animate the counter for increases and decreases with mindful easing.
@@ -57,7 +57,7 @@ flowchart TD
     START --> VERIFY --> UPDATE --> CONTEXT --> MONITOR --> END((Community scale reinforced))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN new telemetry WHEN the counter updates THEN the value animates within 1 second without jitter.
   - GIVEN data delays WHEN freshness drops below SLA THEN display a syncing state instead of misleading numbers.
@@ -67,7 +67,7 @@ flowchart TD
   - Overly flashy animations conflict with the calm tone of the experience.
   - Pulling raw identifiable data rather than aggregated counts could violate privacy commitments.
 
-## Data & Measurement
+## Data
 - Primary metric: Accuracy rate comparing displayed totals vs. backend truth at sample intervals.
 - Secondary checks: Update latency, user interactions with the counter, and qualitative sentiment.
 - Telemetry requirements: Log timestamp of each update, delta magnitude, and fallback states triggered.

@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Geo Allow Follow-up
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Geo Allow Follow-up offers a respectful path to enable location after a user sai
 
 The tone stays invitational so users feel in control. They can enable permission with one tap or dismiss without friction.
 
-## Interaction Blueprint
+## Interaction
 1. Detect experiences (Light Map, localized missions) where location adds value for users who have declined permissions.
 2. Present a lightweight banner or modal with copy explaining the benefit and privacy measures.
 3. Offer actions: “Enable location” (launch OS settings) and “Not now”.
@@ -63,7 +63,7 @@ flowchart TD
     ACTION -->|No| DEFER --> END((Choice respected))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN location is disabled WHEN the user lands on the globe THEN the follow-up prompt appears only after they interact, not immediately.
   - GIVEN a user selects Enable WHEN OS settings open THEN copy explains how to toggle and the app listens for changes to refresh automatically.
@@ -73,7 +73,7 @@ flowchart TD
   - Using alarmist language that pressures compliance.
   - Forgetting to update the interface after permissions change, leaving users uncertain.
 
-## Data & Measurement
+## Data
 - Primary metric: Successful enablement rate following the follow-up prompt.
 - Secondary checks: Cooldown adherence, dismiss rates, and qualitative perception of helpfulness.
 - Telemetry requirements: Log prompt impressions, user choices, setting change detection, and cooldown resets.

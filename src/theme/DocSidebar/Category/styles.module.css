@@ -1,0 +1,9 @@
+.category {
+  position: relative;
+  width: 100%;
+  will-change: transform;
+}
+
+.category :global(.menu__link) {
+  width: 100%;
+}

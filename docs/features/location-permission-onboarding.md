@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Location Permission During Onboarding
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Location permission unlocks the personal resonance of the Light Map. During onbo
 
 The screen pairs clear copy with a globe preview so users see the benefit before the system modal appears. If they decline we honor the decision and show how to enable it later without friction.
 
-## Interaction Blueprint
+## Interaction
 1. Confirm user acceptance of the data policy before requesting location.
 2. Present contextual education: why location helps, how data is protected, and what happens if they decline.
 3. Offer primary and secondary actions (Allow, Not Now) with equal respect.
@@ -64,7 +64,7 @@ flowchart TD
     RESULT -->|Don't allow| DEFERRAL --> END((Respect choice))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a user reaches this step WHEN detail copy renders THEN it references the privacy commitment and optional nature of sharing.
   - GIVEN permission approval WHEN the globe loads THEN coordinates display safely (obfuscated as needed) with no blocking errors.
@@ -74,7 +74,7 @@ flowchart TD
   - Pressure tactics or dark patterns that push users to allow sharing.
   - Showing precise coordinates instead of community-safe approximations.
 
-## Data & Measurement
+## Data
 - Primary metric: Permission acceptance rate during onboarding.
 - Secondary checks: Percentage of denials that later convert to allow, and support tickets related to location confusion.
 - Telemetry requirements: Log consent state, system prompt outcome, and subsequent changes in settings.

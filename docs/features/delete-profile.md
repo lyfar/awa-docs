@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Delete Profile
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Delete Profile honors user agency. The flow shares clear warnings about data los
 
 Tone stays compassionate, thanking the user for their time while staying aligned with privacy standards.
 
-## Interaction Blueprint
+## Interaction
 1. Expose Delete Profile within Application Settings with brief explanation and link to data policy.
 2. When selected, show a modal summarizing consequences (loss of AWAunits, history, social features).
 3. Require explicit confirmation (e.g., typing DELETE or re-authentication) to proceed.
@@ -61,7 +61,7 @@ flowchart TD
     CONFIRM -->|No| END((Action cancelled))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a user initiates deletion WHEN confirmation is provided THEN all sessions terminate immediately.
   - GIVEN the deletion job runs WHEN complete THEN associated telemetry, content, and personal identifiers are purged per policy.
@@ -71,7 +71,7 @@ flowchart TD
   - Leaving orphaned records that could resurface the user’s presence.
   - Failing to comply with regional regulations around proof of deletion.
 
-## Data & Measurement
+## Data
 - Primary metric: Deletion request completion time vs. SLA.
 - Secondary checks: Number of cancellations during the grace period, support tickets related to deletion, and audit pass rate.
 - Telemetry requirements: Log initiation, confirmation time, job status, and completion notifications.

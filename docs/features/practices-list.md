@@ -18,22 +18,22 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Practices List
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
 ## Narrative
-Practices List presents the launch set of guided sessions plus “My Practice.” Each card shows duration, modality, and community reactions so exploration feels inviting without overload. Calm visuals, gentle microinteractions, and clear benefits keep the tone mindful.
+Practices List presents the modalities defined in the [Practices catalogue](/docs/wiki/practices/). Each card mirrors the availability rules from the wiki so users always see the right daily rotations and event unlocks without hardcoded assumptions, while capability ownership stays aligned with the global [Capability catalogue](/docs/wiki/capabilities/).
 
-Selecting a practice shows a quick preview or launches the session based on familiarity. “My Practice” stays customizable with icons across meditation, breathing, mantras, sound healing, movement, and more.
+Cards use mindful motion, master portraits, and duration badges to set expectations before a tap. When a user selects a card, the pop-up information sheet surfaces the same copy and controls documented in the practice wiki entries, keeping design, content, and engineering in lockstep.
 
-## Interaction Blueprint
-1. Fetch practice catalog and user-specific metadata (likes, availability) on load.
-2. Render cards with artwork, duration, reaction counts, and badges for featured or new practices.
-3. Support search or filters for modalities when the list grows beyond the initial set.
-4. Preview cards reveal descriptions, audio cues, and preparation guidance.
-5. Selecting a practice transitions to the Practice Screen with saved preferences applied.
-6. Log selection and engagement metrics to inform future curation.
+## Interaction
+1. Retrieve the daily catalogue with availability metadata (practice ids, order, rotation slots, countdown timers, master data, download flags).
+2. Render practice cards in the order provided, displaying portraits, icons, and duration logic sourced from the wiki-backed payload.
+3. When a card is tapped, open the pop-up information sheet populated with the wiki’s "Pop-Up Card Content" fields.
+4. Allow the user to start playback or configure selectors (duration presets, modality dropdown for My Practice) directly from the pop-up.
+5. Transition to the Practice Screen after the user confirms start, passing along practice id, selected duration, and modality selections.
+6. Log impressions, pop-up opens, selector changes, and practice starts for analytics.
 
 :::caution Edge Case
 Network latency delays content. Show placeholders and allow offline cached practices where possible.
@@ -60,20 +60,20 @@ flowchart TD
     CHOOSE -->|No| END((User explores list))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
-  - GIVEN the list loads WHEN data is available THEN cards display accurate metadata and gracefully handle missing assets.
-  - GIVEN a user selects a practice WHEN the preview appears THEN play/pause controls and description render clearly.
-  - GIVEN offline mode WHEN cached practices exist THEN they still appear with appropriate indicators.
+  - GIVEN the feature loads WHEN the catalogue API responds THEN practice cards appear in the order and availability state supplied by the wiki-backed payload (no fallback constants).
+  - GIVEN a user opens a practice card WHEN the pop-up displays THEN the content matches the corresponding wiki entry, including master sections, descriptions, and control options.
+  - GIVEN My Practice WHEN the pop-up opens THEN the modality dropdown and manual duration input validate entries before enabling Start.
 - **No-gos & risks**
-  - Overloading the initial release with too many options causing decision fatigue.
-  - Inconsistent naming or categorization that confuses new practitioners.
-  - Neglecting accessibility (contrast, focus states) on cards and filters.
+  - Showing expired or unavailable practices because rotation metadata lags behind the wiki rules.
+  - Letting pop-up copy drift from the wiki source-of-truth, leading to mismatched expectations.
+  - Breaking accessibility by hiding essential info (e.g., countdown, master data) behind color-only treatments.
 
-## Data & Measurement
-- Primary metric: Practice start rate per session from the list view.
-- Secondary checks: Engagement with “My Practice,” reaction tap-throughs, and abandonment before start.
-- Telemetry requirements: Log list load success, card impressions, selections, preview interactions, and fallback states.
+## Data
+- Primary metric: Practice start rate per session from the list view segmented by practice type.
+- Secondary checks: Pop-up open-to-start conversion, duration preset usage, and My Practice completion logging.
+- Telemetry requirements: Log catalogue version, card impressions, pop-up opens, selector adjustments, start confirmations, and error fallback events.
 
 ## Open Questions
 - Should we schedule rotating featured practices for launch or rely on manual curation?

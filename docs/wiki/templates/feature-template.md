@@ -50,14 +50,14 @@ BODY STRUCTURE
 
 import FeatureSummary from '@site/src/components/FeatureSummary';
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
 ## Narrative
 Write 2 to 3 short paragraphs that explain the experience in clear, simple language while keeping the calm, aligned product voice. Expand on the Flow text, weave in dependencies if provided, and note how the feature reinforces AWATERRA’s mindful journey.
 
-## Interaction Blueprint
+## Interaction
 1. Expand the Flow into numbered steps (max 7).
 2. Add at least one edge or failure case.
 3. Finish with a bullet list “Signals of success” derived from *User value* and *Done when*.
@@ -77,11 +77,11 @@ flowchart TD
 
 Replace each node with the actual steps, including at least one negative branch. Keep the journey inside a ```mermaid``` fence so Docusaurus renders it.
 
-## Requirements & Guardrails
+## Requirements
 - Acceptance criteria using GIVEN / WHEN / THEN phrasing that describe observable user or business outcomes (avoid prescribing technical implementation).
 - “No-gos & risks” bullet list highlighting business or customer impacts (include dependencies if any).
 
-## Data & Measurement
+## Data
 - Primary metric(s) to watch.
 - Secondary / qualitative checks.
 - Telemetry requirements (use “TBD - align with analytics” if unknown).
@@ -102,4 +102,5 @@ Use Docusaurus defaults where they improve clarity: headings and automatic table
 - Keep markdown clean; headings above are mandatory.
 - Output must be valid markdown with one newline at end of file.
 - NEVER use the em-dash. Only "-".
+- When linking to other docs, prefer directory paths (e.g., `/docs/wiki/practices/`) instead of appending `/index` to avoid broken links.
 ```

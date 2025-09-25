@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # App Store Presence
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ App Store Presence makes sure AWATERRA's listing matches the product. We prepare
 
 Smooth release workflows and timely reviews prevent approval delays. A polished listing helps users grasp the value and supports conversion.
 
-## Interaction Blueprint
+## Interaction
 1. Draft positioning statements, screenshots, and preview videos that align with brand tone.
 2. Localize metadata for supported languages, including subtitle, keywords, and description.
 3. Configure App Store Connect settings: bundle identifiers, pricing, territories, and age ratings.
@@ -58,7 +58,7 @@ flowchart TD
     START --> CREATE --> CONFIG --> REVIEW --> SUBMIT --> MONITOR --> END((Listing live))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN assets WHEN exported THEN they meet platform specs (sizes, formats) and pass QA.
   - GIVEN metadata WHEN localized THEN translations are accurate and culturally appropriate.
@@ -68,7 +68,7 @@ flowchart TD
   - Missing legal copy (privacy policy, support contact).
   - Allowing outdated screenshots to linger after major redesigns.
 
-## Data & Measurement
+## Data
 - Primary metric: Conversion rate from store impressions to installs.
 - Secondary checks: Review sentiment, approval turnaround time, and listing update cadence.
 - Telemetry requirements: Track asset versioning, submission timestamps, and review outcomes.

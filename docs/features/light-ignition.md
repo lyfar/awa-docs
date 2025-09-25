@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Light Ignition
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Light Ignition turns each completed practice into a calm celebration. The globe 
 
 We keep the moment clear by recapping streaks, rewards, and favorites without overwhelming the user. Effects stay soothing, timing is deliberate, and accessibility cues keep everyone included.
 
-## Interaction Blueprint
+## Interaction
 1. Detect completion of the guided 10-minute morning practice.
 2. Trigger Light Vision animation on the globe and overlay celebratory effects.
 3. Increment AWA Pulse and surface momentary metrics that show the community uplift.
@@ -63,7 +63,7 @@ flowchart TD
     FAVORITES --> SUMMARY --> END((Celebration complete))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a completed practice WHEN Light Ignition fires THEN globe animations, Pulse uplift, and session summary appear within 1 second.
   - GIVEN a registered user WHEN rewards credit THEN wallet and streak values update before the user leaves the screen.
@@ -73,7 +73,7 @@ flowchart TD
   - Inconsistent reward accounting that erodes trust in the system.
   - Accessibility regressions (flashes, color contrast) that exclude sensitive users.
 
-## Data & Measurement
+## Data
 - Primary metric: Percentage of completed practices that successfully trigger Light Ignition events.
 - Secondary checks: Reward settlement latency, favorite conversion rate, and Pulse uplift per session.
 - Telemetry requirements: Log practice completion triggers, reward distribution outcomes, and animation timing.

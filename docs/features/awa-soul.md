@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # AWA Soul
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ AWA Soul is the ambassador that welcomes every newcomer. A living sphere of ligh
 
 The character gives clear directions, sets expectations, and encourages commitment in plain words. When onboarding ends, the sphere wraps into the globe so users see how their light joins the whole.
 
-## Interaction Blueprint
+## Interaction
 1. Detect first-launch or guided practice scenarios that require the AWA Soul introduction.
 2. Render the pulsing light sphere with breathing motion and adaptive brightness.
 3. Deliver scripted narration (voice or text) coordinated with particle emphasis and formations.
@@ -61,7 +61,7 @@ flowchart TD
     LOOP --> GUIDE
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a new user WHEN the app opens THEN AWA Soul greets them with narration and responsive animation.
   - GIVEN animation playback WHEN the user interacts THEN feedback (point clustering, brightness shifts) reflects that attention.
@@ -71,7 +71,7 @@ flowchart TD
   - Long load times that break immersion before the greeting begins.
   - Localization gaps that make guidance inaccessible in the user’s language.
 
-## Data & Measurement
+## Data
 - Primary metric: Onboarding completion rate driven by AWA Soul’s guided flow.
 - Secondary checks: Average dwell time with the character, skip rates, and drop-off points per narration step.
 - Telemetry requirements: Log scene transitions, interaction events with the sphere, and animation performance metrics.

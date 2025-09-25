@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Profile Notifications
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Profile Notifications close the loop on personal milestones. Reactions, mission 
 
 Each message includes helpful context and respects quiet hours so motivation stays steady without pressure.
 
-## Interaction Blueprint
+## Interaction
 1. Listen for profile events from engagement services (mentions, achievements, invitations).
 2. Package notifications with concise copy, mindful tone, and helpful metadata.
 3. Respect category preferences and quiet hours before scheduling delivery.
@@ -60,7 +60,7 @@ flowchart TD
     TAP -->|No| END((Notification stored/dismissed))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a qualifying event WHEN preferences allow THEN a notification sends within the defined latency.
   - GIVEN a user taps the notification WHEN the app opens THEN it navigates directly to the related content.
@@ -70,7 +70,7 @@ flowchart TD
   - Over-notifying for minor events leading to fatigue.
   - Links that open to dead ends or require additional navigation.
 
-## Data & Measurement
+## Data
 - Primary metric: Notification open rate for profile-related messages.
 - Secondary checks: Opt-out rate, follow-up actions taken, and negative feedback submissions.
 - Telemetry requirements: Log event trigger, send outcome, delivery receipts, and deeplink success.

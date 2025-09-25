@@ -15,6 +15,7 @@ type GroupedFeatures = Array<{
   items: Array<{
     path: string;
     title: string;
+    summary: string;
   }>;
 }>;
 
@@ -42,6 +43,7 @@ const VersionFeatureList: React.FC<VersionFeatureListProps> = ({version}) => {
       byCapability.get(info.capability)!.items.push({
         path,
         title: info.title,
+        summary: info.summary,
       });
     });
 
@@ -72,7 +74,7 @@ const VersionFeatureList: React.FC<VersionFeatureListProps> = ({version}) => {
         <section key={group.capabilityKey} className={styles.group}>
           <h3 className={styles.groupTitle}>{group.capabilityLabel}</h3>
           <ul className={styles.featureList}>
-            {group.items.map((feature) => {
+              {group.items.map((feature) => {
             const href = `${docsBaseUrl}${feature.path}`.replace(/\/+$/, '');
             const featureInfo = featureMetadata.featureMapping[feature.path];
             return (
@@ -80,7 +82,7 @@ const VersionFeatureList: React.FC<VersionFeatureListProps> = ({version}) => {
                 <a className={styles.featureLink} href={href}>
                   <div className={styles.featureLinkContent}>
                     <span className={styles.featureTitle}>{feature.title}</span>
-                    <span className={styles.featureDescription}>View documentation</span>
+                    <span className={styles.featureDescription}>{feature.summary}</span>
                   </div>
                   <span className={styles.featureMeta}>
                     <span className={styles.versionBadge}>{featureInfo?.version ?? version}</span>

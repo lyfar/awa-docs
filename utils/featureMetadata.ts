@@ -6,6 +6,7 @@ export interface FeatureInfo {
   capability: string;
   position: number;
   title: string;
+  summary: string;
 }
 
 export interface CapabilityInfo {
@@ -109,11 +110,17 @@ export function readFeatureMetadata(): FeatureMetadata {
         const slug = featureKey.split('/').pop() ?? '';
         const fallbackTitle = frontmatter.sidebar_label || extractedTitle || formatFromSlug(slug);
 
+        const summary = frontmatter.user_value
+          || frontmatter.done_when
+          || frontmatter.trigger
+          || 'Summary coming soon.';
+
         featureMapping[featureKey] = {
           version: frontmatter.version,
           capability: frontmatter.capability,
           position: parseInt(frontmatter.sidebar_position || '999', 10),
           title: fallbackTitle,
+          summary: summary,
         };
       }
     });

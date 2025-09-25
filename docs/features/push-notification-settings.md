@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Push Notification Settings
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Push Notification Settings let practitioners choose the rhythms that serve them.
 
 Transparent descriptions and synced preferences across devices keep communication mindful and aligned with consent.
 
-## Interaction Blueprint
+## Interaction
 1. Surface settings entry points from Profile and contextual nudges.
 2. Display available categories with clear copy and default recommendations.
 3. Persist toggles locally and via backend so preferences apply to all channels.
@@ -57,7 +57,7 @@ flowchart TD
     START --> REVIEW --> TOGGLES --> SAVE --> SYNC --> END((Personalized notifications))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a user toggles a category WHEN changes save THEN the backend updates before the next notification cycle.
   - GIVEN OS-level permissions are disabled WHEN settings screen loads THEN it surfaces guidance to re-enable or keep muted.
@@ -67,7 +67,7 @@ flowchart TD
   - Defaulting to all categories ON without explaining impact.
   - Delayed synchronization leading to unwanted messages after preferences change.
 
-## Data & Measurement
+## Data
 - Primary metric: Notification opt-in retention rate after preference adjustments.
 - Secondary checks: Category enablement distribution, mute duration usage, and support contacts about notifications.
 - Telemetry requirements: Log setting views, toggle events, sync outcomes, and notification send attempts blocked by preferences.

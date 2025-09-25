@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # PUSH/INAPP: AWA Pulse Goes Down
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ This engagement play keeps the community responsive. When AWA Pulse dips, a mind
 
 Copy balances urgency with compassion using lines like “The pulse is gentle right now, can you help?” so shared responsibility stays warm, not guilty.
 
-## Interaction Blueprint
+## Interaction
 1. Monitor pulse analytics service for threshold breaches sustained over the configured window.
 2. Enrich the event with context (current pulse, suggested actions, recent contributors).
 3. Segment audiences based on notification preferences and quiet hours.
@@ -62,7 +62,7 @@ flowchart TD
     WAIT --> START
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a sustained drop WHEN detected THEN a single notification dispatches with contextual CTA.
   - GIVEN quiet hours or mute WHEN active THEN users are excluded from the send.
@@ -72,7 +72,7 @@ flowchart TD
   - Using fear-based copy that clashes with AWATERRA’s supportive ethos.
   - Failing to respect user preferences from Push Notification Settings.
 
-## Data & Measurement
+## Data
 - Primary metric: Practice participation uplift within 2 hours of the alert.
 - Secondary checks: Notification open/click-through rates, opt-outs, and pulse stability post-notification.
 - Telemetry requirements: Log trigger time, message payload, segment size, delivery outcomes, and resulting pulse data.

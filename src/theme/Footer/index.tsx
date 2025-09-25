@@ -26,11 +26,13 @@ const footerSections: FooterSection[] = [
     ],
   },
   {
-    label: 'Templates',
+    label: 'Wiki',
     links: [
-      {title: 'Capability Template', to: '/docs/product-templates/capability-template'},
-      {title: 'Feature Template', to: '/docs/product-templates/feature-template'},
-      {title: 'Version Template', to: '/docs/product-templates/version-template'},
+      {title: 'Overview', to: '/docs/wiki/index'},
+      {title: 'Practices Catalogue', to: '/docs/wiki/practices/'},
+      {title: 'Capability Template', to: '/docs/wiki/templates/capability-template'},
+      {title: 'Feature Template', to: '/docs/wiki/templates/feature-template'},
+      {title: 'Version Template', to: '/docs/wiki/templates/version-template'},
     ],
   },
 ];

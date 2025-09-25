@@ -61,10 +61,57 @@ const versionDocs = Object.entries(versionDocMapping)
     return a.docPath.localeCompare(b.docPath);
   });
 
-const templateDocs = [
-  'product-templates/capability-template',
-  'product-templates/feature-template',
-  'product-templates/version-template',
+const wikiPracticeDocs = [
+  'wiki/practices/index',
+  'wiki/practices/light-practice',
+  'wiki/practices/guided-meditation',
+  'wiki/practices/sound-meditation',
+  'wiki/practices/my-practice',
+  'wiki/practices/special-practice',
+];
+
+const wikiCapabilityDocs = [
+  'wiki/capabilities/index',
+  'wiki/capabilities/App-Infrastructure',
+  'wiki/capabilities/Visualization-Map-Layer',
+  'wiki/capabilities/Access',
+  'wiki/capabilities/Identity',
+  'wiki/capabilities/Practice',
+  'wiki/capabilities/Engagement-Notifications',
+  'wiki/capabilities/Masters-Practices',
+  'wiki/capabilities/AWAY-Streaks',
+  'wiki/capabilities/Gamification-Rewards',
+  'wiki/capabilities/Product-Analytics',
+  'wiki/capabilities/Customer-Support',
+  'wiki/capabilities/Distribution',
+];
+
+const wikiTemplateDocs = [
+  'wiki/templates/capability-template',
+  'wiki/templates/feature-template',
+  'wiki/templates/version-template',
+];
+
+const wikiDocs = [
+  'wiki/index',
+  {
+    type: 'category' as const,
+    label: 'Capabilities',
+    collapsed: false,
+    items: wikiCapabilityDocs,
+  },
+  {
+    type: 'category' as const,
+    label: 'Practices',
+    collapsed: false,
+    items: wikiPracticeDocs,
+  },
+  {
+    type: 'category' as const,
+    label: 'Templates',
+    collapsed: false,
+    items: wikiTemplateDocs,
+  },
 ];
 
 const sidebars: SidebarsConfig = {
@@ -87,12 +134,7 @@ const sidebars: SidebarsConfig = {
         items: featuresByCapability[capabilityKey],
       })),
   ],
-  templatesSidebar: [{
-    type: 'category',
-    label: 'Product Templates',
-    collapsed: false,
-    items: templateDocs,
-  }],
+  wikiSidebar: wikiDocs,
 };
 
 export default sidebars;

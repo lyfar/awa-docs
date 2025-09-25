@@ -18,22 +18,23 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Practice Screen
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
 ## Narrative
-The Practice Screen delivers the core AWATERRA experience. Soft gradients, AWA Soul breathing animations, and ambient audio help users settle into focus.
+The Practice Screen executes the flows defined in the [practice wiki](/docs/wiki/practices/) once a user confirms launch from the pop-up. AWAsoul anchors the visuals and controls, adapting its state to whatever modality the catalogue payload specifies while keeping capability ownership anchored to the [Capability catalogue](/docs/wiki/capabilities/).
 
-Controls stay simple with clear start, pause, mute, and finish actions so attention remains on inner work. Guests still record a session and see the benefit of creating an account.
+Timers, grace logic, audio assets, and follow/download behaviour all reference metadata pulled from the wiki entry. That keeps the screen dynamic—changing a value in the wiki (for example, a new duration preset or download rule) propagates automatically without code edits.
 
-## Interaction Blueprint
-1. Load practice assets (audio, visuals, guidance text) and prepare do-not-disturb prompt.
-2. Display a calming pre-start state with session description and start CTA.
-3. On start, trigger countdown timer, audio playback, optionally haptic breathing cues.
-4. Allow pause/resume with confirmation to prevent accidental stops.
-5. On completion, surface finish CTA, gratitude prompt, and optional reaction/feedback.
-6. Persist session data, then route to Profile View or Light Ignition celebration.
+## Interaction
+1. Receive practice id, selected duration/modality, and metadata from the pop-up confirmation.
+2. Load required assets (audio file if applicable, AWAsoul skin, master portrait, reaction payload) and surface the optional do-not-disturb prompt.
+3. Present a pre-start state that reflects the practice type, including countdown-to-unlock for Special Practice when needed.
+4. On start, launch the timer logic: fixed timer, selected preset, or manual countdown with grace tracking for My Practice; begin audio playback for guided types.
+5. Maintain controls for pause/resume, mute, and finish while AWAsoul visuals sync with the current modality.
+6. On completion or manual finish, capture reaction input, award AWAunits, check streak status, and surface follow/download actions when allowed.
+7. Persist the session record (practice id, target duration, actual duration, modality, reaction, follow/download actions) and route to the celebration or summary view.
 
 :::caution Edge Case
 User receives an interruption such as a call or notification. Save the session state and make it easy to resume.
@@ -63,21 +64,22 @@ flowchart TD
     PAUSE -->|No| FINISH --> COMPLETE --> END((Practice recorded))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
-  - GIVEN a user starts a session WHEN countdown ends THEN audio and visuals play synchronously until completion or pause.
-  - GIVEN the user finishes WHEN they tap “Finish practice” THEN data logs and the celebration flow triggers within one second.
-  - GIVEN the user is a guest WHEN they complete THEN a gentle prompt offers profile creation without blocking exit.
+  - GIVEN a practice entry with audio WHEN playback starts THEN the timer and AWAsoul visuals align with the duration type, presets, and skin defined in that entry's metadata.
+  - GIVEN a practice that exposes selectable presets WHEN the user confirms start THEN the chosen value persists through the session and writes back to analytics on completion.
+  - GIVEN a practice that defines a grace window (e.g., My Practice) WHEN the countdown exceeds the allowed threshold THEN the result view marks the session as incomplete and explains the outcome.
+  - GIVEN a practice flagged with follow/download actions WHEN the result screen appears THEN those CTAs surface and log interactions; practices without the flag never show them.
 - **No-gos & risks**
-  - Busy UI or aggressive animations that distract from mindfulness.
-  - Losing session progress after app backgrounding.
-  - Failing to respect user settings (mute, vibration, dark mode).
+  - Diverging from the wiki rule set (e.g., offering downloads for My Practice or mis-timing Special Practice unlocks).
+  - Dropping session state after interruptions, causing inaccurate duration or streak logging.
+  - Ignoring accessibility (e.g., AWAsoul colours, timer contrast, captions for guided narration).
 
-## Data & Measurement
-- Primary metric: Practice completion rate vs. starts.
-- Secondary checks: Average session duration variance, pause frequency, and feedback submissions.
-- Telemetry requirements: Log session start/stop timestamps, control interactions, audio errors, and completion outcomes.
+## Data
+- Primary metric: Practice completion rate vs. starts, split by practice type.
+- Secondary checks: Pause/resume frequency, grace-window overruns for My Practice, follow/download conversions.
+- Telemetry requirements: Log session start/finish timestamps, selected duration, actual duration, reaction choice, follow/download actions, streak outcomes, audio errors, and interruption recovery events.
 
 ## Open Questions
 - Should we preload multiple audio tracks to reduce gaps when users switch practices mid-session?
-- How do we integrate adaptive guidance (e.g., shorter practices for busy moments) in future releases?
+- How do we extend the wiki to cover future modalities (e.g., breathwork intensives) without breaking 0.1 flows?

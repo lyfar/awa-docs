@@ -33,7 +33,7 @@ Features are organized by capability and can be filtered by version using the se
 - [Master's Globe / Planet / Soul](/docs/features/masters-globe-planet-soul) - Master visualizations
 
 ### Templates
-- [Feature Template](/docs/product-templates/feature-template)
+- [Feature Template](/docs/wiki/templates/feature-template)
 
 ---
 

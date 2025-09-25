@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Profile View
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Profile View is the moment guests feel the impact of their first practice and ca
 
 The flow respects choice. Users can celebrate and continue as guests while seeing a clear summary of what they miss by not saving progress, reinforced with gentle animation.
 
-## Interaction Blueprint
+## Interaction
 1. Trigger the completion animation and summary after a guest practice ends.
 2. Display achievements: Pulse contribution, AWAunits earned, and heartfelt gratitude.
 3. Present primary CTA “Create profile” alongside a secondary “Later” option.
@@ -61,7 +61,7 @@ flowchart TD
     CHOICE -->|Later| GUEST --> REMIND --> END((Guest continues))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a guest completes a practice WHEN the summary appears THEN both CTAs are visible and accessible.
   - GIVEN the user registers WHEN verification completes THEN previously earned AWAunits and progress are retained.
@@ -71,7 +71,7 @@ flowchart TD
   - Losing earned rewards during registration due to race conditions.
   - Copy that feels manipulative or guilt-inducing contrary to brand tone.
 
-## Data & Measurement
+## Data
 - Primary metric: Conversion rate from guest to registered profile after the first session.
 - Secondary checks: AWAunit retention vs. expiration, frequency of reminder prompts, and feature tap-throughs requiring a profile.
 - Telemetry requirements: Log modal views, CTA selections, registration completion, and deferral reminders.

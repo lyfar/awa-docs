@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Layout & Menu
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,9 @@ Layout & Menu sets the navigation foundation for AWATERRA. The structure balance
 
 Beyond wayfinding, the menu shows the breadth of the product, from practices to profile, while keeping the mindful tone. Consistent placement, motion, and iconography give future features a pattern to follow without rework.
 
-## Interaction Blueprint
+As an app-infrastructure deliverable, the layout blueprint stitches together the broader UX vision—covering core navigation menus, key flows, and screen scaffolding so specialized features know where they live before detailed UI work begins.
+
+## Interaction
 1. Align stakeholders on the launch IA and map it to user journeys and permissions.
 2. Design responsive layout shells for mobile-first usage with scalable breakpoints.
 3. Implement navigation components, including icons, labels, and active-state cues.
@@ -43,6 +45,7 @@ A locale introduces long labels that break the layout. Use responsive truncation
 - Users identify their current location and next steps without assistance.
 - Navigation adjusts gracefully across device sizes and orientations.
 - Analytics show balanced engagement across primary destinations.
+- Feature teams reuse the shared layout map to place new modules without reworking navigation.
 :::
 
 ### Journey
@@ -61,7 +64,7 @@ flowchart TD
     ITERATE --> DESIGN
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a first-time user WHEN the app opens THEN the layout indicates the available sections and active view.
   - GIVEN a screen rotation or form-factor change WHEN the menu reflows THEN controls remain usable and accessible.
@@ -71,7 +74,7 @@ flowchart TD
   - Inconsistent iconography or labels erodes the mindful tone we aim to uphold.
   - Ignoring accessibility standards (contrast, hit areas, focus order) limits who can benefit.
 
-## Data & Measurement
+## Data
 - Primary metric: Successful navigation rate to key destinations (Practices, Pulse, Profile) per session.
 - Secondary checks: Time-to-first-action after launch, menu interaction drop-off, and accessibility audit scores.
 - Telemetry requirements: Instrument navigation taps, deeplink entries, and screen transitions.

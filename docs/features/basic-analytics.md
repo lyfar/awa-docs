@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Basic Analytics (Engagement & Retention)
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Basic Analytics gives the team an early view of AWATERRA’s health. Dashboards 
 
 Accurate instrumentation keeps marketing, product, and operations aligned without waiting for manual exports.
 
-## Interaction Blueprint
+## Interaction
 1. Instrument key events across app (install, onboarding step, practice start/finish, notification opens).
 2. Stream events into the analytics warehouse with consistent schemas and versioning.
 3. Build dashboards displaying KPIs, cohort retention, and pulse-related engagement.
@@ -57,7 +57,7 @@ flowchart TD
     START --> STREAM --> MODEL --> DASHBOARD --> REVIEW --> END((Data-informed decisions))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN an event fires WHEN it reaches analytics THEN metadata (user id, locale, version) is populated correctly.
   - GIVEN dashboards WHEN refreshed THEN metrics align within tolerance to backend truth where applicable.
@@ -67,7 +67,7 @@ flowchart TD
   - Overcomplicating dashboards with vanity metrics.
   - Allowing long refresh delays that render insights stale.
 
-## Data & Measurement
+## Data
 - Primary metric: Dashboard freshness within defined SLA (e.g., updated every hour/day).
 - Secondary checks: Event delivery success rate, schema validation errors, stakeholder satisfaction surveys.
 - Telemetry requirements: Log pipeline health, transformation job success, and dashboard access metrics.

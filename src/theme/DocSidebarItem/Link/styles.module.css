@@ -1,3 +1,16 @@
+.menuItem {
+  position: relative;
+  will-change: transform;
+}
+
+.menuItem[data-version-status='current'] .menuLink {
+  background: linear-gradient(90deg, rgba(109, 90, 230, 0.12), rgba(109, 90, 230, 0));
+}
+
+.menuItem[data-version-status='previous'] .menuLink {
+  transition: background-color 0.2s ease;
+}
+
 .menuExternalLink {
   align-items: center;
 }

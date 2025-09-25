@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Globe
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ The Globe is the living map of AWATERRA. It centers on the practitioner, pulses 
 
 It serves as the onboarding wow moment, daily home base, and gentle prompt to invite friends. Every visual treatment, from golden pulses to expanding ripples, signals that practice has real impact.
 
-## Interaction Blueprint
+## Interaction
 1. Acquire permissioned location data or fall back to a global overview if unavailable.
 2. Render the user’s position and animate a golden pulse with expanding rings after each practice.
 3. Overlay surrounding participants and data layers (Pulse rate, last practice timestamps) with graceful transitions.
@@ -62,7 +62,7 @@ flowchart TD
     ANIMATE --> INTERACT --> CTA --> END((Globe session complete))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a granted location WHEN the globe loads THEN it centers on the user with pulse animation and updated metadata.
   - GIVEN denied permissions WHEN the globe loads THEN it presents a respectful global overview with optional enablement guidance.
@@ -72,7 +72,7 @@ flowchart TD
   - Overly heavy shaders or particle counts that drop performance below acceptable FPS.
   - Visual clutter that obscures context or overwhelms users unfamiliar with 3D navigation.
 
-## Data & Measurement
+## Data
 - Primary metric: Successful globe render rate with location contextualization (or safe fallback) per session.
 - Secondary checks: Average FPS, invite CTA interactions, time spent exploring the map.
 - Telemetry requirements: Log load outcomes, permission states, camera interactions, and performance diagnostics.

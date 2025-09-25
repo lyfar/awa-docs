@@ -41,6 +41,7 @@ export interface FeatureInfo {
   capability: string;
   position: number;
   title: string;
+  summary: string;
 }
 
 export interface CapabilityInfo {

@@ -9,6 +9,10 @@ description: Standard outline for documenting AWATERRA product capabilities from
 
 Use this template when you introduce or refine a capability area within the AWATERRA product platform. A capability groups the practices, data, and systems that deliver a cohesive value stream.
 
+:::note Linking
+When referencing other docs, prefer directory paths (e.g., `/docs/wiki/capabilities/`) instead of appending `/index` to avoid broken links.
+:::
+
 ## Capability Identity
 
 - **Capability Name** - Distinct, action-oriented label that the team can rally around.

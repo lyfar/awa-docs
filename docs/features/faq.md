@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # FAQ
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ The FAQ is a self-serve knowledge base inside AWATERRA. It answers common questi
 
 Content stays concise, compassionate, and easy for non-engineers to update, which keeps the brand voice consistent.
 
-## Interaction Blueprint
+## Interaction
 1. Provide a discoverable FAQ entry point from Profile and key empty states.
 2. Organize content into mindful categories (Practices, Rewards, Account, Data, Technical).
 3. Enable search and quick links so users reach answers within two taps.
@@ -61,7 +61,7 @@ flowchart TD
     RESOLVE -->|No| SUPPORT --> FEEDBACK --> END
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a new article WHEN published THEN it appears immediately across clients with proper formatting.
   - GIVEN a user searches WHEN keywords match THEN relevant articles rank at the top.
@@ -71,7 +71,7 @@ flowchart TD
   - Overly technical language inconsistent with the AWATERRA tone.
   - Requiring engineers for day-to-day content updates.
 
-## Data & Measurement
+## Data
 - Primary metric: FAQ self-resolution rate (users marking answers helpful / not opening support ticket afterward).
 - Secondary checks: Search term coverage, article freshness SLA, and feedback sentiment.
 - Telemetry requirements: Log views, search queries, helpfulness votes, and escalations.

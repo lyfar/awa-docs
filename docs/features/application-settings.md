@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Application Settings
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Application Settings gathers the controls practitioners use to personalize AWATE
 
 The module also holds compliance actions such as profile deletion and data requests. We link to GDPR flows directly so users can manage responsibilities without leaving the screen.
 
-## Interaction Blueprint
+## Interaction
 1. Present categorized settings (Account, Security, Notifications, Language, Location) with intuitive icons.
 2. Enable quick toggles for biometric login, push preferences, and quiet hours with immediate feedback.
 3. Provide language selector leveraging localization infrastructure to refresh UI text live.
@@ -57,7 +57,7 @@ flowchart TD
     START --> NAVIGATE --> ADJUST --> SAVE --> CONFIRM --> END((Preferences updated))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a user toggles biometric login WHEN the change is saved THEN the next authentication flow reflects the new method.
   - GIVEN a language switch WHEN applied THEN UI text updates immediately and persists across sessions.
@@ -67,7 +67,7 @@ flowchart TD
   - Saving partial updates that leave the system in inconsistent state.
   - Mixing tone or terminology that violates the mindful brand voice.
 
-## Data & Measurement
+## Data
 - Primary metric: Successful settings update rate without generating support tickets.
 - Secondary checks: Frequency of biometric enablement, language changes, and deletion requests initiated from settings.
 - Telemetry requirements: Log view events, preference updates, error states, and completion confirmations.

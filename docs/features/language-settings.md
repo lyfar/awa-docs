@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Language Settings
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,9 @@ Language Settings helps AWATERRA feel native in every supported language. Users 
 
 The control also explains how to request more languages and invites feedback from communities that need broader support.
 
-## Interaction Blueprint
+Release 0.1 ships with English and Russian. Every other request routes into the feedback backlog so we can prioritize the next wave of localization for versions 0.1.1 and 0.2 without guessing.
+
+## Interaction
 1. Surface the language selector during onboarding with default based on device locale.
 2. Offer a compact list of available languages with preview copy and accessibility notes.
 3. Apply the chosen language immediately, refreshing strings, layouts, and date/number formats.
@@ -57,20 +59,20 @@ flowchart TD
     START --> SELECT --> APPLY --> SAVE --> CONFIRM --> END((Language updated))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a user selects a new language WHEN confirmed THEN the entire UI updates immediately and persists across sessions.
-  - GIVEN unsupported language requests WHEN surfaced THEN the UI provides a respectful response and capture mechanism.
+  - GIVEN unsupported language requests WHEN surfaced THEN the UI provides a respectful response, records the ask, and sets expectations about future rollouts.
   - GIVEN reduced-motion or accessibility settings WHEN language changes THEN typography and layout still meet standards for legibility.
 - **No-gos & risks**
   - Mixing locales within a single screen due to partial translations.
   - Hardcoding text that bypasses localization pipelines.
   - Ignoring right-to-left or long-string considerations as we add languages.
 
-## Data & Measurement
+## Data
 - Primary metric: Successful language switch rate without requiring a restart.
 - Secondary checks: Frequency of language changes, localization bug reports, and time-to-fix missing keys.
-- Telemetry requirements: Log selection events, fallback occurrences, and layout warnings triggered by translation length.
+- Telemetry requirements: Log selection events, fallback occurrences, interest in new locales, and layout warnings triggered by translation length.
 
 ## Open Questions
 - Should language selection tie into upcoming content recommendations (e.g., region-specific practices)?

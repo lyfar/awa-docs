@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # PUSH/INAPP: Fading Light Reminder
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ The Fading Light Reminder is a gentle note: “Your light is dimming, ready to s
 
 Tone stays reflective, focusing on personal rhythm instead of streak anxiety.
 
-## Interaction Blueprint
+## Interaction
 1. Schedule a reminder 24 hours after the last completed practice, respecting quiet hours and notification preferences.
 2. Compose copy referencing the user’s contribution (“Your light still glows, keep it bright”).
 3. Deliver via push and optionally in-app inbox for users who prefer ambient prompts.
@@ -63,7 +63,7 @@ flowchart TD
     TAP -->|No| END((Reminder logged))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a practice event WHEN logged THEN a reminder schedules exactly 24 hours later unless the user opts out.
   - GIVEN a user practices again before the reminder WHEN scheduler checks THEN it cancels the pending send.
@@ -73,7 +73,7 @@ flowchart TD
   - Using guilt-based messaging inconsistent with AWATERRA’s supportive tone.
   - Failing to respect category opt-outs managed in settings.
 
-## Data & Measurement
+## Data
 - Primary metric: Practice restart rate attributable to the reminder.
 - Secondary checks: Notification open rate, snooze/disable rate, and qualitative sentiment in feedback channels.
 - Telemetry requirements: Log scheduling, cancellation, delivery outcomes, opens, and follow-up practice completion.

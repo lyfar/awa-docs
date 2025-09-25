@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Push Notifications
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Push Notifications help practitioners stay aware of their next step. When a sche
 
 The flow guides the user from the lock screen into the right screen inside the app. We track each delivery and response so timing and content stay useful.
 
-## Interaction Blueprint
+## Interaction
 1. System evaluates schedule and user events to queue a notification.
 2. Notification service dispatches the message to the device.
 3. User sees the notification on their home or lock screen.
@@ -65,7 +65,7 @@ flowchart TD
     LOG --> END((Interaction recorded))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a scheduled reminder WHEN the reminder time arrives THEN the user receives a timely prompt that reflects their current journey.
   - GIVEN the user taps a notification WHEN AWATERRA opens THEN the experience lands on the promised destination and the engagement is recorded for reporting.
@@ -75,12 +75,10 @@ flowchart TD
   - Ensure permission prompts follow platform guidelines to avoid rejection.
   - Protect personal data in transit and at rest to maintain trust.
 
-## Data & Measurement
+## Data
 - Primary metric: Notification-engaged users per active day (target +15% vs control).
 - Secondary checks: Opt-out rate, time-to-open distribution, practice completion delta for notified users.
 - Telemetry requirements: Log delivery status, interaction type, and linked user/session metadata; align schema with analytics before launch.
 
 ## Open Questions
 - What cadence should default reminder templates follow for new versus returning practitioners?
-- Should we surface a user-facing history of recent notifications?
-- How do we adapt content for different regions and languages?

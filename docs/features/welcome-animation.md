@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Welcome Animation
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ The Welcome Animation bridges the Loading Screen and onboarding. It invites user
 
 The sequence also sets context for location access, primes community participation, and transitions into guided setup without breaking immersion.
 
-## Interaction Blueprint
+## Interaction
 1. Launch the welcome scene after the loading sequence on first run or post-update resets.
 2. Animate the globe and AWA Soul elements while displaying the hero copy about shared light.
 3. Collect the user’s preferred name and confirm consent before proceeding.
@@ -61,7 +61,7 @@ flowchart TD
     SUPPORT --> LOCATION
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a new user WHEN the welcome animation plays THEN prompts for name and context are clear and skippable without losing essential information.
   - GIVEN accessibility preferences WHEN reduced motion is enabled THEN animation simplifies but still conveys warmth.
@@ -71,7 +71,7 @@ flowchart TD
   - Mandatory name collection without explanation diminishes trust.
   - Location requests without clear value proposition risk denial.
 
-## Data & Measurement
+## Data
 - Primary metric: Completion rate of the welcome flow including successful name capture.
 - Secondary checks: Permission acceptance rates following the sequence, skip frequency, and user sentiment.
 - Telemetry requirements: Log animation start/end, input submissions, skips, and permission prompt follow-through.

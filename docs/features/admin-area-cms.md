@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Admin Area v0.1 (CRM/CMS)
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ Admin Area v0.1 gives AWATERRA staff a safe place to manage practices without to
 
 This release covers the basics: edit metadata, publish or retire entries, and confirm that updates reach the app. Role checks and audit logs keep the workspace protected even as we move fast.
 
-## Interaction Blueprint
+## Interaction
 1. Admin authenticates with elevated credentials and reaches the dashboard home.
 2. Dashboard lists existing practices with status badges, search, and quick filters.
 3. Admin chooses an item to edit or selects "Create practice" to open the guided form.
@@ -51,10 +51,11 @@ Form validation fails because required fields are missing. The dashboard blocks 
 flowchart TD
     START([Admin logs into dashboard])
     LIST[View practice catalog]
-    ACTION{Create or edit?}
+    ACTION{Create, edit, or delete?}
     START --> LIST --> ACTION
     ACTION -->|Create| CREATE[Complete new practice form]
     ACTION -->|Edit| EDIT[Update existing practice fields]
+    ACTION -->|Delete| DELETE[Open delete confirmation]
     CREATE --> VALIDATE{Pass validation?}
     EDIT --> VALIDATE
     VALIDATE -->|Yes| REVIEW[Review changes & confirm]
@@ -62,10 +63,14 @@ flowchart TD
     FIX --> ACTION
     REVIEW --> SAVE[Persist changes via APIs]
     SAVE --> SYNC[Sync to live catalog & log action]
+    DELETE --> CONFIRM{Confirm deletion?}
+    CONFIRM -->|Yes| REMOVE[Mark practice inactive & log]
+    CONFIRM -->|No| LIST
+    REMOVE --> SYNC
     SYNC --> END((Practices updated successfully))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN an authenticated admin WHEN they open the practice catalog THEN they see a searchable list with status, owner, and last-updated metadata.
   - GIVEN the admin submits a fully populated practice form WHEN the change is confirmed THEN the record is created or updated and visible in both dashboard and client app within a refresh cycle.
@@ -75,7 +80,7 @@ flowchart TD
   - Avoid silent failures that overwrite content without alerting the editor.
   - Prevent destructive actions from bypassing audit logging or version history.
 
-## Data & Measurement
+## Data
 - Primary metric: Admin task completion rate (create/update/delete) without engineering intervention (target ≥ 95 percent).
 - Secondary checks: Median dashboard load under 2 seconds, number of validation errors per session, count of audit gaps.
 - Telemetry requirements: Log every CRUD action with actor, timestamp, diff snapshot, and outcome; instrument dashboard performance and error events.

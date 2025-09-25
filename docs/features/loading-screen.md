@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Loading Screen
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ The Loading Screen welcomes the user while the app prepares content. Calm animat
 
 We keep progress cues honest and responsive. As soon as tasks finish, the sequence fades away so the user arrives at the right spot without extra delay.
 
-## Interaction Blueprint
+## Interaction
 1. Detect launch or feature transitions that require prefetching and initialize the loading state.
 2. Display the first screen with pulsing light animation and the welcoming message.
 3. Transition to the second screen reinforcing belonging and hinting at the community ahead.
@@ -60,7 +60,7 @@ flowchart TD
     LOOP --> READY
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN a cold app start WHEN assets load THEN the welcome animation plays smoothly and transitions automatically once ready.
   - GIVEN a returning user WHEN cached data is sufficient THEN the loading screen is skipped, preventing unnecessary delay.
@@ -70,7 +70,7 @@ flowchart TD
   - Flashy or high-contrast visuals conflict with the calming tone.
   - Playing audio without consent could surprise users in quiet environments.
 
-## Data & Measurement
+## Data
 - Primary metric: Percentage of sessions where loading completes under the target threshold while the animation plays uninterrupted.
 - Secondary checks: Average time spent on the loading sequence, opt-out/rage taps, and crash-free rate during initialization.
 - Telemetry requirements: Log triggers, durations, fallback messaging usage, and whether the screen was shown or skipped.

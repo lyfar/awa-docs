@@ -18,7 +18,7 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Prototype 3D Map with FPS Stats
 
-## One-Glance Summary
+## Summary
 
 <FeatureSummary />
 
@@ -27,7 +27,7 @@ The Prototype 3D Map with FPS Stats is our sandbox for testing rendering, contro
 
 Even as an internal tool it mirrors the future experience with smooth interaction and clear orientation, helping stakeholders feel the spatial story we plan to ship.
 
-## Interaction Blueprint
+## Interaction
 1. Load prototype assets and initialize the 3D scene with target shaders and lighting.
 2. Render the practice plane and attach navigation controls (pan, zoom, rotate) tuned for device input.
 3. Instrument frame timing and overlay FPS along with key resource stats.
@@ -58,7 +58,7 @@ flowchart TD
     START --> INIT --> CONTROLS --> OVERLAY --> TEST --> REVIEW --> END((Insights captured))
 ```
 
-## Requirements & Guardrails
+## Requirements
 - **Acceptance criteria**
   - GIVEN the prototype loads WHEN a tester interacts THEN FPS counter and controls respond without stutter.
   - GIVEN extended usage WHEN logs are captured THEN memory usage stays within safe thresholds and no crashes occur.
@@ -68,7 +68,7 @@ flowchart TD
   - Using placeholder assets that differ greatly from planned fidelity undermines the exercise.
   - Failing to document findings slows optimization cycles.
 
-## Data & Measurement
+## Data
 - Primary metric: Median FPS during scripted interaction scenarios (rotate, zoom, data overlay).
 - Secondary checks: Crash-free rate over 24h burn-in, GPU/CPU utilization, and memory headroom.
 - Telemetry requirements: Log per-frame timing, resource usage, camera path events, and any runtime warnings.
