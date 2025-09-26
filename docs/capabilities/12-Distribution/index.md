@@ -28,5 +28,4 @@ This capability handles the core functionality for this area of the AWATERRA pla
 
 ## Related Features
 
-- [Related Feature 1](/docs/features/related-feature-1)
-- [Related Feature 2](/docs/features/related-feature-2)
+- [App Store](/docs/features/app-store)

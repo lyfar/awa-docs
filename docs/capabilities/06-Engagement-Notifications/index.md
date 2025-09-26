@@ -28,5 +28,6 @@ This capability handles the core functionality for this area of the AWATERRA pla
 
 ## Related Features
 
-- [Related Feature 1](/docs/features/related-feature-1)
-- [Related Feature 2](/docs/features/related-feature-2)
+- [AWA Pulse Goes Down (Push)](/docs/features/push-awa-pulse-down)
+- [Fading Light Reminder](/docs/features/push-fading-light-reminder)
+- [Accept Notifications Screens](/docs/features/accept-notifications-screens)

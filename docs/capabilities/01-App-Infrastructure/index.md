@@ -86,7 +86,9 @@ The App Infrastructure capability provides the foundational systems and services
 
 ## Related Features
 
-- [User Authentication](/docs/features/user-authentication)
-- [Subscription Management](/docs/features/subscription-management)
 - [Push Notifications](/docs/features/push-notifications)
-- [Admin Dashboard](/docs/features/admin-dashboard)
+- [Setup Backend Infrastructure](/docs/features/setup-backend-infrastructure)
+- [App Architecture & Base](/docs/features/app-architecture-base)
+- [Localization Management](/docs/features/localization-management)
+- [Admin Area v0.1 (CRM/CMS)](/docs/features/admin-area-cms)
+- [Layout & Menu](/docs/features/layout-menu)

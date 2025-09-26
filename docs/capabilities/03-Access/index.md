@@ -108,7 +108,7 @@ The Access capability manages how users enter and interact with the AWATERRA pla
 
 ## Related Features
 
-- [User Profile](/docs/features/user-profile)
-- [Location Services](/docs/features/location-services)
-- [Push Notifications](/docs/features/push-notifications)
-- [Privacy Settings](/docs/features/privacy-settings)
+- [Loading Screen](/docs/features/loading-screen)
+- [Welcome Animation](/docs/features/welcome-animation)
+- [Location Permission (Onboarding)](/docs/features/location-permission-onboarding)
+- [GDPR](/docs/features/gdpr)

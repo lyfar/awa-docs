@@ -44,6 +44,12 @@ The Identity capability manages user profiles, settings, and identity control wi
 
 ## Related Features
 
-- [User Profile](/docs/features/user-profile)
-- [Privacy Settings](/docs/features/privacy-settings)
-- [Subscription Management](/docs/features/subscription-management)
+- [Paid / Subscription Profile](/docs/features/paid-subscription-profile)
+- [Profile View](/docs/features/profile-view)
+- [Push Notification Settings](/docs/features/push-notification-settings)
+- [Application Settings](/docs/features/application-settings)
+- [Language Settings](/docs/features/language-settings)
+- [Delete Profile](/docs/features/delete-profile)
+- [Profile Notifications](/docs/features/profile-notifications)
+- [FAQ](/docs/features/faq)
+- [Geo Allow (Re-Prompt)](/docs/features/geo-allow-followup)

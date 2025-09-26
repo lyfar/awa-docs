@@ -98,7 +98,9 @@ The Visualization & Map Layer capability creates the visual foundation of AWATER
 
 ## Related Features
 
-- [Practice Screen](/docs/features/practice-screen)
-- [Master Practices](/docs/features/master-practices)
-- [AWA Units System](/docs/features/awa-units)
-- [User Profile](/docs/features/user-profile)
+- [Light Ignition](/docs/features/light-ignition)
+- [AWA Soul](/docs/features/awa-soul)
+- [Globe](/docs/features/globe)
+- [AWA Pulse (Basic)](/docs/features/awa-pulse-basic)
+- [Prototype 3D Map (FPS)](/docs/features/prototype-3d-map-fps)
+- [Total User Counter](/docs/features/total-user-counter)

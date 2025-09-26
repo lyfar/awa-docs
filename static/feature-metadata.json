@@ -47,7 +47,7 @@
       "capability": "visualization-map-layer",
       "position": 2,
       "title": "AWA Soul",
-      "summary": "Inspiring onboarding guide that introduces users to the global light community"
+      "summary": "Scripted luminous guide that welcomes users and supports practice with calm assistant-like visuals"
     },
     "features/basic-analytics": {
       "version": "0.1",
@@ -110,7 +110,7 @@
       "capability": "visualization-map-layer",
       "position": 1,
       "title": "Light Ignition",
-      "summary": "Morning focus, visual map flash, Pulse lift, and AWAunits rewards reinforce daily practice"
+      "summary": "Show each person their living light across onboarding, globe, and home to sustain daily practice"
     },
     "features/loading-screen": {
       "version": "0.1",
@@ -173,7 +173,7 @@
       "capability": "identity",
       "position": 1,
       "title": "Profile View",
-      "summary": "Encourage registration and celebrate progress after the first practice"
+      "summary": "Ground every session in the user's light, progress, and next actions"
     },
     "features/prototype-3d-map-fps": {
       "version": "0.1",
@@ -344,5 +344,5 @@
       "slug": "1.0-ignition"
     }
   },
-  "lastUpdated": "2025-09-25T07:52:51.493Z"
+  "lastUpdated": "2025-09-26T02:30:36.978Z"
 }

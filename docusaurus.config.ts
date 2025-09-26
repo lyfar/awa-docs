@@ -118,6 +118,9 @@ const config: Config = {
     },
     mermaid: {
       theme: {light: 'neutral', dark: 'dark'},
+      options: {
+        securityLevel: 'loose',
+      },
     },
   } satisfies Preset.ThemeConfig,
 };

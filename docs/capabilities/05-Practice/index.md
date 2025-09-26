@@ -78,6 +78,3 @@ All launch practices live in the [Practices catalogue](/docs/wiki/practices/). E
 
 - [Practices List](/docs/features/practices-list)
 - [Practice Screen](/docs/features/practice-screen)
-- [Light Ignition](/docs/features/light-ignition)
-- [Push Notifications](/docs/features/push-notifications) — for practice reminders aligned with availability windows
-- [Admin Area v0.1](/docs/features/admin-area-cms) — manages practice entries and rotations

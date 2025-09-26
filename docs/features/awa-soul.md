@@ -8,9 +8,9 @@ status: "in-progress"
 lark_id: "recuVfKxHQ1Vl1"
 figma: "https://www.figma.com/design/CBoSOj4JkiZkWdINOzzFE7/Awaterra-App-UIUX?node-id=48-4"
 owner: ""
-user_value: "Inspiring onboarding guide that introduces users to the global light community"
-trigger: "When a user opens the app for the first time and during early guided practices"
-done_when: "Users experience AWA Soul’s greeting, guidance, and wrap into the globe, establishing the community connection"
+user_value: "Scripted luminous guide that welcomes users and supports practice with calm assistant-like visuals"
+trigger: "During the welcome animation and whenever a practice session begins"
+done_when: "AWA Soul delivers the scripted guidance, then settles back into the globe without breaking immersion"
 capability_label: "02. Visualization & Map Layer"
 ---
 
@@ -23,59 +23,75 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-AWA Soul is the ambassador that welcomes every newcomer. A living sphere of light breathes, guides the user through onboarding, and reminds them they join a global community.
+AWA Soul is AWATERRA’s luminous guide. Inspired by calm voice assistants such as Siri or ChatGPT Voice, it looks and moves like an ambient AI, yet every line is scripted by the team. During the [Welcome Animation](./welcome-animation.md) the sphere types and speaks with a shimmering cadence, then stays available throughout the journey. The same avatar that breathes through [Light Ignition](./light-ignition.md) lifts from the globe, introduces itself, and invites the user to settle in.
 
-The character gives clear directions, sets expectations, and encourages commitment in plain words. When onboarding ends, the sphere wraps into the globe so users see how their light joins the whole.
+After onboarding, AWA Soul rests within the [Globe](./globe.md) until a practice begins. When the user taps `Начать практику`, the guide rises from the globe into the [Practice Screen](./practice-screen.md), delivers the pre-authored prompts, and then gently dissolves back into the globe once the session completes. This continuity lets the user feel a single, caring presence instead of disconnected screens.
+
+
+:::note Scripted Guidance
+AWA Soul’s dialogue is pre-authored. The assistant-like visuals signal warmth and presence without implying generative AI or unscripted responses.
+:::
 
 ## Interaction
-1. Detect first-launch or guided practice scenarios that require the AWA Soul introduction.
-2. Render the pulsing light sphere with breathing motion and adaptive brightness.
-3. Deliver scripted narration (voice or text) coordinated with particle emphasis and formations.
-4. Transition from onboarding steps into the Light Map, animating AWA Soul as it envelops the globe.
-5. Respond to user interactions (tap, swipe, dwell) with subtle animation changes that reinforce presence.
-6. Persist the user’s onboarding completion so subsequent sessions start in the standard home experience.
+1. During the welcome animation, lift AWA Soul from Light Ignition, render the shimmering type-to-reveal UI, and greet the user by name while staying on the same canvas.
+2. As onboarding ends, fold AWA Soul back into the [Globe](./globe.md) so it can rest at the heart of [Profile View](./profile-view.md) without vanishing.
+3. When the user starts a practice, raise AWA Soul out of the globe, transition the scene into the [Practice Screen](./practice-screen.md), and shift the UI into assistant mode (voice waveform-inspired visuals with scripted typewriter captions).
+4. Guide the practice with contextual prompts—breath cues, reflections, timing—and react to user interactions (pauses, skips) with subtle brightness or position changes.
+5. On practice completion, acknowledge the effort, trigger [Light Ignition](./light-ignition.md), and dissolve AWA Soul back into the globe so the home view is already updated.
+6. Store the user’s progress state so AWA Soul skips repetitive greetings yet stays ready to surface micro-prompts or reminders when the app relaunches.
 
 :::caution Edge Case
-Device performance limits particle effects. Degrade gracefully to fewer points while keeping breathing and narration.
+Users may jump straight into practice before onboarding finishes. Ensure AWA Soul can pivot smoothly into assistant mode without replaying the full welcome script.
 :::
 
 :::tip Signals of Success
-- New users finish onboarding and understand AWATERRA’s mission.
-- Interaction logs show engagement with AWA Soul’s prompts instead of skips.
-- Visual transitions run smoothly on target hardware.
+- Users recognize AWA Soul as a single companion from welcome through practice without visual breaks.
+- Practice guidance receives positive feedback and low skip rates.
+- Transitions in and out of assistant mode complete under one second on target hardware.
 :::
 
 ### Journey
 
 ```mermaid
+%%{init: {'securityLevel': 'loose', 'flowchart': {'htmlLabels': true}}}%%
 flowchart TD
-    START([First app launch])
-    INTRO[Render AWA Soul sphere]
-    GUIDE[Deliver guided narration]
-    TRANSITION[Animate wrap into globe]
-    CHECK{Onboarding complete?}
-    HOME[Land on Light Map]
-    START --> INTRO --> GUIDE --> TRANSITION --> CHECK
-    CHECK -->|Yes| HOME --> END((User feels welcomed))
-    CHECK -->|No| LOOP[Offer gentle reminders]
-    LOOP --> GUIDE
+    WELCOME(["<a href='./welcome-animation'>Welcome animation</a>"])
+    REST([AWA Soul rests inside globe])
+    START_PRACTICE(["Tap start practice<br/><a href='./practice-screen'>Practice Screen</a>"])
+    GUIDE([Scripted prompts & breath cues])
+    COMPLETE(["Practice complete<br/><a href='./light-ignition'>Light Ignition</a>"])
+    RETURN(["Return to home<br/><a href='./profile-view'>Profile View</a>"])
+    WELCOME --> REST
+    REST --> START_PRACTICE
+    START_PRACTICE --> GUIDE
+    GUIDE --> COMPLETE
+    COMPLETE --> RETURN
+    RETURN --> REST
 ```
 
 ## Requirements
 - **Acceptance criteria**
-  - GIVEN a new user WHEN the app opens THEN AWA Soul greets them with narration and responsive animation.
-  - GIVEN animation playback WHEN the user interacts THEN feedback (point clustering, brightness shifts) reflects that attention.
-  - GIVEN onboarding completion WHEN the user returns THEN AWA Soul resumes in-context guidance rather than repeating the full sequence.
+  - GIVEN the welcome animation plays WHEN AWA Soul greets the user THEN the scripted lines render with assistant-style motion while staying on the same canvas.
+  - GIVEN the user starts a practice WHEN AWA Soul rises from the globe THEN the transition to the Practice Screen completes in under one second and the scripted prompts begin immediately.
+  - GIVEN a practice completes WHEN Light Ignition triggers THEN AWA Soul acknowledges the finish and settles back into the globe without lingering overlays.
+  - GIVEN the user resumes the app WHEN onboarding is already complete THEN AWA Soul surfaces only contextual micro-prompts, not the entire welcome script.
 - **No-gos & risks**
+  - Hinting at unscripted or generative responses when the copy is fixed.
   - Overly intense visuals or audio that overwhelm sensitive users.
-  - Long load times that break immersion before the greeting begins.
-  - Localization gaps that make guidance inaccessible in the user’s language.
+  - Long load times that break immersion before the greeting or practice guidance begins.
 
 ## Data
-- Primary metric: Onboarding completion rate driven by AWA Soul’s guided flow.
-- Secondary checks: Average dwell time with the character, skip rates, and drop-off points per narration step.
-- Telemetry requirements: Log scene transitions, interaction events with the sphere, and animation performance metrics.
+- Primary metric: Percentage of sessions where AWA Soul successfully transitions from welcome to practice without visual gaps.
+- Secondary checks: Practice guidance completion rate, skip rate of scripted prompts, and latency of transitions in/out of assistant mode.
+- Telemetry requirements: Log trigger events (welcome, practice start, practice end), animation timing, and prompt consumption metrics.
+
+## Related Feature Docs
+- [Welcome Animation](./welcome-animation.md) — surfaces the first scripted conversation.
+- [Light Ignition](./light-ignition.md) — visual heartbeat that pairs with AWA Soul’s wrap-up.
+- [Globe](./globe.md) — resting state for AWA Soul between sessions.
+- [Profile View](./profile-view.md) — home canvas where the guide waits before each practice.
+- [Practice Screen](./practice-screen.md) — stage for scripted guidance during sessions.
 
 ## Open Questions
 - Should AWA Soul’s script adapt based on user-selected intent or language preferences in v0.1?
-- How do we maintain narrative freshness for returning users who revisit the guidance flow?
+- How do we keep the scripted guidance fresh for returning practitioners without implying AI improvisation?

@@ -8,9 +8,9 @@ status: "done"
 lark_id: "recuVfJGxv3dPW"
 figma: "https://www.figma.com/design/CBoSOj4JkiZkWdINOzzFE7/Awaterra-App-UIUX?node-id=48-15"
 owner: ""
-user_value: "Encourage registration and celebrate progress after the first practice"
-trigger: "Immediately after a guest completes their first practice and taps Finish"
-done_when: "Session summary appears, rewards are applied or deferred, and the user can register or continue as guest"
+user_value: "Ground every session in the user's light, progress, and next actions"
+trigger: "After onboarding completes, after finishing a practice, or whenever the user reopens the app"
+done_when: "Profile home renders with globe, menu, and next-practice entry reflecting the latest state"
 capability_label: "04. Identity"
 ---
 
@@ -23,59 +23,71 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Profile View is the moment guests feel the impact of their first practice and can join the community fully. The screen glows with gratitude, recaps contributions, and invites profile creation to save AWAunits, streaks, and deeper features.
+Profile View is the AWATERRA home page. The welcome animation dissolves into this surface, every practice completion returns here, and relaunching the app anchors the user in the same calm hub. The header greets the user by name on the left while the profile menu button waits on the right. The center of the canvas showcases the living [Globe](./globe.md) with the user's [AWA Pulse](./awa-pulse-basic.md): the light stays bright for 24 hours after each practice, then softens to a glimmer until the next ignition. The primary call-to-action invites them to start the next practice before the glow fades.
 
-The flow respects choice. Users can celebrate and continue as guests while seeing a clear summary of what they miss by not saving progress, reinforced with gentle animation.
+The layout stays focused: greeting, menu, globe, pulse visualization, and practice CTA. Personal notifications from [Profile Notifications](./profile-notifications.md) sit within reach, and the [layout menu](./layout-menu.md) keeps deeper navigation one tap away. Everything refreshes in place so the user always knows where to begin, continue, or reflect without extra screens.
 
 ## Interaction
-1. Trigger the completion animation and summary after a guest practice ends.
-2. Display achievements: Pulse contribution, AWAunits earned, and heartfelt gratitude.
-3. Present primary CTA “Create profile” alongside a secondary “Later” option.
-4. If the user selects Create profile, collect email verification and finalize account creation.
-5. If they defer, clarify that earned AWAunits will expire and provide gentle reminders.
-6. Update access permissions: unlock missions, masters, and progress tracking for registered members; gate for guests.
+1. Land the user on Profile View after onboarding, practice completion, or app relaunch, restoring their place in the home experience.
+2. Render the header with the greeting on the left and the menu/profile button on the right, mirroring the latest name or identity state.
+3. Keep the [Globe](./globe.md) centered with the user's pulse visualization layered above; show the bright state during the 24-hour burn window and soften it gently when the timer lapses.
+4. Present the primary CTA row directly under the globe—`Начать практику` routes to the [Practice Screen](./practice-screen.md), while secondary actions surface saved rituals or breathers.
+5. Surface the latest personal notifications inline with the CTA row and deep-link them to [profile notifications](./profile-notifications.md), highlighting fading-light nudges when the timer is near its end.
+6. Keep the [layout menu](./layout-menu.md) accessible from the header button for profile settings and navigation, including quick access to [Application Settings](./application-settings.md).
+7. Persist the home state so returning users drop back into Profile View instantly, even after backgrounding the app.
 
 :::caution Edge Case
-User dismisses the modal accidentally. Resurface the invitation in the profile tab without blocking core usage.
+Notifications spike during live events. Tuck them into a calm card under the globe and let the user expand for more instead of flooding the header.
 :::
 
 :::tip Signals of Success
-- Conversion rate from guest to registered climbs after the first practice.
-- Feedback shows users understand the benefits of creating a profile.
-- No duplicate accounts appear when users retry the flow.
+- Most home sessions tap `Начать практику` or another CTA within a minute.
+- Personal notifications receive healthy open rates without denting session calm.
+- Return sessions consistently rehydrate Profile View without flashes or route jumps.
 :::
 
 ### Journey
 
 ```mermaid
+%%{init: {'securityLevel': 'loose', 'flowchart': {'htmlLabels': true}}}%%
 flowchart TD
-    START([Practice completes])
-    SUMMARY[Show celebration & stats]
-    CHOICE{Create profile?}
-    REGISTER[Collect email & confirm]
-    GUEST[Continue as guest]
-    REWARD[Apply AWAunits & unlock features]
-    REMIND[Store reminder & expire units]
-    START --> SUMMARY --> CHOICE
-    CHOICE -->|Yes| REGISTER --> REWARD --> END((Profile created))
-    CHOICE -->|Later| GUEST --> REMIND --> END((Guest continues))
+    ONBOARD["<a href='./welcome-animation'>Welcome animation complete</a>"]
+    PRACTICE_DONE["<a href='./practice-screen'>Practice completes</a>"]
+    RELAUNCH([App relaunch / resume])
+    HOME[Profile View home]
+    HEADER[Greeting & menu]
+    GLOBE_NODE["<a href='./globe'>Globe + pulse</a>"]
+    CTA_NODE["<a href='./practice-screen'>Start practice CTA</a>"]
+    PULSE_NODE["<a href='./awa-pulse-basic'>Pulse visualization</a>"]
+    MENU_NODE["<a href='./layout-menu'>Profile menu</a>"]
+    ALERT_NODE["<a href='./profile-notifications'>Personal notifications</a>"]
+    ONBOARD --> HOME
+    PRACTICE_DONE --> HOME
+    RELAUNCH --> HOME
+    HOME --> HEADER
+    HOME --> GLOBE_NODE
+    HOME --> CTA_NODE
+    HOME --> PULSE_NODE
+    HOME --> MENU_NODE
+    HOME --> ALERT_NODE
 ```
 
 ## Requirements
 - **Acceptance criteria**
-  - GIVEN a guest completes a practice WHEN the summary appears THEN both CTAs are visible and accessible.
-  - GIVEN the user registers WHEN verification completes THEN previously earned AWAunits and progress are retained.
-  - GIVEN the user defers WHEN 24 hours pass THEN a gentle reminder nudges them without spamming.
+  - GIVEN the welcome animation completes WHEN the dissolve finishes THEN Profile View loads within a beat and reflects the user's greeting and latest stats.
+  - GIVEN the user taps the menu button WHEN on Profile View THEN profile settings open without leaving the home context.
+  - GIVEN the user taps `Начать практику` WHEN on Profile View THEN the app routes directly to the Practice Screen without intermediate blockers.
+  - GIVEN personal notifications arrive WHEN the user is on Profile View THEN they appear in the inline list and open the corresponding detail when tapped.
 - **No-gos & risks**
-  - Hard-blocking guests from exploring core content before they’re ready to commit.
-  - Losing earned rewards during registration due to race conditions.
-  - Copy that feels manipulative or guilt-inducing contrary to brand tone.
+  - Redirecting users to secondary screens after onboarding or practice completion.
+  - Delayed globe or pulse renders that recreate a loading screen feeling.
+  - Overwhelming the home surface with pop-ups or interruptive modals.
 
 ## Data
-- Primary metric: Conversion rate from guest to registered profile after the first session.
-- Secondary checks: AWAunit retention vs. expiration, frequency of reminder prompts, and feature tap-throughs requiring a profile.
-- Telemetry requirements: Log modal views, CTA selections, registration completion, and deferral reminders.
+- Primary metric: Percentage of home sessions that trigger a primary action (start practice or open menu) within the first minute.
+- Secondary checks: Notification open rate from Profile View, menu engagement, and repeat visits to the home surface.
+- Telemetry requirements: Log Profile View entry source (onboarding, practice, relaunch), menu taps, notification opens, CTA usage, and time to exit.
 
 ## Open Questions
-- Should we offer social sign-in at launch or keep email-only to reduce complexity?
-- How do we personalize follow-up messaging based on why a user deferred (e.g., time, trust, readiness)?
+- Should Profile View adapt modules based on time of day or recent practice type in v0.1?
+- How do we surface community updates without disrupting the calm home experience?

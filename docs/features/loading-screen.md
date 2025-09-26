@@ -23,16 +23,16 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The Loading Screen welcomes the user while the app prepares content. Calm animations, warm copy, and soft audio make the wait feel intentional instead of idle.
+The Loading Screen welcomes the user while the app initializes and sets up the single-screen onboarding canvas. Calm copy, ambient audio, and a still or gently looping video from the AWATERRA library—no abstract placeholders—make the wait feel intentional instead of idle.
 
-We keep progress cues honest and responsive. As soon as tasks finish, the sequence fades away so the user arrives at the right spot without extra delay.
+When initialization completes we fade directly into the Welcome Animation without changing scenes, so the flow from loading → typing intro → globe reveal is seamless.
 
 ## Interaction
-1. Detect launch or feature transitions that require prefetching and initialize the loading state.
-2. Display the first screen with pulsing light animation and the welcoming message.
-3. Transition to the second screen reinforcing belonging and hinting at the community ahead.
-4. Monitor data readiness and update progress indicators or copy if additional time is needed.
-5. Fade out the loading sequence once prerequisites complete and transition into the destination experience.
+1. Detect when the user opens the app for the first time in a session (cold start or post-update) and initialize the loading state. Do not reuse this surface for in-app feature loads—use skeleton placeholders instead.
+2. Display the first frame with a curated photo or looping video as the backdrop and the calming welcome message. There is no pulsing light; the visual remains steady to settle the user before the animation begins.
+3. Keep the loading experience focused on grounding visuals only; narrative copy remains minimal until the [Welcome Animation](./welcome-animation.md) begins.
+4. Monitor initialization state and update copy if additional time is needed.
+5. Fade out the loading sequence once prerequisites complete and transition into the Welcome Animation.
 6. Record whether the sequence has been shown before to avoid repetition when unnecessary.
 
 :::caution Edge Case
@@ -48,27 +48,30 @@ Slow network extends load time. Show a calming loop with honest messaging instea
 ### Journey
 
 ```mermaid
+%%{init: {'securityLevel': 'loose', 'flowchart': {'htmlLabels': true}}}%%
 flowchart TD
-    START([Trigger loading state])
-    INTRO[Show welcome animation]
-    STORY[Reinforce community message]
-    READY{Content ready?}
-    TRANSITION[Fade into destination]
-    START --> INTRO --> STORY --> READY
-    READY -->|Yes| TRANSITION --> END((Experience begins))
-    READY -->|No| LOOP[Continue calming loop]
-    LOOP --> READY
+    OPEN([User opens app])
+    LOAD[Trigger loading state]
+    BACKDROP[Show photo/video backdrop]
+    READY{Prerequisites loaded?}
+    LOOP[Continue calming loop]
+    WELCOME["<a href='./welcome-animation'>Fade into Welcome Animation</a>"]
+    OPEN --> LOAD --> BACKDROP --> READY
+    READY -->|Yes| WELCOME --> END((Welcome Animation begins))
+    READY -->|No| LOOP --> READY
+    click WELCOME "./welcome-animation" "Open the Welcome Animation feature doc"
 ```
 
 ## Requirements
 - **Acceptance criteria**
-  - GIVEN a cold app start WHEN assets load THEN the welcome animation plays smoothly and transitions automatically once ready.
+  - GIVEN a cold app start WHEN assets load THEN the welcome animation plays smoothly on the same surface without screen flashes.
   - GIVEN a returning user WHEN cached data is sufficient THEN the loading screen is skipped, preventing unnecessary delay.
   - GIVEN accessibility settings WHEN reduced motion is enabled THEN the animation simplifies without removing essential messaging.
 - **No-gos & risks**
-  - Long unbroken waits without context increase churn; copy must set expectations.
+- Long unbroken waits without context increase churn; copy must set expectations.
   - Flashy or high-contrast visuals conflict with the calming tone.
   - Playing audio without consent could surprise users in quiet environments.
+- Reusing the loading screen for in-app data fetches erodes trust; rely on skeletons and inline feedback elsewhere.
 
 ## Data
 - Primary metric: Percentage of sessions where loading completes under the target threshold while the animation plays uninterrupted.
