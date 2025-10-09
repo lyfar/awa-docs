@@ -7,6 +7,13 @@
       "title": "Accept Notifications Screens",
       "summary": "Guide users to allow notifications with clear benefits"
     },
+    "features/admin-area-cms-v0-2": {
+      "version": "0.2",
+      "capability": "app-infrastructure",
+      "position": 6,
+      "title": "Admin Area v0.2 (CRM/CMS)",
+      "summary": "Let content editors ship practice updates and FAQ/Info/Policy changes without engineering support."
+    },
     "features/admin-area-cms": {
       "version": "0.1",
       "capability": "app-infrastructure",
@@ -91,6 +98,13 @@
       "title": "Globe",
       "summary": "Help users locate their light, see nearby activity, and feel part of the global practice"
     },
+    "features/info-page-v0-2": {
+      "version": "0.2",
+      "capability": "identity",
+      "position": 14,
+      "title": "Info Page v0.2",
+      "summary": "Provide a single, living page for AWATERRA story, team, and social links."
+    },
     "features/language-settings": {
       "version": "0.1",
       "capability": "identity",
@@ -104,6 +118,20 @@
       "position": 6,
       "title": "Layout & Menu",
       "summary": "Give users a clear, consistent navigation system across the app"
+    },
+    "features/leave-feedback": {
+      "version": "0.2",
+      "capability": "customer-support",
+      "position": 3,
+      "title": "Leave Feedback",
+      "summary": "Let users share feelings, ideas, or issues without leaving the app."
+    },
+    "features/light-ignition-v0-2": {
+      "version": "0.2",
+      "capability": "visualization-map-layer",
+      "position": 2,
+      "title": "Light Ignition v0.2",
+      "summary": "Visualize how recent practices feed the pulse and reactions across globe, profile, and practice cards."
     },
     "features/light-ignition": {
       "version": "0.1",
@@ -140,12 +168,26 @@
       "title": "Master's Globe / Planet / Soul",
       "summary": "Summary coming soon."
     },
-    "features/paid-subscription-profile": {
+    "features/new-features-notification-screen": {
       "version": "0.2",
       "capability": "identity",
-      "position": 1,
-      "title": "Paid / Subscription Profile",
-      "summary": "Summary coming soon."
+      "position": 13,
+      "title": "New Features Notification Screen v0.2",
+      "summary": "Keep users aligned on the latest improvements and guide them to try new 0.2 capabilities."
+    },
+    "features/practice-history-reactions": {
+      "version": "0.2",
+      "capability": "practice",
+      "position": 8,
+      "title": "History of Completed Practices with Reactions",
+      "summary": "Let users review every completed practice with the feelings they logged and insights to guide the next session."
+    },
+    "features/practice-reaction": {
+      "version": "0.2",
+      "capability": "practice",
+      "position": 9,
+      "title": "Practice Reaction",
+      "summary": "Give users a calm way to name how a practice made them feel and personalize future guidance."
     },
     "features/practice-screen": {
       "version": "0.1",
@@ -154,6 +196,13 @@
       "title": "Practice Screen",
       "summary": "Provide a calm, guided environment to start, pause, and complete a practice"
     },
+    "features/practices-list-v0-2": {
+      "version": "0.2",
+      "capability": "practice",
+      "position": 2,
+      "title": "Practices List v0.2",
+      "summary": "Help users pick the next session by showing reaction trends, availability, and favourites at a glance."
+    },
     "features/practices-list": {
       "version": "0.1",
       "capability": "practice",
@@ -161,12 +210,33 @@
       "title": "Practices List",
       "summary": "Show all available practices so users can choose the path that fits"
     },
+    "features/practices-reactions-analytics": {
+      "version": "0.2",
+      "capability": "product-analytics",
+      "position": 4,
+      "title": "Practices Reactions Analytics",
+      "summary": "Give product, masters, and ops a dashboard of how practices make people feel."
+    },
+    "features/practices-reactions-base": {
+      "version": "0.2",
+      "capability": "app-infrastructure",
+      "position": 7,
+      "title": "Practices Reactions Base",
+      "summary": "Provide a single source of truth for practice reaction taxonomy, storage, and APIs."
+    },
     "features/profile-notifications": {
       "version": "0.1",
       "capability": "identity",
       "position": 6,
       "title": "Profile Notifications",
       "summary": "Keep users informed about activity tied to their profile"
+    },
+    "features/profile-view-v0-2": {
+      "version": "0.2",
+      "capability": "identity",
+      "position": 2,
+      "title": "Profile View v0.2",
+      "summary": "Surface reaction insights, saved practices, and calm guidance every time the user lands home."
     },
     "features/profile-view": {
       "version": "0.1",
@@ -216,6 +286,13 @@
       "position": 2,
       "title": "Setup Backend Infrastructure",
       "summary": "Enable app to run reliably with scalable backend"
+    },
+    "features/terms-policy-v0-2": {
+      "version": "0.2",
+      "capability": "identity",
+      "position": 12,
+      "title": "T&C / Policy v0.2",
+      "summary": "Give every user one place to review Terms, Privacy, and data practices without leaving the app."
     },
     "features/total-user-counter": {
       "version": "0.1",
@@ -344,5 +421,5 @@
       "slug": "1.0-ignition"
     }
   },
-  "lastUpdated": "2025-09-26T02:30:36.978Z"
+  "lastUpdated": "2025-10-09T08:22:28.406Z"
 }
