@@ -27,6 +27,8 @@ Practices Reactions Analytics turns raw reaction submissions into actionable ins
 
 The pipeline standardizes terminology, handles late-arriving events, and ensures consent controls are respected (delete requests cascade). Aggregations update hourly for near-real-time views. Alerting catches anomalies, such as a practice suddenly skewing to “Release” (maybe the audio glitched) or reaction capture rates dropping below targets. The analytics team can also export aggregated data for marketing storytelling without exposing personal histories.
 
+Dashboards read the official vocabulary from the [Reactions Taxonomy](/docs/wiki/reactions/) so state names and translations remain consistent with what users see in the app.
+
 ## Interaction
 1. Reaction event fires from Practice Reaction; ingestion service appends metadata (user cohort, practice category) and publishes to analytics stream.
 2. Streaming job writes to raw table; hourly batch job aggregates by practice, master, day, and reaction state.

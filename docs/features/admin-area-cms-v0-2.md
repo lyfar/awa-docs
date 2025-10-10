@@ -27,6 +27,8 @@ Admin Area v0.2 expands the internal CMS into the single cockpit for every copy-
 
 Entries inherit structured blocks—headlines, rich text, lists, embeds, and CTA links—so the app and docs render consistent layouts. Practice records gain reaction-tag metadata, letting catalogue cards, dashboards, and analytics share the same seven-state taxonomy. Every save produces a preview URL that mirrors production. Reviewers leave inline comments, approvals unlock publish, and the system snapshot diffs for accountability. Publishing pushes content to both mobile and docs APIs atomically and alerts support if anything fails validation.
 
+Taxonomy copy, colour tokens, and localisation guidance are maintained alongside the [Reactions Taxonomy](/docs/wiki/reactions/) reference so editors know exactly how to name each state across surfaces.
+
 ## Interaction
 1. Admin signs in (MFA enforced) and lands on the unified workspace dashboard with summary tiles for Practice Catalogue, FAQ, Info, and Policies plus review queues.
 2. Picking a practice opens the extended form: core metadata, availability, media, and the new reaction-tag weights that map to the seven emotional states.

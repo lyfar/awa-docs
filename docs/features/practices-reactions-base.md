@@ -27,6 +27,8 @@ Practices Reactions Base is the backend foundation for the seven-state emotions 
 
 The base handles both ingestion and aggregation. When a practice ends, the app posts the selected state plus optional intensity and notes. The service validates against active taxonomy entries, records the event, and emits updates to downstream consumers (profile view, analytics warehouse, notification engine). Read-side APIs power quick fetches: user history, practice aggregates, master-level insights, and global counts. Schema migrations keep history intact even as we refine labels (e.g., renaming “Happy” to “Joyful”). All data is privacy-compliant and scoped per user or practice as appropriate.
 
+Taxonomy definitions, translations, and governance rules live in the [Reactions Taxonomy](/docs/wiki/reactions/); the service consumes that source of truth to keep every client aligned.
+
 ## Interaction
 1. Client requests `GET /reactions/taxonomy` during app boot; service returns the seven normalized states with localized names, descriptions, and color tokens.
 2. After a practice, client submits `POST /reactions` with user id, practice id, state key, optional intensity, and note metadata.

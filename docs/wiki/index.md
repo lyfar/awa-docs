@@ -16,4 +16,4 @@ Use this space for:
 - Source-of-truth templates the whole team uses when drafting specs or capability docs.
 - Links to deeper references in design files, analytics dashboards, or operational runbooks.
 
-More collections will land here over time. For now, explore the [Practices catalogue](/docs/wiki/practices/) to understand every modality we offer today, the [Capability catalogue](/docs/wiki/capabilities/) to keep requirements aligned, and review the shared templates when kicking off new documentation.
+More collections will land here over time. For now, explore the [Practices catalogue](/docs/wiki/practices/) to understand every modality we offer today, the [Capability catalogue](/docs/wiki/capabilities/) to keep requirements aligned, the [Reactions taxonomy](/docs/wiki/reactions/) to stay fluent in our shared emotional language, and review the shared templates when kicking off new documentation.

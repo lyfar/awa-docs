@@ -70,6 +70,10 @@ const wikiPracticeDocs = [
   'wiki/practices/special-practice',
 ];
 
+const wikiReactionDocs = [
+  'wiki/reactions/index',
+];
+
 const wikiCapabilityDocs = [
   'wiki/capabilities/index',
   'wiki/capabilities/App-Infrastructure',
@@ -99,6 +103,12 @@ const wikiDocs = [
     label: 'Capabilities',
     collapsed: false,
     items: wikiCapabilityDocs,
+  },
+  {
+    type: 'category' as const,
+    label: 'Reactions',
+    collapsed: false,
+    items: wikiReactionDocs,
   },
   {
     type: 'category' as const,

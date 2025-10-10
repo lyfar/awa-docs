@@ -27,6 +27,8 @@ The New Features Notification Screen gives users a calm space to absorb what cha
 
 The screen uses CMS-managed content so marketing and product teams can refresh copy without shipping new builds. Release notes include three tiers: “Headline” (e.g., Reaction Wheel), “What’s new for you” (personalized callouts such as “See your top states in Profile”), and “Under the hood” (infrastructure improvements). The experience respects the user’s state: if they already explored a feature, the card shows as completed. Acknowledge buttons track who has seen the updates, informing future nudges.
 
+Whenever the deck references reactions, card copy links back to the [Reactions Taxonomy](/docs/wiki/reactions/) so users and editors anchor in the same definitions.
+
 ## Interaction
 1. App detects a version bump (e.g., `0.2.x` vs last seen version) or user taps “What’s New.”
 2. Client fetches release-note bundles from the CMS with card metadata, imagery references, and deep-link URIs.

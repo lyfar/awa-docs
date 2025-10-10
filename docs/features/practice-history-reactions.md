@@ -27,6 +27,8 @@ The History of Completed Practices with Reactions gives people a reflective jour
 
 History pulls from the Practices Reactions Base and practice completion records. It caches the most recent month and lazily loads older sessions. For each entry, the UI offers nudges—if the user recorded mostly Grounded states, they’ll see a tip to explore Energise practices. The interaction stays gentle: no gamification, just insights and optional sharing.
 
+Every state summary references the canonical names outlined in the [Reactions Taxonomy](/docs/wiki/reactions/) so history, analytics, and profile insights stay synchronised.
+
 ## Interaction
 1. User opens History via Profile View or completion screen.
 2. Client requests the last 30 days of practice sessions with reactions; results stream into weekly groups.

@@ -27,6 +27,8 @@ Light Ignition v0.2 deepens the original glow mechanic with reaction-aware visua
 
 The system reads from the Practices Reactions Base, updates the user’s light payload, and broadcasts state changes to the globe, profile home, and practice cards. Fades stay gentle—lights soften over the final six hours with a halo hinting at the new dominant state. Notifications tap into the same data to nudge a user when their light is close to dimming or when a contrasting state might balance their week.
 
+All hues and labels trace back to the [Reactions Taxonomy](/docs/wiki/reactions/) so the glow a user sees here matches the wording and colours across catalogue, history, and analytics.
+
 ## Interaction
 1. Onboarding finale introduces the seven-state palette: as the camera zooms out, the user’s spark cycles briefly through each hue before locking onto their starting state.
 2. Practice completion posts a reaction; Light Ignition ingests the update, calculates the new dominant and supporting states, and broadcasts payloads to globe/profile surfaces.

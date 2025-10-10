@@ -27,6 +27,8 @@ Profile View v0.2 keeps the calm hero from v0.1 and layers in the new reaction-p
 
 Next to the reactions card, users see quick actions: “Continue practice,” “Saved favourites,” and “Leave feedback.” Reaction-aware badges highlight when the system suggests grounding or energizing options based on recent selections. Notifications stay inline, and a new release banner appears when the What’s New deck has unseen cards. The layout still resists clutter—modules expand on demand while preserving the breathable spacing that defines the home experience.
 
+State names, colours, and copy mirror the [Reactions Taxonomy](/docs/wiki/reactions/) so the wheel, insights, and downstream nudges stay consistent with the rest of the product.
+
 ## Interaction
 1. User lands on Profile View; the app fetches reaction summaries from Practices Reactions Base and hydrates the reaction wheel plus streak badges.
 2. Reaction wheel displays dominant state (full-color arc) and up to two secondary states; tooltips explain what each state represents in localized language.

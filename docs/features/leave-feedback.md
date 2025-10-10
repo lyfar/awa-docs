@@ -27,6 +27,8 @@ Leave Feedback gives users a gentle way to tell us what’s working or where the
 
 Feedback routes through the support backend with tags for topic (content, app experience, emotions) and urgency. Users can opt into follow-up by providing email/Telegram; otherwise the submission stays anonymous. We also show quick links to FAQ and Info for self-service. Successful submissions end with a thank-you animation and a suggestion to log another practice or explore updates.
 
+State tags reuse the [Reactions Taxonomy](/docs/wiki/reactions/) so support teams can slice reports by the same language product and analytics rely on.
+
 ## Interaction
 1. User taps “Leave feedback”; the form slides up overlaying the current context.
 2. App pre-fills the latest reaction state and practice name (if relevant); user can toggle them off.

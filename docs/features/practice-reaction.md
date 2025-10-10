@@ -27,6 +27,8 @@ Practice Reaction is the moment a session becomes insight. When a practice ends,
 
 The experience balances speed and reflection. Users can tap once to submit or long-press to open an expanded description with journaling tips. If they’re unsure, a “Skip for now” option records the session without a reaction but gently reminds them later. For accessibility, states are announced with labels and example scenarios. The final screen offers optional notes (voice or text) and a shortcut to share feedback.
 
+The seven-state vocabulary is defined centrally in the [Reactions Taxonomy](/docs/wiki/reactions/) so every surface reads and writes the same identifiers and copy.
+
 ## Interaction
 1. Practice completes; completion animation fades into the reaction prompt.
 2. Seven orbs arrange in a circle with the dominant suggestion (based on prior trends) highlighted; users can swipe to read descriptions.

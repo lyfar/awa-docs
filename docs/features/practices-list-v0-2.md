@@ -27,6 +27,8 @@ Practices List v0.2 builds on the v0.1 catalogue with reaction intelligence and 
 
 The list retrieves data from the CMS (practice metadata) and Practices Reactions Base (aggregate reactions). Filters let users focus on specific states (“I need Grounding tonight”), durations, or masters. Long-pressing a card favourites it, while tapping opens the familiar sheet with descriptions, selectors, and the reaction breakdown. Cards animate into view without jarring transitions, ensuring the catalogue remains a calming step before practice.
 
+Reaction chip labels and filters reuse the naming and colour guidance in the [Reactions Taxonomy](/docs/wiki/reactions/) so catalogue copy aligns with profile and analytics.
+
 ## Interaction
 1. User opens the list; client requests the latest catalogue plus reaction aggregates.
 2. Cards render in curated order with reaction chips (top three states by percentage) and availability labels (new, limited, archived soon).
