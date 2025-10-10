@@ -4,315 +4,359 @@
       "version": "0.1",
       "capability": "engagement-notifications",
       "position": 3,
-      "title": "Accept Notifications Screens"
+      "title": "Accept Notifications Screens",
+      "summary": "Guide users to allow notifications with clear benefits"
     },
     "features/admin-area-cms-v0-2": {
       "version": "0.2",
       "capability": "app-infrastructure",
       "position": 6,
-      "title": "Admin Area v0.2 (CRM/CMS)"
+      "title": "Admin Area v0.2 (CRM/CMS)",
+      "summary": "Let content editors ship practice updates and FAQ/Info/Policy changes without engineering support."
     },
     "features/admin-area-cms": {
       "version": "0.1",
       "capability": "app-infrastructure",
       "position": 5,
-      "title": "Admin Area v0.1 (CRM/CMS)"
+      "title": "Admin Area v0.1 (CRM/CMS)",
+      "summary": "Simplifies content management for the first wave of practices."
     },
     "features/app-architecture-base": {
       "version": "0.1",
       "capability": "app-infrastructure",
       "position": 3,
-      "title": "App Architecture & Base"
+      "title": "App Architecture & Base",
+      "summary": "Reliable app performance and data security"
     },
     "features/app-store": {
       "version": "0.1",
       "capability": "distribution",
       "position": 1,
-      "title": "App Store"
+      "title": "App Store",
+      "summary": "Prepare the App Store listing so users can discover and install AWATERRA"
     },
     "features/application-settings": {
       "version": "0.1",
       "capability": "identity",
       "position": 3,
-      "title": "Application Settings"
+      "title": "Application Settings",
+      "summary": "Give users control over preferences, security, language, and notifications"
     },
     "features/awa-pulse-basic": {
       "version": "0.1",
       "capability": "visualization-map-layer",
       "position": 4,
-      "title": "AWA Pulse (Basic)"
+      "title": "AWA Pulse (Basic)",
+      "summary": "Show live system vitality so the community feels connected to collective practice"
     },
     "features/awa-soul": {
       "version": "0.1",
       "capability": "visualization-map-layer",
       "position": 2,
-      "title": "AWA Soul"
+      "title": "AWA Soul",
+      "summary": "Scripted luminous guide that welcomes users and supports practice with calm assistant-like visuals"
     },
     "features/basic-analytics": {
       "version": "0.1",
       "capability": "product-analytics",
       "position": 1,
-      "title": "Basic Analytics"
+      "title": "Basic Analytics",
+      "summary": "Give product and business teams insight into downloads, installs, and engagement"
     },
     "features/delete-profile": {
       "version": "0.1",
       "capability": "identity",
       "position": 5,
-      "title": "Delete Profile"
+      "title": "Delete Profile",
+      "summary": "Give users full control to erase their account and data when desired"
     },
     "features/faq": {
       "version": "0.1",
       "capability": "identity",
       "position": 7,
-      "title": "FAQ"
+      "title": "FAQ",
+      "summary": "Provide clear answers to common AWATERRA questions"
     },
     "features/gdpr": {
       "version": "0.1",
       "capability": "access",
       "position": 4,
-      "title": "GDPR"
+      "title": "GDPR",
+      "summary": "Ensure user data privacy, consent, and control to build trust"
     },
     "features/geo-allow-followup": {
       "version": "0.1",
       "capability": "identity",
       "position": 8,
-      "title": "Geo Allow (Re-Prompt)"
+      "title": "Geo Allow (Re-Prompt)",
+      "summary": "Offer a respectful way to enable location after an initial refusal"
     },
     "features/globe": {
       "version": "0.1",
       "capability": "visualization-map-layer",
       "position": 3,
-      "title": "Globe"
+      "title": "Globe",
+      "summary": "Help users locate their light, see nearby activity, and feel part of the global practice"
     },
     "features/info-page-v0-2": {
       "version": "0.2",
       "capability": "identity",
       "position": 14,
-      "title": "Info Page v0.2"
+      "title": "Info Page v0.2",
+      "summary": "Provide a single, living page for AWATERRA story, team, and social links."
     },
     "features/language-settings": {
       "version": "0.1",
       "capability": "identity",
       "position": 4,
-      "title": "Language Settings"
+      "title": "Language Settings",
+      "summary": "Let users choose their preferred language for comfort and accessibility"
     },
     "features/layout-menu": {
       "version": "0.1",
       "capability": "app-infrastructure",
       "position": 6,
-      "title": "Layout & Menu"
+      "title": "Layout & Menu",
+      "summary": "Give users a clear, consistent navigation system across the app"
     },
     "features/leave-feedback": {
       "version": "0.2",
       "capability": "customer-support",
       "position": 3,
-      "title": "Leave Feedback"
+      "title": "Leave Feedback",
+      "summary": "Let users share feelings, ideas, or issues without leaving the app."
     },
     "features/light-ignition-v0-2": {
       "version": "0.2",
       "capability": "visualization-map-layer",
       "position": 2,
-      "title": "Light Ignition v0.2"
+      "title": "Light Ignition v0.2",
+      "summary": "Visualize how recent practices feed the pulse and reactions across globe, profile, and practice cards."
     },
     "features/light-ignition": {
       "version": "0.1",
       "capability": "visualization-map-layer",
       "position": 1,
-      "title": "Light Ignition"
+      "title": "Light Ignition",
+      "summary": "Show each person their living light across onboarding, globe, and home to sustain daily practice"
     },
     "features/loading-screen": {
       "version": "0.1",
       "capability": "access",
       "position": 1,
-      "title": "Loading Screen"
+      "title": "Loading Screen",
+      "summary": "Reduce anxiety by showing a calm, purposeful progress experience while the app loads"
     },
     "features/localization-management": {
       "version": "0.1",
       "capability": "app-infrastructure",
       "position": 4,
-      "title": "Localization Management"
+      "title": "Localization Management",
+      "summary": "Seamless multi-language support for diverse users"
     },
     "features/location-permission-onboarding": {
       "version": "0.1",
       "capability": "access",
       "position": 3,
-      "title": "Location Permission (Onboarding)"
+      "title": "Location Permission (Onboarding)",
+      "summary": "Display accurate location on the globe to personalize engagement"
     },
     "features/masters-globe-planet-soul": {
       "version": "0.3",
       "capability": "masters-practices",
       "position": 1,
-      "title": "Master's Globe / Planet / Soul"
+      "title": "Master's Globe / Planet / Soul",
+      "summary": "Summary coming soon."
     },
     "features/new-features-notification-screen": {
       "version": "0.2",
       "capability": "identity",
       "position": 13,
-      "title": "New Features Notification Screen v0.2"
+      "title": "New Features Notification Screen v0.2",
+      "summary": "Keep users aligned on the latest improvements and guide them to try new 0.2 capabilities."
     },
     "features/practice-history-reactions": {
       "version": "0.2",
       "capability": "practice",
       "position": 8,
-      "title": "History of Completed Practices with Reactions"
+      "title": "History of Completed Practices with Reactions",
+      "summary": "Let users review every completed practice with the feelings they logged and insights to guide the next session."
     },
     "features/practice-reaction": {
       "version": "0.2",
       "capability": "practice",
       "position": 9,
-      "title": "Practice Reaction"
+      "title": "Practice Reaction",
+      "summary": "Give users a calm way to name how a practice made them feel and personalize future guidance."
     },
     "features/practice-screen": {
       "version": "0.1",
       "capability": "practice",
       "position": 2,
-      "title": "Practice Screen"
+      "title": "Practice Screen",
+      "summary": "Provide a calm, guided environment to start, pause, and complete a practice"
     },
     "features/practices-list-v0-2": {
       "version": "0.2",
       "capability": "practice",
       "position": 2,
-      "title": "Practices List v0.2"
+      "title": "Practices List v0.2",
+      "summary": "Help users pick the next session by showing reaction trends, availability, and favourites at a glance."
     },
     "features/practices-list": {
       "version": "0.1",
       "capability": "practice",
       "position": 1,
-      "title": "Practices List"
+      "title": "Practices List",
+      "summary": "Show all available practices so users can choose the path that fits"
     },
     "features/practices-reactions-analytics": {
       "version": "0.2",
       "capability": "product-analytics",
       "position": 4,
-      "title": "Practices Reactions Analytics"
+      "title": "Practices Reactions Analytics",
+      "summary": "Give product, masters, and ops a dashboard of how practices make people feel."
     },
     "features/practices-reactions-base": {
       "version": "0.2",
       "capability": "app-infrastructure",
       "position": 7,
-      "title": "Practices Reactions Base"
+      "title": "Practices Reactions Base",
+      "summary": "Provide a single source of truth for practice reaction taxonomy, storage, and APIs."
     },
     "features/profile-notifications": {
       "version": "0.1",
       "capability": "identity",
       "position": 6,
-      "title": "Profile Notifications"
+      "title": "Profile Notifications",
+      "summary": "Keep users informed about activity tied to their profile"
     },
     "features/profile-view-v0-2": {
       "version": "0.2",
       "capability": "identity",
       "position": 2,
-      "title": "Profile View v0.2"
+      "title": "Profile View v0.2",
+      "summary": "Surface reaction insights, saved practices, and calm guidance every time the user lands home."
     },
     "features/profile-view": {
       "version": "0.1",
       "capability": "identity",
       "position": 1,
-      "title": "Profile View"
+      "title": "Profile View",
+      "summary": "Ground every session in the user's light, progress, and next actions"
     },
     "features/prototype-3d-map-fps": {
       "version": "0.1",
       "capability": "visualization-map-layer",
       "position": 5,
-      "title": "Prototype 3D Map (FPS)"
+      "title": "Prototype 3D Map (FPS)",
+      "summary": "Visualize the practice journey while monitoring real-time performance"
     },
     "features/push-awa-pulse-down": {
       "version": "0.1",
       "capability": "engagement-notifications",
       "position": 1,
-      "title": "AWA Pulse Goes Down (Push)"
+      "title": "AWA Pulse Goes Down (Push)",
+      "summary": "Alert the community when the pulse drops so they can help stabilize it"
     },
     "features/push-fading-light-reminder": {
       "version": "0.1",
       "capability": "engagement-notifications",
       "position": 2,
-      "title": "Fading Light Reminder"
+      "title": "Fading Light Reminder",
+      "summary": "Gently nudge users to reflect and re-engage as their 24-hour light fades"
     },
     "features/push-notification-settings": {
       "version": "0.1",
       "capability": "identity",
       "position": 2,
-      "title": "Push Notification Settings"
+      "title": "Push Notification Settings",
+      "summary": "Let people tailor reminder categories so updates remain relevant"
     },
     "features/push-notifications": {
       "version": "0.1",
       "capability": "app-infrastructure",
       "position": 1,
-      "title": "Push Notifications"
+      "title": "Push Notifications",
+      "summary": "Users receive timely reminders to engage with the app, increasing retention and consistency"
     },
     "features/setup-backend-infrastructure": {
       "version": "0.1",
       "capability": "app-infrastructure",
       "position": 2,
-      "title": "Setup Backend Infrastructure"
+      "title": "Setup Backend Infrastructure",
+      "summary": "Enable app to run reliably with scalable backend"
     },
     "features/terms-policy-v0-2": {
       "version": "0.2",
       "capability": "identity",
       "position": 12,
-      "title": "T&C / Policy v0.2"
+      "title": "T&C / Policy v0.2",
+      "summary": "Give every user one place to review Terms, Privacy, and data practices without leaving the app."
     },
     "features/total-user-counter": {
       "version": "0.1",
       "capability": "visualization-map-layer",
       "position": 6,
-      "title": "Total User Counter"
+      "title": "Total User Counter",
+      "summary": "Show community scale and reinforce belonging"
     },
     "features/welcome-animation": {
       "version": "0.1",
       "capability": "access",
       "position": 2,
-      "title": "Welcome Animation"
+      "title": "Welcome Animation",
+      "summary": "Visually emphasize shared energy and personalize the first impression"
     }
   },
   "capabilityMapping": {
     "app-infrastructure": {
       "label": "01. App Infrastructure",
-      "path": "capabilities/App-Infrastructure/index"
+      "path": "capabilities/01-App-Infrastructure/index"
     },
     "visualization-map-layer": {
       "label": "02. Visualization & Map Layer",
-      "path": "capabilities/Visualization-Map-Layer/index"
+      "path": "capabilities/02-Visualization-Map-Layer/index"
     },
     "access": {
       "label": "03. Access",
-      "path": "capabilities/Access/index"
+      "path": "capabilities/03-Access/index"
     },
     "identity": {
       "label": "04. Identity",
-      "path": "capabilities/Identity/index"
+      "path": "capabilities/04-Identity/index"
     },
     "practice": {
       "label": "05. Practice",
-      "path": "capabilities/Practice/index"
+      "path": "capabilities/05-Practice/index"
     },
     "engagement-notifications": {
       "label": "06. Engagement & Notifications",
-      "path": "capabilities/Engagement-Notifications/index"
+      "path": "capabilities/06-Engagement-Notifications/index"
     },
     "masters-practices": {
       "label": "07. Masters Practices",
-      "path": "capabilities/Masters-Practices/index"
+      "path": "capabilities/07-Masters-Practices/index"
     },
     "away-streaks": {
       "label": "08. AWAY Streaks",
-      "path": "capabilities/AWAY-Streaks/index"
+      "path": "capabilities/08-AWAY-Streaks/index"
     },
     "gamification-rewards": {
       "label": "09. Gamification & Rewards",
-      "path": "capabilities/Gamification-Rewards/index"
+      "path": "capabilities/09-Gamification-Rewards/index"
     },
     "product-analytics": {
       "label": "10. Product Analytics",
-      "path": "capabilities/Product-Analytics/index"
+      "path": "capabilities/10-Product-Analytics/index"
     },
     "customer-support": {
       "label": "11. Customer Support",
-      "path": "capabilities/Customer-Support/index"
+      "path": "capabilities/11-Customer-Support/index"
     },
     "distribution": {
       "label": "12. Distribution",
-      "path": "capabilities/Distribution/index"
+      "path": "capabilities/12-Distribution/index"
     }
   },
   "versionDocMapping": {
@@ -377,5 +421,5 @@
       "slug": "1.0-ignition"
     }
   },
-  "lastUpdated": "2025-10-09T09:18:09.750Z"
+  "lastUpdated": "2025-10-10T06:44:54.753Z"
 }

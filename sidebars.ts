@@ -106,12 +106,6 @@ const wikiDocs = [
   },
   {
     type: 'category' as const,
-    label: 'Reactions',
-    collapsed: false,
-    items: wikiReactionDocs,
-  },
-  {
-    type: 'category' as const,
     label: 'Practices',
     collapsed: false,
     items: wikiPracticeDocs,
