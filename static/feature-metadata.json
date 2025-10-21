@@ -14,6 +14,13 @@
       "title": "Admin Area v0.2 (CRM/CMS)",
       "summary": "Let content editors ship practice updates and FAQ/Info/Policy changes without engineering support."
     },
+    "features/admin-area-cms-v0-3": {
+      "version": "0.3",
+      "capability": "app-infrastructure",
+      "position": 8,
+      "title": "Admin Area CMS v0.3",
+      "summary": "Give the operations team a calm workspace to onboard masters, schedule collective sessions, and wire reactions into the catalogue without engineering lifts."
+    },
     "features/admin-area-cms": {
       "version": "0.1",
       "capability": "app-infrastructure",
@@ -48,6 +55,13 @@
       "position": 4,
       "title": "AWA Pulse (Basic)",
       "summary": "Show live system vitality so the community feels connected to collective practice"
+    },
+    "features/awa-pulse-master-collective-v0-3": {
+      "version": "0.3",
+      "capability": "visualization-map-layer",
+      "position": 7,
+      "title": "AWA Pulse v0.3 (Master)",
+      "summary": "Help the community feel the build-up and afterglow of master-led collectives by visualising shared light on the globe."
     },
     "features/awa-soul": {
       "version": "0.1",
@@ -97,6 +111,13 @@
       "position": 3,
       "title": "Globe",
       "summary": "Help users locate their light, see nearby activity, and feel part of the global practice"
+    },
+    "features/home-view-v0-3-masters": {
+      "version": "0.3",
+      "capability": "identity",
+      "position": 3,
+      "title": "Home View v0.3 (Masters)",
+      "summary": "Surface collective practice announcements and master updates without cluttering the calm home experience."
     },
     "features/info-page-v0-2": {
       "version": "0.2",
@@ -161,6 +182,48 @@
       "title": "Location Permission (Onboarding)",
       "summary": "Display accurate location on the globe to personalize engagement"
     },
+    "features/master-analytics-v0-3": {
+      "version": "0.3",
+      "capability": "product-analytics",
+      "position": 5,
+      "title": "Master Analytics v0.3",
+      "summary": "Equip the team and masters with concise reports on attendance, reactions, and gratitude to refine future collectives."
+    },
+    "features/master-card-bio-v0-3": {
+      "version": "0.3",
+      "capability": "masters-practices",
+      "position": 4,
+      "title": "Master Card v0.3",
+      "summary": "Give users a rich yet calm introduction to each master, their story, and upcoming collective practices."
+    },
+    "features/master-practice-calendar-v0-3": {
+      "version": "0.3",
+      "capability": "masters-practices",
+      "position": 6,
+      "title": "Master Practice Calendar v0.3",
+      "summary": "Let practitioners block time for collectives on their device calendar with accurate timezone support."
+    },
+    "features/master-practice-language-v0-3": {
+      "version": "0.3",
+      "capability": "masters-practices",
+      "position": 5,
+      "title": "Master Practice Language v0.3",
+      "summary": "Ensure practitioners only see master sessions in languages they can follow, reducing friction and confusion."
+    },
+    "features/master-practice-total-users-v0-3": {
+      "version": "0.3",
+      "capability": "masters-practices",
+      "position": 7,
+      "title": "Master Practice Total Users v0.3",
+      "summary": "Show how many people joined a master’s collective to reinforce community presence and inform masters."
+    },
+    "features/master-visualization-screen-v0-3": {
+      "version": "0.3",
+      "capability": "visualization-map-layer",
+      "position": 8,
+      "title": "Master Visualization Screen v0.3",
+      "summary": "Immerse users in a calm, master-branded space that builds anticipation and connection before and during a collective practice."
+    },
     "features/masters-globe-planet-soul": {
       "version": "0.3",
       "capability": "masters-practices",
@@ -174,6 +237,13 @@
       "position": 13,
       "title": "New Features Notification Screen v0.2",
       "summary": "Keep users aligned on the latest improvements and guide them to try new 0.2 capabilities."
+    },
+    "features/practice-history-reactions-v0-3": {
+      "version": "0.3",
+      "capability": "practice",
+      "position": 9,
+      "title": "History with Reactions v0.3",
+      "summary": "Let users revisit collective experiences, see how masters influenced their state, and share gratitude afterward."
     },
     "features/practice-history-reactions": {
       "version": "0.2",
@@ -189,6 +259,13 @@
       "title": "Practice Reaction",
       "summary": "Give users a calm way to name how a practice made them feel and personalize future guidance."
     },
+    "features/practice-screen-masters-v0-3": {
+      "version": "0.3",
+      "capability": "masters-practices",
+      "position": 2,
+      "title": "Practice Screen v0.3 (Masters)",
+      "summary": "Deliver a guided, communal master practice with countdowns, reactions, and graceful completion all in one flow."
+    },
     "features/practice-screen": {
       "version": "0.1",
       "capability": "practice",
@@ -202,6 +279,13 @@
       "position": 2,
       "title": "Practices List v0.2",
       "summary": "Help users pick the next session by showing reaction trends, availability, and favourites at a glance."
+    },
+    "features/practices-list-v0-3": {
+      "version": "0.3",
+      "capability": "practice",
+      "position": 3,
+      "title": "Practices List v0.3",
+      "summary": "Help users discover master-led sessions with filters for language, collective availability, and reaction fit."
     },
     "features/practices-list": {
       "version": "0.1",
@@ -238,6 +322,13 @@
       "title": "Profile View v0.2",
       "summary": "Surface reaction insights, saved practices, and calm guidance every time the user lands home."
     },
+    "features/profile-view-v0-3": {
+      "version": "0.3",
+      "capability": "identity",
+      "position": 4,
+      "title": "Profile View v0.3",
+      "summary": "Blend reaction insights with master guidance so users know who to follow and which collective to join next."
+    },
     "features/profile-view": {
       "version": "0.1",
       "capability": "identity",
@@ -266,6 +357,13 @@
       "title": "Fading Light Reminder",
       "summary": "Gently nudge users to reflect and re-engage as their 24-hour light fades"
     },
+    "features/push-inapp-masters-notifications-v0-3": {
+      "version": "0.3",
+      "capability": "engagement-notifications",
+      "position": 4,
+      "title": "Push & In-App Masters v0.3",
+      "summary": "Keep practitioners aligned with master collectives through timely reminders, countdown nudges, and gentle follow-ups."
+    },
     "features/push-notification-settings": {
       "version": "0.1",
       "capability": "identity",
@@ -279,6 +377,13 @@
       "position": 1,
       "title": "Push Notifications",
       "summary": "Users receive timely reminders to engage with the app, increasing retention and consistency"
+    },
+    "features/reactions-masters-v0-3": {
+      "version": "0.3",
+      "capability": "masters-practices",
+      "position": 3,
+      "title": "Reactions v0.3 (Masters)",
+      "summary": "Let participants express shared emotions during master collectives with restrained, meaningful visuals and sound."
     },
     "features/setup-backend-infrastructure": {
       "version": "0.1",
@@ -421,5 +526,5 @@
       "slug": "1.0-ignition"
     }
   },
-  "lastUpdated": "2025-10-10T06:44:54.753Z"
+  "lastUpdated": "2025-10-17T08:11:22.990Z"
 }
