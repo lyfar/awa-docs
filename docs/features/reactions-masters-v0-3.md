@@ -23,26 +23,26 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Reactions were redesigned for the collective brief: instead of static buttons, a floating action button blooms into a constellation of 7–10 curated states (Joy, Radiance, Release, Grounded, Peace, Insight, Unity, etc.). The tray stays hidden until five seconds before the session so the focus remains on settling in, then slides in with a soft breath animation. Each tap emits a 50 ms haptic pulse, plays a crystal chime whose volume scales with global send rate, and launches the emoji along a curved path into the master’s mini-map. When the emoji reaches centre, a subtle micro-flash signals the collective acknowledgement, visible to all attendees.
+Reactions for master collectives are designed to capture the flow of feeling throughout a session. Instead of a single post-practice summary, participants can leave reactions at any point along the practice timeline, similar to commenting on a SoundCloud track. A calm, unobtrusive interface element allows users to select one of seven core states (Grounded, Joy, Energy, Peace, Release, Insight, Unity).
 
-To maintain rhythm, each participant can send at most one emoji every three seconds. After ten sends, their FAB fades to translucent and shows a 30-second countdown ring; once cooled, it brightens again. The system aggregates totals in the background, feeding the live reaction dashboard on the visualization screen and the collective recap stats. If the practice extends, the tray stays responsive but continues to respect cooldowns.
+As reactions are added, they appear as markers on the session's progress bar. This creates a living emotional graph of the collective experience, visible to all participants in real-time. The visualization is intentionally gentle, using soft-hued icons to represent the different feelings, ensuring the focus remains on the practice itself. For session replays, the timeline shows all reactions from the live event, allowing users to feel the original collective energy and add their own.
 
 ## Interaction
-1. Countdown hits T-5 seconds; reaction FAB animates into the lower-right corner.
-2. User taps FAB; tray fans out with the curated emoji states (localised labels + colours).
-3. Selecting an emoji triggers haptic + chime, increments personal counter, and emits the animation.
-4. Shared reaction bar updates to show which state leads; participant counter reflects total sends.
-5. If the user hits the 3-second cooldown, the FAB shows a shrinking ring; tapping is disabled until reset.
-6. After ten sends, a 30-second cooldown overlay appears; once complete, the FAB returns to active state.
+1. When a master practice begins, a playback timeline appears at the bottom of the screen.
+2. A subtle "react" button is visible near the timeline. Tapping it opens a small, calm palette of the seven reaction icons.
+3. The user selects a reaction (e.g., "Insight"). The icon for that reaction gently appears on the timeline at the current timestamp.
+4. The timeline populates with reactions from other participants in real-time, clustering them gracefully when many are shared at once.
+5. Users can leave multiple reactions throughout the session, mapping their feelings to specific moments in the master's guidance.
+6. The reaction interface remains available for 60 seconds after the practice audio ends to allow for final reflections.
 
 :::caution Edge Case
 Handle accessibility gracefully—provide text-only labels and allow users to disable sound/haptics; otherwise reactions may exclude sensitive participants.
 :::
 
 :::tip Signals of Success
-- Reaction cadence feels musical rather than frantic; cooldowns keep the experience intentional.
-- Shared bar clearly communicates the prevailing emotional state.
-- Users rarely hit frustration from disabled buttons because cues make cooldown timing obvious.
+- Reaction distribution on the timeline provides clear insights into which moments of a practice are most impactful.
+- The experience feels connective and communal, not distracting or competitive.
+- Users revisiting a session on replay report feeling more connected to the original live event.
 :::
 
 ### Journey
@@ -50,37 +50,38 @@ Handle accessibility gracefully—provide text-only labels and allow users to di
 ```mermaid
 %%{init: {'securityLevel': 'loose', 'flowchart': {'htmlLabels': true}}}%%
 flowchart TD
-    READY([T-5s before start])
-    FAB[Reaction FAB appears]
-    TAP{User taps FAB?}
-    TRAY[Show emoji tray]
-    SEND[Emoji launched + haptic]
-    COOLDOWN{Cooldown reached?}
-    REST[Show timer ring]
-    RESUME[Cooldown ends]
-    END((Practice ends + 60s grace))
-    READY --> FAB --> TAP
-    TAP -->|Yes| TRAY --> SEND --> COOLDOWN
-    COOLDOWN -->|3s| REST --> RESUME --> TAP
-    COOLDOWN -->|No| TAP
-    SEND --> END
-    click SEND "./practice-screen-masters-v0-3" "Main screen consumes reactions"
-    click END "./practice-history-reactions-v0-3" "Reactions stored for history"
+    START([Master practice starts])
+    TIMELINE[Reaction timeline is visible]
+    REACT_BTN{User taps react button?}
+    SELECT[User selects one of 7 reactions]
+    APPEAR[Reaction appears on timeline]
+    LOOP{Practice ongoing?}
+    END((Practice ends))
+
+    START --> TIMELINE --> REACT_BTN
+    REACT_BTN -->|Yes| SELECT --> APPEAR --> LOOP
+    REACT_BTN -->|No| LOOP
+    LOOP -->|Yes| REACT_BTN
+    LOOP -->|No| END
+    click APPEAR "./practice-screen-masters-v0-3" "Reactions are visible on the practice screen"
+    click END "./practice-history-reactions-v0-3" "Reaction timeline is saved in history"
 ```
 
 ## Requirements
 - **Acceptance criteria**
-  - GIVEN the countdown reaches T-5 seconds WHEN the practice is about to start THEN the reaction FAB appears and remains until 60 seconds post-session.
-  - GIVEN a user taps an emoji WHEN cooldown allows THEN the animation plays, shared totals update, and other attendees see the micro-flash.
-  - GIVEN a user reaches ten reactions WITHOUT break THEN the FAB transitions to a 30-second rest state before reactivating.
+  - GIVEN a master practice is active WHEN the user is participating THEN the reaction timeline is visible and interactive.
+  - GIVEN a user taps the react button and selects a reaction WHEN submitted THEN their chosen reaction appears on the timeline at the corresponding timestamp, visible to them and other participants.
+  - GIVEN a user is viewing a replay of a master practice WHEN they view the timeline THEN they can see all reactions left during the live session.
 - **No-gos & risks**
-  - Allowing unlimited spam, which would overwhelm visuals and audio.
-  - Sound cues that become harsh at scale; keep chimes soft even when many emojis fire.
-  - Tray positions that interfere with core controls (pause, exit) on small screens.
-- **Data**
-  - Track reactions per user, cooldown hits, leading emoji state, global send rate, and opt-outs from sounds/haptics.
+  - Visuals or sounds that are distracting or break the calm, meditative state of the practice.
+  - A complex or intrusive interface for leaving reactions.
+  - Losing reaction data or timestamps, which would corrupt the integrity of the emotional journey.
+## Data
+- **Primary metric:** Reaction submissions per state per session (live vs replay).
+- **Secondary checks:** Timeline density hotspots, cooldown effectiveness, accessibility opt-outs, and replay engagement with existing markers.
+- **Telemetry requirements:** Log reaction timestamps, user/device context, palette usage, cooldown blocks, and replay reactivity events.
 
 ## Open Questions
-- Should we support a "long-press" to send a stronger pulse (counting as multiple) or keep all sends equal for now?
-- Do we expose a mute toggle directly on the tray or rely on global settings?
-- How do we represent reactions for replay viewers—do they see archived particles or fresh interactions?
+- Should users be able to see who left a specific reaction, or should all reactions remain anonymous?
+- How do we visualize a high density of reactions on the timeline without it becoming cluttered?
+- Should we allow users to add a short note to their reaction?

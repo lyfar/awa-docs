@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The catalogue expands in v0.3 to showcase masters alongside standard sessions. Cards now include the master portrait, language chips, and a badge signalling whether the session is live, upcoming, or on-demand replay. Collective practices float to the top when a countdown is active, accompanied by a soft glow that matches Home View stories. Filters gain two new tabs: "Masters" (followed, recommended, trending) and "Languages" with quick toggles for RU, EN, and any future additions. Reaction badges still summarise how past participants felt, now explicitly showing the master’s average impact.
+v0.3 keeps the calm catalogue grid and adds master context: cards now show portrait, language chips, and a soft badge for live/upcoming/replay states so collectives stand out without breaking serenity. Followed masters float to the top, reaction chips summarise how the community felt, and countdown glows match the [Home View announcements](/docs/features/home-view-v0-3-masters.md).
 
-When a user taps into a card, the detail sheet exposes the master’s affirmation, a short excerpt of the audio, and follow/reminder switches. The design stays calm even with the new metadata—text remains concise, and animations are gentle fades. Users can still favourite practices; favourites now pin within their respective master group so repeated sessions stay easy to reach.
+Detail sheets reuse the standard practice selectors while exposing master affirmations, reminder toggles, and audio previews. Favourites pin within each master group, filters gain Masters/Languages pills, and long-press behaviour stays identical to v0.2 so muscle memory remains intact.
 
 ## Interaction
 1. List loads practise catalogue plus master metadata (languages, collective schedule, reaction aggregates).
@@ -74,8 +74,10 @@ flowchart TD
   - Treating each language as a separate card, which would clutter the catalogue.
   - Losing calmness with overly animated badges—keep transitions soft.
   - Unsynchronised follow/reminder states between catalogue and profile.
-- **Data**
-  - Monitor filter usage, reminder toggles, follow conversions, and start rates per master.
+## Data
+- **Primary metric:** Starts and reminder toggles triggered directly from the catalogue (per master).
+- **Secondary checks:** Language/master filter usage, follow conversions, favourite pins, and countdown engagement.
+- **Telemetry requirements:** Log payload versions, filter selections, follow/reminder toggles, card impressions, and start confirmations with linked master IDs.
 
 ## Open Questions
 - Should follow status automatically favourite all of a master’s practices or remain separate controls?

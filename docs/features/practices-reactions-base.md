@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Practices Reactions Base is the backend foundation for the seven-state emotions model introduced in release 0.2. Every surface—practice completion flows, profile dashboards, analytics, CMS—relies on the same canonical taxonomy. The service stores definitions (localized labels, icon tokens, color mappings), captures every reaction selection with timestamps, and exposes fast queries for profile summaries, practice breakdowns, and dashboards.
+Practices Reactions Base is the canonical backend for the seven-state emotion model in v0.2. It stores the localized taxonomy, validates every reaction submit, and keeps profile, history, analytics, and notification pipelines in lockstep with the same identifiers.
 
-The base handles both ingestion and aggregation. When a practice ends, the app posts the selected state plus optional intensity and notes. The service validates against active taxonomy entries, records the event, and emits updates to downstream consumers (profile view, analytics warehouse, notification engine). Read-side APIs power quick fetches: user history, practice aggregates, master-level insights, and global counts. Schema migrations keep history intact even as we refine labels (e.g., renaming “Happy” to “Joyful”). All data is privacy-compliant and scoped per user or practice as appropriate.
-
-Taxonomy definitions, translations, and governance rules live in the [Reactions Taxonomy](/docs/wiki/reactions/); the service consumes that source of truth to keep every client aligned.
+The service ingests events, fans them out to downstream caches, and exposes read APIs for user history or practice aggregates while versioning schema changes. All definitions flow directly from the [Reactions Taxonomy](/docs/wiki/reactions/), so labels and colours stay consistent across CMS, app clients, and analytics.
 
 ## Interaction
 1. Client requests `GET /reactions/taxonomy` during app boot; service returns the seven normalized states with localized names, descriptions, and color tokens.

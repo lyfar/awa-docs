@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Leave Feedback gives users a gentle way to tell us what’s working or where they need help. The entry point appears on Profile View, within the What’s New deck, and at the end of practice reactions. The form keeps the tone supportive: a short intro (“We’d love to hear how you feel”) followed by optional prompts (What did you love? What could be smoother?). The user can include their latest reaction state automatically so support sees context without extra typing.
+Leave Feedback keeps a gentle tone while letting users share wins or issues without leaving the app. Entry points live on Profile View, What’s New, and the post-practice flow, and the form can auto attach the latest reaction so support sees context instantly.
 
-Feedback routes through the support backend with tags for topic (content, app experience, emotions) and urgency. Users can opt into follow-up by providing email/Telegram; otherwise the submission stays anonymous. We also show quick links to FAQ and Info for self-service. Successful submissions end with a thank-you animation and a suggestion to log another practice or explore updates.
-
-State tags reuse the [Reactions Taxonomy](/docs/wiki/reactions/) so support teams can slice reports by the same language product and analytics rely on.
+Submissions flow through the support backend with topic tags, optional contact details, and quick links to FAQ/Info for self-serve answers. Reaction tags reuse the [Reactions Taxonomy](/docs/wiki/reactions/), so sentiment reports stay aligned with product language.
 
 ## Interaction
 1. User taps “Leave feedback”; the form slides up overlaying the current context.

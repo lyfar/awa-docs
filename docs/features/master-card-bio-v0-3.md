@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Master cards become the primary surface for understanding who guides the collective. They blend portrait photography, a short origin story, affirmation, and practice list. The header features the master planet artwork with soft motion, their name, and pronouns if provided. Beneath sits an affirmation in first person, reinforcing what the session offers (e.g., "We cleanse together with gentle breath"). Follow/Unfollow toggles float near the top, while a reminder switch appears for upcoming practices.
+Master cards now anchor everything about a guide: planet artwork, affirmation, language availability, and social links all live in the Overview tab, matching the visuals from [Home View orbs](/docs/features/home-view-v0-3-masters.md). Follow/reminder toggles float near the top so actions feel immediate yet calm.
 
-The card splits into three tabs: Overview, Practices, and History. Overview houses biography, language availability, and social links (Telegram, Instagram, website) with icons. Practices lists upcoming collectives and on-demand tracks curated by that master with countdown chips. History summarises how the user felt in past sessions with this master, pulling from the reactions timeline. A "Send gratitude" button lives at the bottom so the user can compose a short note post-session.
+Practices + History tabs reuse catalogue data and the reactions timeline to show upcoming collectives and the user’s past feelings with that master. A “Send gratitude” button feeds [Master Analytics](/docs/features/master-analytics-v0-3.md), keeping the partnership loop tight.
 
 ## Interaction
 1. User opens the card; data loads biography, upcoming sessions, languages, and reaction stats.
@@ -76,8 +76,10 @@ flowchart TD
   - Overly long bios that overwhelm the calm layout; enforce character counts and truncation with "Read more." 
   - Sharing personal data or contact details that the master did not approve.
   - Links that break out of the app unexpectedly.
-- **Data**
-  - Track follow conversions, reminder usage, gratitude messages, and tab dwell times.
+## Data
+- **Primary metric:** Follow conversions and reminder toggles triggered inside the card.
+- **Secondary checks:** Tab dwell distribution (Overview/Practices/History), gratitude submissions, and deep links into sessions.
+- **Telemetry requirements:** Log card entry source, tab switches, follow/reminder state changes, gratitude payloads, and CTA taps with master IDs.
 
 ## Open Questions
 - Do we allow users to submit questions for masters directly from this card, or keep communication one-way for now?

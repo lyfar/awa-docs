@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Info Page v0.2 replaces static “About” copy with a living narrative of AWATERRA’s mission, team, and community channels. The page pulls from the CMS so marketing can adjust storytelling, add event highlights, or swap social links without engineering help. Sections include a mission statement, founder spotlight, community pathways (Telegram, Instagram, YouTube), and a “How practice works” overview with imagery. The page lives inside the profile area and becomes a go-to reference when users invite friends or explain the product.
+Info Page v0.2 turns the About surface into a CMS-driven story about AWATERRA’s mission, team, and community channels. Marketing can update mission statements, founder spotlights, or social links without a new build, and the page stays nestled in Profile.
 
-Localization matters: Russian and English content render side by side based on device locale, and optional audio snippets let masters narrate the vision. The layout favors calm reading with cards that expand for deeper dives. Analytics capture which sections resonate to guide future updates.
+Cards expand for deeper dives, localisation swaps copy per device language, and optional audio snippets let masters narrate the vision. Analytics track which sections resonate so future updates stay focused.
 
 ## Interaction
 1. User taps “About AWATERRA” from Profile or onboarding’s curiosity prompt.

@@ -1,303 +1,75 @@
 ---
+title: Master's Globe / Planet / Soul
+sidebar_label: Master's Globe / Planet / Soul
 sidebar_position: 1
 version: "0.3"
 capability: "masters-practices"
+status: "planned"
+lark_id: ""
+figma: ""
+owner: ""
+user_value: "Give every master a calm, recognizable visual identity that powers the catalogue, visualization screen, and halo states."
+trigger: "When a master is onboarded in CMS or a collective pulls its visual payload."
+done_when: "Master-specific planets, colours, glyphs, and affirmations are stored once and reused consistently across Home, Pulse, and practice surfaces."
+capability_label: "07. Masters Practices"
 ---
-version: "0.1"
+
+import FeatureSummary from '@site/src/components/FeatureSummary';
 
 # Master's Globe / Planet / Soul
 
-## Feature Name
-Master's Globe / Planet / Soul
+## Summary
 
-## Overview
-Master's Globe / Planet / Soul is an advanced visualization feature that provides personalized visualizations to enhance user engagement and trust when users select master practices. It displays stylized visualizations reflecting the chosen master, incorporates user reaction data, and updates in real-time to create a unique experience for each master-led session.
+<FeatureSummary />
 
-## Purpose
-The business need this feature addresses is creating personalized, engaging experiences for master-led practices that enhance user trust and engagement, providing unique visualizations that reflect the individual master's energy and teaching style.
+## Narrative
+This feature is the source-of-truth for every master’s visual “planet.” Content ops capture colours, glyphs, hero textures, affirmations, and animation parameters inside the CMS; the payload is versioned so the [Practice Screen (Masters)](/docs/features/practice-screen-masters-v0-3.md) and [Master Visualization Screen](/docs/features/master-visualization-screen-v0-3.md) can render the same calm sphere without bespoke code.
 
-## User Stories
+The same schema powers [Home View orbs](/docs/features/home-view-v0-3-masters.md), [AWA Pulse halos](/docs/features/awa-pulse-master-collective-v0-3.md), and master cards. Updating a colour or affirmation once ripples everywhere, keeping the collective story coherent while freeing engineering from duplicated assets.
 
-### Primary User Story
-As a user, I want to see a personalized visualization when I select a master practice so that I can feel more connected to the master and their unique energy.
+## Interaction
+1. Ops create or edit a master inside [Admin Area CMS v0.3](/docs/features/admin-area-cms-v0-3.md); the form captures palette, glyph, planet texture, audio tag, and affirmation.
+2. CMS validates required assets (hi-res PNG, animation tokens) and saves a new planet version.
+3. Practice catalogue, Home View, and push templates request the planet payload when rendering cards/rings.
+4. Visualization screens stream the payload to build countdown scenes and live planets.
+5. After the session, recap modules reuse the same palette for stats and thank-you prompts.
+6. Deprecating or updating a planet increments the version so cached clients know when to refresh.
 
-### Secondary User Stories
-- As a user, I want to see how other users react to the master
-- As a user, I want to experience the master's unique visual style
-- As a user, I want to feel the master's energy through visualization
-- As a user, I want to see real-time updates during master practices
+### Journey
 
-## UI/UX Requirements
-
-### Visual Design
-- Stylized visualization reflecting chosen master
-- Unique visual elements for each master
-- Real-time user reaction data display
-- Master-specific color schemes and effects
-- Smooth transitions between master visualizations
-- Responsive design for different devices
-
-### User Flow
-1. User selects a master practice
-2. System loads master-specific visualization
-3. Master's unique visual style is displayed
-4. User reaction data is incorporated
-5. Visualization updates in real-time
-6. User experiences master's energy through visuals
-
-### Accessibility
-- Alternative text for master visualizations
-- Audio descriptions for visual elements
-- Clear visual indicators for master selection
-- Screen reader support for master information
-
-## Technical Requirements
-
-### Frontend
-- Master-specific visualization system
-- Real-time reaction data display
-- Dynamic visual effects and animations
-- Master profile and styling system
-- Responsive design implementation
-- Accessibility features
-
-### Backend
-- Master profile management
-- User reaction data processing
-- Real-time visualization updates
-- Master-specific content delivery
-- Analytics for master engagement
-- Performance optimization
-
-### Data Models
-- Master profiles and visual styles
-- User reaction data
-- Master practice sessions
-- Visualization preferences
-- Real-time update data
-- Master engagement metrics
-
-### Integrations
-- Master content management
-- Real-time data streaming
-- User reaction system
-- Analytics platform
-- Performance monitoring
-
-## Dependencies
-
-### Required Capabilities
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer) - Core visualization system
-- [07. Masters Practices](/docs/capabilities/07-Masters-Practices) - Master practice management
-- [05. Practice](/docs/capabilities/05-Practice) - Practice session system
-
-### Required Features
-- Master practice system
-- User reaction system
-- Real-time visualization updates
-- Master profile management
-
-### External Dependencies
-- Master content management system
-- Real-time data services
-- Analytics platform
-- Performance monitoring tools
-
-## Version Information
-
-- **Target Version**: TBD (Future versions)
-- **Priority**: Medium
-- **Status**: Planned
-- **Estimated Effort**: 4-5 weeks
-- **Start Date**: TBD
-- **End Date**: TBD
-
-## Acceptance Criteria
-
-### Functional Requirements
-- Visualization is correctly styled for chosen master
-- User reactions are displayed accurately
-- Real-time updates work correctly
-- Master-specific visual elements are unique
-- Visualization is accessible to users
-- Performance is smooth and responsive
-
-### Non-Functional Requirements
-- Visualization renders smoothly (60fps)
-- Real-time updates within 5 seconds
-- Master-specific styling is consistent
-- Responsive design for all devices
-- Battery efficient rendering
-
-### Testing Requirements
-- Unit tests for master visualization logic
-- Integration tests for real-time updates
-- Performance tests for different master styles
-- User experience tests for master selection
-- End-to-end tests for complete master flow
-
-## Implementation Notes
-
-### Technical Considerations
-- Implement efficient master-specific rendering
-- Use proper data structures for master profiles
-- Consider performance impact of complex visualizations
-- Implement proper error handling for master data
-- Design for scalability with multiple masters
-
-### Design Considerations
-- Design unique visual styles for each master
-- Ensure visualizations reflect master's energy
-- Consider cultural sensitivity in master representations
-- Design for emotional impact and connection
-- Consider accessibility for users with visual impairments
-
-### Risk Factors
-- Performance issues with complex master visualizations
-- Master profile data management
-- Real-time update synchronization
-- Battery drain from intensive rendering
-- User experience issues with complex interactions
-
-## Examples
-
-### Master Visualization Features
-- **Unique Styling**: Each master has distinct visual elements
-- **Reaction Data**: Real-time user reactions displayed
-- **Energy Representation**: Visual representation of master's energy
-- **Real-time Updates**: Live updates during practice sessions
-- **Personalization**: Customized experience for each master
-
-### Implementation Tasks
-- Design master-specific visual styles
-- Implement master profile system
-- Create real-time reaction display
-- Build master visualization engine
-- Develop real-time update system
-- Add accessibility features
-
-### Code Examples
-```javascript
-// Example Master's Globe implementation
-class MastersGlobeService {
-  constructor() {
-    this.masterProfiles = new Map();
-    this.currentMaster = null;
-    this.reactionData = new Map();
-  }
-  
-  async loadMasterVisualization(masterId) {
-    try {
-      // Load master profile and visual style
-      const masterProfile = await this.getMasterProfile(masterId);
-      
-      // Set current master
-      this.currentMaster = masterProfile;
-      
-      // Load master-specific visualization
-      await this.loadMasterVisualStyle(masterProfile);
-      
-      // Load user reaction data
-      const reactions = await this.getMasterReactions(masterId);
-      this.reactionData.set(masterId, reactions);
-      
-      // Start real-time updates
-      this.startRealTimeUpdates(masterId);
-      
-      return {
-        master: masterProfile,
-        visualization: masterProfile.visualStyle,
-        reactions: reactions
-      };
-    } catch (error) {
-      throw new Error(`Master visualization failed: ${error.message}`);
-    }
-  }
-  
-  async getMasterProfile(masterId) {
-    const profile = await this.masterService.getProfile(masterId);
-    
-    return {
-      id: profile.id,
-      name: profile.name,
-      visualStyle: profile.visualStyle,
-      colorScheme: profile.colorScheme,
-      energyType: profile.energyType,
-      teachingStyle: profile.teachingStyle
-    };
-  }
-  
-  async loadMasterVisualStyle(masterProfile) {
-    // Apply master-specific visual styling
-    await this.visualizationService.applyStyle({
-      colorScheme: masterProfile.colorScheme,
-      energyType: masterProfile.energyType,
-      visualElements: masterProfile.visualStyle.elements,
-      animations: masterProfile.visualStyle.animations
-    });
-  }
-  
-  async getMasterReactions(masterId) {
-    const reactions = await this.reactionService.getMasterReactions(masterId);
-    
-    return {
-      totalReactions: reactions.length,
-      positiveReactions: reactions.filter(r => r.type === 'positive').length,
-      recentReactions: reactions.slice(-10),
-      averageRating: this.calculateAverageRating(reactions)
-    };
-  }
-  
-  startRealTimeUpdates(masterId) {
-    // Subscribe to real-time updates for this master
-    this.realtimeService.subscribe(`master:${masterId}`, (update) => {
-      this.handleMasterUpdate(masterId, update);
-    });
-  }
-  
-  async handleMasterUpdate(masterId, update) {
-    switch (update.type) {
-      case 'new_reaction':
-        await this.updateReactionDisplay(masterId, update.reaction);
-        break;
-      case 'practice_start':
-        await this.updatePracticeVisualization(masterId, update.practice);
-        break;
-      case 'energy_change':
-        await this.updateEnergyVisualization(masterId, update.energy);
-        break;
-    }
-  }
-  
-  async updateReactionDisplay(masterId, reaction) {
-    const currentReactions = this.reactionData.get(masterId);
-    currentReactions.recentReactions.push(reaction);
-    
-    // Update UI with new reaction
-    await this.uiService.updateReactionDisplay(masterId, reaction);
-  }
-  
-  calculateAverageRating(reactions) {
-    if (reactions.length === 0) return 0;
-    
-    const totalRating = reactions.reduce((sum, reaction) => {
-      return sum + (reaction.rating || 0);
-    }, 0);
-    
-    return totalRating / reactions.length;
-  }
-}
+```mermaid
+%%{init: {'securityLevel': 'loose', 'flowchart': {'htmlLabels': true}}}%%
+flowchart TD
+    CMS([Admin adds/edits master])
+    VALIDATE[Validate palette + assets]
+    STORE[Store planet payload + version]
+    CONSUME{Surface requesting payload?}
+    PRACTICE["<a href='./practice-screen-masters-v0-3'>Practice screen renders planet</a>"]
+    PULSE["<a href='./awa-pulse-master-collective-v0-3'>AWA Pulse halo updates</a>"]
+    HOME["<a href='./home-view-v0-3-masters'>Home orb mirrors palette</a>"]
+    DONE((Visual identity stays consistent))
+    CMS --> VALIDATE --> STORE --> CONSUME
+    CONSUME --> PRACTICE --> DONE
+    CONSUME --> PULSE --> DONE
+    CONSUME --> HOME --> DONE
 ```
 
-## Related Documentation
+## Requirements
+- **Acceptance criteria**
+  - GIVEN a master record WHEN the planet form is completed THEN the CMS stores palette, glyphs, animations, and affirmation with version metadata.
+  - GIVEN a client requests a planet payload WHEN the master’s version changes THEN the API returns the updated payload plus cache headers so visuals refresh consistently.
+  - GIVEN an asset is missing or corrupt WHEN publishing THEN validation blocks the change with human-friendly errors and audit logs.
+- **No-gos & risks**
+  - Storing visual assets across multiple systems—keep a single payload to avoid drift.
+  - Publishing palettes without accessibility checks (contrast, flashing).
+  - Heavy textures that break performance on low-end devices; enforce size limits and fallback colours.
 
-- [02. Visualization & Map Layer](/docs/capabilities/02-Visualization-Map-Layer)
-- [07. Masters Practices](/docs/capabilities/07-Masters-Practices)
-- [05. Practice](/docs/capabilities/05-Practice)
-- [Features Overview](/docs/features/intro)
-- [Development Roadmap](/docs/roadmap/intro)
+## Data
+- **Primary metric:** Time from master profile edit to propagated visuals across Home/Pulse/Practice (should align with CDN cache refresh SLA).
+- **Secondary checks:** Validation failure rate, asset download errors, payload version mismatches, and number of rollbacks.
+- **Telemetry requirements:** Log payload versions served, asset fetch success/failure, visual cache hits, validation error reasons, and rollback events.
 
----
-version: "0.1"
-
-*Feature last updated: December 2024*
+## Open Questions
+- Do we allow seasonal/temporary planet skins, and if so how do we sunset them without bloating storage?
+- Should masters preview their planet in-app before publish, or is CMS preview sufficient for v0.3?
+- Do we expose a lightweight palette-only endpoint for push templates to reduce payload size?

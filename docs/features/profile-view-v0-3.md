@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Profile View v0.3 keeps the serene hero yet now contextualises masters alongside reactions. The top still greets the user with their dominant state and glow, but directly beneath sits a "Guided by masters" carousel that prioritises collectives aligned with the user’s current feelings. If the reaction wheel shows "Grounded" trending, the first tile suggests the upcoming collective designed to deepen that calm; if "Release" is dominant, a balancing practice surfaces.
+Profile View v0.3 keeps the greeting hero + reaction wheel and now slides in a master carousel right under the light. Followed masters appear first, balanced/recommended masters follow, and each tile mirrors the colours from [Master Cards](/docs/features/master-card-bio-v0-3.md) so the experience feels cohesive.
 
-Favourite masters occupy breathable cards that show portrait, next session countdown, language tags, and follow status. Reaction history gains a "Shared moments" filter to isolate collective practices the user joined, showing how they felt before and after. Quick actions update accordingly: "Thank Anna" appears after a collective, while "Explore new guides" shows when no follow-ups exist. The view leans on familiar colour taxonomy and only expands modules on demand so the home retains its calm.
+History gains a “Shared moments” filter for collectives, and quick actions adapt ("Thank Anna", "Explore new guides") without crowding the layout. Everything continues to read the same taxonomy data from [Practices Reactions Base](/docs/features/practices-reactions-base.md), so colours and copy remain aligned.
 
 ## Interaction
 1. User lands on Profile View; app fetches reaction summaries, followed masters, and upcoming collective metadata.
@@ -74,8 +74,10 @@ flowchart TD
   - Overcrowding the hero with too many modules; maintain breathing room and respect calm tone.
   - Recommendation logic that ignores language preferences or upcoming availability.
   - State mismatches between profile and home announcements creating confusion.
-- **Data**
-  - Track carousel click-throughs, reminder conversions, thank-you sends, and usage of the shared moments filter.
+## Data
+- **Primary metric:** Carousel engagement (orb taps ÷ Profile View sessions) and reminder conversions triggered from the carousel.
+- **Secondary checks:** Shared moments filter usage, thank-you sends, follow/unfollow taps, and reaction-wheel interactions.
+- **Telemetry requirements:** Log payload hashes, carousel ordering, CTA taps, reminder toggles, gratitude submissions, and history-filter states.
 
 ## Open Questions
 - Should we allow manual pinning of masters to keep them at the front of the carousel regardless of recommendations?

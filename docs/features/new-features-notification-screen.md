@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The New Features Notification Screen gives users a calm space to absorb what changed in release 0.2. Rather than push notifications that can be dismissed, the app presents a curated highlight sheet when users first launch after an update. Cards explain new capabilities like reactions, practice history, and feedback forms with supporting visuals. Each card links directly to the relevant surface—Practice List, Profile View, FAQ—so users can explore immediately.
+The New Features Notification Screen is the calm “What’s new” deck for v0.2 launches. When users open the app after an update, CMS-authored cards highlight the big capabilities (reaction wheel, history, feedback) and deep-link straight into the relevant surface.
 
-The screen uses CMS-managed content so marketing and product teams can refresh copy without shipping new builds. Release notes include three tiers: “Headline” (e.g., Reaction Wheel), “What’s new for you” (personalized callouts such as “See your top states in Profile”), and “Under the hood” (infrastructure improvements). The experience respects the user’s state: if they already explored a feature, the card shows as completed. Acknowledge buttons track who has seen the updates, informing future nudges.
-
-Whenever the deck references reactions, card copy links back to the [Reactions Taxonomy](/docs/wiki/reactions/) so users and editors anchor in the same definitions.
+Cards are grouped into Headline, “What’s new for you,” and “Under the hood,” and acknowledgement buttons track who has already viewed the content. Copy references the same definitions as the [Reactions Taxonomy](/docs/wiki/reactions/) so marketing, docs, and product stay aligned.
 
 ## Interaction
 1. App detects a version bump (e.g., `0.2.x` vs last seen version) or user taps “What’s New.”

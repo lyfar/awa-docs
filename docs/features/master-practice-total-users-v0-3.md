@@ -71,8 +71,10 @@ flowchart TD
   - Counting duplicate device joins, inflating the sense of community.
   - Showing very low counts without sensitivity; consider "A small circle gathered" copy below a threshold.
   - Sync issues between live numbers and stored totals creating mistrust.
-- **Data**
-  - Track join/leave events, unique attendees, watch time, and discrepancies resolved after deduplication.
+## Data
+- **Primary metric:** Unique attendees per collective (live count vs final stored total).
+- **Secondary checks:** Join/leave churn before start, recap view rate, AU contribution correlation, and deduplication adjustments.
+- **Telemetry requirements:** Log ready taps, leave events, dedupe resolutions, recap payloads, and analytics exports referencing the total.
 
 ## Open Questions
 - Should we display a range (e.g., "200+ souls") once attendance crosses a threshold for calm presentation?

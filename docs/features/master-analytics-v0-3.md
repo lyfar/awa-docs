@@ -23,14 +23,14 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Master Analytics wraps all the new telemetry into actionable insight. The pipeline ingests attendance totals, language splits, reaction distribution, gratitude messages, and replay counts. Internal dashboards (Looker/Metabase) surface a timeline per master so the product and content teams can monitor engagement. For external sharing, the CMS "Share report" button generates a PDF/HTML summary the team emails to the master—"247 participants from 12 countries, dominant feeling: Unity, top gratitude themes."
+Master Analytics wraps all the new telemetry into actionable insight. The pipeline ingests attendance totals, language splits, gratitude messages, replay counts, and now, rich, timestamped reaction data. Internal dashboards (Looker/Metabase) surface a timeline per master so the product and content teams can monitor engagement, seeing exactly which moments in a practice evoke specific feelings like "Joy" or "Release." For external sharing, the CMS "Share report" button generates a PDF/HTML summary the team emails to the master—"247 participants from 12 countries, dominant feeling: Unity, with peaks of Insight at the 15-minute mark."
 
-The dashboard also flags anomalies: low attendance, high drop-off, muted reaction rates. Filters allow slicing by language, time of day, and whether the session was live or replay. Data definitions stay consistent with existing analytics (Practices Reactions Base) so cross-version comparisons remain valid. All exports remain de-identified—no personal notes leave the platform without consent.
+The dashboard also flags anomalies: low attendance, high drop-off, or muted reaction rates. Filters allow slicing by language, time of day, and whether the session was live or replay. Data definitions stay consistent with existing analytics (Practices Reactions Base) so cross-version comparisons remain valid. All exports remain de-identified—no personal notes leave the platform without consent.
 
 ## Interaction
-1. Practice completes; ingestion job collects attendance, reaction totals, gratitude submissions, AU generated, and device mix.
+1. Practice completes; ingestion job collects attendance, timestamped reaction events, gratitude submissions, AU generated, and device mix.
 2. Data lands in warehouse (BigQuery/Firestore) tagged by master, language, version.
-3. Dashboard refreshes within 15 minutes, showing time series and per-session cards.
+3. Dashboard refreshes within 15 minutes, showing time series, reaction heatmaps along the practice timeline, and per-session cards.
 4. Operations opens the session in CMS, views the analytics snapshot, and clicks "Share report" to generate partner-friendly summary.
 5. Optional CSV/JSON export supports deeper analysis or archiving.
 6. Insights feed roadmap decisions (e.g., commission more EN tracks where demand is high).
@@ -64,15 +64,17 @@ flowchart TD
 
 ## Requirements
 - **Acceptance criteria**
-  - GIVEN a master session ends WHEN ingestion runs THEN dashboards update within 15 minutes with attendance, reactions, and AU metrics.
-  - GIVEN operations generates a report WHEN triggered THEN the export includes counts, dominant reactions, language distribution, gratitude themes, and upcoming schedule.
+  - GIVEN a master session ends WHEN ingestion runs THEN dashboards update within 15 minutes with attendance, detailed reaction timelines, and AU metrics.
+  - GIVEN operations generates a report WHEN triggered THEN the export includes counts, dominant reactions with timeline insights, language distribution, gratitude themes, and upcoming schedule.
   - GIVEN privacy constraints WHEN gratitude quotes are included THEN they are anonymised or consent-approved before sharing.
 - **No-gos & risks**
   - Mixing personal identifiers into exports without consent.
   - Data delays that make reports stale by the time the team emails masters.
   - Divergent metrics between analytics and what users saw on recap screens.
-- **Data**
-  - Log ingestion latency, report generation runs, master open rates, and follow-up actions driven by insights.
+## Data
+- **Primary metric:** Ingestion-to-dashboard latency plus report generation success per session.
+- **Secondary checks:** Report open/share rates, gratitude/theme extraction accuracy, and data parity with Practice History recaps.
+- **Telemetry requirements:** Log pipeline step durations, export triggers, delivery status, dashboard filter usage, and anonymisation audits.
 
 ## Open Questions
 - Should masters eventually access a self-serve analytics portal, or do we keep reports curated by the internal team?

@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Practice Reaction is the moment a session becomes insight. When a practice ends, we invite the user to choose how they feel from seven curated states: Grounded, Joy, Energy, Peace, Release, Insight, Unity. Each state is represented by a color-coded orb and a subtle description pulled from the CMS (“I feel rooted and steady,” “I feel expansive and connected”). Selecting a state stores the reaction, animates Light Ignition with matching hues, and feeds the history, profile wheel, and analytics.
+Practice Reaction is the short pause after every session where users log how they feel across the seven curated states (Grounded through Unity). Tapping an orb confirms instantly, animates Light Ignition, and feeds profile, history, and analytics streams.
 
-The experience balances speed and reflection. Users can tap once to submit or long-press to open an expanded description with journaling tips. If they’re unsure, a “Skip for now” option records the session without a reaction but gently reminds them later. For accessibility, states are announced with labels and example scenarios. The final screen offers optional notes (voice or text) and a shortcut to share feedback.
-
-The seven-state vocabulary is defined centrally in the [Reactions Taxonomy](/docs/wiki/reactions/) so every surface reads and writes the same identifiers and copy.
+Long-press opens a detail sheet for notes or journaling tips, while “Skip for now” keeps the flow gentle when they need more time. The vocabulary comes directly from the [Reactions Taxonomy](/docs/wiki/reactions/), so copy and colours match every other surface.
 
 ## Interaction
 1. Practice completes; completion animation fades into the reaction prompt.

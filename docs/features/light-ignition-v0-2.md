@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Light Ignition v0.2 deepens the original glow mechanic with reaction-aware visuals. Instead of a single bright-or-ember state, the globe now reflects the dominant reaction color from the last 24 hours, while profile surfaces expose how the user’s emotional mix is trending. When a practice completes, ignition still flashes instantly, but the light also pulses in the shade tied to the selected state (Grounded, Energy, Peaceful, Release, Insight, Unity, Joy). Subsequent practices layer subtle gradients rather than replacing the spark outright, helping the user see how experiences stack through the day.
+Light Ignition v0.2 keeps the spark from v0.1 but now colours it with the latest reaction, showing stacked feelings on the globe and profile for the past 24 hours. Each new practice blends gently into the aura instead of snapping, so users can sense how their week is trending.
 
-The system reads from the Practices Reactions Base, updates the user’s light payload, and broadcasts state changes to the globe, profile home, and practice cards. Fades stay gentle—lights soften over the final six hours with a halo hinting at the new dominant state. Notifications tap into the same data to nudge a user when their light is close to dimming or when a contrasting state might balance their week.
-
-All hues and labels trace back to the [Reactions Taxonomy](/docs/wiki/reactions/) so the glow a user sees here matches the wording and colours across catalogue, history, and analytics.
+The engine listens to Practices Reactions Base, updates globe/profile/push payloads, and fades the hue calmly as the burn window ends. Colours and labels still come from the [Reactions Taxonomy](/docs/wiki/reactions/), keeping catalogue, history, and notifications aligned.
 
 ## Interaction
 1. Onboarding finale introduces the seven-state palette: as the camera zooms out, the user’s spark cycles briefly through each hue before locking onto their starting state.

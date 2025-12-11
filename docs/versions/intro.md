@@ -27,9 +27,9 @@ This section provides a comprehensive overview of the AWATERRA platform developm
 - Master profiles and calendar integration
 - Enhanced community features
 
-### [0.4 Flicker (Basic AWA Units + Registration and Login)](/docs/versions/0.4-flicker/intro)
+### [0.4 Flicker (Basic Lumens + Registration and Login)](/docs/versions/0.4-flicker/intro)
 **Timeline**: 2025/11/03 - 2025/11/21
-- AWA Units system and gamification
+- Lumens system and gamification
 - Social login and enhanced registration
 - Points tracking and rewards
 
@@ -42,7 +42,7 @@ This section provides a comprehensive overview of the AWATERRA platform developm
 ### [0.6 Ray (Basic Missions)](/docs/versions/0.6-ray/intro)
 **Timeline**: 2025/11/15 - 2025/12/03
 - Mission system and quest-like experiences
-- Rewards store and AWA Units redemption
+- Rewards store and Lumens redemption
 - Structured goal tracking
 
 ### [0.7 INT Beam (Advanced Features)](/docs/versions/0.7-int-beam/intro)
@@ -81,7 +81,7 @@ Each version builds upon the previous one, ensuring:
 ### Feature Progression
 - **MVP Focus**: Core functionality and user experience
 - **Engagement**: Practice reactions and community features
-- **Gamification**: AWA Units, streaks, and missions
+- **Gamification**: Lumens, streaks, and missions
 - **Premium Features**: Paid content and advanced capabilities
 - **Platform Completion**: Full feature set and optimization
 

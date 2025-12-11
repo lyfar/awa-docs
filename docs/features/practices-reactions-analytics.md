@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Practices Reactions Analytics turns raw reaction submissions into actionable insight. Every reaction event from the app (state, intensity, notes flag) funnels into the data warehouse via the Practices Reactions Base stream. The analytics layer models three dimensions: user journey (which states dominate over time), practice performance (what feelings each practice evokes), and master impact (how different guides influence reactions). Dashboards in Looker/Metabase visualize trends, highlight outliers, and inform content tweaks or master coaching.
+Practices Reactions Analytics turns every reaction event into dashboards for product, masters, and ops. Streams from Practices Reactions Base feed raw tables, hourly aggregates, and Looker/Metabase views that show top states per practice, cohort shifts, and master impact.
 
-The pipeline standardizes terminology, handles late-arriving events, and ensures consent controls are respected (delete requests cascade). Aggregations update hourly for near-real-time views. Alerting catches anomalies, such as a practice suddenly skewing to “Release” (maybe the audio glitched) or reaction capture rates dropping below targets. The analytics team can also export aggregated data for marketing storytelling without exposing personal histories.
-
-Dashboards read the official vocabulary from the [Reactions Taxonomy](/docs/wiki/reactions/) so state names and translations remain consistent with what users see in the app.
+The pipeline enforces terminology, cascades delete requests, and triggers alerts when capture rates or state mixes look off. Dashboards reuse the [Reactions Taxonomy](/docs/wiki/reactions/), so copy aligns perfectly with in-app feelings.
 
 ## Interaction
 1. Reaction event fires from Practice Reaction; ingestion service appends metadata (user cohort, practice category) and publishes to analytics stream.

@@ -23,9 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-T&C / Policy v0.2 introduces the in-app legal hub. Instead of linking out to PDFs or external webpages, AWATERRA presents Terms, Privacy, and data use explanations in a native sheet managed through the Admin Area CMS. Each document tracks effective dates, locale translations, and a concise summary so users understand what changed. When policies update, the system prompts users to acknowledge the new version and stores consent timestamps tied to their profile.
+T&C / Policy v0.2 brings the legal hub in-app, so Terms, Privacy, and data practices load from the CMS with effective dates, locale coverage, and short change summaries. Users acknowledge updates right inside the sheet and we log consent against their profile for compliance.
 
-The experience centers on transparency. The top banner shows the current version, effective date, and a link to the change log. Sections break the document into expandable accordions (data usage, subscriptions, feedback handling). For offline scenarios, the client caches the last acknowledged version and surfaces a “Will sync on reconnection” banner. Support agents can reference the same content through the info page, ensuring consistent wording across channels.
+Sections stay lightweight—expandable accordions for data use, subscriptions, feedback handling—with cached copies for offline viewing and links to the change log. Support references the same content through the Info page, keeping language consistent everywhere.
 
 ## Interaction
 1. User taps “Terms & Privacy” from Profile, onboarding footer, or notification prompt.

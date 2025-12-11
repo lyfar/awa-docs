@@ -23,15 +23,15 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-History gains master awareness in v0.3. Collective entries now appear with a golden accent, showing the master portrait, total attendees, and how the user’s reaction shifted compared to their baseline. Each entry groups pre-session feeling (captured at countdown) and post-session reaction so people can reflect on the change. Tapping opens a recap sheet with highlights, suggested thank-you note, and quick access to follow/unfollow.
+v0.3 history adds master context. Collective entries gain a golden accent with portrait, attendee count, and reaction delta so users remember who guided the session and how it felt. Recap sheets reuse the [Reactions timeline](/docs/features/reactions-masters-v0-3.md) plus gratitude CTA so thanking a master is one tap away.
 
-Weeks view displays a "Collective highlights" row summarising which masters the user practiced with and their dominant reaction afterwards. Filters get a "Masters" toggle to browse entries by specific guides, plus a "Shared with community" view that only shows collective moments. Exported reports now include master metadata so partners receive de-identified insights when we share aggregated stats.
+Filters include Masters and “Shared moments” toggles, a highlights row summarises which master influenced each week, and exports append master metadata for partner-ready recaps while keeping notes private.
 
 ## Interaction
-1. User opens History; client fetches standard practice timeline plus master metadata and pre-session reactions.
-2. Collective entries render with stacked cards showing before/after feelings, master, attendees, and thank CTA.
+1. User opens History; client fetches standard practice timeline plus master metadata and collective reaction timelines.
+2. Collective entries render with stacked cards showing master, attendees, and thank CTA.
 3. Filters allow switching to "Masters" (select a guide) or "Collectives" (only community sessions).
-4. Tapping an entry opens the recap sheet with audio replay (if available), gratitude template, and share/export options.
+4. Tapping an entry opens the recap sheet with the full reaction timeline, audio replay (if available), gratitude template, and share/export options.
 5. Users can submit a thank-you message that logs in Master Analytics and optionally posts to the master’s feed.
 6. Export generates a summary including master names, languages, reactions, and attendance for personal journaling.
 
@@ -69,15 +69,17 @@ flowchart TD
 
 ## Requirements
 - **Acceptance criteria**
-  - GIVEN a collective session WHEN it appears in history THEN the card shows master name, participant count, before/after reactions, and thank CTA.
+  - GIVEN a collective session WHEN it appears in history THEN the card shows master name and participant count, and opens a recap view with the full, replayable reaction timeline.
   - GIVEN the user filters by a master WHEN applied THEN only sessions led by that master remain, sorted chronologically.
-  - GIVEN the user exports history WHEN done THEN the file includes master metadata and reaction deltas without leaking private notes unless explicitly opted in.
+  - GIVEN the user exports history WHEN done THEN the file includes master metadata and reaction summaries without leaking private notes unless explicitly opted in.
 - **No-gos & risks**
   - Overwhelming the timeline with too many accents; keep collective styling elegant.
   - Mixing personal notes into exports shared with masters without explicit consent.
   - Inconsistent reaction delta calculations (server vs client).
-- **Data**
-  - Track thank-you sends, replay taps, filter usage, and export frequency for collective entries.
+## Data
+- **Primary metric:** Collective recap engagement (thank-you sends, replay taps) per week.
+- **Secondary checks:** Filter usage (Masters/shared), export frequency, gratitude conversions, and recap dwell time.
+- **Telemetry requirements:** Log history payload version, filter states, recap opens, gratitude submissions, export requests, and privacy flags.
 
 ## Open Questions
 - Do we capture optional "pre-session mood" prompts for non-collective practices to compare against collective deltas?

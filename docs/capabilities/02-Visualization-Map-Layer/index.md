@@ -28,7 +28,7 @@ The Visualization & Map Layer capability creates the visual foundation of AWATER
 - **Basic Pulse**: Individual user energy visualization
 - **Master Pulse**: Enhanced visualization for master-led practices
 - **Collective Pulse**: Global energy visualization showing worldwide participation
-- **AWA Unit Pulse**: Visual representation of platform currency and rewards
+- **Lumens Pulse**: Visual representation of platform currency and rewards
 
 ### 3D Map with FPS Stats
 - **Performance Monitoring**: Real-time frame rate and performance metrics

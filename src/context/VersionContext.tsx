@@ -12,7 +12,7 @@ const VERSION_OPTIONS: VersionDefinition[] = [
   {value: '0.1', label: '0.1 Photon (MVP)', slug: '0.1-photon', docPath: 'versions/0.1-photon/intro'},
   {value: '0.2', label: '0.2 Spark (Advanced Practices)', slug: '0.2-spark', docPath: 'versions/0.2-spark/intro'},
   {value: '0.3', label: '0.3 Ember (Basic Masters)', slug: '0.3-ember', docPath: 'versions/0.3-ember/intro'},
-  {value: '0.4', label: '0.4 Flicker (AWA Units)', slug: '0.4-flicker', docPath: 'versions/0.4-flicker/intro'},
+  {value: '0.4', label: '0.4 Flicker (Lumens)', slug: '0.4-flicker', docPath: 'versions/0.4-flicker/intro'},
   {value: '0.5', label: '0.5 Glow (AWAWAY Streaks)', slug: '0.5-glow', docPath: 'versions/0.5-glow/intro'},
   {value: '0.6', label: '0.6 Ray (Basic Missions)', slug: '0.6-ray', docPath: 'versions/0.6-ray/intro'},
   {value: '0.7', label: '0.7 INT Beam (Advanced Features)', slug: '0.7-int-beam', docPath: 'versions/0.7-int-beam/intro'},

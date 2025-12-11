@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Admin Area v0.2 expands the internal CMS into the single cockpit for every copy-driven surface in release 0.2. The practice catalogue from v0.1 now sits alongside FAQ, Info, and legal entries (T&C, Privacy) so the operations team can refresh reactions, policies, or onboarding copy within minutes. Editors authenticate with MFA, see both practice and knowledge modules on the dashboard, and work through draft → review → publish flows without filing engineering tickets.
+Admin Area v0.2 turns the internal CMS into the single cockpit for practice metadata plus FAQ, Info, and legal pages. Editors sign in with MFA, pick a module, and move drafts through review to publish without engineering help.
 
-Entries inherit structured blocks—headlines, rich text, lists, embeds, and CTA links—so the app and docs render consistent layouts. Practice records gain reaction-tag metadata, letting catalogue cards, dashboards, and analytics share the same seven-state taxonomy. Every save produces a preview URL that mirrors production. Reviewers leave inline comments, approvals unlock publish, and the system snapshot diffs for accountability. Publishing pushes content to both mobile and docs APIs atomically and alerts support if anything fails validation.
-
-Taxonomy copy, colour tokens, and localisation guidance are maintained alongside the [Reactions Taxonomy](/docs/wiki/reactions/) reference so editors know exactly how to name each state across surfaces.
+Structured blocks, reaction-tag fields, and preview URLs keep the app and docs consistent, and publishing pushes changes to APIs/CDN with audit logs. Taxonomy copy and colour tokens sit alongside the [Reactions Taxonomy](/docs/wiki/reactions/), so every surface reuses the same labels.
 
 ## Interaction
 1. Admin signs in (MFA enforced) and lands on the unified workspace dashboard with summary tiles for Practice Catalogue, FAQ, Info, and Policies plus review queues.

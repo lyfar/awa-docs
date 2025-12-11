@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Profile View v0.2 keeps the calm hero from v0.1 and layers in the new reaction-powered insights. The greeting header and globe remain the anchor, yet a reaction wheel now sits beneath the light, showing the user’s dominant states over the past week. Each slice maps to the seven-color taxonomy, animating gently when new reactions arrive. Tapping a slice opens detail cards that recommend practices to balance or deepen that feeling.
+Profile View v0.2 keeps the calm hero layout from v0.1 and adds a reaction wheel under the light so users can glance at their dominant states from the last week. Tapping a slice opens a focused suggestion card, while the globe and streak badges keep animating in the same paceful style.
 
-Next to the reactions card, users see quick actions: “Continue practice,” “Saved favourites,” and “Leave feedback.” Reaction-aware badges highlight when the system suggests grounding or energizing options based on recent selections. Notifications stay inline, and a new release banner appears when the What’s New deck has unseen cards. The layout still resists clutter—modules expand on demand while preserving the breathable spacing that defines the home experience.
-
-State names, colours, and copy mirror the [Reactions Taxonomy](/docs/wiki/reactions/) so the wheel, insights, and downstream nudges stay consistent with the rest of the product.
+Quick actions (“Start practice”, “Saved favourites”, “Leave feedback”) adapt to the current reaction mix, and inline banners surface release notes or reminders without crowding the page. Colour names stay sourced from the [Reactions Taxonomy](/docs/wiki/reactions/), ensuring the wheel, Light Ignition, and downstream nudges speak the same language.
 
 ## Interaction
 1. User lands on Profile View; the app fetches reaction summaries from Practices Reactions Base and hydrates the reaction wheel plus streak badges.

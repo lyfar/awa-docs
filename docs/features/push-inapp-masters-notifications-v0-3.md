@@ -75,8 +75,10 @@ flowchart TD
   - Spamming users who snoozed or skipped; respect cooldown rules (no more than one push every 3h unless user joins).
   - Missing localisation or incorrect time conversions leading to late reminders.
   - Sending gratitude pushes to non-attendees, creating confusion.
-- **Data**
-  - Monitor opt-in rates, open/tap-through, snooze frequency, opt-outs, and thank-you message submissions.
+## Data
+- **Primary metric:** Reminder push open/tap-through rate into the visualization screen.
+- **Secondary checks:** Opt-in/opt-out deltas, snooze usage, gratitude completion rate post-session, and localisation accuracy (errors flagged).
+- **Telemetry requirements:** Log reminder preference changes, send vs deliver timestamps, action taps (join/snooze/dismiss), gratitude payloads, and cooldown suppressions.
 
 ## Open Questions
 - Should we allow users to choose channel intensity (push + email vs push only) per master?

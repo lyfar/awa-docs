@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-Practices List v0.2 builds on the v0.1 catalogue with reaction intelligence and personalization. Cards still show master portrait, duration, and availability badges, but now include a reaction chip summarizing how other users feel after the practice (“Mostly Peace,” “Strong Energy”). Saved favourites pin to the top, and badges highlight when a session aligns with the user’s current dominant state from Profile View. The design stays serene, using rounded cards and soft gradients while bringing forward the information needed to choose quickly.
+Practices List v0.2 keeps the calm catalogue layout and layers in reaction intelligence. Cards now show reaction chips (“Mostly Peace”), favourites pin to the top, and badges call out when a session aligns with the user’s current state.
 
-The list retrieves data from the CMS (practice metadata) and Practices Reactions Base (aggregate reactions). Filters let users focus on specific states (“I need Grounding tonight”), durations, or masters. Long-pressing a card favourites it, while tapping opens the familiar sheet with descriptions, selectors, and the reaction breakdown. Cards animate into view without jarring transitions, ensuring the catalogue remains a calming step before practice.
-
-Reaction chip labels and filters reuse the naming and colour guidance in the [Reactions Taxonomy](/docs/wiki/reactions/) so catalogue copy aligns with profile and analytics.
+Data still flows from the CMS plus Practices Reactions Base, so filters for state, duration, or master stay accurate. Chip labels mirror the [Reactions Taxonomy](/docs/wiki/reactions/), ensuring catalogue, profile, and analytics describe feelings the same way.
 
 ## Interaction
 1. User opens the list; client requests the latest catalogue plus reaction aggregates.

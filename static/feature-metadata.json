@@ -7,6 +7,20 @@
       "title": "Accept Notifications Screens",
       "summary": "Guide users to allow notifications with clear benefits"
     },
+    "features/account-restoration-logic-v0-4": {
+      "version": "0.4",
+      "capability": "app-infrastructure",
+      "position": 0,
+      "title": "Account Restoration Logic",
+      "summary": "Enables users to restore their account, achievements, units, and transaction history on a new device"
+    },
+    "features/acquisition-analytics-v1-0": {
+      "version": "1.0",
+      "capability": "product-analytics",
+      "position": 0,
+      "title": "Acquisition Analytics",
+      "summary": "Understands user acquisition patterns and improves targeting"
+    },
     "features/admin-area-cms-v0-2": {
       "version": "0.2",
       "capability": "app-infrastructure",
@@ -63,12 +77,103 @@
       "title": "AWA Pulse v0.3 (Master)",
       "summary": "Help the community feel the build-up and afterglow of master-led collectives by visualising shared light on the globe."
     },
+    "features/awa-pulse-units-formula-v0-4": {
+      "version": "0.4",
+      "capability": "visualization-map-layer",
+      "position": 0,
+      "title": "AWA Pulse 0.4 with Lumens Formula",
+      "summary": "Users see their pulse impact and gain units after practice"
+    },
     "features/awa-soul": {
       "version": "0.1",
       "capability": "visualization-map-layer",
       "position": 2,
       "title": "AWA Soul",
       "summary": "Scripted luminous guide that welcomes users and supports practice with calm assistant-like visuals"
+    },
+    "features/awa-units-base-controls-v0-4": {
+      "version": "0.4",
+      "capability": "app-infrastructure",
+      "position": 0,
+      "title": "Lumens Base and Controls",
+      "summary": "Provides insight into user and system currency, aiding understanding of engagement and resource allocation"
+    },
+    "features/awa-units-points-history-v0-4": {
+      "version": "0.4",
+      "capability": "gamification-rewards",
+      "position": 0,
+      "title": "Points Counter (Lumens) & History",
+      "summary": "Gain motivation and rewards for completing practices"
+    },
+    "features/awa-units-post-practice-v0-4": {
+      "version": "0.4",
+      "capability": "practice",
+      "position": 0,
+      "title": "Lumens Added After Practice Completion",
+      "summary": "Motivates users by showing their progress"
+    },
+    "features/awa-units-reporting-v0-4": {
+      "version": "0.4",
+      "capability": "product-analytics",
+      "position": 0,
+      "title": "Lumens Reporting",
+      "summary": "Understand user spending behavior and in-app currency flow"
+    },
+    "features/awa-units-visualization-v0-4": {
+      "version": "0.4",
+      "capability": "visualization-map-layer",
+      "position": 0,
+      "title": "Lumens Visualization",
+      "summary": "Clear visualization of user units count"
+    },
+    "features/awaway-current-cycle-progress-v1-0": {
+      "version": "1.0",
+      "capability": "away-streaks",
+      "position": 0,
+      "title": "Current Cycle Progress View",
+      "summary": "Shows 1/2 cycles collected so users can light any location and restart (~48 weeks total)"
+    },
+    "features/awaway-figure-merch-code-v1-0": {
+      "version": "1.0",
+      "capability": "away-streaks",
+      "position": 0,
+      "title": "Merch Code After Figure Generation",
+      "summary": "Unlock merch purchases only when streak geometry milestones are achieved"
+    },
+    "features/awaway-first-portal-v0-5": {
+      "version": "0.5",
+      "capability": "away-streaks",
+      "position": 0,
+      "title": "First Portal (7 Practices)",
+      "summary": "Rewards seven-day commitment with a new geometry figure, Field Key, and ritualized celebration"
+    },
+    "features/awaway-infra-v0-5": {
+      "version": "0.5",
+      "capability": "app-infrastructure",
+      "position": 0,
+      "title": "AWAWAY Infrastructure",
+      "summary": "Provides the foundational services that store, sync, and protect AWAWAY streak progress"
+    },
+    "features/awaway-onboarding-card-v0-5": {
+      "version": "0.5",
+      "capability": "access",
+      "position": 0,
+      "title": "Add AWAWAY to Onboarding Experience",
+      "summary": "Introduces sacred-geometry streaks during onboarding so new users understand the journey"
+    },
+    "features/awaway-onboarding-flow-v0-5": {
+      "version": "0.5",
+      "capability": "away-streaks",
+      "position": 0,
+      "title": "AWAWAY Onboarding Flow",
+      "summary": "Guides users through the sacred geometry journey so they understand portals, Field Keys, and the spiral path"
+    },
+    "features/awaway-visualization-v0-5": {
+      "version": "0.5",
+      "capability": "visualization-map-layer",
+      "position": 0,
+      "title": "AWAWAY Visualization",
+      "summary": "Shows AWASoul transforming into sacred geometry so streak progress feels tangible"
     },
     "features/basic-analytics": {
       "version": "0.1",
@@ -77,6 +182,13 @@
       "title": "Basic Analytics",
       "summary": "Give product and business teams insight into downloads, installs, and engagement"
     },
+    "features/daily-streak-reminder-v0-5": {
+      "version": "0.5",
+      "capability": "engagement-notifications",
+      "position": 0,
+      "title": "Daily Streak Reminder",
+      "summary": "Stay consistent with practice streaks"
+    },
     "features/delete-profile": {
       "version": "0.1",
       "capability": "identity",
@@ -84,12 +196,40 @@
       "title": "Delete Profile",
       "summary": "Give users full control to erase their account and data when desired"
     },
+    "features/donation-paid-v1-0": {
+      "version": "1.0",
+      "capability": "identity",
+      "position": 0,
+      "title": "Donation (Paid)",
+      "summary": "Let members make direct monetary donations to support AWATERRA initiatives"
+    },
+    "features/download-share-geometry-achievement-v1-0": {
+      "version": "1.0",
+      "capability": "away-streaks",
+      "position": 0,
+      "title": "Download & Share Geometry Status (Paid)",
+      "summary": "Paid users can save or share their current AWAWAY geometry as an achievement"
+    },
+    "features/download-shareable-dashboard-v1-0": {
+      "version": "1.0",
+      "capability": "identity",
+      "position": 0,
+      "title": "Download Shareable Dashboard (Paid)",
+      "summary": "Paid members can export a beautifully formatted dashboard of their stats to keep or share"
+    },
     "features/faq": {
       "version": "0.1",
       "capability": "identity",
       "position": 7,
       "title": "FAQ",
       "summary": "Provide clear answers to common AWATERRA questions"
+    },
+    "features/follow-masters-paid-v1-0": {
+      "version": "1.0",
+      "capability": "masters-practices",
+      "position": 0,
+      "title": "Follow Masters (Paid)",
+      "summary": "Access to exclusive masters for subscribed users and receive master updates"
     },
     "features/gdpr": {
       "version": "0.1",
@@ -118,6 +258,20 @@
       "position": 3,
       "title": "Home View v0.3 (Masters)",
       "summary": "Surface collective practice announcements and master updates without cluttering the calm home experience."
+    },
+    "features/inapp-notification-collect-units-v0-4": {
+      "version": "0.4",
+      "capability": "engagement-notifications",
+      "position": 0,
+      "title": "In-App Notification for Collecting Lumens",
+      "summary": "Users understand how to earn currency, enhancing engagement"
+    },
+    "features/inapp-notification-spend-units-v0-4": {
+      "version": "0.4",
+      "capability": "engagement-notifications",
+      "position": 0,
+      "title": "In-App Notification for Spending Lumens",
+      "summary": "Users are informed about how to spend their earned units"
     },
     "features/info-page-v0-2": {
       "version": "0.2",
@@ -189,6 +343,13 @@
       "title": "Master Analytics v0.3",
       "summary": "Equip the team and masters with concise reports on attendance, reactions, and gratitude to refine future collectives."
     },
+    "features/master-awa-unit-reward-v0-4": {
+      "version": "0.4",
+      "capability": "masters-practices",
+      "position": 0,
+      "title": "Get Master Au (Lumens)",
+      "summary": "Gains additional Au (Lumens) after master practice"
+    },
     "features/master-card-bio-v0-3": {
       "version": "0.3",
       "capability": "masters-practices",
@@ -229,7 +390,21 @@
       "capability": "masters-practices",
       "position": 1,
       "title": "Master's Globe / Planet / Soul",
-      "summary": "Summary coming soon."
+      "summary": "Give every master a calm, recognizable visual identity that powers the catalogue, visualization screen, and halo states."
+    },
+    "features/motivational-message-v1-0": {
+      "version": "1.0",
+      "capability": "engagement-notifications",
+      "position": 0,
+      "title": "Motivational Message",
+      "summary": "Boost motivation with simple phrases"
+    },
+    "features/new-feature-version-notifications-v1-0": {
+      "version": "1.0",
+      "capability": "app-infrastructure",
+      "position": 0,
+      "title": "New Features / Versions Notification Base",
+      "summary": "Users are informed about new features and updates"
     },
     "features/new-features-notification-screen": {
       "version": "0.2",
@@ -237,6 +412,34 @@
       "position": 13,
       "title": "New Features Notification Screen v0.2",
       "summary": "Keep users aligned on the latest improvements and guide them to try new 0.2 capabilities."
+    },
+    "features/notifications-upcoming-special-practices-v1-0": {
+      "version": "1.0",
+      "capability": "engagement-notifications",
+      "position": 0,
+      "title": "Notifications for Upcoming Special Practices (Paid)",
+      "summary": "Stay informed about upcoming master practices to enhance mindfulness"
+    },
+    "features/offline-practice-mode-v1-0": {
+      "version": "1.0",
+      "capability": "practice",
+      "position": 0,
+      "title": "Offline Mode for Downloaded Audio (Paid)",
+      "summary": "Access practices anytime without internet for convenience"
+    },
+    "features/onboarding-awa-units-v0-4": {
+      "version": "0.4",
+      "capability": "access",
+      "position": 0,
+      "title": "Add Lumens to Onboarding Experience",
+      "summary": "Better onboarding experience and user engagement"
+    },
+    "features/paid-subscription-profile-v1-0": {
+      "version": "1.0",
+      "capability": "app-infrastructure",
+      "position": 0,
+      "title": "Paid / Subscription Profile",
+      "summary": "Unlocks additional features and content for subscribers"
     },
     "features/practice-history-reactions-v0-3": {
       "version": "0.3",
@@ -264,7 +467,7 @@
       "capability": "masters-practices",
       "position": 2,
       "title": "Practice Screen v0.3 (Masters)",
-      "summary": "Deliver a guided, communal master practice with countdowns, reactions, and graceful completion all in one flow."
+      "summary": "Deliver a guided, communal master practice with countdowns, immersive playback, and reflective closure once the session ends."
     },
     "features/practice-screen": {
       "version": "0.1",
@@ -364,6 +567,13 @@
       "title": "Push & In-App Masters v0.3",
       "summary": "Keep practitioners aligned with master collectives through timely reminders, countdown nudges, and gentle follow-ups."
     },
+    "features/push-new-light-near-you-v1-0": {
+      "version": "1.0",
+      "capability": "engagement-notifications",
+      "position": 0,
+      "title": "PUSH: New Light Near You",
+      "summary": "Let members know when a new Light (practitioner) appears nearby, sparking connection"
+    },
     "features/push-notification-settings": {
       "version": "0.1",
       "capability": "identity",
@@ -378,6 +588,13 @@
       "title": "Push Notifications",
       "summary": "Users receive timely reminders to engage with the app, increasing retention and consistency"
     },
+    "features/push-reminders-special-practices-v1-0": {
+      "version": "1.0",
+      "capability": "engagement-notifications",
+      "position": 0,
+      "title": "Push Reminders Before Special Practices (Paid)",
+      "summary": "Ensure paid users never miss important special practices"
+    },
     "features/reactions-masters-v0-3": {
       "version": "0.3",
       "capability": "masters-practices",
@@ -385,12 +602,89 @@
       "title": "Reactions v0.3 (Masters)",
       "summary": "Let participants express shared emotions during master collectives with restrained, meaningful visuals and sound."
     },
+    "features/referral-program-awa-units-v0-4": {
+      "version": "0.4",
+      "capability": "gamification-rewards",
+      "position": 0,
+      "title": "Referral Program with Shareable Links",
+      "summary": "Users can earn \\\"Lumens\\\" by inviting friends, increasing engagement and rewards"
+    },
+    "features/save-practice-paid-v1-0": {
+      "version": "1.0",
+      "capability": "practice",
+      "position": 0,
+      "title": "Save Practice (Paid)",
+      "summary": "Keep favorite practices for quick future access"
+    },
     "features/setup-backend-infrastructure": {
       "version": "0.1",
       "capability": "app-infrastructure",
       "position": 2,
       "title": "Setup Backend Infrastructure",
       "summary": "Enable app to run reliably with scalable backend"
+    },
+    "features/sign-up-apple-google-v0-4": {
+      "version": "0.4",
+      "capability": "access",
+      "position": 0,
+      "title": "Sign Up with Apple + Google",
+      "summary": "Simplifies registration, offers quick access with Apple login"
+    },
+    "features/sign-up-email-v0-4": {
+      "version": "0.4",
+      "capability": "access",
+      "position": 0,
+      "title": "Sign Up with Email",
+      "summary": "Easy account creation and quick access to personalized mindfulness content"
+    },
+    "features/social-sharing-paid-v1-0": {
+      "version": "1.0",
+      "capability": "masters-practices",
+      "position": 0,
+      "title": "Social Sharing (Paid)",
+      "summary": "Paid users can share the final screen from master completions as premium stories"
+    },
+    "features/spend-add-to-awaway-v0-5": {
+      "version": "0.5",
+      "capability": "gamification-rewards",
+      "position": 0,
+      "title": "SPEND Add to AWAWAY",
+      "summary": "Let users reinvest Lumens directly into their AWAWAY journey"
+    },
+    "features/spend-keep-streak-v1-0": {
+      "version": "1.0",
+      "capability": "gamification-rewards",
+      "position": 0,
+      "title": "SPEND Units to Keep Streak",
+      "summary": "Allow a one-time per X days use of units to maintain the streak if a practice was missed"
+    },
+    "features/spend-rewards-store-v0-5": {
+      "version": "0.5",
+      "capability": "gamification-rewards",
+      "position": 0,
+      "title": "SPEND Rewards Store (Missions)",
+      "summary": "Fund manuscript preservation and see impact"
+    },
+    "features/spend-units-send-to-master-v0-4": {
+      "version": "0.4",
+      "capability": "gamification-rewards",
+      "position": 0,
+      "title": "Spend Lumens - Send to Master",
+      "summary": "Users can share their Lumens with masters to enhance their experience."
+    },
+    "features/spend-units-send-to-pulse-v0-4": {
+      "version": "0.4",
+      "capability": "gamification-rewards",
+      "position": 0,
+      "title": "Spend Lumens - Send to Pulse",
+      "summary": "Ability to spend their units to support Pulse"
+    },
+    "features/subscription-page-v1-0": {
+      "version": "1.0",
+      "capability": "identity",
+      "position": 0,
+      "title": "Subscription Page",
+      "summary": "Access to premium features enhances user experience"
     },
     "features/terms-policy-v0-2": {
       "version": "0.2",
@@ -405,6 +699,13 @@
       "position": 6,
       "title": "Total User Counter",
       "summary": "Show community scale and reinforce belonging"
+    },
+    "features/user-profile-dashboard-v1-0": {
+      "version": "1.0",
+      "capability": "identity",
+      "position": 0,
+      "title": "User Profile and Dashboard v1",
+      "summary": "Users see increased profile insights and reactions"
     },
     "features/welcome-animation": {
       "version": "0.1",
@@ -486,7 +787,7 @@
     "versions/0.4-flicker/intro": {
       "version": "0.4",
       "position": 4,
-      "label": "0.4 Flicker (Basic AWA Units + Registration and Login)",
+      "label": "0.4 Flicker (Basic Lumens + Registration and Login)",
       "slug": "0.4-flicker"
     },
     "versions/0.5-glow/intro": {
@@ -526,5 +827,5 @@
       "slug": "1.0-ignition"
     }
   },
-  "lastUpdated": "2025-10-17T08:11:22.990Z"
+  "lastUpdated": "2025-11-16T04:21:55.826Z"
 }

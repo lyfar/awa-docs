@@ -73,8 +73,10 @@ flowchart TD
   - Defaulting to the wrong language and eroding trust.
   - Allowing admins to publish language variants without uploading corresponding audio.
   - Over-complicating the UI with too many chips—limit to available languages.
-- **Data**
-  - Track language preference adoption, toggles per session, fallback occurrences, and replay usage per language.
+## Data
+- **Primary metric:** Percentage of sessions launched in a preferred language (per user).
+- **Secondary checks:** Filter/toggle usage, fallback frequency, reminder language changes, and replay demand by language.
+- **Telemetry requirements:** Log profile preference changes, filter states, chosen language per join, fallback events, and push language payloads.
 
 ## Open Questions
 - Should we auto-suggest a second language based on device locale if the preferred language lacks sessions?

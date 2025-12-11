@@ -23,11 +23,9 @@ import FeatureSummary from '@site/src/components/FeatureSummary';
 <FeatureSummary />
 
 ## Narrative
-The History of Completed Practices with Reactions gives people a reflective journal anchored in their practice sessions. Each entry shows the practice name, master, duration, reaction state (color-coded), optional notes, and whether the session ignited their light. The list groups by week with a calm timeline design so users can see streaks and shifts in how they felt. Filters let them drill into specific states (“Show me when I felt Grounded”) or masters. Exportable summaries support sharing progress with mentors or friends.
+History is the reflective journal for v0.2: every completed practice appears with its master, duration, colour-coded reaction, notes, and light ignition state, grouped into calm weekly sections with filters for masters or feelings. Export buttons let users share progress with mentors or pull a CSV for their own journaling.
 
-History pulls from the Practices Reactions Base and practice completion records. It caches the most recent month and lazily loads older sessions. For each entry, the UI offers nudges—if the user recorded mostly Grounded states, they’ll see a tip to explore Energise practices. The interaction stays gentle: no gamification, just insights and optional sharing.
-
-Every state summary references the canonical names outlined in the [Reactions Taxonomy](/docs/wiki/reactions/) so history, analytics, and profile insights stay synchronised.
+Entries stream from Practices Reactions Base plus completion logs, cache the recent month, and lazy-load older weeks. Suggestions gently reference the [Reactions Taxonomy](/docs/wiki/reactions/) so nudges (“Try more Energy sessions”) stay aligned with the rest of the ecosystem.
 
 ## Interaction
 1. User opens History via Profile View or completion screen.

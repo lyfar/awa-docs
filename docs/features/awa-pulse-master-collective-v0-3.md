@@ -78,8 +78,10 @@ flowchart TD
   - Showing inaccurate attendance numbers due to delayed telemetry.
   - Overloading the globe with multiple concurrent halos; ensure stacking logic stays calm.
   - Countdown states that clash with accessibility (e.g., unreadable contrast for colourblind users).
-- **Data**
-  - Log reminder opt-ins, live participant peaks, reaction distribution per collective, and recap engagement (taps, replays).
+## Data
+- **Primary metric:** Reminder opt-ins and live participant peaks driven by halo states.
+- **Secondary checks:** Reaction distribution per collective, recap tap-through, replay starts from the halo, and telemetry dropout incidents.
+- **Telemetry requirements:** Log halo lifecycle events, countdown timers, reminder actions, live participant deltas, reaction motes, and recap CTA taps.
 
 ## Open Questions
 - Do we stack halos for simultaneous collectives or limit to one featured master at a time?

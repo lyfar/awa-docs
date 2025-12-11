@@ -79,8 +79,10 @@ flowchart TD
   - Allowing overlapping collective windows for the same master or conflicting announcements.
   - Publishing assets without verifying audio files and translations.
   - Fragmented data export flows that force manual spreadsheet work.
-- **Data**
-  - Track time to onboard a master, number of edits per session, conflict rate, and percentage of sessions exported to partners.
+## Data
+- **Primary metric:** Time to publish a master + first collective (draft → live) inside the CMS.
+- **Secondary checks:** Conflict/validation rate, number of edits per session, export completion, and reaction ingest lag surfaced in reports.
+- **Telemetry requirements:** Log form submissions, validation errors, scheduler conflicts, publish events, report exports, and rollback actions.
 
 ## Open Questions
 - Should masters have self-service access or do we keep CMS access internal only for v0.3?

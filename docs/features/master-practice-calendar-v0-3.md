@@ -78,8 +78,10 @@ flowchart TD
   - Creating duplicate events if the user taps multiple times—detect existing entries via unique IDs in notes.
   - Incorrect timezone handling causing missed sessions.
   - Saving reminders without user consent or overriding their defaults.
-- **Data**
-  - Track calendar adds per session, permission grant rates, event edits, and attendance correlation.
+## Data
+- **Primary metric:** Calendar add rate per collective (events created ÷ unique viewers).
+- **Secondary checks:** Permission grant/denial rates, edits/removals, reminder conversions, and attendance uplift for calendar users.
+- **Telemetry requirements:** Log permission prompts, event creation success/failure, calendar IDs (hashed), reminder toggle sync, and reschedule notifications.
 
 ## Open Questions
 - Should we implement automatic calendar updates via ICS feeds in later versions?

@@ -76,8 +76,10 @@ flowchart TD
   - Overcrowding the top row—limit to a manageable number or provide carousel controls.
   - Ring styling that clashes with the accessibility palette or looks too similar to default state.
   - Duplicated announcements when a master hosts multiple sessions within 24 hours; group them intelligently.
-- **Data**
-  - Track views per orb, reminder conversions, story completion rate, and thank-you taps.
+## Data
+- **Primary metric:** Orb view and completion rate (stories viewed ÷ impressions) plus reminder conversions.
+- **Secondary checks:** Thank-you taps, snooze/dismiss actions, announcement rotation effectiveness, and return visits to recaps.
+- **Telemetry requirements:** Log feed payloads, orb order, slide interactions, reminder toggles, gratitude CTAs, and expiry events.
 
 ## Open Questions
 - Should we allow users to pin favourite masters so their orb appears even without an active announcement?
